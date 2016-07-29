@@ -197,6 +197,19 @@ function styleCounty(feature) {
 	};
 }
 
+
+/* sky script */
+function styleWaterShed(feature) {
+	return {
+		weight: 0.75,
+		opacity: 1,
+		color: 'black',
+		fillOpacity: 0,
+		fillColor: false
+	};
+}
+/* sky script */
+
 function highlightFeature(e) {
 	var layer = e.target;
 	
@@ -331,6 +344,12 @@ var geojsonCounty = new L.Shapefile('00_Data/ModelOutputData/WisconsinCounties',
 	style: styleCounty,
 	className: 'over-ride-stuff'
 });
+
+/* sky script */
+var waterShed = new L.Shapefile('00_Data/ModelOutputData/WI_watershed', {
+	style: styleWaterShed
+});
+/* sky script */
 
 geojson.addTo(geojsonGroup);
 geojsonCounty.addTo(geojsonCountyGroup);
