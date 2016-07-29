@@ -346,7 +346,7 @@ var geojsonCounty = new L.Shapefile('00_Data/ModelOutputData/WisconsinCounties',
 });
 
 /* sky script */
-var waterShed = new L.Shapefile('00_Data/ModelOutputData/WI_watershed', {
+var waterShed = new L.Shapefile('00_Data/ModelOutputData/WI_watersheds', {
 	style: styleWaterShed
 });
 /* sky script */
