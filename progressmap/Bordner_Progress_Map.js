@@ -204,8 +204,8 @@ function styleWaterShed(feature) {
 		weight: 0.75,
 		opacity: 1,
 		color: 'black',
-		fillOpacity: .5,
-		fillColor: #187199
+		fillOpacity: 0,
+		fillColor: false
 	};
 }
 /* sky script */
