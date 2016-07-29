@@ -192,8 +192,8 @@ function styleCounty(feature) {
 		weight: 0.75,
 		opacity: 1,
 		color: 'black',
-		fillOpacity: 0,
-		fillColor: false
+		fillOpacity: 0.5,
+		fillColor: '#7cd3fb'
 	};
 }
 
@@ -205,7 +205,7 @@ function styleWaterShed(feature) {
 		opacity: 1,
 		color: 'black',
 		fillOpacity: 0,
-		fillColor: false
+		fillColor: 
 	};
 }
 /* sky script */
