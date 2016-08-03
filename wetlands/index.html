@@ -43,6 +43,11 @@
 			'data': 'https://bordnerlab.github.io/wetlands/data/wetlands/ashland_wetlands.geojson'
 		});
 		
+		map.addSource('coastalCounties', {
+			'type': 'geojson',
+			'data': 'https://bordnerlab.github.io/wetlands/data/counties.geojson'
+		});
+		/*
 		map.addLayer({
 			'id': 'ashlandWetlands',
 			'type': 'fill',
@@ -53,6 +58,17 @@
 				'fill-opacity': 0.4
 			}
 		}, 'water');
+		*/
+		map.addLayer({
+			'id': 'coastalCounties',
+			'type': 'fill',
+			'source': 'coastalCounties',
+			'layout': {},
+			'paint': {
+				'fill-color': '#f08',
+				'fill-opacity': 0.4
+			}
+		});
 	});
 	
 	</script>
