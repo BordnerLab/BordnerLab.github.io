@@ -43,6 +43,8 @@
 	
 	map.addControl(new mapboxgl.Navigation());
 	
+	map.addControl(new mapboxgl.Geocoder());
+	
 	map.on('load', function () {
 		map.addSource('ashlandWetlands', {
 			'type': 'geojson',
