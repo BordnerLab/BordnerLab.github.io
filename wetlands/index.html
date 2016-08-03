@@ -121,7 +121,7 @@
 		
 		var feature = features[0];
 		
-		popup.setLngLat(feature.geometry.coordinates)
+		popup.setLngLat(e.lngLat)
 			.setHTML(feature.properties.COUNTY_NAM)
 			.addTo(map);
 	});
