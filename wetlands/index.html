@@ -25,10 +25,23 @@
 		.mapboxgl-popup {
 		
 		}
+		
+		#geocoder-container {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			margin-top: 10px;
+		}
+
+		#geocoder-container > div {
+			min-width:50%;
+			margin-left:25%;
+		}
 	</style>
 </head>
 <body>
 	<div id='map'></div>
+	<div id='geocoder-container'></div>
 	
 	<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.js'></script>
 	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.css' type='text/css' />
@@ -44,7 +57,11 @@
 	
 	map.addControl(new mapboxgl.Navigation());
 	
-	map.addControl(new mapboxgl.Geocoder());
+	var geocoder = new mapboxgl.Geocoder({
+		container: 'geocoder-container'
+	});
+	
+	map.addControl(geocoder);
 	
 	map.on('load', function () {
 		map.addSource('ashlandWetlands', {
@@ -55,6 +72,14 @@
 		map.addSource('coastalCounties', {
 			'type': 'geojson',
 			'data': 'https://bordnerlab.github.io/wetlands/data/counties.geojson'
+		});
+		
+		map.addSource('single-point', {
+			'type': 'geojson',
+			'data: {
+				'type': 'FeatureCollection',
+				'features': []
+			}
 		});
 		/*
 		map.addLayer({
@@ -100,6 +125,20 @@
 				'fill-opacity': 1
 			}
 		});
+		
+		map.addLayer({
+			'id': 'point',
+			'source': 'single-point',
+			'type': 'circle',
+			'paint': {
+				'circle-radius': 10,
+				'circle-color': '#007cbf'
+			}
+		});
+	});
+	
+	geocoder.on('result', function(ev) {
+		map.getSource('single-point').setData(ev.result.geometry);
 	});
 	
 	var popup = new mapboxgl.Popup({
