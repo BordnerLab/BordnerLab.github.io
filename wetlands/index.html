@@ -172,7 +172,7 @@
 				center: e.lngLat,
 				zoom: 8
 			});
-			map.setFilter("county-fills", ["!==", "COUNTY_NAM", feature.properties.COUNTY_NAM]);
+			map.setFilter("county-fills", ["!=", "COUNTY_NAM", feature.properties.COUNTY_NAM]);
 			determineClick(feature);
 		}
 	});
