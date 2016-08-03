@@ -60,16 +60,53 @@
 		}, 'water');
 		*/
 		map.addLayer({
-			'id': 'coastalCounties',
+			'id': 'county-fills',
 			'type': 'fill',
 			'source': 'coastalCounties',
 			'layout': {},
 			'paint': {
 				'fill-color': '#f08',
-				'fill-opacity': 0.4
+				'fill-opacity': 0.2,
 			}
 		});
+		
+		map.addLayer({
+			'id': 'county-borders',
+			'type': 'line',
+			'source': 'coastalCounties',
+			'layout': {},
+			'paint': {
+				'line-color': 'black',
+				'line-width': 1
+			}
+		});
+		
+		map.addLayer({
+			'id': 'county-hover',
+			'type': 'fill',
+			'source': 'coastalCounties',
+			'layout': {},
+			'paint': {
+				'fill-color': '#f08',
+				'fill-opacity': 1
+			}
+		});
+		
+		map.on('mousemove', function(e) {
+			var features = map.queryRenderedFeatures(e.point, { layers: ["county-fills"] });
+			if (features.length) {
+				map.setFilter("county-hover", ["==", "COUNTY_NAM", features[0].properties.COUNTY_NAM]);
+			} else {
+				map.setFilter("county-hover", ["==", "COUNTY_NAM", ""]);
+			}
+		});
+		
+		map.on ('mouseout', function() {
+			map.setFilter("county-hover", ["==", "COUNTY_NAM", ""]);
+		});
 	});
+	
+	
 	
 	</script>
 		
