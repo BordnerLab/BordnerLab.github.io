@@ -181,7 +181,7 @@
 	
 	function determineClick(feature) {
 		if (feature.properties.COUNTY_NAM == "Ashland") {
-			Ashland();
+			Ashland(feature);
 		} else {
 			alert(feature.properties.COUNTY_NAM);
 		}
@@ -199,9 +199,9 @@
 				'fill-opacity': 0.4
 			}
 		}, 'water');
-		
-		map.setFilter('county-fills', ['==', 'COUNTY_NAM', 'Ashland']);
-		
+		console.log("does");
+		map.setFilter("county-fills", ["==", "COUNTY_NAM", feature.properties.COUNTY_NAM]);
+		console.log("it work");
 	};
 	
 	
