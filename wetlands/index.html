@@ -172,7 +172,7 @@
 				center: e.lngLat,
 				zoom: 8
 			});
-			
+			map.setFilter("county-fills", ["!==", "COUNTY_NAM", feature.properties.COUNTY_NAM]);
 			determineClick(feature);
 		}
 	});
@@ -199,9 +199,6 @@
 				'fill-opacity': 0.4
 			}
 		}, 'water');
-		console.log("does");
-		map.setFilter("county-fills", ["==", "COUNTY_NAM", feature.properties.COUNTY_NAM]);
-		console.log("it work");
 	};
 	
 	
