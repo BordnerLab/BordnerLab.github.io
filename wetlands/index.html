@@ -21,6 +21,10 @@
 			width:100%;
 			height:100%;
 		}
+		
+		.mapboxgl-popup {
+		
+		}
 	</style>
 </head>
 <body>
@@ -93,19 +97,37 @@
 				'fill-opacity': 1
 			}
 		});
-		
-		map.on('mousemove', function(e) {
-			var features = map.queryRenderedFeatures(e.point, { layers: ["county-fills"] });
-			if (features.length) {
-				map.setFilter("county-hover", ["==", "COUNTY_NAM", features[0].properties.COUNTY_NAM]);
-			} else {
-				map.setFilter("county-hover", ["==", "COUNTY_NAM", ""]);
-			}
-		});
-		
-		map.on ('mouseout', function() {
+	});
+	
+	var popup = new mapboxgl.Popup({
+		closeButton: false,
+		closeOnClick: false
+	});
+	
+	map.on('mousemove', function(e) {
+		var features = map.queryRenderedFeatures(e.point, { layers: ["county-fills"] });
+		if (features.length) {
+			map.setFilter("county-hover", ["==", "COUNTY_NAM", features[0].properties.COUNTY_NAM]);
+		} else {
 			map.setFilter("county-hover", ["==", "COUNTY_NAM", ""]);
-		});
+		}
+			
+		map.getCanvas().style.cursor = 'pointer';
+			
+		if (!features.length) {
+			popup.remove();
+			return;
+		}
+		
+		var feature = features[0];
+		
+		popup.setLngLat(feature.geometry.coordinates)
+			.setHTML(feature.properties.COUNTY_NAM)
+			.addTo(map);
+	});
+	
+	map.on ('mouseout', function() {
+		map.setFilter("county-hover", ["==", "COUNTY_NAM", ""]);
 	});
 	
 	
