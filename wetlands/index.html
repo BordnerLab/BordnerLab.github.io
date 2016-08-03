@@ -172,6 +172,14 @@
 		map.setFilter("county-hover", ["==", "COUNTY_NAM", ""]);
 	});
 	
+	map.on ('click', function(e) {
+		var features = map.queryRenderedFeatures(e.point, { layers: ['county-fills'] });
+		
+		if (features.length) {
+			map.flyTo({center: features[0].geometry.coordinates});
+		}
+	});
+	
 	
 	
 	</script>
