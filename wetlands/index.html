@@ -112,7 +112,7 @@
 			map.setFilter("county-hover", ["==", "COUNTY_NAM", ""]);
 		}
 			
-		map.getCanvas().style.cursor = 'pointer';
+		map.getCanvas().style.cursor = (features.length ? 'pointer' : '';
 			
 		if (!features.length) {
 			popup.remove();
