@@ -170,7 +170,7 @@
 		if (features.length) {
 			map.flyTo({
 				center: e.lngLat,
-				zoom: 9
+				zoom: 8
 			});
 			
 			determineClick(feature);
@@ -200,7 +200,7 @@
 			}
 		}, 'water');
 		
-		map.removeLayer('county-fills');
+		map.setFilter('county-fills', ['!==', 'COUNTY_NAM', 'Ashland']);
 		
 	};
 	
