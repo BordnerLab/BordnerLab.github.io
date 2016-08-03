@@ -1,4 +1,13 @@
 
+
+
+function determineClick(feature) {
+	if (feature.properties.COUNTY_NAM == "Ashland") {
+		Ashland();
+	} else {
+		alert(feature.properties.COUNTY_NAM);
+};
+
 function Ashland() {
 		map.addLayer({
 			'id': 'ashlandWetlands',

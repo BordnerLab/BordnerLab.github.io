@@ -165,9 +165,15 @@
 	map.on ('click', function(e) {
 		var features = map.queryRenderedFeatures(e.point, { layers: ['county-fills'] });
 		
+		var feature = features[0];
+		
 		if (features.length) {
-			map.flyTo({center: e.lngLat});
-			Ashland();
+			map.flyTo({
+				center: e.lngLat,
+				zoom: 9
+			});
+			
+			determineClick(feature);
 		}
 	});
 	
