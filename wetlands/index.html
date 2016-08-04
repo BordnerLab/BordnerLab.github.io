@@ -224,9 +224,9 @@
 		});
 	
 		map.on('mousemove', function(e) {
-			var features = map.queryRenderedFeatures(e.point, { layers: ["county-fills"] });
-			console.log(features[0]);
-			if (features.length) {
+			var features = map.queryRenderedFeatures(e.point, { layers: countyIDArr });
+			
+			if (features.length && features[0].layer.id == "county-fills") {
 				map.setFilter("county-hover", ["==", "COUNTY_NAM", features[0].properties.COUNTY_NAM]);
 			} else {
 				map.setFilter("county-hover", ["==", "COUNTY_NAM", ""]);
@@ -240,10 +240,14 @@
 			}
 		
 			var feature = features[0];
-		
-			popup.setLngLat(e.lngLat)
-				.setHTML(feature.properties.COUNTY_NAM)
-				.addTo(map);
+			
+			if (feature.layer.id == "county-fills") {
+				popup.setLngLat(e.lngLat)
+					.setHTML(feature.properties.COUNTY_NAM)
+					.addTo(map);
+			} else {
+				return;
+			}
 		});
 		
 		map.on ('mouseout', function() {
