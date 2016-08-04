@@ -81,6 +81,23 @@
 	
 	var currentLayers = [];
 	
+	var hoverLayers = [
+		"ashlandWetlands",
+		"bayfieldWetlands",
+		"brownWetlands",
+		"doorWetlands",
+		"douglasWetlands",
+		"ironWetlands",
+		"kenoshaWetlands",
+		"kewauneeWetlands",
+		"marinetteWetlands",
+		"ozaukeeWetlands",
+		"racineWetlands",
+		"sheboyganWetlands",
+		"county-fills"
+	];
+		
+	
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2bmtkcjUzaG5meCJ9.eswxCZSAnob59HR0wEaTpA';
 	
 	var map = new mapboxgl.Map({
@@ -224,7 +241,7 @@
 		});
 	
 		map.on('mousemove', function(e) {
-			var features = map.queryRenderedFeatures(e.point, { layers: countyIDArr });
+			var features = map.queryRenderedFeatures(e.point, { layers: hoverLayers });
 			
 			if (features.length && features[0].layer.id == "county-fills") {
 				map.setFilter("county-hover", ["==", "COUNTY_NAM", features[0].properties.COUNTY_NAM]);
@@ -316,6 +333,7 @@
 					'fill-opacity': 1
 				}
 			}, 'water');
+			hoverLayers.push(a4cover);
 			
 			map.addLayer({
 				'id': a3cover,
@@ -328,6 +346,7 @@
 					'fill-opacity': 1
 				}
 			}, 'water');
+			hoverLayers.push(a3cover);
 			
 			map.addLayer({
 				'id': b4cover,
@@ -340,6 +359,7 @@
 					'fill-opacity': 1
 				}
 			}, 'water');
+			hoverLayers.push(b4cover);
 			
 			map.addLayer({
 				'id': c4cover,
@@ -352,6 +372,7 @@
 					'fill-opacity': 1
 				}
 			}, 'water');
+			hoverLayers.push(c4cover);
 			
 			map.addLayer({
 				'id': c4bcover,
@@ -364,6 +385,7 @@
 					'fill-opacity': 1
 				}
 			}, 'water');
+			hoverLayers.push(c4bcover);
 			
 			map.addLayer({
 				'id': f4cover,
@@ -376,6 +398,7 @@
 					'fill-opacity': 1
 				}
 			}, 'water');
+			hoverLayers.push(f4cover);
 			
 			map.addLayer({
 				'id': mfcover,
@@ -388,6 +411,7 @@
 					'fill-opacity': 1
 				}
 			}, 'water');
+			hoverLayers.push(mfcover);
 			
 			map.addLayer({
 				'id': ercover,
@@ -400,6 +424,7 @@
 					'fill-opacity': 1
 				}
 			}, 'water');
+			hoverLayers.push(ercover);
 			
 			currentLayers.push(source);
 		} else if (hold >= 0) {
