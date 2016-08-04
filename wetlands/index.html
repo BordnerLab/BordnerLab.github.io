@@ -100,7 +100,7 @@
 	map.on('load', function () {
 		map.addSource('ashlandWetlands', {
 			'type': 'geojson',
-			'url': 'https://bordnerlab.github.io/wetlands/data/wetlands/ashland_wetlands.geojson'
+			'data': 'https://bordnerlab.github.io/wetlands/data/wetlands/ashland_wetlands.geojson'
 		});
 		
 		map.addSource('bayfieldWetlands', {
@@ -281,6 +281,18 @@
 	
 	
 	function displayWetlands(source, feature) {
+		map.addLayer({
+			'id': 'ashlandWetlands',
+			'type': 'fill',
+			'source': 'ashlandWetlands',
+			'layout': {},
+			'paint': {
+				'fill-color': '#f08',
+				'fill-opacity': 0.4
+			}
+		}, 'water');
+	};
+		/*
 		console.log(source);
 		if (currentLayers.indexOf(source) = -1) {
 			map.addLayer({
@@ -298,7 +310,7 @@
 		} else if (currentLayers.indexOf(source) >= 0) {
 			alert('Wetlands layer is already added');
 		}
-	};
+		*/
 	
 	</script>
 		
