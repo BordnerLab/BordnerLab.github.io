@@ -254,6 +254,7 @@
 	
 	function determineClick(feature) {
 		var clickedCountyName = feature.properties.COUNTY_NAM;
+		console.log(clickedCountyName);
 		var arrLength = countyIDArr.length;
 		for (var i = 0; i < arrLength; i++) {
 			if (clickedCountyName == countyIDArr[i]) {
