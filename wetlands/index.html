@@ -63,6 +63,21 @@
 		"sheboyganWetlands"
 	];
 	
+	var countyNames = [
+		"Ashland",
+		"Bayfield",
+		"Brown",
+		"Door",
+		"Douglas",
+		"Iron",
+		"Kenosha",
+		"Kewaunee",
+		"Marinette",
+		"Ozaukee",
+		"Racine",
+		"Sheboygan"
+	];
+	
 	var currentLayers = [];
 	
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2bmtkcjUzaG5meCJ9.eswxCZSAnob59HR0wEaTpA';
@@ -254,11 +269,8 @@
 	
 	function determineClick(feature) {
 		var clickedCountyName = feature.properties.COUNTY_NAM;
-		var arrLength = countyIDArr.length;
-		console.log(arrLength);
-		for (var i = 0; i < arrLength; i++) {
-			if (clickedCountyName == countyIDArr[i]) {
-				console.log(clickedCountyName);
+		for (i = 0; i < countyNames.length; i++) {
+			if (clickedCountyName == countyNames[i]) {
 				displayWetlands(countyIDArr[i], feature);
 			} else {
 				return;
