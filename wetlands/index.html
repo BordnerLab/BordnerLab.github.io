@@ -260,7 +260,13 @@
 					zoom: 8
 				});
 				countyFillArr.push(feature.properties.COUNTY_NAM);
-				map.setFilter("county-fills", ["!=", "COUNTY_NAM", feature.properties.COUNTY_NAM]);
+				map.setFilter("county-fills", ['all', 
+					["!=", "COUNTY_NAM", countyFillArr[0],
+					["!=", "COUNTY_NAM", countyFillArr[1],
+					["!=", "COUNTY_NAM", countyFillArr[2],
+					["!=", "COUNTY_NAM", countyFillArr[3],
+					["!=", "COUNTY_NAM", countyFillArr[4]]);
+					
 				determineClick(feature);
 			}
 		});
