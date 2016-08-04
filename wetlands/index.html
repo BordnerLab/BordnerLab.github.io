@@ -246,7 +246,9 @@
 					.setHTML(feature.properties.COUNTY_NAM)
 					.addTo(map);
 			} else {
-				return;
+				popup.setLngLat(e.lngLat)
+					.setHTML(feature.properties.Cov1)
+					.addTo(map);
 			}
 		});
 		
