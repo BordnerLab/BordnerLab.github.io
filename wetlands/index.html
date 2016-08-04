@@ -255,10 +255,9 @@
 	function determineClick(feature) {
 		var clickedCountyName = feature.properties.COUNTY_NAM;
 		var arrLength = countyIDArr.length;
+		console.log(arrLength);
 		for (var i = 0; i < arrLength; i++) {
 			if (clickedCountyName == countyIDArr[i]) {
-				var test = countyIDArr[i];
-				console.log(test);
 				console.log(clickedCountyName);
 				displayWetlands(countyIDArr[i], feature);
 			} else {
