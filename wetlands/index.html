@@ -272,17 +272,16 @@
 		var i;
 		for (i = 0; i < countyNames.length; i++) {
 			if (clickedCountyName == countyNames[i]) {
-				console.log(countyNames[i]);
-				console.log(clickedCountyName);
 				displayWetlands(countyIDArr[i], feature);
 			} else {
-				
+	
 			}
 		}
 	};
 	
 	
 	function displayWetlands(source, feature) {
+		console.log(source);
 		if (currentLayers.indexOf(source) = -1) {
 			map.addLayer({
 				'id': source,
