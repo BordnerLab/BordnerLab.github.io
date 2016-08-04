@@ -260,6 +260,7 @@
 					zoom: 8
 				});
 				countyFillArr.push(feature.properties.COUNTY_NAM);
+				console.log(countyFillArr);
 				map.setFilter("county-fills", ["!=", "COUNTY_NAM", countyFillArr]);
 				determineClick(feature);
 			}
