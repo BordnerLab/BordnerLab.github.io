@@ -60,8 +60,7 @@
 		"marinetteWetlands",
 		"ozaukeeWetlands",
 		"racineWetlands",
-		"sheboyganWetlands",
-		"county-fills"
+		"sheboyganWetlands"
 	];
 	
 	var countyNames = [
@@ -274,11 +273,11 @@
 		});
 		
 		map.on ('click', function(e) {
-			var features = map.queryRenderedFeatures(e.point, { layers: ['county-fills'] });
+			var features = map.queryRenderedFeatures(e.point, { layers: hoverLayers });
 		
 			var feature = features[0];
 		
-			if (features.length) {
+			if (features.length && feaure.layer.id == "county-fills") {
 				map.flyTo({
 					center: e.lngLat,
 					zoom: 8
@@ -287,7 +286,14 @@
 				map.setFilter("county-fills", ["!=", "COUNTY_NAM", feature.properties.COUNTY_NAM]);
 					
 				determineClick(feature);
+			} else {
+				map.flyTo({
+					center: e.lngLat,
+					zoom: 10,
+					pitch: 10
+				});
 			}
+					
 		});
 	});
 	
