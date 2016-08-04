@@ -60,7 +60,8 @@
 		"marinetteWetlands",
 		"ozaukeeWetlands",
 		"racineWetlands",
-		"sheboyganWetlands"
+		"sheboyganWetlands",
+		"county-fills"
 	];
 	
 	var countyNames = [
@@ -224,6 +225,7 @@
 	
 		map.on('mousemove', function(e) {
 			var features = map.queryRenderedFeatures(e.point, { layers: ["county-fills"] });
+			console.log(features[0]);
 			if (features.length) {
 				map.setFilter("county-hover", ["==", "COUNTY_NAM", features[0].properties.COUNTY_NAM]);
 			} else {
