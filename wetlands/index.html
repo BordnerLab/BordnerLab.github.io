@@ -52,7 +52,7 @@
 	<div id='geocoder-container'></div>
 	
 	<div id='rangeslider'>
-		<input type="range" name="pitch" id="pitch" value="0" min="0" max="90" onchange="updateSlider(this.id)">
+		<input type="range" name="pitch" id="pitch" value="0" min="0" max="60" defaultValue="0" ondrag="updateSlider(this.id)">
 	</div>
 	
 	
@@ -459,7 +459,6 @@
 	
 	function updateSlider(x) {
 		var valueHold = document.getElementById(x).value;
-		console.log(valueHold);
 		map.setPitch(valueHold);
 	};
 	
