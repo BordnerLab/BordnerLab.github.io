@@ -42,11 +42,29 @@
 		#pitch {
 			writing-mode: bt-lr;
 			-webkit-appearance: slider-vertical;
+			-webkit-appearance: none;
 			position: absolute;
 			height: 125px;
 			width: auto;
 			top:100px;
 			right:16px;
+			background: transparent;
+		}
+		
+		#pitch :: -webkit-slider-thumb {
+			-webkit-appearance: none;
+		}
+		
+		#pitch : focus {
+			outline: none;
+		}
+		
+		#pitch :: -ms-track {
+			width:100%;
+			cursor:pointer;
+			background: transparent;
+			border-color: transparent;
+			color: transparent;
 		}
 	</style>
 </head>
