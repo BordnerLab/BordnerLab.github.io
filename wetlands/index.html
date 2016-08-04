@@ -296,15 +296,107 @@
 	
 	function displayWetlands(source, feature) {
 		var hold = currentLayers.indexOf(source);
+		var a4cover = source + "A4";
+		var a3cover = source + "A3";
+		var b4cover = source + "B4";
+		var c4cover = source + "C4";
+		var c4bcover = source + "C4b";
+		var f4cover = source + "F4";
+		var mfcover = source + "MF";
+		var ercover = source + "ER";
 		if (hold == -1) {
 			map.addLayer({
-				'id': source,
+				'id': a4cover,
 				'type': 'fill',
 				'source': source,
 				'layout': {},
 				'filter': ['==', 'Cov1', 'A4'],
 				'paint': {
-					'fill-color': '#f08',
+					'fill-color': '#EE7600',
+					'fill-opacity': 1
+				}
+			}, 'water');
+			
+			map.addLayer({
+				'id': a3cover,
+				'type': 'fill',
+				'source': source,
+				'layout': {},
+				'filter': ['==', 'Cov1', 'A3'],
+				'paint': {
+					'fill-color': '#FB9B9C',
+					'fill-opacity': 1
+				}
+			}, 'water');
+			
+			map.addLayer({
+				'id': b4cover,
+				'type': 'fill',
+				'source': source,
+				'layout': {},
+				'filter': ['==', 'Cov1', 'B4'],
+				'paint': {
+					'fill-color': '#9B9CFB',
+					'fill-opacity': 1
+				}
+			}, 'water');
+			
+			map.addLayer({
+				'id': c4cover,
+				'type': 'fill',
+				'source': source,
+				'layout': {},
+				'filter': ['==', 'Cov1', 'C4'],
+				'paint': {
+					'fill-color': '#CD69C9',
+					'fill-opacity': 1
+				}
+			}, 'water');
+			
+			map.addLayer({
+				'id': c4bcover,
+				'type': 'fill',
+				'source': source,
+				'layout': {},
+				'filter': ['==', 'Cov1', 'C4b'],
+				'paint': {
+					'fill-color': '#99004D',
+					'fill-opacity': 1
+				}
+			}, 'water');
+			
+			map.addLayer({
+				'id': f4cover,
+				'type': 'fill',
+				'source': source,
+				'layout': {},
+				'filter': ['==', 'Cov1', 'F4'],
+				'paint': {
+					'fill-color': '#2DA0BA',
+					'fill-opacity': 1
+				}
+			}, 'water');
+			
+			map.addLayer({
+				'id': mfcover,
+				'type': 'fill',
+				'source': source,
+				'layout': {},
+				'filter': ['==', 'Cov1', 'MF'],
+				'paint': {
+					'fill-color': '#435645',
+					'fill-opacity': 1
+				}
+			}, 'water');
+			
+			map.addLayer({
+				'id': ercover,
+				'type': 'fill',
+				'source': source,
+				'layout': {},
+				'filter': ['==', 'Cov1', 'ER'],
+				'paint': {
+					'fill-color': '#9B9CFB',
 					'fill-opacity': 1
 				}
 			}, 'water');
