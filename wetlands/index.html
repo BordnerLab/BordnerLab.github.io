@@ -52,7 +52,7 @@
 	<div id='geocoder-container'></div>
 	
 	<div id='rangeslider'>
-		<input type="range" name="pitch" id="pitch" value="0" min="0" max="60" defaultValue="0" oninput="updateSlider(this.id)">
+		<input type="range" name="pitch" id="pitch" value="0" min="0" max="60" defaultValue="0" onchange="updateSlider(this.id)">
 	</div>
 	
 	
@@ -309,6 +309,7 @@
 					around: e.lngLat,
 					animate: true
 				});
+				document.getElementById("pitch").value = 35;
 			} else {
 			
 			}
