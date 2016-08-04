@@ -241,7 +241,7 @@
 	
 		map.on('mousemove', function(e) {
 			var features = map.queryRenderedFeatures(e.point, { layers: hoverLayers });
-			
+			console.log(features[0]);
 			if (features.length && features[0].layer.id == "county-fills") {
 				map.setFilter("county-hover", ["==", "COUNTY_NAM", features[0].properties.COUNTY_NAM]);
 			} else {
@@ -338,7 +338,7 @@
 				'filter': ['==', 'Cov1', 'A4'],
 				'paint': {
 					'fill-color': '#EE7600',
-					'fill-opacity': 1
+					'fill-opacity': 0.5
 				}
 			}, 'water');
 			hoverLayers.push(a4cover);
@@ -351,7 +351,7 @@
 				'filter': ['==', 'Cov1', 'A3'],
 				'paint': {
 					'fill-color': '#FB9B9C',
-					'fill-opacity': 1
+					'fill-opacity': 0.5
 				}
 			}, 'water');
 			hoverLayers.push(a3cover);
@@ -364,7 +364,7 @@
 				'filter': ['==', 'Cov1', 'B4'],
 				'paint': {
 					'fill-color': '#9B9CFB',
-					'fill-opacity': 1
+					'fill-opacity': 0.5
 				}
 			}, 'water');
 			hoverLayers.push(b4cover);
@@ -377,7 +377,7 @@
 				'filter': ['==', 'Cov1', 'C4'],
 				'paint': {
 					'fill-color': '#CD69C9',
-					'fill-opacity': 1
+					'fill-opacity': 0.5
 				}
 			}, 'water');
 			hoverLayers.push(c4cover);
@@ -390,7 +390,7 @@
 				'filter': ['==', 'Cov1', 'C4b'],
 				'paint': {
 					'fill-color': '#99004D',
-					'fill-opacity': 1
+					'fill-opacity': 0.5
 				}
 			}, 'water');
 			hoverLayers.push(c4bcover);
@@ -403,7 +403,7 @@
 				'filter': ['==', 'Cov1', 'F4'],
 				'paint': {
 					'fill-color': '#2DA0BA',
-					'fill-opacity': 1
+					'fill-opacity': 0.5
 				}
 			}, 'water');
 			hoverLayers.push(f4cover);
@@ -416,7 +416,7 @@
 				'filter': ['==', 'Cov1', 'MF'],
 				'paint': {
 					'fill-color': '#435645',
-					'fill-opacity': 1
+					'fill-opacity': 0.5
 				}
 			}, 'water');
 			hoverLayers.push(mfcover);
@@ -429,7 +429,7 @@
 				'filter': ['==', 'Cov1', 'ER'],
 				'paint': {
 					'fill-color': '#9B9CFB',
-					'fill-opacity': 1
+					'fill-opacity': 0.5
 				}
 			}, 'water');
 			hoverLayers.push(ercover);
