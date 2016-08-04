@@ -79,6 +79,7 @@
 	];
 	
 	var currentLayers = [];
+	var countyFillArr = [];
 	
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2bmtkcjUzaG5meCJ9.eswxCZSAnob59HR0wEaTpA';
 	
@@ -258,7 +259,8 @@
 					center: e.lngLat,
 					zoom: 8
 				});
-				map.setFilter("county-fills", ["!=", "COUNTY_NAM", feature.properties.COUNTY_NAM]);
+				countyFillArr.push(feature.properties.COUNTY_NAM);
+				map.setFilter("county-fills", ["!=", "COUNTY_NAM", countyFillArr]);
 				determineClick(feature);
 			}
 		});
