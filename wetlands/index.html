@@ -98,12 +98,6 @@
 	map.addControl(geocoder);
 	
 	map.on('load', function () {
-		map.addSource('ashlandWetlands', {
-			'type': 'geojson',
-			'data': 'data/wetlands/ashland_wetlands.geojson'
-		});
-		
-		
 		
 		map.addSource('coastalCounties', {
 			'type': 'geojson',
@@ -239,7 +233,7 @@
 					'fill-color': '#f08',
 					'fill-opacity': 0.4
 				}
-			});
+			}, 'water');
 			
 			currentLayers.push(source);
 		} else if (currentLayers.indexOf(source) >= 0) {
