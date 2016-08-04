@@ -289,7 +289,7 @@
 				map.setFilter("county-fills", ["!=", "COUNTY_NAM", feature.properties.COUNTY_NAM]);
 					
 				determineClick(feature);
-			} else {
+			} else if (features.length && feature.layer.id != "county-fills") {
 				map.flyTo({
 					center: e.lngLat,
 					zoom: 13,
@@ -297,6 +297,8 @@
 					around: e.lngLat,
 					animate: true
 				});
+			} else {
+			
 			}
 					
 		});
