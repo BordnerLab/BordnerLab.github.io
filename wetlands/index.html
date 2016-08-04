@@ -271,6 +271,8 @@
 		var clickedCountyName = feature.properties.COUNTY_NAM;
 		for (i = 0; i < countyNames.length; i++) {
 			if (clickedCountyName == countyNames[i]) {
+				console.log(countyNames[i]);
+				console.log(clickedCountyName);
 				displayWetlands(countyIDArr[i], feature);
 			} else {
 				return;
