@@ -285,21 +285,8 @@
 	
 	
 	function displayWetlands(source, feature) {
-		map.addLayer({
-			'id': source,
-			'type': 'fill',
-			'source': source,
-			'layout': {},
-			'paint': {
-				'fill-color': '#f08',
-				'fill-opacity': 1
-			}
-		}, 'water');
-		
-		var test = currentLayers.indexOf(source);
-		console.log(test);
-		/*
-		if (currentLayers.indexOf(source) = -1) {
+		var hold = currentLayers.indexOf(source);
+		if (hold == -1) {
 			map.addLayer({
 				'id': source,
 				'type': 'fill',
@@ -307,14 +294,14 @@
 				'layout': {},
 				'paint': {
 					'fill-color': '#f08',
-					'fill-opacity': 0.4
+					'fill-opacity': 1
 				}
 			}, 'water');
 			
 			currentLayers.push(source);
-		} else if (currentLayers.indexOf(source) >= 0) {
+		} else if (hold >= 0) {
 			alert('Wetlands layer is already added');
-		}*/
+		}
 	};
 	
 	</script>
