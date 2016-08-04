@@ -204,17 +204,7 @@
 					zoom: 8
 				});
 				map.setFilter("county-fills", ["!=", "COUNTY_NAM", feature.properties.COUNTY_NAM]);
-				/*determineClick(feature);*/
-				map.addLayer({
-					'id': 'ashlandWetlands',
-					'type': 'fill',
-					'source': 'ashlandWetlands',
-					'layout': {},
-					'paint': {
-						'fill-color': '#f08',
-						'fill-opacity': 1
-					}
-				}, 'water');
+				determineClick(feature);
 			}
 		});
 	});
@@ -240,6 +230,17 @@
 	
 	
 	function displayWetlands(source, feature) {
+		map.addLayer({
+			'id': 'ashlandWetlands',
+			'type': 'fill',
+			'source': 'ashlandWetlands',
+			'layout': {},
+			'paint': {
+				'fill-color': '#f08',
+				'fill-opacity': 1
+			}
+		}, 'water');
+		/*
 		if (currentLayers.indexOf(source) = -1) {
 			map.addLayer({
 				'id': source,
@@ -255,7 +256,7 @@
 			currentLayers.push(source);
 		} else if (currentLayers.indexOf(source) >= 0) {
 			alert('Wetlands layer is already added');
-		}
+		}*/
 	};
 	
 	</script>
