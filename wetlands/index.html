@@ -241,9 +241,12 @@
 	
 		map.on('mousemove', function(e) {
 			var features = map.queryRenderedFeatures(e.point, { layers: hoverLayers });
-			console.log(features[0]);
+			
 			if (features.length && features[0].layer.id == "county-fills") {
 				map.setFilter("county-hover", ["==", "COUNTY_NAM", features[0].properties.COUNTY_NAM]);
+			} else if (features.length && features[0].layer.id != "county-fills") {
+				var holdID = features[0].layer.id;
+				/* OBJECTID */
 			} else {
 				map.setFilter("county-hover", ["==", "COUNTY_NAM", ""]);
 			}
