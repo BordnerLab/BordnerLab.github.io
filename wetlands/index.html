@@ -179,7 +179,7 @@
 			'layout': {},
 			'paint': {
 				'fill-color': '#f08',
-				'fill-opacity': 0.2
+				'fill-opacity': 0
 			}
 		});
 		
@@ -260,8 +260,7 @@
 					zoom: 8
 				});
 				countyFillArr.push(feature.properties.COUNTY_NAM);
-				console.log(countyFillArr);
-				map.setFilter("county-fills", ["!=", "COUNTY_NAM", countyFillArr]);
+				map.setFilter("county-fills", ["!=", "COUNTY_NAM", feature.properties.COUNTY_NAM]);
 				determineClick(feature);
 			}
 		});
