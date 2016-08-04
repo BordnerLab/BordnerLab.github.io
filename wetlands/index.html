@@ -314,13 +314,6 @@
 			}
 					
 		});
-		
-		function updateSlider(x) {
-			var valueHold = document.getElementById(x).value;
-			console.log(valueHold);
-			map.setPitch(valueHold);
-			console.log(map.getPitch();
-		};
 	});
 	
 	geocoder.on('result', function(ev) {
@@ -462,6 +455,13 @@
 		} else if (hold >= 0) {
 			alert('Wetlands layer is already added');
 		}
+	};
+	
+	function updateSlider(x) {
+		var valueHold = document.getElementById(x).value;
+		console.log(valueHold);
+		map.setPitch(valueHold);
+		console.log(map.getPitch();
 	};
 	
 	
