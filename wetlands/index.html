@@ -52,7 +52,7 @@
 	<div id='geocoder-container'></div>
 	
 	<div id='rangeslider'>
-		<input type="range" name="pitch" id="pitch" value="0" min="0" max="90">
+		<input type="range" name="pitch" id="pitch" value="0" min="0" max="90" onchange="updateSlider(this.id)">
 	</div>
 	
 	
@@ -314,6 +314,11 @@
 			}
 					
 		});
+		
+		function updateSlider(x) {
+			var valueHold = document.getElementById(x).value;
+			map.setPitch(valueHold);
+		};
 	});
 	
 	geocoder.on('result', function(ev) {
