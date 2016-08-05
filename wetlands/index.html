@@ -135,6 +135,8 @@
 	
 	var currentLayers = [];
 	
+	var tempLayers = [];
+	
 	var hoverLayers = [
 		"ashlandWetlands",
 		"bayfieldWetlands",
@@ -411,6 +413,7 @@
 				}
 			}, 'water');
 			hoverLayers.push(a4cover);
+			tempLayers.push(a4cover);
 			
 			map.addLayer({
 				'id': a3cover,
@@ -424,6 +427,7 @@
 				}
 			}, 'water');
 			hoverLayers.push(a3cover);
+			tempLayers.push(a3cover);
 			
 			map.addLayer({
 				'id': b4cover,
@@ -437,6 +441,7 @@
 				}
 			}, 'water');
 			hoverLayers.push(b4cover);
+			tempLayers.push(b4cover);
 			
 			map.addLayer({
 				'id': c4cover,
@@ -450,6 +455,7 @@
 				}
 			}, 'water');
 			hoverLayers.push(c4cover);
+			tempLayers.push(c4cover);
 			
 			map.addLayer({
 				'id': c4bcover,
@@ -463,6 +469,7 @@
 				}
 			}, 'water');
 			hoverLayers.push(c4bcover);
+			tempLayers.push(c4bcover);
 			
 			map.addLayer({
 				'id': f4cover,
@@ -476,6 +483,7 @@
 				}
 			}, 'water');
 			hoverLayers.push(f4cover);
+			tempLayers.push(f4cover);
 			
 			map.addLayer({
 				'id': mfcover,
@@ -489,6 +497,7 @@
 				}
 			}, 'water');
 			hoverLayers.push(mfcover);
+			tempLayers.push(mfcover);
 			
 			map.addLayer({
 				'id': ercover,
@@ -502,6 +511,7 @@
 				}
 			}, 'water');
 			hoverLayers.push(ercover);
+			tempLayers.push(ercover);
 			
 			currentLayers.push(source);
 		} else if (hold >= 0) {
@@ -547,6 +557,14 @@
 	function selectByCounty() {
 		selectByCountyControl = true;
 		alert('select by county display enabled');
+		
+		var x;
+		for (x=0; x < tempLayers.length; x++) {
+			map.removeLayer(tempLayers[x]);
+		}
+		
+		map.setLayoutProperty("county-fills", "visibility", "visible");
+		map.setLayoutProperty("county-hover", "visibility", "visible");
 	};
 	
 	
