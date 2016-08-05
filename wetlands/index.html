@@ -650,10 +650,7 @@
 		var b;
 		try {
 			for (b=0; b < tempLayers.length; b++) {
-				try {
-					map.setFilter(tempLayers[b], ["==", "Cov1", wetlandsLegendHolder]);
-				} catch (err){
-				}
+				map.setFilter(tempLayers[b], ["==", "Cov1", wetlandsLegendHolder]);
 			}
 		} catch (err) {
 		}
