@@ -499,8 +499,17 @@
 		map.setPitch(valueHold);
 	};
 	
+	var toolbarControl = 0;
 	function toggleToolbar() {
-		document.getElementById("toolbar").style.transform = "translate(100%)";
+		if (toolbarControl == 0) {
+			document.getElementById("toolbar").style.transform = "translate(100%)";
+			toolbarControl = 1;
+			return toolbarControl;
+		} else if (toolbarControl > 0) {
+			document.getElementById("toolbar").style.transform = "";
+			toolbarControl = 0;
+			return toolbarControl;
+		}
 	};
 	
 	
