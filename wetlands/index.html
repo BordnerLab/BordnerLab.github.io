@@ -304,8 +304,10 @@
 			} else if (features.length && features[0].layer.id != "county-fills") {
 				var holdID = features[0].layer.id;
 				/* OBJECTID */
-			} else {
+			} else if (fulldisplayControl == false) {
 				map.setFilter("county-hover", ["==", "COUNTY_NAM", ""]);
+			} else {
+			
 			}
 			
 			map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
@@ -536,6 +538,7 @@
 		for (z=0; z < countyIDArr.length; z++) {
 			displayWetlands(countyIDArr[z]);
 		}
+		return fullDisplayControl;
 	};
 	
 	function selectByCounty() {
