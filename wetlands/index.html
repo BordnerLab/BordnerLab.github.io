@@ -671,7 +671,7 @@
 				var c;
 				for (c=0; c < countyIDArr.length; c++) {
 					var nameHolder = countyIDArr[c] + wetlandsLegendHolder;
-					if (tempLayers[b] == nameHolder) {
+					if (tempLayers[b] != nameHolder) {
 						map.setLayoutProperty(nameHolder, "visibility", "none");
 						tempMouseOverArr.push(nameHolder);
 					} else {
