@@ -65,7 +65,7 @@
 			-webkit-transition: transform 1s;
 			transition: transform 1s;
 			-moz-transition: transform 1s;
-			border-radius:15px;
+			border-radius:10px;
 			
 		}
 		
@@ -77,8 +77,8 @@
 			top: 75px;
 			cursor:pointer;
 			left:-20px;
-			border-top-left-radius:15px;
-			border-bottom-left-radius:15px;
+			border-top-left-radius:10px;
+			border-bottom-left-radius:10px;
 		}
 	</style>
 </head>
@@ -91,10 +91,10 @@
 	
 	<div id='toolbar'>
 		<div id='grabHandle' onclick="toggleToolbar()"></div>
-		<div id='button01' style="position:absolute; height:50px; width: 50px; background:green; top:0; border-top-left-radius:15px; border-top-right-radius:15px;"></div>
-		<div id='button02' style="position:absolute; height:50px; width:50px; background:grey; top:50px;"></div>
-		<div id='button03' style="position:absolute; height:50px; width:50px; background:red; top:100px;"></div>
-		<div id='button04' style="position:absolute; height:50px; width:50px; background:blue; top:150px; border-bottom-left-radius:15px; border-bottom-right-radius:15px;"></div>
+		<div id='button01' style="position:absolute; height:50px; width: 50px; background:green; top:0; border-top-left-radius:10px; border-top-right-radius:10px; cursor:pointer;" onclick="fullDisplay()"></div>
+		<div id='button02' style="position:absolute; height:50px; width:50px; background:grey; top:50px; cursor:pointer;" onclick="selectByCounty()"></div>
+		<div id='button03' style="position:absolute; height:50px; width:50px; background:red; top:100px; cursor:pointer;"></div>
+		<div id='button04' style="position:absolute; height:50px; width:50px; background:blue; top:150px; border-bottom-left-radius:10px; border-bottom-right-radius:10px; cursor:pointer;"></div>
 	</div>
 	
 	
@@ -150,7 +150,9 @@
 		"sheboyganWetlands",
 		"county-fills"
 	];
-		
+	
+	var fullDisplayControl = false;
+	var selectByCountyControl = true;
 	
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2bmtkcjUzaG5meCJ9.eswxCZSAnob59HR0wEaTpA';
 	
@@ -519,6 +521,16 @@
 		}
 	};
 	
+	
+	function fullDisplay() {
+		fullDisplayControl = true;
+		alert('full map display enabled');
+	};
+	
+	function selectByCounty() {
+		selectByCountyControl = true;
+		alert('select by county display enabled');
+	};
 	
 	
 	
