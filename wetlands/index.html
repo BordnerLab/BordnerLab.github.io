@@ -63,7 +63,8 @@
 			width: 20px;
 			height: 50px;
 			background:red;
-			margin-top: 100%;
+			margin-top: 75px;
+			cursor:pointer;
 		}
 	</style>
 </head>
@@ -75,7 +76,7 @@
 	<input type="range" name="pitch" id="pitch" value="0" min="0" max="60" defaultValue="0" onchange="updateSlider(this.id)" orient="vertical">
 	
 	<div id='toolbar'>
-		<div id='grabHandle'></div>
+		<div id='grabHandle' onclick="toggleToolbar(this.id)"></div>
 	</div>
 	
 	
@@ -485,6 +486,10 @@
 	function updateSlider(x) {
 		var valueHold = document.getElementById(x).value;
 		map.setPitch(valueHold);
+	};
+	
+	function toggleToolbar(x) {
+		document.getElementById(x).style.transform = "translate(100%)";
 	};
 	
 	
