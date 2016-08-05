@@ -329,7 +329,9 @@
 		});
 		
 		map.on ('mouseout', function() {
-			map.setFilter("county-hover", ["==", "COUNTY_NAM", ""]);
+			if (fullDisplayControl == false) {
+				map.setFilter("county-hover", ["==", "COUNTY_NAM", ""]);
+			}
 		});
 		
 		map.on ('click', function(e) {
