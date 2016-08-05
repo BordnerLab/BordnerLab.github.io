@@ -378,6 +378,20 @@
 		
 	
 	function determineClick(feature) {
+		var t;
+		try {
+			for (t=0; t < tempLayers.length; t++) {
+				try {
+					map.removeLayer(tempLayers[t]);
+				} catch (err) {
+					return;
+				}
+			}
+		} catch (err) {
+			return;
+		}
+		tempLayers.length = 0;
+		
 		var clickedCountyName = feature.properties.COUNTY_NAM;
 		var i;
 		for (i = 0; i < countyNames.length; i++) {
@@ -400,20 +414,6 @@
 		var f4cover = source + "F4";
 		var mfcover = source + "MF";
 		var ercover = source + "ER";
-		
-		var t;
-		try {
-			for (t=0; t < tempLayers.length; t++) {
-				try {
-					map.removeLayer(tempLayers[t]);
-				} catch (err) {
-					return;
-				}
-			}
-		} catch (err) {
-			return;
-		}
-		tempLayers.length = 0;
 		
 		if (hold == -1) {
 			map.addLayer({
