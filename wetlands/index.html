@@ -197,6 +197,8 @@
 		"ER"
 	]
 	
+	var tempMouseOverArr = [];
+	
 	var fullDisplayControl = false;
 	var selectByCountyControl = true;
 	
@@ -669,8 +671,9 @@
 				var c;
 				for (c=0; c < countyIDArr.length; c++) {
 					var nameHolder = countyIDArr[c] + wetlandsLegendHolder;
-					if (tempLayers[b] == nameHolder) {
-						console.log(nameHolder);
+					if (tempLayers[b] != nameHolder) {
+						map.setLayoutProperty(nameHolder, "visibility", "none");
+						tempMouseOverArr.push(nameHolder);
 					} else {
 					
 					}
@@ -683,9 +686,10 @@
 	function resetLikeLegend() {
 		var b;
 		try {
-			for (b=0; b < tempLayers.length; b++) {
-					/*map.setFilter(tempLayers[b], ["==", "Cov1", ""]);*/
+			for (b=0; b < tempMouseOverArr.length; b++) {
+				map.setLayoutProperty(tempMouseOverArr[b], "visibility", "visible");
 			}
+			tempMouseOverArr.length = 0;
 		} catch (err) {
 		
 		}
