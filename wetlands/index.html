@@ -119,14 +119,14 @@
 	</div>
 	
 	<div id='legend'>
-		<div id="A4" class="legendSquare" style="top:0; background: #EE7600;" onmouseover="displayLikeLegend(this.id)">A4</div>
-		<div id="A3" class="legendSquare" style="top:35px; background:#FB9B9C;" onmouseover="displayLikeLegend(this.id)">A3</div>
-		<div id="B4" class="legendSquare" style="top:70px; background:#9B9CFB;" onmouseover="displayLikeLegend(this.id)">B4</div>
-		<div id="C4" class="legendSquare" style="top:105px; background:#CD69C9;" onmouseover="displayLikeLegend(this.id)">C4</div>
-		<div id="C4b" class="legendSquare" style="top:140px; background:#99004D;" onmouseover="displayLikeLegend(this.id)">C4b</div>
-		<div id="F4" class="legendSquare" style="top:175px; background:#2DA0BA;" onmouseover="displayLikeLegend(this.id)">F4</div>
-		<div id="MF" class="legendSquare" style="top:210px; background:#435645;" onmouseover="displayLikeLegend(this.id)">MF</div>
-		<div id="ER" class="legendSquare" style="top:245px; background:#9B9CFB;" onmouseover="displayLikeLegend(this.id)">ER</div>
+		<div id="A4" class="legendSquare" style="top:0; background: #EE7600;" onmouseover="displayLikeLegend(this.id)" onmouseout="restLikeLegend()">A4</div>
+		<div id="A3" class="legendSquare" style="top:35px; background:#FB9B9C;" onmouseover="displayLikeLegend(this.id)" onmouseout="restLikeLegend()">A3</div>
+		<div id="B4" class="legendSquare" style="top:70px; background:#9B9CFB;" onmouseover="displayLikeLegend(this.id)" onmouseout="restLikeLegend()">B4</div>
+		<div id="C4" class="legendSquare" style="top:105px; background:#CD69C9;" onmouseover="displayLikeLegend(this.id)" onmouseout="restLikeLegend()">C4</div>
+		<div id="C4b" class="legendSquare" style="top:140px; background:#99004D;" onmouseover="displayLikeLegend(this.id)" onmouseout="restLikeLegend()">C4b</div>
+		<div id="F4" class="legendSquare" style="top:175px; background:#2DA0BA;" onmouseover="displayLikeLegend(this.id)" onmouseout="restLikeLegend()">F4</div>
+		<div id="MF" class="legendSquare" style="top:210px; background:#435645;" onmouseover="displayLikeLegend(this.id)" onmouseout="restLikeLegend()">MF</div>
+		<div id="ER" class="legendSquare" style="top:245px; background:#9B9CFB;" onmouseover="displayLikeLegend(this.id)" onmouseout="restLikeLegend()">ER</div>
 	</div>
 	
 	
@@ -648,8 +648,14 @@
 		var spaceHolder = wetlandsLegend.indexOf(id);
 		wetlandsLegendHolder = wetlandsLegend[spaceHolder];
 		var b;
-		for (b=0; b < tempLayers.length; b++) {
-			map.setFilter(tempLayers[b], ["==", "Cov1", wetlandsLegendHolder]);
+		try {
+			for (b=0; b < tempLayers.length; b++) {
+				try {
+					map.setFilter(tempLayers[b], ["==", "Cov1", wetlandsLegendHolder]);
+				} catch {
+				}
+			}
+		} catch (err) {
 		}
 	};
 	
@@ -657,7 +663,10 @@
 		var b;
 		try {
 			for (b=0; b < tempLayers.length; b++) {
-				map.setFilter(tempLayers[b], ["==", "Cov1", ""]);
+				try {
+					map.setFilter(tempLayers[b], ["==", "Cov1", ""]);
+				} catch {
+				}
 			}
 		} catch (err) {
 		
