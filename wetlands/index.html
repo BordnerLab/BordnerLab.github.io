@@ -559,12 +559,16 @@
 		alert('select by county display enabled');
 		
 		var x;
-		for (x=0; x < tempLayers.length; x++) {
-			try {
-				map.removeLayer(tempLayers[x]);
-			} catch (err) {
-				return;
+		try {
+			for (x=0; x < tempLayers.length; x++) {
+				try {
+					map.removeLayer(tempLayers[x]);
+				} catch (err) {
+					return;
+				}
 			}
+		} catch (err) {
+			return;
 		}
 		
 		map.setLayoutProperty("county-fills", "visibility", "visible");
