@@ -560,7 +560,11 @@
 		
 		var x;
 		for (x=0; x < tempLayers.length; x++) {
-			map.removeLayer(tempLayers[x]);
+			try {
+				map.removeLayer(tempLayers[x]);
+			} catch (err) {
+				return;
+			}
 		}
 		
 		map.setLayoutProperty("county-fills", "visibility", "visible");
