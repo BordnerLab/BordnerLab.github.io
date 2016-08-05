@@ -525,6 +525,15 @@
 	function fullDisplay() {
 		fullDisplayControl = true;
 		alert('full map display enabled');
+		
+		map.removeLayer("county-fills");
+		map.removeLayer("county-borders");
+		map.removeLayer("county-hover");
+		
+		var z;
+		for (z=0; z < countyIDArr.length; z++) {
+			displayWetlands(countyIDArr[z]);
+		}
 	};
 	
 	function selectByCounty() {
