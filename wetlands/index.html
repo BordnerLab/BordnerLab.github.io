@@ -465,7 +465,9 @@
 				'id': a4cover,
 				'type': 'fill',
 				'source': source,
-				'layout': {},
+				'layout': {
+					'visibility': 'visible'
+				},
 				'filter': ['==', 'Cov1', 'A4'],
 				'paint': {
 					'fill-color': '#EE7600',
@@ -479,7 +481,9 @@
 				'id': a3cover,
 				'type': 'fill',
 				'source': source,
-				'layout': {},
+				'layout': {
+					'visibility': 'visible'
+				},
 				'filter': ['==', 'Cov1', 'A3'],
 				'paint': {
 					'fill-color': '#FB9B9C',
@@ -493,7 +497,9 @@
 				'id': b4cover,
 				'type': 'fill',
 				'source': source,
-				'layout': {},
+				'layout': {
+					'visibility': 'visible'
+				},
 				'filter': ['==', 'Cov1', 'B4'],
 				'paint': {
 					'fill-color': '#9B9CFB',
@@ -507,7 +513,9 @@
 				'id': c4cover,
 				'type': 'fill',
 				'source': source,
-				'layout': {},
+				'layout': {
+					'visibility': 'visible'
+				},
 				'filter': ['==', 'Cov1', 'C4'],
 				'paint': {
 					'fill-color': '#CD69C9',
@@ -521,7 +529,9 @@
 				'id': c4bcover,
 				'type': 'fill',
 				'source': source,
-				'layout': {},
+				'layout': {
+					'visibility': 'visible'
+				},
 				'filter': ['==', 'Cov1', 'C4b'],
 				'paint': {
 					'fill-color': '#99004D',
@@ -535,7 +545,9 @@
 				'id': f4cover,
 				'type': 'fill',
 				'source': source,
-				'layout': {},
+				'layout': {
+					'visibility': 'visible'
+				},
 				'filter': ['==', 'Cov1', 'F4'],
 				'paint': {
 					'fill-color': '#2DA0BA',
@@ -549,7 +561,9 @@
 				'id': mfcover,
 				'type': 'fill',
 				'source': source,
-				'layout': {},
+				'layout': {
+					'visibility': 'visible'
+				},
 				'filter': ['==', 'Cov1', 'MF'],
 				'paint': {
 					'fill-color': '#435645',
@@ -563,7 +577,9 @@
 				'id': ercover,
 				'type': 'fill',
 				'source': source,
-				'layout': {},
+				'layout': {
+					'visibility': 'visible'
+				},
 				'filter': ['==', 'Cov1', 'ER'],
 				'paint': {
 					'fill-color': '#9B9CFB',
@@ -650,7 +666,15 @@
 		var b;
 		try {
 			for (b=0; b < tempLayers.length; b++) {
-				map.setFilter(tempLayers[b], ["==", "Cov1", wetlandsLegendHolder]);
+				var c;
+				for (c=0; c < countyIDArr.length; c++) {
+					var nameHolder = countyIDArr[c] + wetlandsLegendHolder;
+					if (tempLayers[b] == nameHolder) {
+						console.log(nameHolder);
+					} else {
+					
+					}
+				}
 			}
 		} catch (err) {
 		}
@@ -660,10 +684,7 @@
 		var b;
 		try {
 			for (b=0; b < tempLayers.length; b++) {
-				try {
-					map.setFilter(tempLayers[b], ["==", "Cov1", ""]);
-				} catch (err) {
-				}
+					/*map.setFilter(tempLayers[b], ["==", "Cov1", ""]);*/
 			}
 		} catch (err) {
 		
