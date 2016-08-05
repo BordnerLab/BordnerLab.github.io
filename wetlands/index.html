@@ -532,9 +532,9 @@
 		fullDisplayControl = true;
 		alert('full map display enabled');
 		
-		map.getLayoutProperty("county-fills", "visibility", "none");
-		map.getLayoutProperty("county-borders", "visibility", "none");
-		map.getLayoutProperty("county-hover", "visibility", "none");
+		map.setLayoutProperty("county-fills", "visibility", "none");
+		map.setLayoutProperty("county-borders", "visibility", "none");
+		map.setLayoutProperty("county-hover", "visibility", "none");
 		
 		
 		var z;
