@@ -670,21 +670,25 @@
 			for (b=0; b < tempLayers.length; b++) {
 				var c;
 				for (c=0; c < countyIDArr.length; c++) {
-					var nameHolder = countyIDArr[c] + wetlandsLegendHolder;
-					if (tempLayers[b] == nameHolder) {
-						/*map.setLayoutProperty(nameHolder, "visibility", "none");*/
-						/*tempMouseOverArr.push(nameHolder);*/
-						map.setLayoutProperty(nameHolder, "visibility", "visible");
-					} else if (tempLayers[b] != nameHolder) {
-						console.log(nameHolder);
-						map.setLayoutProperty(tempLayers[b], "visibility", "none");
-						map.setLayoutProperty(nameHolder, "visibility", "visible");
-						tempMouseOverArr.push(tempLayers[b]);
+					try {
+						var nameHolder = countyIDArr[c] + wetlandsLegendHolder;
+						if (tempLayers[b] == nameHolder) {
+							/*map.setLayoutProperty(nameHolder, "visibility", "none");*/
+							/*tempMouseOverArr.push(nameHolder);*/
+							map.setLayoutProperty(nameHolder, "visibility", "visible");
+						} else if (tempLayers[b] != nameHolder) {
+							console.log(nameHolder);
+							map.setLayoutProperty(tempLayers[b], "visibility", "none");
+							map.setLayoutProperty(nameHolder, "visibility", "visible");
+							tempMouseOverArr.push(tempLayers[b]);
+						}
+					} catch (err) {
+						c += 1;
 					}
 				}
 			}
 		} catch (err) {
-			console.log("not so fast");
+			console.log("bleh");
 		}
 	};
 	
