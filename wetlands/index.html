@@ -47,8 +47,8 @@
 			writing-mode: bt-lr;
 			-webkit-appearance: slider-vertical;
 			align:center;
-			padding-left: 10px;
-			padding-right:10px;
+			padding-left: 7px;
+			padding-right:7px;
 			height: 125px;
 			width: auto;
 			background: transparent;
@@ -107,6 +107,7 @@
 			padding-top:5px;
 			padding-bottom:5px;
 			color:white;
+			border: 1px solid #ddd;
 		}
 		
 		#sliderBox {
@@ -117,7 +118,7 @@
 			right: 10px;
 			background: rgba(0,0,0,0.1);
 			border-radius: 5px;
-			border: 1px solid white;
+			border: 1px solid #ddd;
 		}
 		
 		#countyToggles {
@@ -138,7 +139,7 @@
 			text-align: center;
 			padding-top:2px;
 			font-size: 15px;
-			border:1px solid grey;
+			border:1px solid #ddd;
 			background: white;
 		}
 			
@@ -154,21 +155,21 @@
 	
 	<div id='toolbar'>
 		<div id='grabHandle' onclick="toggleToolbar()"><i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
-		<div id='button01' style="position:absolute; height:50px; width: 50px; background:white; top:0; border-top-left-radius:5px; border-top-right-radius:5px; cursor:pointer; border:1px solid grey;" onclick="fullDisplay()">Full</div>
-		<div id='button02' style="position:absolute; height:50px; width:50px; background:white; top:50px; cursor:pointer; border: 1px solid grey;" onclick="selectByCounty()">County</div>
-		<div id='button03' style="position:absolute; height:50px; width:50px; background:white; top:100px; cursor:pointer; border: 1px solid grey;" onclick="displaySettingsMenu()"><i class="fa fa-cog" aria-hidden="true"></i></div>
-		<div id='button04' style="position:absolute; height:50px; width:50px; background:white; top:150px; border-bottom-left-radius:5px; border-bottom-right-radius:5px; cursor:pointer; border:1px solid grey;" onclick="displayWater()">Water</div>
+		<div id='button01' style="position:absolute; height:50px; width: 50px; background:white; top:0; border-top-left-radius:5px; border-top-right-radius:5px; cursor:pointer; border:1px solid #ddd;" onclick="fullDisplay()">Full</div>
+		<div id='button02' style="position:absolute; height:50px; width:50px; background:white; top:50px; cursor:pointer; border: 1px solid #ddd;" onclick="selectByCounty()">County</div>
+		<div id='button03' style="position:absolute; height:50px; width:50px; background:white; top:100px; cursor:pointer; border: 1px solid #ddd;" onclick="displaySettingsMenu()"><i class="fa fa-cog" aria-hidden="true"></i></div>
+		<div id='button04' style="position:absolute; height:50px; width:50px; background:white; top:150px; border-bottom-left-radius:5px; border-bottom-right-radius:5px; cursor:pointer; border:1px solid #ddd;" onclick="displayWater()">Water</div>
 	</div>
 	
 	<div id='legend'>
-		<div id="A4" class="legendSquare" style="top:0; background: #EE7600;border: 1px solid white;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend()">A4</div>
-		<div id="A3" class="legendSquare" style="top:30px; background:#FB9B9C; border: 1px solid white;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend()">A3</div>
-		<div id="B4" class="legendSquare" style="top:60px; background:#9B9CFB; border: 1px solid white;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend()">B4</div>
-		<div id="C4" class="legendSquare" style="top:90px; background:#CD69C9; border: 1px solid white;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend()">C4</div>
-		<div id="C4b" class="legendSquare" style="top:120px; background:#99004D; border: 1px solid white;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend()">C4b</div>
-		<div id="F4" class="legendSquare" style="top:150px; background:#2DA0BA; border: 1px solid white;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend()">F4</div>
-		<div id="MF" class="legendSquare" style="top:180px; background:#435645; border: 1px solid white;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend()">MF</div>
-		<div id="ER" class="legendSquare" style="top:210px; background:#9B9CFB; border: 1px solid white;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend()">ER</div>
+		<div id="A4" class="legendSquare" style="top:0; background: #EE7600;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend()">A4</div>
+		<div id="A3" class="legendSquare" style="top:30px; background:#FB9B9C;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend()">A3</div>
+		<div id="B4" class="legendSquare" style="top:60px; background:#9B9CFB;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend()">B4</div>
+		<div id="C4" class="legendSquare" style="top:90px; background:#CD69C9;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend()">C4</div>
+		<div id="C4b" class="legendSquare" style="top:120px; background:#99004D;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend()">C4b</div>
+		<div id="F4" class="legendSquare" style="top:150px; background:#2DA0BA;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend()">F4</div>
+		<div id="MF" class="legendSquare" style="top:180px; background:#435645;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend()">MF</div>
+		<div id="ER" class="legendSquare" style="top:210px; background:#9B9CFB;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend()">ER</div>
 	</div>
 	
 	<div id="countyToggles">
