@@ -43,11 +43,10 @@
 		#pitch {
 			writing-mode: bt-lr;
 			-webkit-appearance: slider-vertical;
-			position: absolute;
+			
 			height: 125px;
 			width: auto;
-			top:100px;
-			right:16px;
+			
 			background: transparent;
 		}
 		
@@ -101,14 +100,26 @@
 			padding-bottom:5px;
 			color:white;
 		}
+		
+		#sliderBox {
+			height: 150px;
+			position: absolute;
+			top:100px;
+			width:auto;
+			right: 10px;
+			background: rgba(0,0,0,0.2);
+		}
+			
+			
 	</style>
 </head>
 <body>
 	<div id='map'></div>
 	<div id='geocoder-container'></div>
 	
-	
-	<input type="range" name="pitch" id="pitch" value="0" min="0" max="60" defaultValue="0" onchange="updateSlider(this.id)" orient="vertical">
+	<div id="sliderBox">
+		<input type="range" name="pitch" id="pitch" value="0" min="0" max="60" defaultValue="0" onchange="updateSlider(this.id)" orient="vertical">
+	</div>
 	
 	<div id='toolbar'>
 		<div id='grabHandle' onclick="toggleToolbar()"></div>
