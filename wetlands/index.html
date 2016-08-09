@@ -9,7 +9,7 @@
 	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.css' rel='stylesheet' />
 	
 	<!-- link font awesome -->
-	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="lib/font-awesome-4.6.3/css/font-awesome.min.css">
 	
 	<style>
 		body {
@@ -72,8 +72,6 @@
 			border-radius:10px;
 			color:white;
 			text-align:center;
-			padding-top:5px;
-			padding-bottom:5px;
 			
 		}
 		
@@ -134,7 +132,7 @@
 	</div>
 	
 	<div id='toolbar'>
-		<div id='grabHandle' onclick="toggleToolbar()"><i class="fa fa-angle-double-right"></i></div>
+		<div id='grabHandle' onclick="toggleToolbar()"><i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
 		<div id='button01' style="position:absolute; height:50px; width: 50px; background:green; top:0; border-top-left-radius:10px; border-top-right-radius:10px; cursor:pointer;" onclick="fullDisplay()">Full</div>
 		<div id='button02' style="position:absolute; height:50px; width:50px; background:grey; top:50px; cursor:pointer;" onclick="selectByCounty()">County</div>
 		<div id='button03' style="position:absolute; height:50px; width:50px; background:red; top:100px; cursor:pointer;" onclick="displaySettingsMenu()"><i class="fa fa-cog" aria-hidden="true"></i></div>
