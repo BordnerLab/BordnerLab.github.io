@@ -674,7 +674,7 @@
 					if (tempLayers[b] == nameHolder) {
 						/*map.setLayoutProperty(nameHolder, "visibility", "none");*/
 						/*tempMouseOverArr.push(nameHolder);*/
-						return;
+						map.setLayoutProperty(nameHolder, "visibility", "visible");
 					} else if (tempLayers[b] != nameHolder) {
 						console.log(nameHolder);
 						map.setLayoutProperty(tempLayers[b], "visibility", "none");
