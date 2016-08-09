@@ -600,10 +600,11 @@
 					
 				determineClick(feature);
 			} else if (features.length && feature.layer.id != "county-fills") {
+				var randomPitch = Math.floor((Math.random() * 40) + 25);
 				map.flyTo({
 					center: e.lngLat,
 					zoom: 13,
-					pitch: 35,
+					pitch: randomPitch,
 					around: e.lngLat,
 					animate: true
 				});
