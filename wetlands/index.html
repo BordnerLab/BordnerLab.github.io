@@ -63,9 +63,9 @@
 			top: 265px;
 			right: 0;
 			transform: translate(0);
-			-webkit-transform: translate(0);
-			-moz-transform: translate(0);
-			-ms-transform: translate(0);
+			-webkit-transform: translate(100%);
+			-moz-transform: translate(100%);
+			-ms-transform: translate(100%);
 			-webkit-transition: transform .35s;
 			transition: transform .35s;
 			-moz-transition: transform .35s;
@@ -79,7 +79,7 @@
 			position: relative;
 			width: 20px;
 			height: 50px;
-			background:rgba(0,0,0,0.2);
+			background:rgba(0,0,0,1);
 			top: 75px;
 			cursor:pointer;
 			left:-20px;
@@ -729,7 +729,7 @@
 	var toolbarControl = 0;
 	function toggleToolbar() {
 		if (toolbarControl == 0) {
-			document.getElementById("toolbar").style.transform = "translate(100%)";
+			document.getElementById("toolbar").style.transform = "translate(0)";
 			toolbarControl = 1;
 			return toolbarControl;
 		} else if (toolbarControl > 0) {
