@@ -119,7 +119,22 @@
 			border-radius: 10px;
 			border: 1px solid white;
 		}
-			
+		
+		#countyToggles {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 100px;
+			height:40px;
+			background:rgba(0,0,0,0.2);
+		}
+		
+		#countyToggles .countyToggleBoxes {
+			position:absolute;
+			width:25px;
+			height:100%;
+			cursor:pointer;
+		}
 			
 	</style>
 </head>
@@ -148,6 +163,13 @@
 		<div id="F4" class="legendSquare" style="top:150px; background:#2DA0BA; border: 1px solid white;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend()">F4</div>
 		<div id="MF" class="legendSquare" style="top:180px; background:#435645; border: 1px solid white;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend()">MF</div>
 		<div id="ER" class="legendSquare" style="top:210px; background:#9B9CFB; border: 1px solid white;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend()">ER</div>
+	</div>
+	
+	<div id="countyToggles">
+		<div class="countyToggleBoxes" style="background:green; left:0px;"></div>
+		<div class="countyToggleBoxes" style="background:grey; left:25px;"></div>
+		<div class="countyToggleBoxes" style="background:blue; left:50px;"></div>
+		<div class="countyToggleBoxes" style="background:black; left:75px;></div>
 	</div>
 	
 	
