@@ -671,11 +671,13 @@
 				var c;
 				for (c=0; c < countyIDArr.length; c++) {
 					var nameHolder = countyIDArr[c] + wetlandsLegendHolder;
-					if (tempLayers[b] != nameHolder) {
-						map.setLayoutProperty(nameHolder, "visibility", "none");
-						tempMouseOverArr.push(nameHolder);
+					if (tempLayers[b] == nameHolder) {
+						/*map.setLayoutProperty(nameHolder, "visibility", "none");*/
+						/*tempMouseOverArr.push(nameHolder);*/
+						return;
 					} else {
-					
+						map.setLayoutProperty(tempLayers[b], "visibility", "none");
+						tempMouseOverArr.push(tempLayers[b]);
 					}
 				}
 			}
