@@ -187,6 +187,10 @@
 			opacity: 1;
 			background: rgba(0,0,0,0.2);
 			z-index:100;
+			transform: translate(0);
+			-webkit-transition: transform .35s;
+			transition: transform .35s;
+			-moz-transition: transform .35s;
 		}
 		
 		#homePage {
@@ -198,6 +202,10 @@
 			width: 50%;
 			height: 50%;
 			z-index: 101;
+			transform: translate(0);
+			-webkit-transition: transform .35s;
+			transition: transform .35s;
+			-moz-transition: transform .35s;
 		}
 		
 			
@@ -240,7 +248,7 @@
 	<div id="homePageBackground"></div>
 	
 	<div id="homePage"></div>
-	
+		<h1 onclick="homePageFunction()">Proceed to the map</h1>
 	</div>
 	
 	
@@ -931,9 +939,11 @@
 	
 	};
 	
+	function homePageFunction() {
+		document.getElementById("homePageBackground").style.transform = "translate(100%)";
+		document.getElementById("homePage").style.transform = "translate(100%)";
+	};
+	
 	</script>
-	<!-- #004878
-		#074566
-	-->
 </body>
 </html>
