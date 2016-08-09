@@ -70,7 +70,7 @@
 			transition: transform .35s;
 			-moz-transition: transform .35s;
 			border-radius:10px;
-			color:white;
+			color:black;
 			text-align:center;
 			
 		}
@@ -86,6 +86,7 @@
 			border-top-left-radius:10px;
 			border-bottom-left-radius:10px;
 			color:white;
+			border: 1px solid white;
 		}
 		
 		#legend {
@@ -134,10 +135,12 @@
 			width:60px;
 			height:100%;
 			cursor:pointer;
-			color:white;
+			color: rgba(0,0,0,0.8);
 			text-align: center;
 			padding-top:2px;
 			font-size: 15px;
+			border:1px solid grey;
+			background: white;
 		}
 			
 	</style>
@@ -152,10 +155,10 @@
 	
 	<div id='toolbar'>
 		<div id='grabHandle' onclick="toggleToolbar()"><i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
-		<div id='button01' style="position:absolute; height:50px; width: 50px; background:green; top:0; border-top-left-radius:10px; border-top-right-radius:10px; cursor:pointer;" onclick="fullDisplay()">Full</div>
-		<div id='button02' style="position:absolute; height:50px; width:50px; background:grey; top:50px; cursor:pointer;" onclick="selectByCounty()">County</div>
-		<div id='button03' style="position:absolute; height:50px; width:50px; background:red; top:100px; cursor:pointer;" onclick="displaySettingsMenu()"><i class="fa fa-cog" aria-hidden="true"></i></div>
-		<div id='button04' style="position:absolute; height:50px; width:50px; background:blue; top:150px; border-bottom-left-radius:10px; border-bottom-right-radius:10px; cursor:pointer;" onclick="displayWater()">Water</div>
+		<div id='button01' style="position:absolute; height:50px; width: 50px; background:white; top:0; border-top-left-radius:10px; border-top-right-radius:10px; cursor:pointer; border:1px solid grey;" onclick="fullDisplay()">Full</div>
+		<div id='button02' style="position:absolute; height:50px; width:50px; background:white; top:50px; cursor:pointer; border: 1px solid grey;" onclick="selectByCounty()">County</div>
+		<div id='button03' style="position:absolute; height:50px; width:50px; background:white; top:100px; cursor:pointer; border: 1px solid grey;" onclick="displaySettingsMenu()"><i class="fa fa-cog" aria-hidden="true"></i></div>
+		<div id='button04' style="position:absolute; height:50px; width:50px; background:white; top:150px; border-bottom-left-radius:10px; border-bottom-right-radius:10px; cursor:pointer; border:1px solid grey;" onclick="displayWater()">Water</div>
 	</div>
 	
 	<div id='legend'>
@@ -170,10 +173,10 @@
 	</div>
 	
 	<div id="countyToggles">
-		<div class="countyToggleBoxes" style="background:green; left:0px;">Wetlands</div>
-		<div class="countyToggleBoxes" style="background:grey; left:60px;">Water</div>
-		<div class="countyToggleBoxes" style="background:blue; left:120px;">Points</div>
-		<div class="countyToggleBoxes" style="background:black; left:180px;">Lines</div>
+		<div class="countyToggleBoxes" style="left:0px;">Wetlands</div>
+		<div class="countyToggleBoxes" style="left:60px;">Water</div>
+		<div class="countyToggleBoxes" style="left:120px;">Points</div>
+		<div class="countyToggleBoxes" style="left:180px;">Lines</div>
 	</div>
 	
 	
