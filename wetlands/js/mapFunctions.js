@@ -290,8 +290,9 @@ function displayWater(id) {
 	
 		var i;
 		for (i = 0; i < countyNames.length; i++) {
-			console.log(clickedCountyName);
 			if (clickedCountyName == countyNames[i]) {
+				console.log(clickedCountyName);
+				console.log(countyNames[i]);
 				displayWaterFeatures(waterIDArr[i]);
 			} else {
 				
