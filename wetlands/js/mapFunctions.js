@@ -347,7 +347,7 @@ function clearLayers() {
 };
 
 function takeScreenshot() {
-	map.options.preserveDrawingBuffer = true;
+	/*map.options.preserveDrawingBuffer = true;*/
 	var data = map.getCanvas().toDataURL("image/png");
 	/*var canvas = map.getCanvas();
 	var dataURL = canvas.toDataURL("image/png");
