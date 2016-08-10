@@ -353,5 +353,6 @@ function takeScreenshot() {
 	var dataURL = canvas.toDataURL("image/png");
 	*/
 	console.log(data);
-	window.location.href = data;
+	//window.location.href = data;
+	window.open(data, '_blank');
 };
