@@ -319,8 +319,8 @@ function displayWater(id) {
 
 
 function clearLayers() {
-console.log("clearLayers");
-var x;
+	console.log("clearLayers");
+	var x;
 	try {
 		for (x=0; x < tempLayers.length; x++) {
 			try {
