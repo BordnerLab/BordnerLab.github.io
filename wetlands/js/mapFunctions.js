@@ -29,9 +29,10 @@ function determineClick(feature) {
 	for (i = 0; i < countyNames.length; i++) {
 		if (clickedCountyName == countyNames[i]) {
 			switch (true) {
-				case (wetlandsDisplayControl):
+				case (wetlandsDisplayControl == true):
+					console.log(wetlandsDisplayControl);
 					displayWetlands(countyIDArr[i], feature);
-				case (waterDisplayControl):
+				case (waterDisplayControl == true):
 					console.log(waterDisplayControl);
 					displayWaterFeatures(waterIDArr[i]);
 			}
