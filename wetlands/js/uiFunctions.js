@@ -34,7 +34,7 @@ function fullDisplay(id) {
 		}
 		var n;
 		for (n=0; n < waterIDArr.length; n++) { 
-			displayWaterFeatures(waterIDArr[i]);
+			displayWaterFeatures(waterIDArr[n]);
 		}
 	} else if (fullDisplayControl == true) {
 		alert("already selected");

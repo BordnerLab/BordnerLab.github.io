@@ -274,7 +274,7 @@ function displayWater(id) {
 		if (fullDisplayControl == true) {
 			var n;
 			for (n=0; n < waterIDArr.length; n++) { 
-				displayWaterFeatures(waterIDArr[i]);
+				displayWaterFeatures(waterIDArr[n]);
 			}
 		} else if (fullDisplayControl == false) {
 			var i;
