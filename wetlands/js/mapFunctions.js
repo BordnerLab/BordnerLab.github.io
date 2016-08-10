@@ -345,3 +345,9 @@ function clearLayers() {
 	currentWaterLayers.length = 0;
 	clickedCountyName = "blank";
 };
+
+function takeScreenshot() {
+	var canvas = map.getCanvas();
+	var dataURL = canvas.toDataURL("image/png");
+	
+};
