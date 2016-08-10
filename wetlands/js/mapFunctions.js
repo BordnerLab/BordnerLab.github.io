@@ -28,13 +28,12 @@ function determineClick(feature) {
 	var i;
 	for (i = 0; i < countyNames.length; i++) {
 		if (clickedCountyName == countyNames[i]) {
-			switch (true) {
-				case (wetlandsDisplayControl == true):
-					console.log(wetlandsDisplayControl);
-					displayWetlands(countyIDArr[i], feature);
-				case (waterDisplayControl == true):
-					console.log(waterDisplayControl);
-					displayWaterFeatures(waterIDArr[i]);
+			if (wetlandsDisplayControl == true) {
+				console.log(wetlandsDisplayControl);
+				displayWetlands(countyIDArr[i], feature);
+			} else if (waterDisplayControl == true) {
+				console.log(waterDisplayControl);
+				displayWaterFeatures(waterIDArr[i]);
 			}
 		}
 	}			
