@@ -23,7 +23,7 @@ function determineClick(feature) {
 	currentLayers.length = 0;
 	tempWaterLayers.length = 0;
 		
-	var clickedCountyName = feature.properties.COUNTY_NAM;
+	clickedCountyName = feature.properties.COUNTY_NAM;
 	
 	var i;
 	for (i = 0; i < countyNames.length; i++) {
@@ -191,20 +191,25 @@ function displayWetlands(source, feature) {
 
 function displayWaterFeatures(source) {
 	if (waterDisplayControl == true) {
-		map.addLayer({
-			'id': source,
-			'type': 'fill',
-			'source': source,
-			'layout': {
-				'visibility': 'visible'
-			},
-			'paint': {
-				'fill-color': '#004878',
-				'fill-opacity': 0.5
-			}
-		});
-		tempWaterLayers.push(source);
-		
+		var hold = currentLayers.indexOf(source);
+		if (hold == -1) {
+			map.addLayer({
+				'id': source,
+				'type': 'fill',
+				'source': source,
+				'layout': {
+					'visibility': 'visible'
+				},
+				'paint': {
+					'fill-color': '#004878',
+					'fill-opacity': 0.5
+				}
+			});
+			tempWaterLayers.push(source);
+			currentWaterLayers.push(source);
+		} else if (hold >= 0) {
+			return;
+		}
 	} else {
 		return;
 	}
@@ -282,6 +287,15 @@ function displayWater(id) {
 		tempWaterLayers.push(waterIDArr[n]);
 		}
 	*/
+	
+		var i;
+		for (i = 0; i < countyNames.length; i++) {
+			if (clickedCountyName == countyNames[i]) {
+				displayWaterFeatures(waterIDArr[i]);
+			} else {
+				return;
+			}
+		}
 		displayWaterControl = 1;
 		document.getElementById(id).style.background = "#004878";
 		document.getElementById(id).style.color = "#fff";
@@ -289,13 +303,19 @@ function displayWater(id) {
 		waterDisplayControl = true;
 		return waterDisplayControl;
 	} else if (displayWaterControl > 0) {
-	/*
-		var m;
-		for (m=0; m < tempWaterLayers.length; m++) {
-			map.removeLayer(tempWaterLayers[m]);
+		try {
+			var m;
+			for (m=0; m < tempWaterLayers.length; m++) {
+				try {
+					map.removeLayer(tempWaterLayers[m]);
+				} catch (err) {
+			
+				}
+			}
+			tempWaterLayers.length = 0;
+		} catch (err) {
+	
 		}
-		tempWaterLayers.length = 0;
-	*/
 		displayWaterControl = 0;
 		document.getElementById(id).style.background = "";
 		document.getElementById(id).style.color = "";
