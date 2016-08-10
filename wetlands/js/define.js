@@ -46,6 +46,7 @@ var countyNames = [
 ];
 	
 var currentLayers = [];
+var currentWaterLayers = [];
 	
 var tempLayers = [];
 	
@@ -84,6 +85,7 @@ var selectByCountyControl = true;
 
 var waterDisplayControl = false;
 var wetlandsDisplayControl = true;
+
 
 
 

@@ -204,6 +204,7 @@ function displayWaterFeatures(source) {
 			}
 		});
 		tempWaterLayers.push(source);
+		
 	} else {
 		return;
 	}
