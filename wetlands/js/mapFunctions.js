@@ -316,3 +316,38 @@ function displayWater(id) {
 	}
 	
 };
+
+
+function clearLayers() {
+var x;
+	try {
+		for (x=0; x < tempLayers.length; x++) {
+			try {
+				map.removeLayer(tempLayers[x]);
+			} catch (err) {
+					
+			}
+		}
+	} catch (err) {
+			
+	}
+		
+	try {
+		var m;
+		for (m=0; m < tempWaterLayers.length; m++) {
+			try {
+				map.removeLayer(tempWaterLayers[m]);
+			} catch (err) {
+			
+			}
+		}
+	} catch (err) {
+	
+	}
+
+	currentLayers.length = 0;
+	tempLayers.length = 0;
+	tempWaterLayers.length = 0;
+	currentWaterLayers.length = 0;
+	clickedCountyName = "blank";
+};
