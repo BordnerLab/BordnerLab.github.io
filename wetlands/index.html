@@ -253,91 +253,9 @@
 	
 	<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.js'></script>
 	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.css' type='text/css' />
+	<script src='js/define.js'></script>
+	
 	<script>
-	
-	var countyIDArr = [
-		"ashlandWetlands",
-		"bayfieldWetlands",
-		"brownWetlands",
-		"doorWetlands",
-		"douglasWetlands",
-		"ironWetlands",
-		"kenoshaWetlands",
-		"kewauneeWetlands",
-		"marinetteWetlands",
-		"ozaukeeWetlands",
-		"racineWetlands",
-		"sheboyganWetlands"
-	];
-	
-	var waterIDArr = [
-		"ashlandWater",
-		"bayfieldWater",
-		"brownWater",
-		"doorWater",
-		"douglasWater",
-		"ironWater",
-		"kenoshaWater",
-		"kewauneeWater",
-		"marinetteWater",
-		"ozaukeeWater",
-		"racineWater",
-		"sheboyganWater"
-	];
-	
-	var tempWaterLayers = [];
-	
-	var countyNames = [
-		"Ashland",
-		"Bayfield",
-		"Brown",
-		"Door",
-		"Douglas",
-		"Iron",
-		"Kenosha",
-		"Kewaunee",
-		"Marinette",
-		"Ozaukee",
-		"Racine",
-		"Sheboygan"
-	];
-	
-	var currentLayers = [];
-	
-	var tempLayers = [];
-	
-	var hoverLayers = [
-		"ashlandWetlands",
-		"bayfieldWetlands",
-		"brownWetlands",
-		"doorWetlands",
-		"douglasWetlands",
-		"ironWetlands",
-		"kenoshaWetlands",
-		"kewauneeWetlands",
-		"marinetteWetlands",
-		"ozaukeeWetlands",
-		"racineWetlands",
-		"sheboyganWetlands",
-		"county-fills"
-	];
-	
-	var wetlandsLegendHolder;
-	var wetlandsLegend = [
-		"A4",
-		"A3",
-		"B4",
-		"C4",
-		"C4b",
-		"F4",
-		"MF",
-		"ER"
-	]
-	
-	var tempMouseOverArr = [];
-	
-	var fullDisplayControl = false;
-	var selectByCountyControl = true;
 	
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2bmtkcjUzaG5meCJ9.eswxCZSAnob59HR0wEaTpA';
 	
