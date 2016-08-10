@@ -269,6 +269,7 @@ function resetLikeLegend(id) {
 var displayWaterControl = 0;
 function displayWater(id) {
 	if (displayWaterControl == 0) {
+		console.log("test");
 	/*
 		var n;
 		for (n=0; n < waterIDArr.length; n++) {
