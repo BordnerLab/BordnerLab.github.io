@@ -28,11 +28,8 @@ function determineClick(feature) {
 	var i;
 	for (i = 0; i < countyNames.length; i++) {
 		if (clickedCountyName == countyNames[i]) {
-			
-			console.log(wetlandsDisplayControl);
 			displayWetlands(countyIDArr[i], feature);
 		
-			console.log(waterDisplayControl);
 			displayWaterFeatures(waterIDArr[i]);
 		}
 	}		
@@ -235,18 +232,15 @@ function displayLikeLegend(id) {
 					if (tempLayers[b] == nameHolder) {
 						map.setLayoutProperty(nameHolder, "visibility", "visible");
 					} else if (tempLayers[b] != nameHolder) {
-						console.log(nameHolder);
 						map.setLayoutProperty(tempLayers[b], "visibility", "none");
 						map.setLayoutProperty(nameHolder, "visibility", "visible");
 						tempMouseOverArr.push(tempLayers[b]);
 					}
 				} catch (err) {
-					console.log(err);
 				}
 			}
 		}
 	} catch (err) {
-		console.log("bleh");
 	}
 };
 
@@ -319,7 +313,6 @@ function displayWater(id) {
 
 
 function clearLayers() {
-	console.log("clearLayers");
 	var x;
 	try {
 		for (x=0; x < tempLayers.length; x++) {
