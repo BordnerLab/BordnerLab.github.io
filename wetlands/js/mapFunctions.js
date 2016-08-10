@@ -13,16 +13,23 @@ function determineClick(feature) {
 	}
 	tempLayers.length = 0;
 	currentLayers.length = 0;
+	tempWaterLayers.length = 0;
 		
 	var clickedCountyName = feature.properties.COUNTY_NAM;
+	
 	var i;
 	for (i = 0; i < countyNames.length; i++) {
 		if (clickedCountyName == countyNames[i]) {
-			displayWetlands(countyIDArr[i], feature);
-		} else {
-	
+			switch (true) {
+				case (wetlandsDisplayControl):
+					displayWetlands(countyIDArr[i], feature);
+				case (waterDisplayControl):
+					displayWater(waterIDArr[i]);
+				default:
+					alert("no");
+			}
 		}
-	}
+	}			
 };
 	
 	
@@ -171,6 +178,22 @@ function displayWetlands(source, feature) {
 		return;
 	}
 };
+
+function displayWater(source) {
+	map.addLayer({
+		'id': source,
+		'type': 'fill',
+		'source': source,
+		'layout': {
+			'visibility': 'visible'
+		},
+		'paint': {
+			'fill-color': '#004878',
+			'fill-opacity': 0.5
+		}
+	});
+	tempWaterLayers.push(source);
+};
 	
 function updateSlider(x) {
 	var valueHold = document.getElementById(x).value;
@@ -221,9 +244,12 @@ function resetLikeLegend(id) {
 	}
 };
 
+
+
 var displayWaterControl = 0;
 function displayWater(id) {
 	if (displayWaterControl == 0) {
+	/*
 		var n;
 		for (n=0; n < waterIDArr.length; n++) {
 			map.addLayer({
@@ -240,20 +266,28 @@ function displayWater(id) {
 		});
 		tempWaterLayers.push(waterIDArr[n]);
 		}
+	*/
 		displayWaterControl = 1;
 		document.getElementById(id).style.background = "#004878";
 		document.getElementById(id).style.color = "#fff";
-		return displayWaterControl;
+	
+		waterDisplayControl = true;
+		return waterDisplayControl;
 	} else if (displayWaterControl > 0) {
+	/*
 		var m;
 		for (m=0; m < tempWaterLayers.length; m++) {
 			map.removeLayer(tempWaterLayers[m]);
 		}
 		tempWaterLayers.length = 0;
+	*/
 		displayWaterControl = 0;
 		document.getElementById(id).style.background = "";
 		document.getElementById(id).style.color = "";
-		return displayWaterControl;
+		
+	
+		waterDisplayControl = false;
+		return waterDisplayControl;
 	}
 	
 };

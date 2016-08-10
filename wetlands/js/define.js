@@ -82,6 +82,9 @@ var tempMouseOverArr = [];
 var fullDisplayControl = false;
 var selectByCountyControl = true;
 
+var waterDisplayControl = false;
+var wetlandsDisplayControl = true;
+
 
 
 function addMapSources() {
