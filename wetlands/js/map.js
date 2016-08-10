@@ -73,7 +73,7 @@ map.on('load', function () {
 				zoom: 8
 			});
 				
-			map.setFilter("county-fills", ["!=", "COUNTY_NAM", feature.properties.COUNTY_NAM]);
+			/*map.setFilter("county-fills", ["!=", "COUNTY_NAM", feature.properties.COUNTY_NAM]);*/
 					
 			determineClick(feature);
 		} else if (features.length && feature.layer.id != "county-fills") {

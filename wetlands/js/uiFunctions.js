@@ -58,7 +58,6 @@ function selectByCounty(id) {
 		map.setLayoutProperty("county-fills", "visibility", "visible");
 		map.setLayoutProperty("county-hover", "visibility", "visible");
 		clearLayers();
-		map.setFilter("county-fills", ["==", "COUNTY_NAM", ""]);
 		console.log('test');
 	} else if (selectByCountyControl == true) {
 		alert("already selected");
