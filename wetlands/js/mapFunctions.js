@@ -24,7 +24,7 @@ function determineClick(feature) {
 				case (wetlandsDisplayControl):
 					displayWetlands(countyIDArr[i], feature);
 				case (waterDisplayControl):
-					displayWater(waterIDArr[i]);
+					displayWaterFeatures(waterIDArr[i]);
 				default:
 					alert("no");
 			}
@@ -179,7 +179,7 @@ function displayWetlands(source, feature) {
 	}
 };
 
-function displayWater(source) {
+function displayWaterFeatures(source) {
 	map.addLayer({
 		'id': source,
 		'type': 'fill',
