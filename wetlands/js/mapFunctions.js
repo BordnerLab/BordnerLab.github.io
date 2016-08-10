@@ -32,6 +32,7 @@ function determineClick(feature) {
 				case (wetlandsDisplayControl):
 					displayWetlands(countyIDArr[i], feature);
 				case (waterDisplayControl):
+					console.log(waterDisplayControl);
 					displayWaterFeatures(waterIDArr[i]);
 			}
 		}
