@@ -190,7 +190,7 @@ function displayWetlands(source, feature) {
 };
 
 function displayWaterFeatures(source) {
-	if (wetlandsDisplayControl == true) {
+	if (waterDisplayControl == true) {
 		map.addLayer({
 			'id': source,
 			'type': 'fill',
