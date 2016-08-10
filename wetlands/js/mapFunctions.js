@@ -1,9 +1,17 @@
 function determineClick(feature) {
 	var t;
+	var r;
 	try {
 		for (t=0; t < tempLayers.length; t++) {
 			try {
 				map.removeLayer(tempLayers[t]);
+			} catch (err) {
+				return;
+			}
+		}
+		for (r=0; r < tempWaterLayers.length; r++) {
+			try {
+				map.removeLayer(tempWaterLayers[r]);
 			} catch (err) {
 				return;
 			}
@@ -25,8 +33,6 @@ function determineClick(feature) {
 					displayWetlands(countyIDArr[i], feature);
 				case (waterDisplayControl):
 					displayWaterFeatures(waterIDArr[i]);
-				default:
-					alert("no");
 			}
 		}
 	}			
