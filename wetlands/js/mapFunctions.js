@@ -192,7 +192,7 @@ function displayWetlands(source, feature) {
 function displayWaterFeatures(source) {
 	if (waterDisplayControl == true) {
 		var hold = currentLayers.indexOf(source);
-		if (hold == -1) {
+		if (hold == -1 || fullDisplayControl == true) {
 			map.addLayer({
 				'id': source,
 				'type': 'fill',
@@ -271,12 +271,19 @@ function displayWater(id) {
 	if (displayWaterControl == 0) {
 	
 		waterDisplayControl = true;
-		var i;
-		for (i = 0; i < countyNames.length; i++) {
-			if (clickedCountyName == countyNames[i]) {
+		if (fullDisplayControl == true) {
+			var n;
+			for (n=0; n < waterIDArr.length; n++) { 
 				displayWaterFeatures(waterIDArr[i]);
-			} else {
+			}
+		} else if (fullDisplayControl == false) {
+			var i;
+			for (i = 0; i < countyNames.length; i++) {
+				if (clickedCountyName == countyNames[i]) {
+					displayWaterFeatures(waterIDArr[i]);
+				} else {
 				
+				}
 			}
 		}
 		displayWaterControl = 1;
