@@ -287,12 +287,10 @@ function displayWater(id) {
 		tempWaterLayers.push(waterIDArr[n]);
 		}
 	*/
-	
+		waterDisplayControl = true;
 		var i;
 		for (i = 0; i < countyNames.length; i++) {
 			if (clickedCountyName == countyNames[i]) {
-				console.log(clickedCountyName);
-				console.log(countyNames[i]);
 				displayWaterFeatures(waterIDArr[i]);
 			} else {
 				
@@ -302,7 +300,6 @@ function displayWater(id) {
 		document.getElementById(id).style.background = "#004878";
 		document.getElementById(id).style.color = "#fff";
 	
-		waterDisplayControl = true;
 		return waterDisplayControl;
 	} else if (displayWaterControl > 0) {
 		try {
