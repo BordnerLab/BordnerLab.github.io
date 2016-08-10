@@ -294,7 +294,7 @@ function displayWater(id) {
 			if (clickedCountyName == countyNames[i]) {
 				displayWaterFeatures(waterIDArr[i]);
 			} else {
-				return;
+				
 			}
 		}
 		displayWaterControl = 1;
