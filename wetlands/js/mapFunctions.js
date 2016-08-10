@@ -269,24 +269,7 @@ function resetLikeLegend(id) {
 var displayWaterControl = 0;
 function displayWater(id) {
 	if (displayWaterControl == 0) {
-	/*
-		var n;
-		for (n=0; n < waterIDArr.length; n++) {
-			map.addLayer({
-			'id': waterIDArr[n],
-			'type': 'fill',
-			'source': waterIDArr[n],
-			'layout': {
-				'visibility': 'visible'
-			},
-			'paint': {
-				'fill-color': '#004878',
-				'fill-opacity': 0.5
-			}
-		});
-		tempWaterLayers.push(waterIDArr[n]);
-		}
-	*/
+	
 		waterDisplayControl = true;
 		var i;
 		for (i = 0; i < countyNames.length; i++) {
@@ -312,6 +295,7 @@ function displayWater(id) {
 				}
 			}
 			tempWaterLayers.length = 0;
+			currentWaterLayers.length = 0;
 		} catch (err) {
 	
 		}

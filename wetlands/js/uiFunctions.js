@@ -32,6 +32,10 @@ function fullDisplay(id) {
 		for (z=0; z < countyIDArr.length; z++) {
 			displayWetlands(countyIDArr[z]);
 		}
+		var n;
+		for (n=0; n < waterIDArr.length; n++) { 
+			displayWaterFeatures(waterIDArr[i]);
+		}
 	} else if (fullDisplayControl == true) {
 		alert("already selected");
 	}
@@ -54,11 +58,24 @@ function selectByCounty(id) {
 				try {
 					map.removeLayer(tempLayers[x]);
 				} catch (err) {
-					return;
+					
 				}
 			}
 		} catch (err) {
-			return;
+			
+		}
+		
+		try {
+			var m;
+			for (m=0; m < tempWaterLayers.length; m++) {
+				try {
+					map.removeLayer(tempWaterLayers[m]);
+				} catch (err) {
+			
+				}
+			}
+		} catch (err) {
+	
 		}
 		
 		map.setLayoutProperty("county-fills", "visibility", "visible");
@@ -66,6 +83,8 @@ function selectByCounty(id) {
 		
 		currentLayers.length = 0;
 		tempLayers.length = 0;
+		tempWaterLayers.length = 0;
+		currentWaterLayers.length = 0;
 	} else if (selectByCountyControl == true) {
 		alert("already selected");
 	}
