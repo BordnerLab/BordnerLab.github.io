@@ -28,178 +28,185 @@ function determineClick(feature) {
 	var i;
 	for (i = 0; i < countyNames.length; i++) {
 		if (clickedCountyName == countyNames[i]) {
-			if (wetlandsDisplayControl == true) {
-				console.log(wetlandsDisplayControl);
-				displayWetlands(countyIDArr[i], feature);
-			} else if (waterDisplayControl == true) {
-				console.log(waterDisplayControl);
-				displayWaterFeatures(waterIDArr[i]);
-			}
+			
+			console.log(wetlandsDisplayControl);
+			displayWetlands(countyIDArr[i], feature);
+		
+			console.log(waterDisplayControl);
+			displayWaterFeatures(waterIDArr[i]);
 		}
-	}			
+	}		
 };
 	
 	
 function displayWetlands(source, feature) {
-	var hold = currentLayers.indexOf(source);
-	var a4cover = source + "A4";
-	var a3cover = source + "A3";
-	var b4cover = source + "B4";
-	var c4cover = source + "C4";
-	var c4bcover = source + "C4b";
-	var f4cover = source + "F4";
-	var mfcover = source + "MF";
-	var ercover = source + "ER";
+	if (wetlandsDisplayControl == true) {
+		var hold = currentLayers.indexOf(source);
+		var a4cover = source + "A4";
+		var a3cover = source + "A3";
+		var b4cover = source + "B4";
+		var c4cover = source + "C4";
+		var c4bcover = source + "C4b";
+		var f4cover = source + "F4";
+		var mfcover = source + "MF";
+		var ercover = source + "ER";
 		
-	if (hold == -1) {
-		map.addLayer({
-			'id': a4cover,
-			'type': 'fill',
-			'source': source,
-			'layout': {
-				'visibility': 'visible'
-			},
-			'filter': ['==', 'Cov1', 'A4'],
-			'paint': {
-				'fill-color': '#EE7600',
-				'fill-opacity': 0.5
-			}
-		}, 'water');
-		hoverLayers.push(a4cover);
-		tempLayers.push(a4cover);
+		if (hold == -1) {
+			map.addLayer({
+				'id': a4cover,
+				'type': 'fill',
+				'source': source,
+				'layout': {
+					'visibility': 'visible'
+				},
+				'filter': ['==', 'Cov1', 'A4'],
+				'paint': {
+					'fill-color': '#EE7600',
+					'fill-opacity': 0.5
+				}
+			}, 'water');
+			hoverLayers.push(a4cover);
+			tempLayers.push(a4cover);
 			
-		map.addLayer({
-			'id': a3cover,
-			'type': 'fill',
-			'source': source,
-			'layout': {
-				'visibility': 'visible'
-			},
-			'filter': ['==', 'Cov1', 'A3'],
-			'paint': {
-				'fill-color': '#FB9B9C',
-				'fill-opacity': 0.5
-			}
-		}, 'water');
-		hoverLayers.push(a3cover);
-		tempLayers.push(a3cover);
+			map.addLayer({
+				'id': a3cover,
+				'type': 'fill',
+				'source': source,
+				'layout': {
+					'visibility': 'visible'
+				},
+				'filter': ['==', 'Cov1', 'A3'],
+				'paint': {
+					'fill-color': '#FB9B9C',
+					'fill-opacity': 0.5
+				}
+			}, 'water');
+			hoverLayers.push(a3cover);
+			tempLayers.push(a3cover);
 			
-		map.addLayer({
-			'id': b4cover,
-			'type': 'fill',
-			'source': source,
-			'layout': {
-				'visibility': 'visible'
-			},
-			'filter': ['==', 'Cov1', 'B4'],
-			'paint': {
-				'fill-color': '#9B9CFB',
-				'fill-opacity': 0.5
-			}
-		}, 'water');
-		hoverLayers.push(b4cover);
-		tempLayers.push(b4cover);
+			map.addLayer({
+				'id': b4cover,
+				'type': 'fill',
+				'source': source,
+				'layout': {
+					'visibility': 'visible'
+				},
+				'filter': ['==', 'Cov1', 'B4'],
+				'paint': {
+					'fill-color': '#9B9CFB',
+					'fill-opacity': 0.5
+				}
+			}, 'water');
+			hoverLayers.push(b4cover);
+			tempLayers.push(b4cover);
 			
-		map.addLayer({
-			'id': c4cover,
-			'type': 'fill',
-			'source': source,
-			'layout': {
-				'visibility': 'visible'
-			},
-			'filter': ['==', 'Cov1', 'C4'],
-			'paint': {
-				'fill-color': '#CD69C9',
-				'fill-opacity': 0.5
-			}
-		}, 'water');
-		hoverLayers.push(c4cover);
-		tempLayers.push(c4cover);
+			map.addLayer({
+				'id': c4cover,
+				'type': 'fill',
+				'source': source,
+				'layout': {
+					'visibility': 'visible'
+				},
+				'filter': ['==', 'Cov1', 'C4'],
+				'paint': {
+					'fill-color': '#CD69C9',
+					'fill-opacity': 0.5
+				}
+			}, 'water');
+			hoverLayers.push(c4cover);
+			tempLayers.push(c4cover);
 			
-		map.addLayer({
-			'id': c4bcover,
-			'type': 'fill',
-			'source': source,
-			'layout': {
-				'visibility': 'visible'
-			},
-			'filter': ['==', 'Cov1', 'C4b'],
-			'paint': {
-				'fill-color': '#99004D',
-				'fill-opacity': 0.5
-			}
-		}, 'water');
-		hoverLayers.push(c4bcover);
-		tempLayers.push(c4bcover);
+			map.addLayer({
+				'id': c4bcover,
+				'type': 'fill',
+				'source': source,
+				'layout': {
+					'visibility': 'visible'
+				},
+				'filter': ['==', 'Cov1', 'C4b'],
+				'paint': {
+					'fill-color': '#99004D',
+					'fill-opacity': 0.5
+				}
+			}, 'water');
+			hoverLayers.push(c4bcover);
+			tempLayers.push(c4bcover);
 			
-		map.addLayer({
-			'id': f4cover,
-			'type': 'fill',
-			'source': source,
-			'layout': {
-				'visibility': 'visible'
-			},
-			'filter': ['==', 'Cov1', 'F4'],
-			'paint': {
-				'fill-color': '#2DA0BA',
-				'fill-opacity': 0.5
-			}
-		}, 'water');
-		hoverLayers.push(f4cover);
-		tempLayers.push(f4cover);
+			map.addLayer({
+				'id': f4cover,
+				'type': 'fill',
+				'source': source,
+				'layout': {
+					'visibility': 'visible'
+				},
+				'filter': ['==', 'Cov1', 'F4'],
+				'paint': {
+					'fill-color': '#2DA0BA',
+					'fill-opacity': 0.5
+				}
+			}, 'water');
+			hoverLayers.push(f4cover);
+			tempLayers.push(f4cover);
 			
-		map.addLayer({
-			'id': mfcover,
-			'type': 'fill',
-			'source': source,
-			'layout': {
-				'visibility': 'visible'
-			},
-			'filter': ['==', 'Cov1', 'MF'],
-			'paint': {
-				'fill-color': '#435645',
-				'fill-opacity': 0.5
-			}
-		}, 'water');
-		hoverLayers.push(mfcover);
-		tempLayers.push(mfcover);
+			map.addLayer({
+				'id': mfcover,
+				'type': 'fill',
+				'source': source,
+				'layout': {
+					'visibility': 'visible'
+				},
+				'filter': ['==', 'Cov1', 'MF'],
+				'paint': {
+					'fill-color': '#435645',
+					'fill-opacity': 0.5
+				}
+			}, 'water');
+			hoverLayers.push(mfcover);
+			tempLayers.push(mfcover);
 			
-		map.addLayer({
-			'id': ercover,
-			'type': 'fill',
-			'source': source,
-			'layout': {
-				'visibility': 'visible'
-			},
-			'filter': ['==', 'Cov1', 'ER'],
-			'paint': {
-				'fill-color': '#9B9CFB',
-				'fill-opacity': 0.5
-			}
-		}, 'water');
-		hoverLayers.push(ercover);
-		tempLayers.push(ercover);
+			map.addLayer({
+				'id': ercover,
+				'type': 'fill',
+				'source': source,
+				'layout': {
+					'visibility': 'visible'
+				},
+				'filter': ['==', 'Cov1', 'ER'],
+				'paint': {
+					'fill-color': '#9B9CFB',
+					'fill-opacity': 0.5
+				}
+			}, 'water');
+			hoverLayers.push(ercover);
+			tempLayers.push(ercover);
 			
-		currentLayers.push(source);
-	} else if (hold >= 0) {
+			currentLayers.push(source);
+		} else if (hold >= 0) {
+			return;
+		}
+	} else {
 		return;
 	}
 };
 
 function displayWaterFeatures(source) {
-	map.addLayer({
-		'id': source,
-		'type': 'fill',
-		'source': source,
-		'layout': {
-			'visibility': 'visible'
-		},
-		'paint': {
-			'fill-color': '#004878',
-			'fill-opacity': 0.5
-		}
-	});
-	tempWaterLayers.push(source);
+	if (wetlandsDisplayControl == true) {
+		map.addLayer({
+			'id': source,
+			'type': 'fill',
+			'source': source,
+			'layout': {
+				'visibility': 'visible'
+			},
+			'paint': {
+				'fill-color': '#004878',
+				'fill-opacity': 0.5
+			}
+		});
+		tempWaterLayers.push(source);
+	} else {
+		return;
+	}
 };
 	
 function updateSlider(x) {
