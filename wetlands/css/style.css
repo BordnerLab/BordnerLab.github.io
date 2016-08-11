@@ -211,4 +211,6 @@ body {
 	width:10px;
 	height:10px;
 	background:black;
+	border-radius: 20px;
+	cursor:pointer;
 }

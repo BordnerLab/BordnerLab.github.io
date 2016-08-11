@@ -104,15 +104,14 @@ map.on('load', function () {
 			return;
 		}
 	});
-	
-	map.on ('contextmenu', function (e) {
-		var marker = new mapboxgl.Marker()
-			.setLngLat(e.lngLat)
-			.addTo(map);
-		console.log("hello");
-	});
 });
 	
 geocoder.on('result', function(ev) {
 	map.getSource('single-point').setData(ev.result.geometry);
+});
+
+map.on ('contextmenu', function (e) {
+	var marker = new mapboxgl.Marker()
+		.setLngLat(e.lngLat)
+		.addTo(map);
 });
