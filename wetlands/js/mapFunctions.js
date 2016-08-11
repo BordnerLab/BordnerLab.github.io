@@ -66,7 +66,7 @@ function displayWetlands(source, feature) {
 			tempLayers.push(a4cover);
 			
 			var temp01 = map.querySourceFeatures('ashlandWetlands', {
-				sourceLayer: a4cover
+				sourceLayer: 'ashlandWetlandsA4'
 			});
 			console.log(temp01);
 			console.log('test');
