@@ -69,7 +69,7 @@ function displayWetlands(source, feature) {
 				sourceLayer: 'ashlandWetlandsA4'
 			});
 			console.log(temp01);
-			console.log('test');
+			console.log('bugaboo');
 			
 			map.addLayer({
 				'id': a3cover,
