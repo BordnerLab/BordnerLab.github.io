@@ -206,3 +206,9 @@ body {
 	padding-right:5px;
 	font-size:30px;
 }
+
+.mapboxgl-marker {
+	width:10px;
+	height:10px;
+	background:black;
+}
