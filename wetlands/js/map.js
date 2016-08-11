@@ -44,7 +44,6 @@ map.on('load', function () {
 			
 		if (!features.length) {
 			popup.remove();
-			document.getElementById("currentCountyBox").innerHTML = "";
 			return;
 		}
 		
@@ -54,7 +53,6 @@ map.on('load', function () {
 			popup.setLngLat(e.lngLat)
 				.setHTML(feature.properties.COUNTY_NAM)
 				.addTo(map);
-			document.getElementById("currentCountyBox").innerHTML = feature.properties.COUNTY_NAM;
 		} else {
 			popup.setLngLat(e.lngLat)
 				.setHTML(feature.properties.Cov1)
@@ -76,6 +74,8 @@ map.on('load', function () {
 				center: e.lngLat,
 				zoom: 8
 			});
+			
+			document.getElementById("currentCountyBox").innerHTML = feature.properties.COUNTY_NAM;
 				
 			map.setFilter("county-fills", ["!=", "COUNTY_NAM", feature.properties.COUNTY_NAM]);
 					
