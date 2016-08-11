@@ -75,7 +75,7 @@ map.on('load', function () {
 				zoom: 8
 			});
 			
-			document.getElementById("currentCountyBox").innerHTML = feature.properties.COUNTY_NAM;
+			document.getElementById("currentCountyBox").innerHTML = feature.properties.COUNTY_NAM + " Hello!";
 				
 			map.setFilter("county-fills", ["!=", "COUNTY_NAM", feature.properties.COUNTY_NAM]);
 					
@@ -108,10 +108,4 @@ map.on('load', function () {
 	
 geocoder.on('result', function(ev) {
 	map.getSource('single-point').setData(ev.result.geometry);
-});
-
-map.on ('contextmenu', function (e) {
-	var marker = new mapboxgl.Marker()
-		.setLngLat(e.point)
-		.addTo(map);
 });
