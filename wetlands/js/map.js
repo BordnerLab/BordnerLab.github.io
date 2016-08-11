@@ -112,6 +112,6 @@ geocoder.on('result', function(ev) {
 
 map.on ('contextmenu', function (e) {
 	var marker = new mapboxgl.Marker()
-		.setLngLat(e.lngLat)
+		.setLngLat(e.point)
 		.addTo(map);
 });
