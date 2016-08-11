@@ -347,6 +347,7 @@ function clearLayers() {
 };
 
 function takeScreenshot() {
+	window.open(window.location.href, '_blank');
 	/*map.options.preserveDrawingBuffer = true;*/
 	var data = map.getCanvas().toDataURL("image/png");
 	/*var canvas = map.getCanvas();
@@ -354,5 +355,5 @@ function takeScreenshot() {
 	*/
 	console.log(data);
 	//window.location.href = data;
-	window.open(data, '_blank');
+	window.open(data);
 };
