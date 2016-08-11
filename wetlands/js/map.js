@@ -104,6 +104,12 @@ map.on('load', function () {
 			return;
 		}
 	});
+	
+	map.on ('contextmenu', function (e) {
+		var marker = new mapboxgl.Marker()
+			.setLngLat(e.lngLat)
+			.addTo(map);
+	});
 });
 	
 geocoder.on('result', function(ev) {
