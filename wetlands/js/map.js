@@ -98,7 +98,7 @@ map.on('load', function () {
 		if (getCanvasControl == true) {
 			data = map.getCanvas().toDataURL("image/png");
 			return data;
-		} else (
+		} else {
 			return;
 		}
 	});
