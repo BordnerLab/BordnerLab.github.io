@@ -106,9 +106,7 @@ map.on('load', function () {
 	});
 	
 	map.on ('contextmenu', function (e) {
-		var marker = new mapboxgl.Marker()
-			.setLngLat(e.lngLat)
-			.addTo(map);
+		console.log("hello");
 	});
 });
 	
