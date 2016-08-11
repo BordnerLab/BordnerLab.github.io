@@ -116,7 +116,7 @@ body {
 		
 #countyToggles {
 	position: absolute;
-	top: 60px;
+	top: 110px;
 	left: 10px;
 	width: 240px;
 	height:40px;
@@ -194,10 +194,15 @@ body {
 
 #currentCountyBox {
 	position: absolute;
-	top: 110px;
+	top: 60px;
 	left: 10px;
 	background: rgba(0,0,0,0.3);
 	color: white;
 	width:auto;
 	height:auto;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:5px;
+	padding-right:5px;
+	font-size:30px;
 }
