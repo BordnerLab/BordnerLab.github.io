@@ -65,12 +65,6 @@ function displayWetlands(source, feature) {
 			hoverLayers.push(a4cover);
 			tempLayers.push(a4cover);
 			
-			var temp01 = map.querySourceFeatures('ashlandWetlands', {
-				sourceLayer: 'ashlandWetlandsA4'
-			});
-			console.log(temp01);
-			console.log('bugaboo');
-			
 			map.addLayer({
 				'id': a3cover,
 				'type': 'fill',
@@ -184,6 +178,12 @@ function displayWetlands(source, feature) {
 			tempLayers.push(ercover);
 			
 			currentLayers.push(source);
+			
+			var temp01 = map.querySourceFeatures('ashlandWetlands', {
+				sourceLayer: 'ashlandWetlandsA4'
+			});
+			console.log(temp01);
+			console.log('bugaboo');
 		} else if (hold >= 0) {
 			return;
 		}
