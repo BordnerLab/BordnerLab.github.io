@@ -89,6 +89,7 @@ var wetlandsDisplayControl = true;
 var clickedCountyName;
 
 var data;
+var getCanvasControl = false;
 
 
 
