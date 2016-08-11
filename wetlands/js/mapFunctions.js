@@ -69,6 +69,7 @@ function displayWetlands(source, feature) {
 				sourceLayer: a4cover
 			});
 			console.log(temp01);
+			console.log('test');
 			
 			map.addLayer({
 				'id': a3cover,
