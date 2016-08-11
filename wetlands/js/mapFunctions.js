@@ -65,6 +65,9 @@ function displayWetlands(source, feature) {
 			hoverLayers.push(a4cover);
 			tempLayers.push(a4cover);
 			
+			var temp01 = map.getLayer(a4cover);
+			console.log(temp01);
+			
 			map.addLayer({
 				'id': a3cover,
 				'type': 'fill',
