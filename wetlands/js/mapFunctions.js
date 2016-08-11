@@ -66,7 +66,7 @@ function displayWetlands(source, feature) {
 			tempLayers.push(a4cover);
 			
 			var temp01 = map.getLayer(a4cover);
-			console.log(temp01);
+			console.log(temp01[0]);
 			
 			map.addLayer({
 				'id': a3cover,
