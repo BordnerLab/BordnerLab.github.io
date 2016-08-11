@@ -15,6 +15,7 @@ function toggleToolbar() {
 
 function fullDisplay(id) {
 	if (fullDisplayControl == false) {
+		document.getElementById("currentCountyBox").innerHTML = "";
 		clearLayers();
 		fullDisplayControl = true;
 		selectByCountyControl = false;
