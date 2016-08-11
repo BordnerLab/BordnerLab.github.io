@@ -88,6 +88,8 @@ var wetlandsDisplayControl = true;
 
 var clickedCountyName;
 
+var data;
+
 
 
 function addMapSources() {

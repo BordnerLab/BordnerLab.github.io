@@ -5,7 +5,7 @@ var map = new mapboxgl.Map({
 	style: 'mapbox://styles/bordnerwlei/cirf7wsrr0003g8nlogxrqxyr',
 	center: [-89.5, 44.5],
 	zoom: 6,
-	preserveDrawingBuffer: true,
+	preserveDrawingBuffer: false,
 	hash: true
 });
 	
@@ -93,6 +93,11 @@ map.on('load', function () {
 		}
 					
 	});
+	
+	map.on('render', function () {
+		data = map.getCanvas().toDataURL("image/png");
+		return data;
+	)};
 });
 	
 geocoder.on('result', function(ev) {
