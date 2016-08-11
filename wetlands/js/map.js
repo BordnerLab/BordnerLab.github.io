@@ -94,10 +94,10 @@ map.on('load', function () {
 					
 	});
 	
-	map.on('render', function () {
+	map.on ('render', function() {
 		data = map.getCanvas().toDataURL("image/png");
-		return data;
-	)};
+		return data;	
+	});
 });
 	
 geocoder.on('result', function(ev) {
