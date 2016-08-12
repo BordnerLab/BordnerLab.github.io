@@ -53,7 +53,7 @@ var clickedCountyName;
 var tempLayers = [];
 	
 var hoverLayers = [
-	"county-fills",
+	/*"county-fills",*/
 	"landcover_A1"
 ];
 	
@@ -96,7 +96,7 @@ function addMapSources() {
 };
 
 function addCountyInitial() {
-	
+	/*
 	map.addLayer({
 		'id': 'county-fills',
 		'type': 'fill',
@@ -109,7 +109,7 @@ function addCountyInitial() {
 			'fill-opacity': 0
 		}
 	});
-	
+	*/
 		
 	map.addLayer({
 		'id': 'county-borders',
