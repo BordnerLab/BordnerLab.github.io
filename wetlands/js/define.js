@@ -81,8 +81,8 @@ var wetlandsLegend = [
 	
 var tempMouseOverArr = [];
 	
-var fullDisplayControl = false;
-var selectByCountyControl = true;
+var fullDisplayControl = true;
+var selectByCountyControl = false;
 
 var waterDisplayControl = false;
 var wetlandsDisplayControl = true;
