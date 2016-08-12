@@ -18,7 +18,6 @@ var geocoder = new mapboxgl.Geocoder({
 map.addControl(geocoder);
 	
 map.on('load', function () {
-		
 	addMapSources();
 		
 	addCountyInitial();
@@ -32,14 +31,11 @@ map.on('load', function () {
 		var features = map.queryRenderedFeatures(e.point, { layers: hoverLayers });
 			
 		if (features.length && features[0].layer.id == "county-fills") {
-			map.setFilter("county-hover", ["==", "COUNTY_NAM", features[0].properties.COUNTY_NAM]);
+			console.log(features[0].layer.id);
 		} else if (features.length && features[0].layer.id != "county-fills") {
-			var holdID = features[0].layer.id;
-			console.log(holdID);
-			console.log(features);
-			/* OBJECTID */
+			var holdID = features[0].layer.id; // ???
 		} else {
-			map.setFilter("county-hover", ["==", "COUNTY_NAM", ""]);
+
 		}
 			
 		map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
@@ -63,7 +59,7 @@ map.on('load', function () {
 	});
 		
 	map.on ('mouseout', function() {
-			map.setFilter("county-hover", ["==", "COUNTY_NAM", ""]);
+			
 	});
 		
 	map.on ('click', function(e) {
@@ -78,8 +74,6 @@ map.on('load', function () {
 			});
 			
 			document.getElementById("currentCountyBox").innerHTML = feature.properties.COUNTY_NAM + " Hello!";
-				
-			map.setFilter("county-fills", ["!=", "COUNTY_NAM", feature.properties.COUNTY_NAM]);
 					
 			determineClick(feature);
 		} else if (features.length && feature.layer.id != "county-fills") {

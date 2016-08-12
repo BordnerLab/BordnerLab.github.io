@@ -14,6 +14,7 @@ function toggleToolbar() {
 };
 
 function fullDisplay(id) {
+	/*
 	if (fullDisplayControl == false) {
 		document.getElementById("currentCountyBox").innerHTML = "";
 		clearLayers();
@@ -21,7 +22,6 @@ function fullDisplay(id) {
 		selectByCountyControl = false;
 		
 		map.setLayoutProperty("county-fills", "visibility", "none");
-		/*map.setLayoutProperty("county-borders", "visibility", "none");*/
 		map.setLayoutProperty("county-hover", "visibility", "none");
 		
 		document.getElementById(id).style.background = "blue";
@@ -41,9 +41,11 @@ function fullDisplay(id) {
 	} else if (fullDisplayControl == true) {
 		alert("already selected");
 	}
+	*/
 };
 
 function selectByCounty(id) {
+	/*
 	if (selectByCountyControl == false) {
 		selectByCountyControl = true;
 		fullDisplayControl = false;
@@ -63,6 +65,7 @@ function selectByCounty(id) {
 	} else if (selectByCountyControl == true) {
 		alert("already selected");
 	}
+	*/
 };
 
 function displaySettingsMenu() {
