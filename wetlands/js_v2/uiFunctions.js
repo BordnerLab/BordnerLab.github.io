@@ -69,7 +69,7 @@ function selectByCounty(id) {
 };
 
 function displaySettingsMenu() {
-	alert('display settings menu enabled');
+	
 };
 
 function homePageFunction() {
