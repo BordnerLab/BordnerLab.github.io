@@ -36,6 +36,8 @@ map.on('load', function () {
 		} else if (features.length && features[0].layer.id != "county-fills") {
 			var holdID = features[0].layer.id;
 			/* OBJECTID */
+		} else if (features.length) {
+			console.log(features);
 		} else {
 			map.setFilter("county-hover", ["==", "COUNTY_NAM", ""]);
 		}

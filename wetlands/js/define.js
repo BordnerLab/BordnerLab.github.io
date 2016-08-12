@@ -63,7 +63,8 @@ var hoverLayers = [
 	"ozaukeeWetlands",
 	"racineWetlands",
 	"sheboyganWetlands",
-	"county-fills"
+	"county-fills",
+	"landcover_A1"
 ];
 	
 var wetlandsLegendHolder;
