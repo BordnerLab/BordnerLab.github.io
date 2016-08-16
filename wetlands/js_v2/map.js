@@ -26,7 +26,7 @@ map.on('load', function () {
 		property: 'Cov1',
 		type: 'categorical',
 		stops: [
-			['A1', '#EE7600'],
+			['A2', '#EE7600'],
 			['A4', '#FB9B9C']]
 		}
 	);
