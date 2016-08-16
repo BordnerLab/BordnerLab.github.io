@@ -22,7 +22,7 @@ map.on('load', function () {
 		
 	addCountyInitial();
 	
-	
+	console.log('monkey');
 	map.setPaintProperty('landcover_A1', 'fill-color', {
 		property: 'Cov1',
 		type: 'categorical',
