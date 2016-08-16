@@ -21,6 +21,15 @@ map.on('load', function () {
 	addMapSources();
 		
 	addCountyInitial();
+	
+	map.setPaintProperty('landcover_A1', 'fill-color', {
+		property: 'Cov1',
+		type: 'categorical',
+		stops: [
+			['A1', '#EE7600'],
+			['A4', '#FB9B9C']]
+		}
+	);
 		
 	var popup = new mapboxgl.Popup({
 		closeButton: false,
