@@ -1,16 +1,8 @@
 function determineClick(feature) {
 	clickedCountyName = feature.properties.COUNTY_NAM;	
 };
-	
-	
-function displayWetlands(source, feature) {
-	
-};
 
-function displayWaterFeatures(source) {
-	
-};
-	
+
 function updateSlider(x) {
 	var valueHold = document.getElementById(x).value;
 	map.setPitch(valueHold);

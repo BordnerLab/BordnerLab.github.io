@@ -13,64 +13,10 @@ function toggleToolbar() {
 	}
 };
 
-function fullDisplay(id) {
-	/*
-	if (fullDisplayControl == false) {
-		document.getElementById("currentCountyBox").innerHTML = "";
-		clearLayers();
-		fullDisplayControl = true;
-		selectByCountyControl = false;
-		
-		map.setLayoutProperty("county-fills", "visibility", "none");
-		map.setLayoutProperty("county-hover", "visibility", "none");
-		
-		document.getElementById(id).style.background = "blue";
-		document.getElementById(id).style.color = "white";
-		document.getElementById("button02").style.background = "#fff";
-		document.getElementById("button02").style.color = "black";
-		
-		
-		var z;
-		for (z=0; z < countyIDArr.length; z++) {
-			displayWetlands(countyIDArr[z]);
-		}
-		var n;
-		for (n=0; n < waterIDArr.length; n++) { 
-			displayWaterFeatures(waterIDArr[n]);
-		}
-	} else if (fullDisplayControl == true) {
-		alert("already selected");
-	}
-	*/
-};
 
-function selectByCounty(id) {
-	/*
-	if (selectByCountyControl == false) {
-		selectByCountyControl = true;
-		fullDisplayControl = false;
-		
-		document.getElementById(id).style.background = "blue";
-		document.getElementById(id).style.color = "white";
-		document.getElementById("button01").style.background = "#fff";
-		document.getElementById("button01").style.color = "black";
-		
-		
-		
-		
-		map.setLayoutProperty("county-fills", "visibility", "visible");
-		map.setLayoutProperty("county-hover", "visibility", "visible");
-		clearLayers();
-		map.setFilter("county-fills", null);
-	} else if (selectByCountyControl == true) {
-		alert("already selected");
-	}
-	*/
-};
 
-function displaySettingsMenu() {
-	
-};
+
+
 
 function homePageFunction() {
 	document.getElementById("homePageBackground").style.transform = "translate(100%)";
