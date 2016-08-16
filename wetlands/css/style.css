@@ -66,14 +66,14 @@ body {
 	position: relative;
 	width: 20px;
 	height: 50px;
-	background:rgba(0,0,0,1);
+	background:#fff;
 	top: 75px;
 	cursor:pointer;
 	left:-20px;
 	border-top-left-radius:10px;
 	border-bottom-left-radius:10px;
-	color:white;
-	border: 1px solid white;
+	color:black;
+	border: 1.5px solid #ddd;
 }
 		
 #legend {
