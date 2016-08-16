@@ -26,7 +26,9 @@ map.on('load', function () {
 	map.setPaintProperty('landcover_A1', 'fill-color', {
 		property: 'Cov1',
 		type: 'categorical',
-		stops: [originCover]
+		stops: [
+			["AP", "#E59966"],
+			["BB", "#E59966"]]
 		}
 	);
 	
