@@ -22,16 +22,14 @@ map.on('load', function () {
 		
 	addCountyInitial();
 	
-	/*
+	
 	map.setPaintProperty('landcover_A1', 'fill-color', {
 		property: 'Cov1',
 		type: 'categorical',
-		stops: [
-			['A2', '#EE7600'],
-			['A4', '#FB9B9C']]
+		stops: [originCover]
 		}
 	);
-	*/
+	
 		
 	var popup = new mapboxgl.Popup({
 		closeButton: false,
