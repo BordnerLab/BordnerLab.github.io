@@ -20,10 +20,12 @@ function resetLikeLegend(id) {
 
 var displayWaterControl = 0;
 function displayWater(id) {
-	if (displayWaterControl == 0) {
-		displayWaterControl = 1;
-		document.getElementById(id).style.background = "#004878";
-		document.getElementById(id).style.color = "#fff";
+	if (displayWaterControl > 0) {
+		displayWaterControl = 0;
+		document.getElementById(id).style.background = "#fff";
+		document.getElementById(id).style.color = "black";
+		
+		map.setPaintProperty('coastalWaters', 'fill-opacity', 0);
 		/*
 		map.setPaintProperty('landcover_A1', 'fill-color', {
 			property: 'Cov1',
@@ -34,10 +36,12 @@ function displayWater(id) {
 			}
 		);
 		*/
-	} else if (displayWaterControl > 0) {
-		displayWaterControl = 0;
-		document.getElementById(id).style.background = "";
-		document.getElementById(id).style.color = "";
+	} else if (displayWaterControl == 0) {
+		displayWaterControl = 1;
+		document.getElementById(id).style.background = "#004878";
+		document.getElementById(id).style.color = "#fff";
+		
+		map.setPaintProperty('coastalWaters', 'fill-opacity', 1);
 		/*
 		map.setPaintProperty('landcover_A1', 'fill-color', {
 			property: 'Cov1',
