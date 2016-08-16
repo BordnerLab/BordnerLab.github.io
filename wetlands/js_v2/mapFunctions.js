@@ -59,8 +59,7 @@ function displayWater(id) {
 
 function takeScreenshot() {
 	//window.open(window.location.href, '_blank');
-	/*map.options.preserveDrawingBuffer = true;*/
-	//var data = map.getCanvas().toDataURL("image/png");
+	var data = map.getCanvas().toDataURL("image/png");
 	/*var canvas = map.getCanvas();
 	var dataURL = canvas.toDataURL("image/png");
 	*/
