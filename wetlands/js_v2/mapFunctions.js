@@ -36,7 +36,7 @@ function displayWater(id) {
 			}
 		);
 		*/
-	} else if (displayWaterControl > 1) {
+	} else if (displayWaterControl > 0) {
 		displayWaterControl = 0;
 		document.getElementById(id).style.background = "#004878";
 		document.getElementById(id).style.color = "#fff";
