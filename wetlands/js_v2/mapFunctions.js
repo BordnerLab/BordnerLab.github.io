@@ -20,8 +20,8 @@ function resetLikeLegend(id) {
 
 var displayWaterControl = 0;
 function displayWater(id) {
-	if (displayWaterControl > 0) {
-		displayWaterControl = 0;
+	if (displayWaterControl == 0) {
+		displayWaterControl = 1;
 		document.getElementById(id).style.background = "#fff";
 		document.getElementById(id).style.color = "black";
 		
@@ -36,8 +36,8 @@ function displayWater(id) {
 			}
 		);
 		*/
-	} else if (displayWaterControl == 0) {
-		displayWaterControl = 1;
+	} else if (displayWaterControl > 1) {
+		displayWaterControl = 0;
 		document.getElementById(id).style.background = "#004878";
 		document.getElementById(id).style.color = "#fff";
 		
