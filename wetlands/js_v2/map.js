@@ -22,7 +22,8 @@ map.on('load', function () {
 		
 	addCountyInitial();
 	
-	console.log('monkey');
+	console.log('maple');
+	/*
 	map.setPaintProperty('landcover_A1', 'fill-color', {
 		property: 'Cov1',
 		type: 'categorical',
@@ -31,6 +32,7 @@ map.on('load', function () {
 			["BB", "#E59966"]]
 		}
 	);
+	*/
 	
 		
 	var popup = new mapboxgl.Popup({
