@@ -22,15 +22,15 @@ map.on('load', function () {
 		
 	addCountyInitial();
 	
-	console.log('test01');
-	/*
+	console.log('test02');
+	
 	map.setPaintProperty('landcover_A1', 'fill-color', {
 		property: 'Cov1',
 		type: 'categorical',
 		stops: [originCover]
 		}
 	);
-	*/
+	
 	
 		
 	var popup = new mapboxgl.Popup({
