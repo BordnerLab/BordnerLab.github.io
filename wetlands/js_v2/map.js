@@ -22,7 +22,7 @@ map.on('load', function () {
 		
 	addCountyInitial();
 	
-	console.log('maple');
+	console.log('test01');
 	/*
 	map.setPaintProperty('landcover_A1', 'fill-color', {
 		property: 'Cov1',

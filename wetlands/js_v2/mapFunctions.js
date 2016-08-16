@@ -24,6 +24,7 @@ function displayWater(id) {
 		displayWaterControl = 1;
 		document.getElementById(id).style.background = "#004878";
 		document.getElementById(id).style.color = "#fff";
+		/*
 		map.setPaintProperty('landcover_A1', 'fill-color', {
 			property: 'Cov1',
 			type: 'categorical',
@@ -32,10 +33,12 @@ function displayWater(id) {
 				['A4', '#435645']]
 			}
 		);
+		*/
 	} else if (displayWaterControl > 0) {
 		displayWaterControl = 0;
 		document.getElementById(id).style.background = "";
 		document.getElementById(id).style.color = "";
+		/*
 		map.setPaintProperty('landcover_A1', 'fill-color', {
 			property: 'Cov1',
 			type: 'categorical',
@@ -44,6 +47,7 @@ function displayWater(id) {
 				['A4', '#FB9B9C']]
 			}
 		);
+		*/
 	}
 };
 
