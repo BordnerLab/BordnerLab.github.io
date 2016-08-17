@@ -27,7 +27,7 @@ $("#slider").roundSlider({
 	min:0,
 	max:100,
 	step:1,
-	value: null,
+	value: 100,
 	radius: 50,
 	width: 16,
 	handleSize: "+0",
@@ -51,10 +51,14 @@ $("#slider").roundSlider({
 	drag: null,
 	change: onCircleChange,
 	stop: null,
-	tooltipFormat: null
+	tooltipFormat: circleToolTip
 });
 
 function onCircleChange (e) {
 	var circleValue = e.value;
 	map.setPaintProperty('coastalWaters', 'fill-opacity', parseInt(circleValue, 10) / 100);
+};
+
+function circleToolTip(args) {
+	return args.value + " %";
 };
