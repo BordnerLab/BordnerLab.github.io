@@ -94,7 +94,7 @@ body {
 	height: 50vh;
 	top:215px;
 	left: 10px;
-	background: rgba(0,0,0,0.4);
+	background: #FBFCFC;
 	-moz-box-shadow: 1px 2px 2px rgba(0,0,0,0.1);
 	-webkit-box-shadow: 1px 2px 2px rgba(0,0,0,0.1);
 	box-shadow: 1px 2px 0px 2px rgba(0,0,0,0.1);
@@ -104,7 +104,7 @@ body {
 #legendv2 .legendSquare {
 	height: auto;
 	width: 100%;
-	background: grey;
+	background: #FBFCFC;
 	margin-top:7.5px;
 }
 
