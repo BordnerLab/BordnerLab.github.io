@@ -60,7 +60,7 @@ $("#slider").roundSlider({
 	endAngle: "+360",
 	animation: true,
 	showTooltip: true,
-	editableToolTip: true,
+	editableToolTip: false,
 	readOnly: false,
 	disabled: false,
 	keyboardAction: true,
