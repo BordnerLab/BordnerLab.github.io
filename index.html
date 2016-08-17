@@ -56,6 +56,10 @@
 		
 			
 	<script>
+		$.extend($.scrollTo.defaults, {
+			duration: 1500
+		});
+		
 		function aboutScroll() {
 			var target = document.getElementById('page01');
 			$(window).scrollTo(target);
