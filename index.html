@@ -7,10 +7,10 @@
 <body>
 	<div id="menu">
 		<div id="menuItems" style="height:20%; width:100%; background: #212F3D;">
-			<h1>Home</h1>
-			<h1 onclick="aboutScroll()">About</h1>
-			<h1>Maple</h1>
-			<h1>Pancakes</h1>
+			<h1 id="menu01" onclick="pageScroll(this.id)">Home</h1>
+			<h1 id="menu02" onclick="pageScroll(this.id)">About</h1>
+			<h1 id="menu03" onclick="pageScroll(this.id)">Projects</h1>
+			<h1 id="menu04" onclick="pageScroll(this.id)">Pancakes</h1>
 		</div>
 	</div>
 	
@@ -22,15 +22,15 @@
 	</div>
 	
 	<div id="page01">
-	
+		<h1> Page 01 </h1>
 	</div>
 	
 	<div id="page02">
-	
+		<h1> Page 02 </h1>
 	</div>
 	
 	<div id="page03">
-	
+		<h1> Page 03 </h1>
 	</div>
 	
 	<h1>Bordner Lab</h1>
@@ -60,10 +60,25 @@
 			duration: 1500
 		});
 		
-		function aboutScroll() {
-			var target = document.getElementById('page01');
+		function pageScroll(source) {
+			switch (source) {
+				case "menu01":
+					var target = document.getElementById('headerBox');
+					break;
+				case "menu02":
+					var target = document.getElementById('page01');
+					break;
+				case "menu03":
+					var target = document.getElementById('page03');
+					break;
+				case "menu04":
+					var target = document.getElementById('page04');
+			}
 			$(window).scrollTo(target);
+				
 		};
+		
+		
 	</script>
 	
 </body>
