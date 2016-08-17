@@ -1,5 +1,8 @@
 
-$('.scroll-pane').jScrollPane();
+$('.scroll-pane').jScrollPane({
+	verticalDragMinHeight: 20,
+	verticalDragMaxHeight: 20
+});
 
 var toolbarControl = 0;
 function toggleToolbar() {
