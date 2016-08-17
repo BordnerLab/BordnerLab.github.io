@@ -48,8 +48,13 @@ $("#slider").roundSlider({
 	beforeCreate: null,
 	create: null,
 	start: null,
-	drag: null,
+	drag: onCircleChange,
 	change: null,
 	stop: null,
 	tooltipFormat: null
 });
+
+function onCircleChange (e) {
+	var circleValue = e.value;
+	map.setPaintProperty('coastalWaters', 'fill-opacity', parseInt(circleValue, 10) / 100);
+};
