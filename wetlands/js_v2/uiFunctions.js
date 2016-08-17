@@ -87,3 +87,47 @@ function onCircleChange (e) {
 function circleToolTip(args) {
 	return args.value + "%";
 };
+
+function circleToggleColor(source) {
+	switch (source) {
+		case "toggle01":
+			if (toggle01Control == false) {
+				document.getElementById(source).style.background = "#5499C7";
+				break;
+			} else if (toggle01Control == true) {
+				document.getElementById(source).style.background = "#fff";
+				break;
+			}
+		case "toggle02":
+			if (toggle01Control == false) {
+				document.getElementById(source).style.background = "#5499C7";
+				break;
+			} else if (toggle01Control == true) {
+				document.getElementById(source).style.background = "#fff";
+				break;
+			}
+		case "toggle03":
+			if (toggle01Control == false) {
+				document.getElementById(source).style.background = "#5499C7";
+				break;
+			} else if (toggle01Control == true) {
+				document.getElementById(source).style.background = "#fff";
+				break;
+			}
+		case "toggle04":
+			if (toggle01Control == false) {
+				document.getElementById(source).style.background = "#5499C7";
+				
+			} else if (toggle01Control == true) {
+				document.getElementById(source).style.background = "#fff";
+				
+			}
+};
+
+
+
+
+
+
+
+

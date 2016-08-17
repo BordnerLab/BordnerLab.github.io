@@ -18,6 +18,11 @@ var data;
 var getCanvasControl = false;
 
 
+var toggle01Control = false;
+var toggle02Control = true;
+var toggle03Control = false;
+var toggle04Control = false;
+
 
 
 

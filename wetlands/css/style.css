@@ -184,13 +184,20 @@ body {
 
 #circleSliderControls .circleToggles .circleToggleCircles {
 	border-radius: 25px;
-	background: #fff;
 	cursor: pointer;
 	height: 12.5px;
 	width: 12.5px;
 	border: 1px solid black;
 	margin: auto;
 	margin-top:2.5px;
+	-webkit-transition: border .5s;
+	-moz-transition: border .5s;
+	-o-transition: border .5s;
+	transition: border .5s;
+}
+
+#circleSliderControls .circleToggles .circleToggleCircles:hover {
+	border: 2px solid #D35400;
 }
 
 #circleSliderControls .circleTogglesInfo {
