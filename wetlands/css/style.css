@@ -303,7 +303,7 @@ body {
 
 #circleSliderContainer {
 	position: absolute;
-	background: rgba(255,255,255,0.2);
+	background: rgba(255,255,255,0.5);
 	left: 10px;
 	top:110px;
 	width: 300px;
