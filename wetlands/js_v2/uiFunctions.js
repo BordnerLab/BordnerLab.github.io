@@ -4,6 +4,25 @@ $('.scroll-pane').jScrollPane({
 	verticalDragMaxHeight: 20
 });
 
+var api = $('.scroll-pane').data('jsp');
+var throttleTimeout;
+$(window).bind(
+	'resize',
+	function()
+	{
+		if (!throttleTimeout) {
+			throttleTimeout = setTimeout(
+				function()
+				{
+					api.reinitialise();
+					throttleTimeout = null;
+				},
+				50
+			);
+		}
+	}
+);
+
 var toolbarControl = 0;
 function toggleToolbar() {
 	if (toolbarControl == 0) {
