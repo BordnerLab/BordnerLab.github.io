@@ -97,33 +97,41 @@ function circleToggleColor(source) {
 		case "toggle01":
 			if (toggle01Control == false) {
 				document.getElementById(source).style.background = "#5499C7";
+				toggle01Control = true;
 				break;
 			} else if (toggle01Control == true) {
 				document.getElementById(source).style.background = "#fff";
+				toggle01Control = false;
 				break;
 			}
 		case "toggle02":
-			if (toggle01Control == false) {
+			if (toggle02Control == false) {
 				document.getElementById(source).style.background = "#5499C7";
+				toggle02Control = true;
 				break;
-			} else if (toggle01Control == true) {
+			} else if (toggle02Control == true) {
 				document.getElementById(source).style.background = "#fff";
+				toggle02Control = false;
 				break;
 			}
 		case "toggle03":
-			if (toggle01Control == false) {
+			if (toggle03Control == false) {
 				document.getElementById(source).style.background = "#5499C7";
+				toggle03Control = true;
 				break;
-			} else if (toggle01Control == true) {
+			} else if (toggle03Control == true) {
 				document.getElementById(source).style.background = "#fff";
+				toggle03Control = false;
 				break;
 			}
 		case "toggle04":
-			if (toggle01Control == false) {
+			if (toggle04Control == false) {
 				document.getElementById(source).style.background = "#5499C7";
+				toggle04Control = true;
 				
-			} else if (toggle01Control == true) {
+			} else if (toggle04Control == true) {
 				document.getElementById(source).style.background = "#fff";
+				toggle04Control = false;
 				
 			}
 	}
