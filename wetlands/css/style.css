@@ -91,13 +91,14 @@ body {
 #legendv2 {
 	position: absolute;
 	width: 50px;
-	height: auto;
+	height: 50vh;
 	top:215px;
-	left: 200px;
+	left: 10px;
 	background: rgba(0,0,0,0.4);
 	-moz-box-shadow: 1px 2px 2px rgba(0,0,0,0.1);
 	-webkit-box-shadow: 1px 2px 2px rgba(0,0,0,0.1);
 	box-shadow: 1px 2px 0px 2px rgba(0,0,0,0.1);
+	overflow-x: scroll;
 }
 
 #legendv2 .legendSquare {
@@ -168,7 +169,7 @@ body {
 #circleSliderControls {
 	position: absolute;
 	top: 110px;
-	left: 100px;
+	left: 110px;
 	background: black;
 	width: 50px;
 	height: 50px;
