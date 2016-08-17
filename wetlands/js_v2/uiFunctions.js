@@ -126,6 +126,7 @@ function circleToggleColor(source) {
 				document.getElementById(source).style.background = "#fff";
 				
 			}
+	}
 };
 
 
