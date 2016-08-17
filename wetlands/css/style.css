@@ -187,6 +187,7 @@ body {
 	background: blue;
 	height: 25%;
 	width: 75%;
+	left: 25%;
 }
 
 #countyToggles .countyToggleBoxes {
