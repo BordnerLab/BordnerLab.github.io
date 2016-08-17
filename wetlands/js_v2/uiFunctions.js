@@ -22,3 +22,5 @@ function homePageFunction() {
 	document.getElementById("homePageBackground").style.transform = "translate(100%)";
 	document.getElementById("homePage").style.transform = "translate(100%)";
 };
+
+$("#slider").roundSlider();
