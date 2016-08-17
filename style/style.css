@@ -15,3 +15,11 @@ body #headerBox {
 	-o-background-size: cover;
 	background-size: cover;
 }
+
+#menu {
+	position: fixed;
+	width: 20%;
+	background:black;
+	height: 100vh;
+}
+	
