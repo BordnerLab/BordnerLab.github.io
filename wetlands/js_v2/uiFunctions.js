@@ -60,5 +60,5 @@ function onCircleChange (e) {
 };
 
 function circleToolTip(args) {
-	return args.value + " %";
+	return args.value + "%";
 };
