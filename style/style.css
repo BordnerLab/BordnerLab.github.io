@@ -6,7 +6,7 @@ body {
 	margin: 0;
 }
 
-#headerBox {
+body #headerBox {
 	width: 100%;
 	height:500px;
 	background: transparent url("vilas.jpg") no-repeat fixed center;
