@@ -23,6 +23,10 @@ var toggle02Control = true;
 var toggle03Control = false;
 var toggle04Control = false;
 
+var opacityLayers = [
+	"coastalWaters"
+];
+
 
 
 

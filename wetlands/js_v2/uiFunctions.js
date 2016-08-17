@@ -81,7 +81,11 @@ $("#slider").roundSlider({
 
 function onCircleChange (e) {
 	var circleValue = e.value;
-	map.setPaintProperty('coastalWaters', 'fill-opacity', parseInt(circleValue, 10) / 100);
+	var n;
+	for (n=0; n < opacityLayers.length; n++) {
+		map.setPaintProperty(opacityLayers[n], 'fill-opacity', parseInt(circleValue, 10) / 100);
+	}
+	//map.setPaintProperty('coastalWaters', 'fill-opacity', parseInt(circleValue, 10) / 100);
 };
 
 function circleToolTip(args) {
