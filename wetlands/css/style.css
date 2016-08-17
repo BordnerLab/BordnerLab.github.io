@@ -175,6 +175,13 @@ body {
 	height: 110px;
 }
 
+#circleSliderControls .circleToggles {
+	position: absolute;
+	background: red;
+	height: 20%;
+	width: 20%;
+}
+
 #countyToggles .countyToggleBoxes {
 	position:absolute;
 	width:60px;
