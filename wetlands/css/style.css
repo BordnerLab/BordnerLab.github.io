@@ -190,7 +190,7 @@ body {
 	width: 12.5px;
 	border: 1px solid #fff;
 	margin: auto;
-	margin-top:5px;
+	margin-top:3.5px;
 }
 
 #circleSliderControls .circleTogglesInfo {
@@ -297,6 +297,6 @@ body {
 
 .scroll-pane {
 	width: 100%;
-	/*max-height: 300px;*/
+	max-height: 300px;
 	overflow:auto;
 }
