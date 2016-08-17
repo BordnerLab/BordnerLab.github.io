@@ -104,6 +104,7 @@ body {
 	height: auto;
 	width: 100%;
 	background: grey;
+	margin-top:7.5px;
 }
 
 #legendv2 .legendSquare .circleLegend {
@@ -167,7 +168,7 @@ body {
 #circleSliderControls {
 	position: absolute;
 	top: 110px;
-	left: 60px;
+	left: 100px;
 	background: black;
 	width: 50px;
 	height: 50px;
