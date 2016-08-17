@@ -8,7 +8,7 @@ body {
 
 body #headerBox {
 	width: 100%;
-	height:100%;
+	height:100vh;
 	background: transparent url(Capture.PNG) no-repeat fixed center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
