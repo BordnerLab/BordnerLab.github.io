@@ -40,7 +40,7 @@ $("#slider").roundSlider({
 	disabled: false,
 	keyboardAction: true,
 	mouseScrollAction: false,
-	sliderType: "default",
+	sliderType: "min-range",
 	circleShape: "full",
 	handleShape: "round",
 	lineCap: "square",
