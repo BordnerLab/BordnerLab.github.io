@@ -16,7 +16,7 @@ body #headerBox {
 	background-size: cover;
 }
 
-#menu {
+body #menu {
 	position: fixed;
 	width: 20%;
 	background:black;
