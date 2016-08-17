@@ -21,6 +21,9 @@ body #headerBox {
 	background: rgba(0,0,0,0.3);
 	width: 40%;
 	height: 40vh;
+	margin: auto;
+	margin-top: 50%;
+	transform: translateY(-50%);
 }
 
 body #menu {
