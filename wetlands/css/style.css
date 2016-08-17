@@ -130,9 +130,12 @@ body {
 #slider {
 	top: 110px;
 	left: 50px;
+}
+
+#slider .rs-bg-color {
 	background: transparent;
 }
-		
+
 #countyToggles .countyToggleBoxes {
 	position:absolute;
 	width:60px;
