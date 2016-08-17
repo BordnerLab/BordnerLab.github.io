@@ -28,7 +28,7 @@ $("#slider").roundSlider({
 	max:100,
 	step:1,
 	value: null,
-	radius: 85,
+	radius: 50,
 	width: 16,
 	handleSize: "+0",
 	startAngle: 0,
@@ -41,7 +41,7 @@ $("#slider").roundSlider({
 	keyboardAction: true,
 	mouseScrollAction: false,
 	sliderType: "min-range",
-	circleShape: "full",
+	circleShape: "pie",
 	handleShape: "round",
 	lineCap: "square",
 	
