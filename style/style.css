@@ -17,6 +17,12 @@ body #headerBox {
 	background-size: cover;
 }
 
+#headerContent {
+	background: rgba(0,0,0,0.3);
+	width: 40%;
+	height: 40vh;
+}
+
 body #menu {
 	position: fixed;
 	width: 20%;
@@ -50,3 +56,4 @@ body #page03 {
 	height: 100vh;
 	background: white;
 }
+
