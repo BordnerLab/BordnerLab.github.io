@@ -182,6 +182,13 @@ body {
 	width: 25%;
 }
 
+#circleSliderControls .circleTogglesInfo {
+	position: absolute;
+	background: blue;
+	height: 25%;
+	width: 75%;
+}
+
 #countyToggles .countyToggleBoxes {
 	position:absolute;
 	width:60px;
@@ -271,3 +278,9 @@ body {
 	cursor:pointer;
 }
 
+
+.scroll-pane {
+	width: 100%;
+	max-height: 200px;
+	overflow:auto;
+}

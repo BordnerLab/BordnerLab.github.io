@@ -1,3 +1,6 @@
+
+$('.scroll-pane').jScrollPane();
+
 var toolbarControl = 0;
 function toggleToolbar() {
 	if (toolbarControl == 0) {
