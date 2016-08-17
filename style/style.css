@@ -9,7 +9,7 @@ body {
 #headerBox {
 	width: 100%;
 	height:500px;
-	background: url(Capture.png) no-repeat center center fixed;
+	background: black url("Capture.png") no-repeat fixed center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
