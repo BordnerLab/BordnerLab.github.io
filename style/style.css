@@ -26,7 +26,7 @@ body #headerBox {
 body #menu {
 	position: fixed;
 	width: 20%;
-	background:black;
+	background: #212F3D
 	height: 100vh;
 	text-align:center;
 	color:white;
