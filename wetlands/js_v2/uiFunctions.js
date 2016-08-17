@@ -48,8 +48,8 @@ $("#slider").roundSlider({
 	beforeCreate: null,
 	create: null,
 	start: null,
-	drag: onCircleChange,
-	change: null,
+	drag: null,
+	change: onCircleChange,
 	stop: null,
 	tooltipFormat: null
 });
