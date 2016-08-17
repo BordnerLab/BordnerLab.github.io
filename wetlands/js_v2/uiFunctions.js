@@ -30,7 +30,7 @@ $("#slider").roundSlider({
 	value: 100,
 	radius: 50,
 	width: 20,
-	handleSize: 15,
+	handleSize: 20,
 	startAngle: 0,
 	endAngle: "+360",
 	animation: true,
