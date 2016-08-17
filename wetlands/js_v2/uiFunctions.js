@@ -23,4 +23,33 @@ function homePageFunction() {
 	document.getElementById("homePage").style.transform = "translate(100%)";
 };
 
-$("#slider").roundSlider();
+$("#slider").roundSlider({
+	min:0,
+	max:100,
+	step:1,
+	value: null,
+	radius: 85,
+	width: 16,
+	handleSize: "+0",
+	startAngle: 0,
+	endAngle: "+360",
+	animation: true,
+	showTooltip: true,
+	editableToolTip: true,
+	readOnly: false,
+	disabled: false,
+	keyboardAction: true,
+	mouseScrollAction: false,
+	sliderType: "default",
+	circleShape: "full",
+	handleShape: "round",
+	lineCap: "square",
+	
+	beforeCreate: null,
+	create: null,
+	start: null,
+	drag: null,
+	change: null,
+	stop: null,
+	tooltipFormat: null
+});
