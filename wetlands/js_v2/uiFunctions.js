@@ -31,7 +31,7 @@ $("#slider").roundSlider({
 	radius: 50,
 	width: 16,
 	handleSize: "+0",
-	startAngle: 0,
+	startAngle: 315,
 	endAngle: "+360",
 	animation: true,
 	showTooltip: true,
