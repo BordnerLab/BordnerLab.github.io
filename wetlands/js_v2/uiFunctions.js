@@ -41,7 +41,7 @@ $("#slider").roundSlider({
 	keyboardAction: true,
 	mouseScrollAction: false,
 	sliderType: "min-range",
-	circleShape: "custom-half",
+	circleShape: "full",
 	handleShape: "round",
 	lineCap: "square",
 	

@@ -103,8 +103,15 @@ body {
 #legendv2 .legendSquare {
 	height: auto;
 	width: 100%;
-	cursor: pointer;
 	background: grey;
+}
+
+#legendv2 .legendSquare .circleLegend {
+	border-radius: 25px;
+	background: red;
+	cursor: pointer;
+	height: 10px;
+	width: 10px;
 }
 		
 #legend .legendSquare {
