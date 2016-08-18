@@ -34,6 +34,11 @@ body {
 	top: 0;
 	width: 0px;
 	margin-top: 10px;
+	visibility: hidden;
+	-webkit-transition: width .5s;
+	-moz-transition: width .5s;
+	-o-transition: width .5s;
+	transition: width .5s;
 }
 
 #geocoder-container > div {
