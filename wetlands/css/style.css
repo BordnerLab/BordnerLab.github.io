@@ -34,6 +34,7 @@ body {
 	top: 0;
 	width: 0px;
 	margin-top: 10px;
+	margin-left:40px;
 	visibility: hidden;
 	-webkit-transition: width .5s;
 	-moz-transition: width .5s;
@@ -148,7 +149,6 @@ body {
 	height: auto;
 	width: 100%;
 	background: #FBFCFC;
-	/*background:red;*/
 	margin-top:7.5px;
 	
 }
