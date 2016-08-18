@@ -48,6 +48,7 @@ body {
 }
 
 #searchBarToggle {
+	color: #F4D03F;
 	position: absolute;
 	top:5.5px;
 	left: 10px;
@@ -177,6 +178,7 @@ body {
 }
 		
 #sliderBox {
+	text-align:center;
 	height: 30px;
 	position: absolute;
 	top:110px;
