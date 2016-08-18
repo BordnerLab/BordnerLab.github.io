@@ -77,9 +77,9 @@ body {
 	-webkit-transform: translate(0px);
 	-moz-transform: translate(0px);
 	-ms-transform: translate(0px);
-	-webkit-transition: transform .35s;
-	transition: transform .35s;
-	-moz-transition: transform .35s;
+	-webkit-transition: left .35s;
+	transition: left .35s;
+	-moz-transition: left .35s;
 	border-radius:4px;
 	text-align:center;
 	/*
@@ -369,4 +369,5 @@ body {
 	position: absolute;
 	left:0px;
 	top:0px;
+	cursor:pointer;
 }
