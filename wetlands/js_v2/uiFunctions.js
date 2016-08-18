@@ -148,7 +148,7 @@ function displaySearchBar() {
 	} else if (displaySearchBarControl > 0) {
 		document.getElementById("geocoder-container").style.visibility = "hidden";
 		document.getElementById("geocoder-container").style.width= "0px";
-		document.getElementById("searchBarToggle").className = "fa fa-map-marker fa-2x";
+		document.getElementById("searchBarToggle").className = "fa fa-map-marker fa-3x";
 		displaySearchBarControl = 0;
 	}
 };
