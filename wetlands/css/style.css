@@ -49,8 +49,8 @@ body {
 
 #searchBarToggle {
 	position: absolute;
-	top:0px;
-	left: 0px;
+	top:10px;
+	left: 10px;
 	cursor:pointer;
 }
 		
@@ -72,7 +72,7 @@ body {
 	height: 200px;
 	background: black;
 	top: 265px;
-	right: 10px;
+	left: 20px;
 	transform: translate(0);
 	-webkit-transform: translate(60px);
 	-moz-transform: translate(60px);
