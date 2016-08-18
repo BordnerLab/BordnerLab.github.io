@@ -249,42 +249,52 @@ function alterLegendInfo(source) {
 		case "AG":
 			placeholder.innerHTML = "Agriculture";
 			placeholder.style.background = "#E59966";
+			placeholder.style.border = "1px solid #ddd";
 			break;
 		case "UR":
 			placeholder.innerHTML = "Urban";
 			placeholder.style.background = "#C03921";
+			placeholder.style.border = "1px solid #ddd";
 			break;
 		case "BA":
 			placeholder.innerHTML = "Barren";
 			placeholder.style.background = "#AFB7C0";
+			placeholder.style.border = "1px solid #ddd";
 			break;
 		case "SL":
 			placeholder.innerHTML = "Shrubland";
 			placeholder.style.background = "#FAD79E";
+			placeholder.style.border = "1px solid #ddd";
 			break;
 		case "MF":
 			placeholder.innerHTML = "Mixed Forest";
 			placeholder.style.background = "#A66ABE";
+			placeholder.style.border = "1px solid #ddd";
 			break;
 		case "WL":
 			placeholder.innerHTML = "Wetlands";
 			placeholder.style.background = "#5FAEE3";
+			placeholder.style.border = "1px solid #ddd";
 			break;
 		case "DF":
 			placeholder.innerHTML = "Deciduous Forest";
 			placeholder.style.background = "#54C083";
+			placeholder.style.border = "1px solid #ddd";
 			break;
 		case "CF":
 			placeholder.innerHTML = "Coniferous Forest";
 			placeholder.style.background = "#19703E";
+			placeholder.style.border = "1px solid #ddd";
 			break;
 		case "O":
 			placeholder.innerHTML = "Other";
 			placeholder.style.background = "#76D6C3";
+			placeholder.style.border = "1px solid #ddd";
 			break;
 		case "U":
 			placeholder.innerHTML = "Unknown";
 			placeholder.style.background = "#FADC70";
+			placeholder.style.border = "1px solid #ddd";
 	}
 };
 
@@ -294,6 +304,7 @@ function exitLegendInfo(source) {
 	
 	placeholder.innerHTML = "";
 	placeholder.style.background = "transparent";
+	placeholder.style.border = "1px solid transparent";
 };
 
 
