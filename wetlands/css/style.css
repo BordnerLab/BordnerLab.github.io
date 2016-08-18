@@ -206,7 +206,11 @@ body {
 
 #slider {
 	top: 125px;
-	left: 20px;
+	left: -190px;
+	-webkit-transition: left .35s;
+	-moz-transition: left .35s;
+	-o-transition: left .35s;
+	transition: left .35s;
 }
 
 #slider .rs-bg-color {
@@ -220,6 +224,10 @@ body {
 	background: #fff;
 	width: 110px;
 	height: 110px;
+	-webkit-transition: left .35s;
+	-moz-transition: left .35s;
+	-o-transition: left .35s;
+	transition: left .35s;
 }
 
 #circleSliderControls .circleToggles {
@@ -358,11 +366,15 @@ body {
 #circleSliderContainer {
 	position: absolute;
 	background: #fff;
-	left: 10px;
+	left: -200px;
 	top:110px;
 	width: 130px;
 	height: 110px;
 	border-radius:4px;
+	-webkit-transition: left .35s;
+	-moz-transition: left .35s;
+	-o-transition: left .35s;
+	transition: left .35s;
 }
 
 #opacityExit {
