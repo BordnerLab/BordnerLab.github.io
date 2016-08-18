@@ -155,15 +155,15 @@ body {
 	height: auto;
 	width: 100%;
 	background: #FBFCFC;
-	margin-top:7.5px;
+	margin-top:10px;
 	
 }
 
 #legendv2 .legendSquare .circleLegend {
 	border-radius: 25px;
 	cursor: pointer;
-	height: 20px;
-	width: 20px;
+	height: 25px;
+	width: 25px;
 	border: 1px solid #fff;
 	margin-left:2px;
 }
