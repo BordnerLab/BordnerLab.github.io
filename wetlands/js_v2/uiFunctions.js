@@ -153,6 +153,28 @@ function displaySearchBar() {
 	}
 };
 
+var showOpacityControlsControl = 0;
+function showOpacityControls() {
+	if (showOpacityControlsControl == 0) {
+		document.getElementById("circleSliderContainer").style.left = "10px";
+		document.getElementById("slider").style.left = "20px";
+		document.getElementById("circleSliderControls").style.left = "110px";
+		showOpacityControlsControl = 1;
+	} else if (showOpacityControlsControl > 0) {
+		document.getElementById("circleSliderContainer").style.left = "-200px";
+		document.getElementById("slider").style.left = "-190px";
+		document.getElementById("circleSliderControls").style.left = "-90px";
+		showOpacityControlsControl = 0;
+	}
+};
+
+function closeOpacityControls() {
+	document.getElementById("circleSliderContainer").style.left = "-200px";
+	document.getElementById("slider").style.left = "-190px";
+	document.getElementById("circleSliderControls").style.left = "-90px";
+	showOpacityControlsControl = 0;
+};
+
 
 
 
