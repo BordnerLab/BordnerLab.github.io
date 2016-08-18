@@ -229,7 +229,9 @@ function showButton03Controls() {
 };
 
 
+function alterLegendInfo() {
 
+};
 
 
 
