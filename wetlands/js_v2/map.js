@@ -92,7 +92,12 @@ map.on('load', function () {
 				});
 				/*document.getElementById("pitch").value = 35;*/
 			} else if (threeDControl == false) {
-			
+				map.flyTo({
+					center: e.lngLat,
+					zoom: 13,
+					around: e.lngLat,
+					animate: true
+				});
 			}
 		} else {
 			

@@ -27,12 +27,12 @@ var toolbarControl = 0;
 function toggleToolbar() {
 	if (toolbarControl == 0) {
 		document.getElementById("toolbar").style.left = "50px";
-		document.getElementById("grabHandleToggle").className = "fa fa-angle-double-left";
+		document.getElementById("grabHandleToggle").className = "fa fa-angle-double-left fa-lg";
 		toolbarControl = 1;
 		return toolbarControl;
 	} else if (toolbarControl > 0) {
 		document.getElementById("toolbar").style.left = "0px";
-		document.getElementById("grabHandleToggle").className = "fa fa-angle-double-right";
+		document.getElementById("grabHandleToggle").className = "fa fa-angle-double-right fa-lg";
 		toolbarControl = 0;
 		return toolbarControl;
 	}
