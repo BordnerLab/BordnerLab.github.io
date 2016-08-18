@@ -228,6 +228,7 @@ function showButton03Controls() {
 	}	
 };
 
+/*
 var alterLegendInfoClickControl = 0;
 function alterLegendInfoClick(source) {
 	var placeholder = document.getElementById("legendv2Info");
@@ -239,6 +240,7 @@ function alterLegendInfoClick(source) {
 	
 	}
 };
+*/
 
 function alterLegendInfo(source) {
 	var placeholder = document.getElementById("legendv2Info");
