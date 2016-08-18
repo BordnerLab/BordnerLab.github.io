@@ -156,11 +156,17 @@ function displaySearchBar() {
 var showOpacityControlsControl = 0;
 function showOpacityControls() {
 	if (showOpacityControlsControl == 0) {
+		document.getElementById("button01").style.color = "#fff";
+		document.getElementById("button01").style.background = "#154360";
+		
 		document.getElementById("circleSliderContainer").style.left = "10px";
 		document.getElementById("slider").style.left = "20px";
 		document.getElementById("circleSliderControls").style.left = "110px";
 		showOpacityControlsControl = 1;
 	} else if (showOpacityControlsControl > 0) {
+		document.getElementById("button01").style.color = "black";
+		document.getElementById("button01").style.background = "#fff";
+		
 		document.getElementById("circleSliderContainer").style.left = "-300px";
 		document.getElementById("slider").style.left = "-290px";
 		document.getElementById("circleSliderControls").style.left = "-190px";
@@ -172,6 +178,9 @@ function closeOpacityControls() {
 	document.getElementById("circleSliderContainer").style.left = "-300px";
 	document.getElementById("slider").style.left = "-290px";
 	document.getElementById("circleSliderControls").style.left = "-190px";
+	
+	document.getElementById("button01").style.color = "black";
+	document.getElementById("button01").style.background = "#fff";
 	showOpacityControlsControl = 0;
 };
 
@@ -191,6 +200,32 @@ function toggleThreeDdisplay(source) {
 		threeDControl = false;
 		toggleThreeDdisplayControl = 0;
 	}
+};
+
+var showButton02ControlsControl = 0;
+function showButton02Controls() {
+	if (showButton02ControlsControl == 0) {
+		document.getElementById("button02").style.color = "#fff";
+		document.getElementById("button02").style.background = "#154360";
+		showButton02ControlsControl = 1;
+	} else if (showButton02ControlsControl > 0) {
+		document.getElementById("button02").style.color = "black";
+		document.getElementById("button02").style.background = "#fff";
+		showButton02ControlsControl = 0;
+	}	
+};
+
+var showButton03ControlsControl = 0;
+function showButton03Controls() {
+	if (showButton03ControlsControl == 0) {
+		document.getElementById("button03").style.color = "#fff";
+		document.getElementById("button03").style.background = "#154360";
+		showButton03ControlsControl = 1;
+	} else if (showButton03ControlsControl > 0) {
+		document.getElementById("button03").style.color = "black";
+		document.getElementById("button03").style.background = "#fff";
+		showButton03ControlsControl = 0;
+	}	
 };
 
 
