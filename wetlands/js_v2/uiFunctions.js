@@ -138,6 +138,20 @@ function circleToggleColor(source) {
 };
 
 
+var displaySearchBarControl = 0;
+function displaySearchBar() {
+	if (displaySearchBarControl == 0) {
+		document.getElementById("geocoder-container").style.width = "200px";
+		document.getElementById("searchBarToggle").className = "fa fa-search-minus";
+		displaySearchBarControl = 1;
+	} else if (displaySearchBarControl > 0) {
+		document.getElementById("geocoder-container").style.width= "0px";
+		document.getElementById("searchBarToggle").className = "fa fa-search-plus";
+		displaySearchBarControl = 0;
+	}
+};
+
+
 
 
 
