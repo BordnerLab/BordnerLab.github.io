@@ -43,13 +43,13 @@ body {
 
 #geocoder-container > div {
 	min-width:100%;
-	margin-left:35px;
+	margin-left:10px;
 }
 
 #searchBarToggle {
 	position: absolute;
-	top:12px;
-	left: 5px;
+	top:0px;
+	left: 0px;
 	cursor:pointer;
 }
 		
