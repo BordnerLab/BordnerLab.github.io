@@ -206,7 +206,7 @@ body {
 
 #slider {
 	top: 125px;
-	left: -190px;
+	left: -290px;
 	-webkit-transition: left .35s;
 	-moz-transition: left .35s;
 	-o-transition: left .35s;
@@ -220,7 +220,7 @@ body {
 #circleSliderControls {
 	position: absolute;
 	top: 110px;
-	left: -90px;
+	left: -190px;
 	background: #fff;
 	width: 110px;
 	height: 110px;
@@ -366,7 +366,7 @@ body {
 #circleSliderContainer {
 	position: absolute;
 	background: #fff;
-	left: -200px;
+	left: -300px;
 	top:110px;
 	width: 130px;
 	height: 110px;

@@ -161,17 +161,17 @@ function showOpacityControls() {
 		document.getElementById("circleSliderControls").style.left = "110px";
 		showOpacityControlsControl = 1;
 	} else if (showOpacityControlsControl > 0) {
-		document.getElementById("circleSliderContainer").style.left = "-200px";
-		document.getElementById("slider").style.left = "-190px";
-		document.getElementById("circleSliderControls").style.left = "-90px";
+		document.getElementById("circleSliderContainer").style.left = "-300px";
+		document.getElementById("slider").style.left = "-290px";
+		document.getElementById("circleSliderControls").style.left = "-190px";
 		showOpacityControlsControl = 0;
 	}
 };
 
 function closeOpacityControls() {
-	document.getElementById("circleSliderContainer").style.left = "-200px";
-	document.getElementById("slider").style.left = "-190px";
-	document.getElementById("circleSliderControls").style.left = "-90px";
+	document.getElementById("circleSliderContainer").style.left = "-300px";
+	document.getElementById("slider").style.left = "-290px";
+	document.getElementById("circleSliderControls").style.left = "-190px";
 	showOpacityControlsControl = 0;
 };
 
