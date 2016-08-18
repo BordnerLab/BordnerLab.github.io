@@ -169,6 +169,13 @@ body {
 	border: 1px solid #fff;
 	margin-left:2px;
 }
+
+#legendv2 #legendv2Info {
+	text-align: center;
+	height:50px;
+	width:50px;
+	background:red;
+}
 		
 #legend .legendSquare {
 	position: absolute;

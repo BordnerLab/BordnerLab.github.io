@@ -228,7 +228,7 @@ function showButton03Controls() {
 	}	
 };
 
-
+/*
 function alterLegendInfo(source) {
 	var placeholder = document.getElementById(source);
 	placeholder.innerHTML = "Wetlands";
@@ -240,7 +240,7 @@ function exitLegendInfo(source) {
 	placeholder.innerHTML = source;
 	placeholder.style.width = "25px";
 };
-
+*/
 
 
 
