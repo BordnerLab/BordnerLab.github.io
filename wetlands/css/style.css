@@ -43,12 +43,12 @@ body {
 
 #geocoder-container > div {
 	min-width:100%;
-	margin-left:30px;
+	margin-left:35px;
 }
 
 #searchBarToggle {
 	position: absolute;
-	top:10px;
+	top:12px;
 	left: 5px;
 	cursor:pointer;
 }
@@ -147,13 +147,13 @@ body {
 #legendv2 .legendSquare {
 	height: auto;
 	width: 100%;
-	background: #FBFCFC;
+	/*background: #FBFCFC;*/
+	background:red;
 	margin-top:7.5px;
 }
 
 #legendv2 .legendSquare .circleLegend {
 	border-radius: 25px;
-	background: red;
 	cursor: pointer;
 	height: 20px;
 	width: 20px;
