@@ -71,8 +71,8 @@ body {
 	width: 50px;
 	height: 200px;
 	background: black;
-	top:45%;
-	left: 10px;
+	top:55%;
+	left: 0px;
 	transform: translate(0px);
 	-webkit-transform: translate(0px);
 	-moz-transform: translate(0px);
@@ -190,14 +190,6 @@ body {
 	box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.1);
 }
 
-#3dBox {
-	height: 20px;
-	width: 20px;
-	position: absolute;
-	top: 220px;
-	background: black;
-	right:0;
-}
 		
 #countyToggles {
 	position: absolute;
