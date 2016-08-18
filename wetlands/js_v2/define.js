@@ -27,6 +27,8 @@ var opacityLayers = [
 	"coastalWaters"
 ];
 
+var threeDControl = false;
+
 
 
 

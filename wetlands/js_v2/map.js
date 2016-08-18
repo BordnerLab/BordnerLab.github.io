@@ -81,15 +81,19 @@ map.on('load', function () {
 					
 			determineClick(feature);
 		} else if (features.length && feature.layer.id != "county-fills") {
-			var randomPitch = Math.floor((Math.random() * 40) + 25);
-			map.flyTo({
-				center: e.lngLat,
-				zoom: 13,
-				pitch: randomPitch,
-				around: e.lngLat,
-				animate: true
-			});
-			document.getElementById("pitch").value = 35;
+			var randomPitch = Math.floor((Math.random() * 40) + 30);
+			if (threeDControl == true) {
+				map.flyTo({
+					center: e.lngLat,
+					zoom: 13,
+					pitch: randomPitch,
+					around: e.lngLat,
+					animate: true
+				});
+				/*document.getElementById("pitch").value = 35;*/
+			} else if (threeDControl == false) {
+			
+			}
 		} else {
 			
 		}
