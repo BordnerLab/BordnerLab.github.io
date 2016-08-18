@@ -290,7 +290,7 @@ function exitLegendInfo(source) {
 	var sourcePlaceholder = document.getElementById(source);
 	
 	placeholder.innerHTML = "";
-	placeholder.background = "transparent";
+	placeholder.style.background = "transparent";
 };
 
 
