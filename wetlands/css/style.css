@@ -48,7 +48,9 @@ body {
 }
 
 #searchBarToggle {
-	color: #F4D03F;
+	/*color: #F4D03F;*/
+	/*color: #DC7633; */
+	color: #154360;
 	position: absolute;
 	top:5.5px;
 	left: 10px;
@@ -93,7 +95,7 @@ body {
 		
 #toolbar #grabHandle {
 	position: relative;
-	width: 20px;
+	width: 35px;
 	height: 50px;
 	background:#fff;
 	top:0px;
