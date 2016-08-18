@@ -179,7 +179,7 @@ function closeOpacityControls() {
 var toggleThreeDdisplayControl = 0;
 function toggleThreeDdisplay(source) {
 	if (toggleThreeDdisplayControl == 0) {
-		document.getElementById(source).style.background = "#D35400";
+		document.getElementById(source).style.background = "#1F618D";
 		map.setPitch(35);
 		threeDControl = true;
 		toggleThreeDdisplayControl = 1;
