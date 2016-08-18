@@ -48,7 +48,8 @@ body {
 }
 
 #searchBarToggle {
-	color: #F4D03F;
+	color: #212F3C;
+	/*color: #F4D03F;*/
 	/*color: #DC7633; */
 	/*color: #154360;*/
 	position: absolute;
