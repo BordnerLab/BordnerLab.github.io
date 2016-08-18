@@ -147,9 +147,9 @@ body {
 #legendv2 .legendSquare {
 	height: auto;
 	width: 100%;
-	/*background: #FBFCFC;*/
-	background:red;
+	background: #FBFCFC;
 	margin-top:7.5px;
+	
 }
 
 #legendv2 .legendSquare .circleLegend {
@@ -340,6 +340,7 @@ body {
 .jspVerticalBar {
 	left:0;
 	background:transparent;
+	width:5px;
 }
 
 .scroll-pane {
