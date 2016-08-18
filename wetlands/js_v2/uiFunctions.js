@@ -229,8 +229,16 @@ function showButton03Controls() {
 };
 
 
-function alterLegendInfo() {
+function alterLegendInfo(source) {
+	var placeholder = document.getElementById(source);
+	placeholder.innerHTML = "Wetlands";
+	placeholder.style.width = "auto";
+};
 
+function exitLegendInfo(source) {
+	var placeholder = document.getElementById(source);
+	placeholder.innerHTML = source;
+	placeholder.style.width = "25px";
 };
 
 
