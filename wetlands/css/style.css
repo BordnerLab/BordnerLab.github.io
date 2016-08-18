@@ -173,8 +173,8 @@ body {
 	position: absolute;
 	width: 100px;
 	left:0;
-	bottom: 60vh;
-	height: 10vh;
+	top:50vh;
+	height: 30px;
 	background:red;
 }
 		
