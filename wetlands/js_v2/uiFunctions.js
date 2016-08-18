@@ -234,6 +234,7 @@ function alterLegendInfoClick(source) {
 	var sourcePlaceholder = document.getElementById(source);
 	if (source == "WL") {
 		placeholder.innerHTML = "Wetlands";
+		placeholder.style.background = "#5FAEE3";
 	} else {
 	
 	}
