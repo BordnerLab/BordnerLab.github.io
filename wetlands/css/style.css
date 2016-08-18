@@ -173,8 +173,9 @@ body {
 #legendv2 #legendv2Info {
 	text-align: center;
 	height:50px;
-	width:50px;
+	width:100px;
 	background:red;
+	z-index:100;
 }
 		
 #legend .legendSquare {
