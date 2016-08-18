@@ -228,6 +228,16 @@ function showButton03Controls() {
 	}	
 };
 
+var alterLegendInfoClickControl = 0;
+function alterLegendInfoClick(source) {
+	var placeholder = document.getElementById("legendv2Info");
+	var sourcePlaceholder = document.getElementById(source);
+	if (source == "WL") {
+		placeholder.innerHTML = "Wetlands";
+	} else {
+	
+	}
+};
 /*
 function alterLegendInfo(source) {
 	var placeholder = document.getElementById(source);

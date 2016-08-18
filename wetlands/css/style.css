@@ -171,11 +171,14 @@ body {
 }
 #legendv2Info {
 	position: absolute;
-	width: 100px;
+	color:white;
+	width: auto;
+	padding:5px;
+	text-align:center;
 	left:0;
 	bottom:55vh;
 	height: 30px;
-	background:red;
+	background:#212F3C;
 }
 		
 #legend .legendSquare {
