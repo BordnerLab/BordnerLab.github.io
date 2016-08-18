@@ -147,8 +147,8 @@ body {
 #legendv2 .legendSquare {
 	height: auto;
 	width: 100%;
-	/*background: #FBFCFC;*/
-	background:red;
+	background: #FBFCFC;
+	/*background:red;*/
 	margin-top:7.5px;
 	
 }
