@@ -16,6 +16,7 @@ $(window).bind(
 				{
 					api.reinitialise();
 					throttleTimeout = null;
+					document.getElementsByCLassName('circleLegend').style.margin = "auto";
 				},
 				50
 			);
