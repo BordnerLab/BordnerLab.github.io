@@ -143,12 +143,12 @@ function displaySearchBar() {
 	if (displaySearchBarControl == 0) {
 		document.getElementById("geocoder-container").style.visibility = "visible";
 		document.getElementById("geocoder-container").style.width = "200px";
-		document.getElementById("searchBarToggle").className = "fa fa-search-minus";
+		document.getElementById("searchBarToggle").className = "fa fa-search-minus fa-2x";
 		displaySearchBarControl = 1;
 	} else if (displaySearchBarControl > 0) {
 		document.getElementById("geocoder-container").style.visibility = "hidden";
 		document.getElementById("geocoder-container").style.width= "0px";
-		document.getElementById("searchBarToggle").className = "fa fa-search-plus";
+		document.getElementById("searchBarToggle").className = "fa fa-search-plus fa-2x";
 		displaySearchBarControl = 0;
 	}
 };
