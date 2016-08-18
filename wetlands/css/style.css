@@ -150,6 +150,7 @@ body {
 	/*background: #FBFCFC;*/
 	background:red;
 	margin-top:7.5px;
+	margin-left:10px;
 	
 }
 
@@ -159,7 +160,7 @@ body {
 	height: 20px;
 	width: 20px;
 	border: 1px solid #fff;
-	margin: auto;
+	margin-left:2px;
 }
 		
 #legend .legendSquare {
