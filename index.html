@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Homepage</title>
+	
+	<link href="lib/bootstrap/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+	<div class="myWrapper">
 	<div id="menu">
 		<div id="menuItems" style="height:20%; width:100%; background: #212F3D;">
 			<h1 id="menu01" onclick="pageScroll(this.id)">Home</h1>
@@ -33,11 +41,14 @@
 	<div id="page03">
 		<h1> Page 03 </h1>
 	</div>
+	</div>
 	
 	
 	<!-- jquery -->
 	<script src="jquery-3.1.0.min.js"></script>
 	<script src="jquery.scrollTo.min.js"></script>
+	
+	<script src="lib/bootstrap/bootstrap.js"></script>
 	<!-- google analytics -->
 	<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
