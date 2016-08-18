@@ -238,19 +238,61 @@ function alterLegendInfoClick(source) {
 	
 	}
 };
-/*
+
 function alterLegendInfo(source) {
-	var placeholder = document.getElementById(source);
-	placeholder.innerHTML = "Wetlands";
-	placeholder.style.width = "auto";
+	var placeholder = document.getElementById("legendv2Info");
+	var sourcePlaceholder = document.getElementById(source);
+	switch (source) {
+		case "AG":
+			placeholder.innerHTML = "Agriculture";
+			placeholder.style.background = "#E59966";
+			break;
+		case "UR":
+			placeholder.innerHTML = "Urban";
+			placeholder.style.background = "#C03921";
+			break;
+		case "BA":
+			placeholder.innerHTML = "Barren";
+			placeholder.style.background = "#AFB7C0";
+			break;
+		case "SL":
+			placeholder.innerHTML = "Shrubland";
+			placeholder.style.background = "#FAD79E";
+			break;
+		case "MF":
+			placeholder.innerHTML = "Mixed Forest";
+			placeholder.style.background = "#A66ABE";
+			break;
+		case "WL":
+			placeholder.innerHTML = "Wetlands";
+			placeholder.style.background = "#5FAEE3";
+			break;
+		case "DF":
+			placeholder.innerHTML = "Deciduous Forest";
+			placeholder.style.background = "#54C083";
+			break;
+		case "CF":
+			placeholder.innerHTML = "Coniferous Forest";
+			placeholder.style.background = "#19703E";
+			break;
+		case "O":
+			placeholder.innerHTML = "Other";
+			placeholder.style.background = "#76D6C3";
+			break;
+		case "U":
+			placeholder.innerHTML = "Unknown";
+			placeholder.style.background = "#FADC70";
+	}
 };
 
 function exitLegendInfo(source) {
-	var placeholder = document.getElementById(source);
-	placeholder.innerHTML = source;
-	placeholder.style.width = "25px";
+	var placeholder = document.getElementById("legendv2Info");
+	var sourcePlaceholder = document.getElementById(source);
+	
+	placeholder.innerHTML = "";
+	placeholder.background = "transparent";
 };
-*/
+
 
 
 

@@ -178,7 +178,7 @@ body {
 	left:0;
 	bottom:55vh;
 	height: 30px;
-	background:#212F3C;
+	background: transparent;
 }
 		
 #legend .legendSquare {
