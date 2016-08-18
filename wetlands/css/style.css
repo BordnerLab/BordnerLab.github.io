@@ -1,9 +1,19 @@
 
-
+/*
+html {
+	overflow:hidden;
+}
+*/
+/*
 body {
 	overflow:hidden;
 }
+*/
 
+.myWrapper {
+	position:relative;
+	overflow:hidden;
+}
 		
 #map {
 	position: absolute;
