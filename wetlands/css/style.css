@@ -147,8 +147,8 @@ body {
 #legendv2 .legendSquare {
 	height: auto;
 	width: 100%;
-	/*background: #FBFCFC;*/
-	background:red;
+	background: #FBFCFC;
+	/*background:red;*/
 	margin-top:7.5px;
 	margin-left:10px;
 	
@@ -343,6 +343,8 @@ body {
 	left:0;
 	background:transparent;
 	width:10px;
+	padding:0;
+	margin:0;
 }
 
 .scroll-pane {
