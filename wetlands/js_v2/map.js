@@ -5,8 +5,8 @@ var map = new mapboxgl.Map({
 	style: 'mapbox://styles/bordnerwlei/cirf7wsrr0003g8nlogxrqxyr',
 	center: [-89.5, 44.5],
 	zoom: 6,
-	preserveDrawingBuffer: true,
-	hash: true
+	preserveDrawingBuffer: false,
+	hash: false
 });
 	
 map.addControl(new mapboxgl.Navigation());
