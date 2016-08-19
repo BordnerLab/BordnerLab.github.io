@@ -98,10 +98,14 @@ function circleToggleColor(source) {
 			if (toggle01Control == false) {
 				document.getElementById(source).style.background = "#5499C7";
 				toggle01Control = true;
+				
+				opacityLayers.push('Agriculture', 'Deciduous Forest', 'Other', 'Urban', 'Barren', 'Shrubland', 'Wetlands', 'Coniferous Forest', 'Mixed Forest', 'Unknown Cover');
 				break;
 			} else if (toggle01Control == true) {
 				document.getElementById(source).style.background = "#fff";
 				toggle01Control = false;
+				
+				
 				break;
 			}
 		case "toggle02":
