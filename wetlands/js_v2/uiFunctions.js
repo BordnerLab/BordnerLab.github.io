@@ -196,7 +196,7 @@ function toggleThreeDdisplay(source) {
 	} else if (toggleThreeDdisplayControl > 0) {
 		document.getElementById(source).style.background = "";
 		document.getElementById(source).style.color = "";
-		map.setPitch(0);
+		map.setPitch(0.1);
 		threeDControl = false;
 		toggleThreeDdisplayControl = 0;
 	}

@@ -2,12 +2,6 @@ function determineClick(feature) {
 	clickedCountyName = feature.properties.COUNTY_NAM;	
 };
 
-
-function updateSlider(x) {
-	var valueHold = document.getElementById(x).value;
-	map.setPitch(valueHold);
-};
-
 function displayLikeLegend(id) {
 	document.getElementById(id).style.border = "2px solid white";
 };

@@ -179,7 +179,7 @@ body {
 	bottom:55vh;
 	height: 30px;
 	background: transparent;
-	border: 1px solid #ddd;
+	border: 1px solid transparent;
 }
 		
 #legend .legendSquare {

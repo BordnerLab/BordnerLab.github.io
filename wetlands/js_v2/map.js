@@ -6,7 +6,8 @@ var map = new mapboxgl.Map({
 	center: [-89.5, 44.5],
 	zoom: 6,
 	preserveDrawingBuffer: false,
-	hash: false
+	hash: false,
+	pitch: 0.1
 });
 	
 map.addControl(new mapboxgl.Navigation());
