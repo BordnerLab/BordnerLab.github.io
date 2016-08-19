@@ -22,7 +22,6 @@ map.on('load', function () {
 		
 	addCountyInitial();
 	
-	console.log('test02');
 	
 	
 		

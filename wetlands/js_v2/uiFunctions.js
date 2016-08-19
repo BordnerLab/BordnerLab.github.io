@@ -207,10 +207,12 @@ function showButton02Controls() {
 	if (showButton02ControlsControl == 0) {
 		document.getElementById("button02").style.color = "#fff";
 		document.getElementById("button02").style.background = "#154360";
+		map.setStyle('mapbox://styles/bordnerwlei/cis24cuiv0002gtkop2y3wnuc');
 		showButton02ControlsControl = 1;
 	} else if (showButton02ControlsControl > 0) {
 		document.getElementById("button02").style.color = "black";
 		document.getElementById("button02").style.background = "#fff";
+		map.setStyle('mapbox://styles/bordnerwlei/cirf7wsrr0003g8nlogxrqxyr');
 		showButton02ControlsControl = 0;
 	}	
 };
