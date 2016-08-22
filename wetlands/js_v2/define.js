@@ -5,7 +5,17 @@
 var clickedCountyName;
 	
 var hoverLayers = [
-	"landcover_A1"
+	"landcover_A1",
+	"Agriculture",
+	"Deciduous Forest",
+	"Other",
+	"Urban",
+	"Barren",
+	"Shrubland",
+	"Wetlands",
+	"Coniferous Forest",
+	"Mixed Forest",
+	"Unknown Cover"
 ];
 
 

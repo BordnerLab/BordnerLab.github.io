@@ -238,7 +238,143 @@ function showButton03Controls() {
 var alterLegendInfoClickControl = 0;
 function alterLegendInfoClick(source) {
 	var sourcePlaceholder = document.getElementById(source);
+	
+	if (alterLegendInfoClickControl == 0) {
+		switch (source) {
+			case "AG":
+				map.setLayoutProperty('Agriculture', 'visibility', 'visible');
+				
+				map.setLayoutProperty('Urban', 'visibility', 'none');
+				map.setLayoutProperty('Barren', 'visibility', 'none');
+				map.setLayoutProperty('Shrubland', 'visibility', 'none');
+				map.setLayoutProperty('Mixed Forest', 'visibility', 'none');
+				map.setLayoutProperty('Wetlands', 'visibility', 'none');
+				map.setLayoutProperty('Deciduous Forest', 'visibility', 'none');
+				map.setLayoutProperty('Coniferous Forest', 'visibility', 'none');
+				map.setLayoutProperty('Other', 'visibility', 'none');
+				map.setLayoutProperty('Unknown Cover', 'visibility', 'none');
+				break;
+			case "UR":
+				map.setLayoutProperty('Urban', 'visibility', 'visible');
+				
+				map.setLayoutProperty('Agriculture', 'visibility', 'none');
+				map.setLayoutProperty('Barren', 'visibility', 'none');
+				map.setLayoutProperty('Shrubland', 'visibility', 'none');
+				map.setLayoutProperty('Mixed Forest', 'visibility', 'none');
+				map.setLayoutProperty('Wetlands', 'visibility', 'none');
+				map.setLayoutProperty('Deciduous Forest', 'visibility', 'none');
+				map.setLayoutProperty('Coniferous Forest', 'visibility', 'none');
+				map.setLayoutProperty('Other', 'visibility', 'none');
+				map.setLayoutProperty('Unknown Cover', 'visibility', 'none');
+				break;
+			case "BA":
+				map.setLayoutProperty('Barren', 'visibility', 'visible');
+				
+				map.setLayoutProperty('Urban', 'visibility', 'none');
+				map.setLayoutProperty('Agriculture', 'visibility', 'none');
+				map.setLayoutProperty('Shrubland', 'visibility', 'none');
+				map.setLayoutProperty('Mixed Forest', 'visibility', 'none');
+				map.setLayoutProperty('Wetlands', 'visibility', 'none');
+				map.setLayoutProperty('Deciduous Forest', 'visibility', 'none');
+				map.setLayoutProperty('Coniferous Forest', 'visibility', 'none');
+				map.setLayoutProperty('Other', 'visibility', 'none');
+				map.setLayoutProperty('Unknown Cover', 'visibility', 'none');
+				break;
+			case "SL":
+				map.setLayoutProperty('Shrubland', 'visibility', 'visible');
+				
+				map.setLayoutProperty('Urban', 'visibility', 'none');
+				map.setLayoutProperty('Barren', 'visibility', 'none');
+				map.setLayoutProperty('Agriculture', 'visibility', 'none');
+				map.setLayoutProperty('Mixed Forest', 'visibility', 'none');
+				map.setLayoutProperty('Wetlands', 'visibility', 'none');
+				map.setLayoutProperty('Deciduous Forest', 'visibility', 'none');
+				map.setLayoutProperty('Coniferous Forest', 'visibility', 'none');
+				map.setLayoutProperty('Other', 'visibility', 'none');
+				map.setLayoutProperty('Unknown Cover', 'visibility', 'none');
+				break;
+			case "MF":
+				map.setLayoutProperty('Mixed Forest', 'visibility', 'visible');
+				
+				map.setLayoutProperty('Urban', 'visibility', 'none');
+				map.setLayoutProperty('Barren', 'visibility', 'none');
+				map.setLayoutProperty('Shrubland', 'visibility', 'none');
+				map.setLayoutProperty('Agriculture', 'visibility', 'none');
+				map.setLayoutProperty('Wetlands', 'visibility', 'none');
+				map.setLayoutProperty('Deciduous Forest', 'visibility', 'none');
+				map.setLayoutProperty('Coniferous Forest', 'visibility', 'none');
+				map.setLayoutProperty('Other', 'visibility', 'none');
+				map.setLayoutProperty('Unknown Cover', 'visibility', 'none');
+				break;
+			case "WL":
+				map.setLayoutProperty('Wetlands', 'visibility', 'visible');
+				
+				map.setLayoutProperty('Urban', 'visibility', 'none');
+				map.setLayoutProperty('Barren', 'visibility', 'none');
+				map.setLayoutProperty('Shrubland', 'visibility', 'none');
+				map.setLayoutProperty('Mixed Forest', 'visibility', 'none');
+				map.setLayoutProperty('Agriculture', 'visibility', 'none');
+				map.setLayoutProperty('Deciduous Forest', 'visibility', 'none');
+				map.setLayoutProperty('Coniferous Forest', 'visibility', 'none');
+				map.setLayoutProperty('Other', 'visibility', 'none');
+				map.setLayoutProperty('Unknown Cover', 'visibility', 'none');
+				break;
+			case "DF":
+				map.setLayoutProperty('Deciduous Forest', 'visibility', 'visible');
+				
+				map.setLayoutProperty('Urban', 'visibility', 'none');
+				map.setLayoutProperty('Barren', 'visibility', 'none');
+				map.setLayoutProperty('Shrubland', 'visibility', 'none');
+				map.setLayoutProperty('Mixed Forest', 'visibility', 'none');
+				map.setLayoutProperty('Wetlands', 'visibility', 'none');
+				map.setLayoutProperty('Agriculture', 'visibility', 'none');
+				map.setLayoutProperty('Coniferous Forest', 'visibility', 'none');
+				map.setLayoutProperty('Other', 'visibility', 'none');
+				map.setLayoutProperty('Unknown Cover', 'visibility', 'none');
+				break;
+			case "CF":
+				map.setLayoutProperty('Coniferous Forest', 'visibility', 'visible');
+				
+				map.setLayoutProperty('Urban', 'visibility', 'none');
+				map.setLayoutProperty('Barren', 'visibility', 'none');
+				map.setLayoutProperty('Shrubland', 'visibility', 'none');
+				map.setLayoutProperty('Mixed Forest', 'visibility', 'none');
+				map.setLayoutProperty('Wetlands', 'visibility', 'none');
+				map.setLayoutProperty('Deciduous Forest', 'visibility', 'none');
+				map.setLayoutProperty('Agriculture', 'visibility', 'none');
+				map.setLayoutProperty('Other', 'visibility', 'none');
+				map.setLayoutProperty('Unknown Cover', 'visibility', 'none');
+				break;
+			case "O":
+				map.setLayoutProperty('Other', 'visibility', 'visible');
+				
+				map.setLayoutProperty('Urban', 'visibility', 'none');
+				map.setLayoutProperty('Barren', 'visibility', 'none');
+				map.setLayoutProperty('Shrubland', 'visibility', 'none');
+				map.setLayoutProperty('Mixed Forest', 'visibility', 'none');
+				map.setLayoutProperty('Wetlands', 'visibility', 'none');
+				map.setLayoutProperty('Deciduous Forest', 'visibility', 'none');
+				map.setLayoutProperty('Coniferous Forest', 'visibility', 'none');
+				map.setLayoutProperty('Agriculture', 'visibility', 'none');
+				map.setLayoutProperty('Unknown Cover', 'visibility', 'none');
+				break;
+			case "U":
+				map.setLayoutProperty('Unknown Cover', 'visibility', 'visible');
+				
+				map.setLayoutProperty('Urban', 'visibility', 'none');
+				map.setLayoutProperty('Barren', 'visibility', 'none');
+				map.setLayoutProperty('Shrubland', 'visibility', 'none');
+				map.setLayoutProperty('Mixed Forest', 'visibility', 'none');
+				map.setLayoutProperty('Wetlands', 'visibility', 'none');
+				map.setLayoutProperty('Deciduous Forest', 'visibility', 'none');
+				map.setLayoutProperty('Coniferous Forest', 'visibility', 'none');
+				map.setLayoutProperty('Other', 'visibility', 'none');
+				map.setLayoutProperty('Agriculture', 'visibility', 'none');
+				
+		}
+	}
 	map.setLayoutProperty('Urban', 'visibility', 'none');
+	
 	console.log('test');
 };
 
