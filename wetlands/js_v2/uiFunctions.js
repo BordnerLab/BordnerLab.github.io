@@ -200,7 +200,7 @@ function toggleThreeDdisplay(source) {
 		toggleThreeDdisplayControl = 1;
 		
 		
-		window.history.pushState("hello", "test", "testCopy.html");
+		window.history.pushState("hello", "test", "testCopy");
 		
 		
 	} else if (toggleThreeDdisplayControl > 0) {
