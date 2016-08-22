@@ -209,7 +209,7 @@ function toggleThreeDdisplay(source) {
 		map.setPitch(0.1);
 		threeDControl = false;
 		toggleThreeDdisplayControl = 0;
-		window.history.back();
+		window.history.pushState("hello", "test", "");
 	}
 };
 
