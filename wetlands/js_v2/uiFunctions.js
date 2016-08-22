@@ -191,6 +191,8 @@ function closeOpacityControls() {
 
 var toggleThreeDdisplayControl = 0;
 function toggleThreeDdisplay(source) {
+	window.history.pushState("hello", "test", "testCopy.html");
+	/*
 	if (toggleThreeDdisplayControl == 0) {
 		document.getElementById(source).style.background = "#1F618D";
 		document.getElementById(source).style.color = "white";
@@ -204,6 +206,7 @@ function toggleThreeDdisplay(source) {
 		threeDControl = false;
 		toggleThreeDdisplayControl = 0;
 	}
+	*/
 };
 
 var showButton02ControlsControl = 0;
