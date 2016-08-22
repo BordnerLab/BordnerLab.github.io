@@ -372,10 +372,21 @@ function alterLegendInfoClick(source) {
 				map.setLayoutProperty('Agriculture', 'visibility', 'none');
 				
 		}
+		alterLegendInfoClickControl = 1;
+	} else if (alterLegendInfoClickControl > 0) {
+		map.setLayoutProperty('Unknown Cover', 'visibility', 'visible');
+				
+		map.setLayoutProperty('Urban', 'visibility', 'visible');
+		map.setLayoutProperty('Barren', 'visibility', 'visible');
+		map.setLayoutProperty('Shrubland', 'visibility', 'visible');
+		map.setLayoutProperty('Mixed Forest', 'visibility', 'visible');
+		map.setLayoutProperty('Wetlands', 'visibility', 'visible');
+		map.setLayoutProperty('Deciduous Forest', 'visibility', 'visible');
+		map.setLayoutProperty('Coniferous Forest', 'visibility', 'visible');
+		map.setLayoutProperty('Other', 'visibility', 'visible');
+		map.setLayoutProperty('Agriculture', 'visibility', 'visible');
+		alterLegendInfoClickControl = 0;
 	}
-	map.setLayoutProperty('Urban', 'visibility', 'none');
-	
-	console.log('test');
 };
 
 
