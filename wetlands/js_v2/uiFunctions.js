@@ -234,19 +234,14 @@ function showButton03Controls() {
 	}	
 };
 
-/*
+
 var alterLegendInfoClickControl = 0;
 function alterLegendInfoClick(source) {
-	var placeholder = document.getElementById("legendv2Info");
 	var sourcePlaceholder = document.getElementById(source);
-	if (source == "WL") {
-		placeholder.innerHTML = "Wetlands";
-		placeholder.style.background = "#5FAEE3";
-	} else {
+	map.setLayoutProperty('Deciduous Forest', 'visibility', 'none');
 	
-	}
 };
-*/
+
 
 function alterLegendInfo(source) {
 	var placeholder = document.getElementById("legendv2Info");
