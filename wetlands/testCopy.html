@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Experimental Map</title>
+	<!-- link mapbox library -->
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.js'></script>
+	
+	<!-- link mapbox styling -->
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.css' rel='stylesheet' />
+	
+	<link href="lib/bootstrap/bootstrap.css" rel="stylesheet">
+	
+	<!-- link font awesome -->
+	<link rel="stylesheet" href="lib/font-awesome-4.6.3/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="lib/roundslider/roundslider.css">
+	
+	<link rel="stylesheet" href="lib/scroll/jquery.jscrollpane.css">
+	
+	<link rel="stylesheet" href="css/style.css" />
+	
+</head>
+<body>
+	<div class="myWrapper">
+	<div id='map'></div>
+	<i id="searchBarToggle" class="fa fa-map-marker fa-3x" aria-hidden="true" onclick="displaySearchBar()"></i>
+	<div id='geocoder-container'></i>
+	</div>
+	
+	<div id="sliderBox" onclick="toggleThreeDdisplay(this.id)">
+		4D
+	</div>
+	
+	
+	
+	<div id='toolbar'>
+		<div id='grabHandle' onclick="toggleToolbar()"><i id="grabHandleToggle" class="fa fa-angle-right fa-3x" aria-hidden="true"></i></div>
+		<div id='button01' style="position:absolute; height:50px; width: 50px; background:#fff; color:black; top:0; border-top-left-radius:4px; border-top-right-radius:4px; cursor:pointer; border:1px solid #ddd;" onclick="showOpacityControls()"><i class="fa fa-adjust fa-2x" aria-hidden="true" style="margin-top:7.5px;"></i></div>
+		<div id='button02' style="position:absolute; height:50px; width:50px; background:#fff; color:black; top:50px; cursor:pointer; border: 1px solid #ddd;" onclick="showButton02Controls()"><i class="fa fa-map fa-2x" aria-hidden="true" style="margin-top:7.5px;"></i></div>
+		<div id='button03' style="position:absolute; height:50px; width:50px; background:#fff; color:black; top:100px; cursor:pointer; border: 1px solid #ddd;" onclick="showButton03Controls()"><i class="fa fa-cog fa-2x" aria-hidden="true" style="margin-top:7.5px;"></i></div>
+		<div id='button04' style="position:absolute; height:50px; width:50px; background:#fff; color: black; top:150px; border-bottom-left-radius:4px; border-bottom-right-radius:4px; cursor:pointer; border:1px solid #ddd;" onclick="takeScreenshot()"><i class="fa fa-camera fa-2x" aria-hidden="true" style="margin-top:7.5px;"></i></div>
+	</div>
+	
+	<!--
+	<div id='legend'>
+		<div id="A4" class="legendSquare" style="top:0; background: #E59966; border: 1px solid #ddd;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend(this.id)">Agriculture</div>
+		<div id="A3" class="legendSquare" style="top:30px; background:#C0392A; border: 1px solid #ddd;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend(this.id)">Urban</div>
+		<div id="B4" class="legendSquare" style="top:60px; background:#AFB7C0; border: 1px solid #ddd;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend(this.id)">Barren</div>
+		<div id="C4" class="legendSquare" style="top:90px; background:#FAD79E; border: 1px solid #ddd;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend(this.id)">Shrubland</div>
+		<div id="C4b" class="legendSquare" style="top:120px; background:#A66ABE; border: 1px solid #ddd;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend(this.id)">Mixed Forest</div>
+		<div id="F4" class="legendSquare" style="top:150px; background:#5FAEE3; border: 1px solid #ddd;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend(this.id)">Wetlands</div>
+		<div id="MF" class="legendSquare" style="top:180px; background:#54C083; border: 1px solid #ddd;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend(this.id)">Deciduous Forest</div>
+		<div id="ER" class="legendSquare" style="top:210px; background:#19703E; border: 1px solid #ddd;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend(this.id)">Coniferous Forest</div>
+		<div id="Other" class="legendSquare" style="top:240px; background:#76D6C3; border: 1px solid #ddd;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend(this.id)">Other</div>
+		<div id="Unknown" class="legendSquare" style="top:270px; background:#FADC70; border:1px solid #ddd;" onmouseover="displayLikeLegend(this.id)" onmouseout="resetLikeLegend(this.id)">Unknown Cover</div>
+	</div>
+	-->
+	<div id="legendv2Info">
+	
+	</div>
+	<div id='legendv2' class="scroll-pane">
+		<div class="legendSquare">
+			<div id="AG" class="circleLegend" style="background: #E59966;" onclick="alterLegendInfoClick(this.id)" onmouseover="alterLegendInfo(this.id)" onmouseout="exitLegendInfo(this.id)">ZZ</div>
+		</div>
+		<div class="legendSquare">
+			<div id="UR" class="circleLegend" style="background:#C0392A;" onclick="alterLegendInfoClick(this.id)" onmouseover="alterLegendInfo(this.id)" onmouseout="exitLegendInfo(this.id)">ZZ</div>
+		</div>
+		<div class="legendSquare">
+			<div id="BA" class="circleLegend" style="background:#AFB7C0;" onclick="alterLegendInfoClick(this.id)" onmouseover="alterLegendInfo(this.id)" onmouseout="exitLegendInfo(this.id)">ZZ</div>
+		</div>
+		<div class="legendSquare">
+			<div id="SL" class="circleLegend" style="background:#FAD79E;" onclick="alterLegendInfoClick(this.id)" onmouseover="alterLegendInfo(this.id)" onmouseout="exitLegendInfo(this.id)">ZZ</div>
+		</div>
+		<div class="legendSquare">
+			<div id="MF" class="circleLegend" style="background:#A66ABE;" onclick="alterLegendInfoClick(this.id)" onmouseover="alterLegendInfo(this.id)" onmouseout="exitLegendInfo(this.id)">ZZ</div>
+		</div>
+		<div class="legendSquare">
+			<div id="WL" class="circleLegend" style="background:#5FAEE3;" onclick="alterLegendInfoClick(this.id)" onmouseover="alterLegendInfo(this.id)" onmouseout="exitLegendInfo(this.id)">ZZ</div>
+		</div>
+		<div class="legendSquare">
+			<div id="DF" class="circleLegend" style="background:#54C083;" onclick="alterLegendInfoClick(this.id)" onmouseover="alterLegendInfo(this.id)" onmouseout="exitLegendInfo(this.id)">ZZ</div>
+		</div>
+		<div class="legendSquare">
+			<div id="CF" class="circleLegend" style="background:#19703E;" onclick="alterLegendInfoClick(this.id)" onmouseover="alterLegendInfo(this.id)" onmouseout="exitLegendInfo(this.id)">ZZ</div>
+		</div>
+		<div class="legendSquare">
+			<div id="O" class="circleLegend" style="background:#76D6C3;" onclick="alterLegendInfoClick(this.id)" onmouseover="alterLegendInfo(this.id)" onmouseout="exitLegendInfo(this.id)">ZZ</div>
+		</div>
+		<div class="legendSquare">
+			<div id="U" class="circleLegend" style="background:#FADC70;" onclick="alterLegendInfoClick(this.id)" onmouseover="alterLegendInfo(this.id)" onmouseout="exitLegendInfo(this.id)">ZZ</div>
+		</div>
+	</div>
+	
+	<!--
+	<div id="currentCountyBox"></div>
+	-->
+	
+	<div id="circleSliderContainer">
+		<i id="opacityExit" class="fa fa-times" aria-hidden="true" onclick="closeOpacityControls()"></i>
+	</div>
+	
+	<div id="slider"></div>
+	
+	<div id="circleSliderControls">
+		<div class="circleToggles" style="top:0;">
+			<div id="toggle01" class="circleToggleCircles" style="background: #fff;" onclick="circleToggleColor(this.id)"></div>
+		</div>
+		<div class="circleToggles" style="top:25%;">
+			<div id="toggle02" class="circleToggleCircles" style="background: #5499C7;" onclick="circleToggleColor(this.id)"></div>
+		</div>
+		<div class="circleToggles" style="top:50%;">
+			<div id="toggle03" class="circleToggleCircles" style="background: #fff;" onclick="circleToggleColor(this.id)"></div>
+		</div>
+		<div class="circleToggles" style="top:75%;">
+			<div id="toggle04" class="circleToggleCircles" style="background: #fff;" onclick="circleToggleColor(this.id)"></div>
+		</div>
+		
+		<div class="circleTogglesInfo" style="top:0;">Pancakes</div>
+		<div class="circleTogglesInfo" style="top:25%;">Eggs</div>
+		<div class="circleTogglesInfo" style="top:50%;">Sausage</div>
+		<div class="circleTogglesInfo" style="top:75%;">Potatoes</div>
+	</div>
+	</div>
+	<!--
+	<div id="homePageBackground"></div>
+	
+	<div id="homePage"></div>
+		<h1 onclick="homePageFunction()">Proceed to the map</h1>
+	</div>
+	-->
+	
+	<script src='lib/roundslider/jquery-1.11.3.min.js'></script>
+	<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.js'></script>
+	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.css' type='text/css' />
+	
+	<script src="lib/bootstrap/bootstrap.js"></script>
+	<!--
+	<script src='js/define.js'></script>
+	<script src='js/map.js'></script>
+	<script src='js/mapFunctions.js'></script>
+	<script src='js/uiFunctions.js'></script>
+	-->
+	<script src='lib/roundslider/roundslider.js'></script>
+	
+	<script src='lib/scroll/jquery.mousewheel.js'></script>
+	<script src='lib/scroll/jquery.jscrollpane.min.js'></script>
+	
+	<script src='js_v2/define.js'></script>
+	<script src='js_v2/map.js'></script>
+	<script src='js_v2/mapFunctions.js'></script>
+	<script src='js_v2/uiFunctions.js'></script>
+	
+	<!-- google analytics -->
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-82621250-1', 'auto');
+	ga('send', 'pageview');
+
+	</script>
+</body>
+</html>
