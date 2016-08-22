@@ -238,8 +238,8 @@ function showButton03Controls() {
 var alterLegendInfoClickControl = 0;
 function alterLegendInfoClick(source) {
 	var sourcePlaceholder = document.getElementById(source);
-	map.setLayoutProperty('Deciduous Forest', 'visibility', 'none');
-	
+	map.setLayoutProperty('Urban', 'visibility', 'none');
+	console.log('test');
 };
 
 
