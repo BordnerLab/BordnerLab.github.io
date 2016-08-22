@@ -191,22 +191,26 @@ function closeOpacityControls() {
 
 var toggleThreeDdisplayControl = 0;
 function toggleThreeDdisplay(source) {
-	window.history.pushState("hello", "test", "testCopy.html");
-	/*
+	
 	if (toggleThreeDdisplayControl == 0) {
 		document.getElementById(source).style.background = "#1F618D";
 		document.getElementById(source).style.color = "white";
 		map.setPitch(35);
 		threeDControl = true;
 		toggleThreeDdisplayControl = 1;
+		
+		
+		window.history.pushState("hello", "test", "testCopy.html");
+		
+		
 	} else if (toggleThreeDdisplayControl > 0) {
 		document.getElementById(source).style.background = "";
 		document.getElementById(source).style.color = "";
 		map.setPitch(0.1);
 		threeDControl = false;
 		toggleThreeDdisplayControl = 0;
+		window.history.back();
 	}
-	*/
 };
 
 var showButton02ControlsControl = 0;
