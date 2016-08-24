@@ -348,7 +348,7 @@ function alterLegendInfoClick(source) {
 					var placeholder2 = document.createElement('DIV');
 					
 					placeholder.setAttribute("class", "legendSquare");
-					paceholder2.setAttribute("class", "circleLegend");
+					placeholder2.setAttribute("class", "circleLegend");
 					
 					var placeholder3 = document.getElementById("legendv3");
 					placeholder3.appendChild(placeholder);
