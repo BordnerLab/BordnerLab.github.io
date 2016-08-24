@@ -104,7 +104,7 @@ map.on('load', function () {
 		}
 					
 	});
-	
+	/*
 	map.on ('render', function() {
 		if (getCanvasControl == true) {
 			data = map.getCanvas().toDataURL("image/png");
@@ -113,6 +113,7 @@ map.on('load', function () {
 			return;
 		}
 	});
+	*/
 });
 	
 geocoder.on('result', function(ev) {
