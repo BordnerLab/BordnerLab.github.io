@@ -411,10 +411,14 @@
 
 
 .containerLoad {
+  position:absolute;
   width: 200px;
   height: 100px;
   padding-top: 100px;
   margin: 0 auto;
+  left:50vh;
+  top: 50vh;
+  z-index: 100;
 }
 
 .ball {
