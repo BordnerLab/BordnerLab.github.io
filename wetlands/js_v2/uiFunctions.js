@@ -5,8 +5,6 @@ $('.scroll-pane').jScrollPane({
 });
 
 
-
-
 var api = $('.scroll-pane').data('jsp');
 var throttleTimeout;
 $(window).bind(
@@ -41,15 +39,6 @@ function toggleToolbar() {
 	}
 };
 
-
-
-
-
-
-function homePageFunction() {
-	document.getElementById("homePageBackground").style.transform = "translate(100%)";
-	document.getElementById("homePage").style.transform = "translate(100%)";
-};
 
 $("#slider").roundSlider({
 	min:0,
@@ -88,7 +77,6 @@ function onCircleChange (e) {
 	for (n=0; n < opacityLayers.length; n++) {
 		map.setPaintProperty(opacityLayers[n], 'fill-opacity', parseInt(circleValue, 10) / 100);
 	}
-	//map.setPaintProperty('coastalWaters', 'fill-opacity', parseInt(circleValue, 10) / 100);
 };
 
 function circleToolTip(args) {
@@ -334,57 +322,8 @@ function alterLegendInfoClick(source) {
 				break;
 			case "WL":
 				map.setLayoutProperty('Wetlands', 'visibility', 'visible');
-				map.setPaintProperty('Wetlands', 'fill-color', {
-					property: 'Cov1',
-					type: 'categorical',
-					stops: [
-						['A3', '#fbb03b'],
-						['A4', '#223b53'],
-						['B4', '#e55e5e'],
-						['C4', '#3bb2d0'],
-						['C4b', '#ccc']]
-				});
 				
-				var c;
-				for(c=0; c < mainLegend.length; c++){
-					var placeholder = mainLegend[c][0];
-					var remove = document.getElementById(placeholder);
-					
-					var p1 = document.getElementById("legendv2").lastElementChild;
-					var p2 = p1.childNodes[0];
-					var p3 = p2.childNodes[0];
-					p2.removeChild(p3);
-				}
-				
-				var backHolder = document.createElement('DIV');
-				var textBackHolder = document.createTextNode("Back");
-				backHolder.setAttribute("class", "legendSquarev2");
-				backHolder.setAttribute("onclick", "clickLegendBack()");
-				var m1 = document.getElementById("legendv2").lastElementChild;
-				var m2 = m1.childNodes[0];
-				backHolder.appendChild(textBackHolder);
-				m2.appendChild(backHolder);
-				
-				var v;
-				for(v=0; v < wetlandsLayers.length; v++){
-					var placeholder = document.createElement('DIV');
-					var placeholder2 = document.createElement('DIV');
-					var idHold = wetlandsLayers[v][0];
-					var colorHold = "background:" + wetlandsLayers[v][1];
-					var textholder = document.createTextNode(idHold);
-					
-					
-					placeholder.setAttribute("class", "legendSquare");
-					placeholder2.setAttribute("class", "circleLegend");
-					placeholder2.setAttribute("id", idHold);
-					placeholder2.setAttribute("style", colorHold);
-					
-					var placeholder3 = document.getElementById("legendv2").lastElementChild;
-					var placeholder4 = placeholder3.childNodes[0];
-					placeholder4.appendChild(placeholder);
-					placeholder.appendChild(placeholder2);
-					placeholder2.appendChild(textholder);
-				}
+				changeLegendAndMap();
 				
 				map.setLayoutProperty('Urban', 'visibility', 'none');
 				map.setLayoutProperty('Barren', 'visibility', 'none');
@@ -600,6 +539,60 @@ function clickLegendBack() {
 			document.getElementById("loadingScreen").style.visibility = "hidden";
 		}, 3000);
 	
+};
+
+function changeLegendAndMap(){
+	map.setPaintProperty('Wetlands', 'fill-color', {
+		property: 'Cov1',
+		type: 'categorical',
+		stops: [
+			['A3', '#fbb03b'],
+			['A4', '#223b53'],
+			['B4', '#e55e5e'],
+			['C4', '#3bb2d0'],
+			['C4b', '#ccc']]
+	});
+				
+	var c;
+	for(c=0; c < mainLegend.length; c++){
+		var placeholder = mainLegend[c][0];
+		var remove = document.getElementById(placeholder);
+					
+		var p1 = document.getElementById("legendv2").lastElementChild;
+		var p2 = p1.childNodes[0];
+		var p3 = p2.childNodes[0];
+		p2.removeChild(p3);
+	}
+				
+	var backHolder = document.createElement('DIV');
+	var textBackHolder = document.createTextNode("Back");
+	backHolder.setAttribute("class", "legendSquarev2");
+	backHolder.setAttribute("onclick", "clickLegendBack()");
+	var m1 = document.getElementById("legendv2").lastElementChild;
+	var m2 = m1.childNodes[0];
+	backHolder.appendChild(textBackHolder);
+	m2.appendChild(backHolder);
+				
+	var v;
+	for(v=0; v < wetlandsLayers.length; v++){
+		var placeholder = document.createElement('DIV');
+		var placeholder2 = document.createElement('DIV');
+		var idHold = wetlandsLayers[v][0];
+		var colorHold = "background:" + wetlandsLayers[v][1];
+		var textholder = document.createTextNode(idHold);
+					
+					
+		placeholder.setAttribute("class", "legendSquare");
+		placeholder2.setAttribute("class", "circleLegend");
+		placeholder2.setAttribute("id", idHold);
+		placeholder2.setAttribute("style", colorHold);
+					
+		var placeholder3 = document.getElementById("legendv2").lastElementChild;
+		var placeholder4 = placeholder3.childNodes[0];
+		placeholder4.appendChild(placeholder);
+		placeholder.appendChild(placeholder2);
+		placeholder2.appendChild(textholder);
+	}
 };
 
 

@@ -1,7 +1,5 @@
 
 
-
-
 var clickedCountyName;
 	
 var hoverLayers = [
