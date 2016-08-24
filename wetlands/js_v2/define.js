@@ -30,6 +30,19 @@ var landcoverLayers = [
 	"Unknown Cover"
 ];
 
+var mainLegend = [
+	["AG", "#E59966"],
+	["UR", "#C0392A"],
+	["BA", "#AFB7C0"],
+	["SL", "#FAD79E"],
+	["MF", "#A66ABE"],
+	["WL", "#5FAEE3"],
+	["DF", "#54C083"],
+	["CF", "#19703E"],
+	["O", "#76D6C3"],
+	["U", "#FADC70"]
+];
+
 var wetlandsLayers = [
 	['A3', '#fbb03b'],
 	['A4', '#223b53'],

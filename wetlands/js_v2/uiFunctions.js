@@ -4,6 +4,8 @@ $('.scroll-pane').jScrollPane({
 	verticalDragMaxHeight: 20
 });
 
+
+
 var api = $('.scroll-pane').data('jsp');
 var throttleTimeout;
 $(window).bind(
@@ -342,6 +344,16 @@ function alterLegendInfoClick(source) {
 						['C4b', '#ccc']]
 				});
 				
+				var c;
+				for(c=0; c < mainLegend.length; c++){
+					var placeholder = mainLegend[c][0];
+					var remove = document.getElementById(placeholder);
+					
+					var p1 = document.getElementById("legendv2").lastElementChild;
+					var p2 = p1.lastElementChild;
+					p2.removeChild(remove);
+				}
+				
 				var v;
 				for(v=0; v < wetlandsLayers.length; v++){
 					var placeholder = document.createElement('DIV');
@@ -356,8 +368,8 @@ function alterLegendInfoClick(source) {
 					placeholder2.setAttribute("id", idHold);
 					placeholder2.setAttribute("style", colorHold);
 					
-					var placeholder3 = document.getElementById("legendv3").lastElementChild;
-					placeholder4 = placeholder3.lastElementChild;
+					var placeholder3 = document.getElementById("legendv2").lastElementChild;
+					var placeholder4 = placeholder3.lastElementChild;
 					placeholder4.appendChild(placeholder);
 					placeholder.appendChild(placeholder2);
 					placeholder2.appendChild(textholder);
