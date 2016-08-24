@@ -348,6 +348,8 @@ function alterLegendInfoClick(source) {
 					var placeholder2 = document.createElement('DIV');
 					var idHold = wetlandsLayers[v][0];
 					var colorHold = "background:" + wetlandsLayers[v][1];
+					var textHolder = document.createTextNode(idHold);
+					
 					
 					placeholder.setAttribute("class", "legendSquare");
 					placeholder2.setAttribute("class", "circleLegend");
@@ -357,6 +359,7 @@ function alterLegendInfoClick(source) {
 					var placeholder3 = document.getElementsByClassName("jspPane").lastElementChild;
 					placeholder3.appendChild(placeholder);
 					placeholder.appendChild(placeholder2);
+					placeholder2.appendChild(textHolder);
 				}
 				
 				map.setLayoutProperty('Urban', 'visibility', 'none');
