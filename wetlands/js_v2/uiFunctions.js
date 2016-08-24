@@ -532,6 +532,7 @@ function exitLegendInfo(source) {
 };
 
 function clickLegendBack() {
+	// Show all layers
 	map.setLayoutProperty('Agriculture', 'visibility', 'visible');
 	map.setLayoutProperty('Deciduous Forest', 'visibility', 'visible');
 	map.setLayoutProperty('Other', 'visibility', 'visible');
@@ -542,6 +543,47 @@ function clickLegendBack() {
 	map.setLayoutProperty('Coniferous Forest', 'visibility', 'visible');
 	map.setLayoutProperty('Mixed Forest', 'visibility', 'visible');
 	map.setLayoutProperty('Unknown Cover', 'visibility', 'visible');
+	
+	// hide wetlands layer
+	map.setPaintProperty('Wetlands', 'fill-color', '#5FAEE3');
+	
+	// remove back button
+	var m1 = document.getElementById("legendv2").lastElementChild;
+	var m2 = m1.childNodes[0];
+	var m3 = m2.childNodes[0];
+	m2.removeChild(m3);
+	
+	// remove wetlands legend
+	var v;
+	for(v=0; v < wetlandsLayers.length; v++){
+		m2.removeChild(m3);
+	}
+	
+	// populate with original legend
+	var f;
+	for(f=0; v < mainLegend.length; f++){
+		var placeholder = document.createElement('DIV');
+		var placeholder2 = document.createElement('DIV');
+		var idHold = mainLegend[f][0];
+		var colorHold = "background:" + mainLegend[f][1];
+		var textholder = document.createTextNode(idHold);
+					
+					
+		placeholder.setAttribute("class", "legendSquare");
+		placeholder2.setAttribute("class", "circleLegend");
+		placeholder2.setAttribute("id", idHold);
+		placeholder2.setAttribute("style", colorHold);
+					
+		var placeholder3 = document.getElementById("legendv2").lastElementChild;
+		var placeholder4 = placeholder3.childNodes[0];
+		placeholder4.appendChild(placeholder);
+		placeholder.appendChild(placeholder2);
+		placeholder2.appendChild(textholder);
+	}
+	
+	// remove text inside legend tooltip
+	var tooltipRef = document.getElementById("legendv2Info");
+	tooltipRef.innerHTML = "";
 };
 
 
