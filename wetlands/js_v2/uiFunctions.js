@@ -357,7 +357,8 @@ function alterLegendInfoClick(source) {
 				
 				var backHolder = document.createElement('DIV');
 				var textBackHolder = document.createTextNode("Back");
-				backHolder.setAttribute("class", "legendSquare");
+				backHolder.setAttribute("class", "legendSquarev2");
+				backHolder.setAttribute("onclick", "clickLegendBack()");
 				var m1 = document.getElementById("legendv2").lastElementChild;
 				var m2 = m1.childNodes[0];
 				backHolder.appendChild(textBackHolder);
@@ -528,6 +529,19 @@ function exitLegendInfo(source) {
 	placeholder.innerHTML = "";
 	placeholder.style.background = "transparent";
 	placeholder.style.border = "1px solid transparent";
+};
+
+function clickLegendBack() {
+	map.setLayoutProperty('Agriculture', 'visibility', 'visible');
+	map.setLayoutProperty('Deciduous Forest', 'visibility', 'visible');
+	map.setLayoutProperty('Other', 'visibility', 'visible');
+	map.setLayoutProperty('Urban', 'visibility', 'visible');
+	map.setLayoutProperty('Barren', 'visibility', 'visible');
+	map.setLayoutProperty('Shrubland', 'visibility', 'visible');
+	map.setLayoutProperty('Wetlands', 'visibility', 'visible');
+	map.setLayoutProperty('Coniferous Forest', 'visibility', 'visible');
+	map.setLayoutProperty('Mixed Forest', 'visibility', 'visible');
+	map.setLayoutProperty('Unknown Cover', 'visibility', 'visible');
 };
 
 

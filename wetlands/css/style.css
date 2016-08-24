@@ -122,6 +122,15 @@
 	margin-top:10px;
 }
 
+#legendv2 .legendSquarev2 {
+	height: auto;
+	padding-top:5px;
+	padding-bottom:5px;
+	width: 100%;
+	background: #5499C7;
+	cursor:pointer;
+}
+
 #legendv2 .legendSquare .circleLegend {
 	text-align:center;
 	font-size: 12px;
