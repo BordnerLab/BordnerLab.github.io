@@ -22,7 +22,7 @@ map.on('load', function () {
 	addMapSources();
 		
 	addCountyInitial();
-	document.getElementById("loadingScreen").style.visibility = "hidden";
+	
 	
 	
 		

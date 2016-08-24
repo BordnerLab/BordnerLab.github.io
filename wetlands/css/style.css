@@ -420,7 +420,7 @@
   left:50vh;
   top: 35vh;
   z-index: 100;
-  visibility: visible;
+  visibility: hidden;
 }
 
 .ball {
