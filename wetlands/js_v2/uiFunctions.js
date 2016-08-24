@@ -355,6 +355,14 @@ function alterLegendInfoClick(source) {
 					p2.removeChild(p3);
 				}
 				
+				var backHolder = document.createElement('DIV');
+				var textBackHolder = document.createTextNode("Back");
+				backHolder.setAttribute("class", "legendSquare");
+				var m1 = document.getElementById("legendv2").lastElementChild;
+				var m2 = m1.childNodes[0];
+				backHolder.appendChild(textBackHolder);
+				m2.appendChild(backHolder);
+				
 				var v;
 				for(v=0; v < wetlandsLayers.length; v++){
 					var placeholder = document.createElement('DIV');

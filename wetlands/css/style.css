@@ -99,36 +99,7 @@
 	border: 3px solid #ddd;
 }
 
-#legendv3 {
-	position: absolute;
-	width:50px;
-	height: 50vh;
-	bottom:0;
-	right:0;
-	background: #FBFCFC;
-	-moz-box-shadow: 1px 2px 2px rgba(0,0,0,0.1);
-	-webkit-box-shadow: 1px 2px 2px rgba(0,0,0,0.1);
-	box-shadow: 1px 2px 0px 2px rgba(0,0,0,0.1);
-	overflow: auto;
-}
 
-#legendv3 .legendSquare {
-	height: auto;
-	width: 100%;
-	background: #FBFCFC;
-	margin-top:10px;
-}
-
-#legendv3 .legendSquare .circleLegend {
-	text-align:center;
-	font-size: 12px;
-	border-radius: 25px;
-	cursor: pointer;
-	height: 25px;
-	width: 25px;
-	border: 1px solid #fff;
-	margin-left:0px;
-}
 
 
 #legendv2 {
