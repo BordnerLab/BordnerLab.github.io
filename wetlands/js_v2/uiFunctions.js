@@ -105,6 +105,14 @@ function circleToggleColor(source) {
 				document.getElementById(source).style.background = "#fff";
 				toggle01Control = false;
 				
+				var a;
+				for(a=0; a < landcoverLayers.length; a++){
+					var placeholder = landcoverLayers[a];
+					var index = opacityLayers.indexOf(placeholder);
+					if (index != -1){
+						opacityLayers.splice(index, 1);
+					}
+				}
 				
 				break;
 			}
@@ -112,10 +120,18 @@ function circleToggleColor(source) {
 			if (toggle02Control == false) {
 				document.getElementById(source).style.background = "#5499C7";
 				toggle02Control = true;
+				
+				opacityLayers.push('coastalWaters');
 				break;
 			} else if (toggle02Control == true) {
 				document.getElementById(source).style.background = "#fff";
 				toggle02Control = false;
+				
+				var index2 = opacityLayers.indexOf('coastalWaters');
+				if (index != -1){
+					opacityLayers.splice(index2), 1);
+				}
+				
 				break;
 			}
 		case "toggle03":
