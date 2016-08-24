@@ -315,6 +315,16 @@ function alterLegendInfoClick(source) {
 				break;
 			case "WL":
 				map.setLayoutProperty('Wetlands', 'visibility', 'visible');
+				map.setPaintProperty('Wetlands', 'fill-color', {
+					property: 'Cov1',
+					type: 'categorical',
+					stops: [
+						['A3', '#fbb03b'],
+						['A4', '#223b53'],
+						['B4', '#e55e5e'],
+						['C4', '#3bb2d0'],
+						['C4b', '#ccc']]
+				});
 				
 				map.setLayoutProperty('Urban', 'visibility', 'none');
 				map.setLayoutProperty('Barren', 'visibility', 'none');
