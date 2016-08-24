@@ -43,6 +43,8 @@ var mainLegend = [
 	["U", "#FADC70"]
 ];
 
+
+
 var wetlandsLayers = [
 	['A3', '#fbb03b'],
 	['A4', '#223b53'],
