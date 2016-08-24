@@ -350,7 +350,7 @@ function alterLegendInfoClick(source) {
 					var remove = document.getElementById(placeholder);
 					
 					var p1 = document.getElementById("legendv2").lastElementChild;
-					var p2 = p1.lastElementChild;
+					var p2 = p1.childNodes[0];
 					p2.removeChild(remove);
 				}
 				
