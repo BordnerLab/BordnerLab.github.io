@@ -354,11 +354,9 @@ function alterLegendInfoClick(source) {
 					placeholder2.setAttribute("id", idHold);
 					placeholder2.setAttribute("style", colorHold);
 					
-					var placeholder3 = document.getElementById("legendv3");
+					var placeholder3 = document.getElementsByClassName("jspPane").lastElementChild;
 					placeholder3.appendChild(placeholder);
 					placeholder.appendChild(placeholder2);
-					
-					placeholder3.setAttribute("class", "scroll-pane");
 				}
 				
 				map.setLayoutProperty('Urban', 'visibility', 'none');
