@@ -352,7 +352,6 @@ function alterLegendInfoClick(source) {
 					var p1 = document.getElementById("legendv2").lastElementChild;
 					var p2 = p1.childNodes[0];
 					var p3 = p2.childNodes[0];
-					console.log('hey');
 					p2.removeChild(p3);
 				}
 				
@@ -371,7 +370,7 @@ function alterLegendInfoClick(source) {
 					placeholder2.setAttribute("style", colorHold);
 					
 					var placeholder3 = document.getElementById("legendv2").lastElementChild;
-					var placeholder4 = placeholder3.lastElementChild;
+					var placeholder4 = placeholder3.childNodes[0];
 					placeholder4.appendChild(placeholder);
 					placeholder.appendChild(placeholder2);
 					placeholder2.appendChild(textholder);
