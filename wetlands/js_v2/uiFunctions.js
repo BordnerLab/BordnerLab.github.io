@@ -564,7 +564,7 @@ function clickLegendBack() {
 	
 	// populate with original legend
 	var f;
-	for(f=0; v < mainLegend.length; f++){
+	for(f=0; v < mainLegend.length -1; f++){
 		var placeholder = document.createElement('DIV');
 		var placeholder2 = document.createElement('DIV');
 		var idHold = mainLegend[f][0];
