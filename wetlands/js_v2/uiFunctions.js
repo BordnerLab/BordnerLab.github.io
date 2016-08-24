@@ -356,6 +356,8 @@ function alterLegendInfoClick(source) {
 					var placeholder3 = document.getElementById("legendv3");
 					placeholder3.appendChild(placeholder);
 					placeholder.appendChild(placeholder2);
+					
+					placeholder3.setAttribute("class", "scroll-pane");
 				}
 				
 				map.setLayoutProperty('Urban', 'visibility', 'none');
