@@ -52,8 +52,8 @@ $(document).ready(function() {
         navigation: true,
         pagination: false,
         navigationText: [
-            "<i class='fa fa-angle-left'></i>",
-            "<i class='fa fa-angle-right'></i>"
+            "<i class='fa fa-angle-left fa-3x'></i>",
+            "<i class='fa fa-angle-right fa-3x'></i>"
         ],
     });
 
@@ -62,8 +62,8 @@ $(document).ready(function() {
         navigation: true,
         pagination: false,
         navigationText: [
-            "<i class='fa fa-angle-left'></i>",
-            "<i class='fa fa-angle-right'></i>"
+            "<i class='fa fa-angle-left fa-3x'></i>",
+            "<i class='fa fa-angle-right fa-3x'></i>"
         ],
         autoHeight: true,
         mouseDrag: false,
@@ -77,8 +77,8 @@ $(document).ready(function() {
         pagination: true,
         autoHeight: true,
         navigationText: [
-            "<i class='fa fa-angle-left'></i>",
-            "<i class='fa fa-angle-right'></i>"
+            "<i class='fa fa-angle-left fa-3x'></i>",
+            "<i class='fa fa-angle-right fa-3x'></i>"
         ],
         transitionStyle: "backSlide"
     });
