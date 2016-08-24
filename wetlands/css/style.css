@@ -398,8 +398,8 @@
 #polyClickedInfoBox {
 	position:absolute;
 	bottom:0;
-	left:150px;
-	width:150px;
+	right:0;
+	width:200px;
 	height:100px;
 	background:orange;
 }
