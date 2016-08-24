@@ -129,7 +129,7 @@ function circleToggleColor(source) {
 				
 				var index2 = opacityLayers.indexOf('coastalWaters');
 				if (index != -1){
-					opacityLayers.splice(index2), 1);
+					opacityLayers.splice(index2, 1);
 				}
 				
 				break;
