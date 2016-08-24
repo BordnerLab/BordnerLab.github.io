@@ -355,7 +355,7 @@ function alterLegendInfoClick(source) {
 					placeholder2.setAttribute("id", idHold);
 					placeholder2.setAttribute("style", colorHold);
 					
-					var placeholder3 = document.getElementsByClassName("jspPane").lastElementChild;
+					var placeholder3 = document.getElementsByClassName("jspPane").lastChild;
 					placeholder3.appendChild(placeholder);
 					placeholder.appendChild(placeholder2);
 				}
