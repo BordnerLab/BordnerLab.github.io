@@ -576,6 +576,9 @@ function clickLegendBack() {
 		placeholder2.setAttribute("class", "circleLegend");
 		placeholder2.setAttribute("id", idHold);
 		placeholder2.setAttribute("style", colorHold);
+		placeholder2.setAttribute("onclick", "alterLegendInfoClick(this.id)");
+		placeholder2.setAttribute("onmouseover", "alterLegendInfo(this.id)");
+		placeholder2.setAttribute("onmouseout", "exitLegendInfo(this.id)");
 					
 		var placeholder3 = document.getElementById("legendv2").lastElementChild;
 		var placeholder4 = placeholder3.childNodes[0];
@@ -587,6 +590,8 @@ function clickLegendBack() {
 	// remove text inside legend tooltip
 	var tooltipRef = document.getElementById("legendv2Info");
 	tooltipRef.innerHTML = "";
+	tooltipRef.style.background = "transparent";
+	tooltipRef.style.border = "1px solid transparent";
 };
 
 
