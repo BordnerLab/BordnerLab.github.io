@@ -349,6 +349,8 @@ function alterLegendInfoClick(source) {
 					
 					placeholder.setAttribute("class", "legendSquare");
 					placeholder2.setAttribute("class", "circleLegend");
+					placeholder2.setAttribute("id", wetlandsLayers[v]);
+					placeholder2.setAttribute("style", "background:black;");
 					
 					var placeholder3 = document.getElementById("legendv3");
 					placeholder3.appendChild(placeholder);
