@@ -556,7 +556,10 @@ function clickLegendBack() {
 	// remove wetlands legend
 	var v;
 	for(v=0; v < wetlandsLayers.length; v++){
-		m2.removeChild(m3);
+		var p1 = document.getElementById("legendv2").lastElementChild;
+		var p2 = p1.childNodes[0];
+		var p3 = p2.childNodes[0];
+		p2.removeChild(p3);
 	}
 	
 	// populate with original legend
