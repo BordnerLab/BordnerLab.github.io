@@ -351,7 +351,8 @@ function alterLegendInfoClick(source) {
 					
 					var p1 = document.getElementById("legendv2").lastElementChild;
 					var p2 = p1.childNodes[0];
-					p2.removeChild(remove);
+					var p3 = p2.childNodes[0];
+					p2.removeChild(p3);
 				}
 				
 				var v;
