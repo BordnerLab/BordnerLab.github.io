@@ -412,14 +412,15 @@
 
 .containerLoad {
   position:absolute;
-  background: rgba(0,0,0,0.3);
+  background: transparent;
   width: 200px;
   height: 100px;
-  padding-top: 100px;
+  padding-top: 0px;
   margin: 0 auto;
   left:50vh;
   top: 35vh;
   z-index: 100;
+  visibility: visible;
 }
 
 .ball {

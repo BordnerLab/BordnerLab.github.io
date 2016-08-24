@@ -6,6 +6,7 @@ $('.scroll-pane').jScrollPane({
 
 
 
+
 var api = $('.scroll-pane').data('jsp');
 var throttleTimeout;
 $(window).bind(
@@ -532,6 +533,7 @@ function exitLegendInfo(source) {
 };
 
 function clickLegendBack() {
+	document.getElementById("loadingScreen").style.visibility = "visible";
 	// Show all layers
 	map.setLayoutProperty('Agriculture', 'visibility', 'visible');
 	map.setLayoutProperty('Deciduous Forest', 'visibility', 'visible');
@@ -592,6 +594,12 @@ function clickLegendBack() {
 	tooltipRef.innerHTML = "";
 	tooltipRef.style.background = "transparent";
 	tooltipRef.style.border = "1px solid transparent";
+	
+	setTimeout(
+		function(){
+			document.getElementById("loadingScreen").style.visibility = "hidden";
+		}, 4000);
+	
 };
 
 
