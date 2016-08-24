@@ -346,12 +346,13 @@ function alterLegendInfoClick(source) {
 				for(v=0; v < wetlandsLayers.length; v++){
 					var placeholder = document.createElement('DIV');
 					var placeholder2 = document.createElement('DIV');
-					var idHold = wetlandsLayers[v];
+					var idHold = wetlandsLayers[v][0];
+					var colorHold = "background:" + wetlandsLayers[v][1];
 					
 					placeholder.setAttribute("class", "legendSquare");
 					placeholder2.setAttribute("class", "circleLegend");
 					placeholder2.setAttribute("id", idHold);
-					placeholder2.setAttribute("style", "background:black;");
+					placeholder2.setAttribute("style", colorHold);
 					
 					var placeholder3 = document.getElementById("legendv3");
 					placeholder3.appendChild(placeholder);

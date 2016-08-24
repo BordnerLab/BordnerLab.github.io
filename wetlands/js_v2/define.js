@@ -31,11 +31,11 @@ var landcoverLayers = [
 ];
 
 var wetlandsLayers = [
-	"A3",
-	"A4",
-	"B4",
-	"C4",
-	"C4b"
+	['A3', '#fbb03b'],
+	['A4', '#223b53'],
+	['B4', '#e55e5e'],
+	['C4', '#3bb2d0'],
+	['C4b', '#ccc']
 ];
 
 
