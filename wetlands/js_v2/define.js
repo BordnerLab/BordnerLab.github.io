@@ -30,6 +30,14 @@ var landcoverLayers = [
 	"Unknown Cover"
 ];
 
+var wetlandsLayers = [
+	"A3",
+	"A4",
+	"B4",
+	"C4",
+	"C4b"
+];
+
 
 
 var waterDisplayControl = false;

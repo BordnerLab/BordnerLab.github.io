@@ -342,6 +342,19 @@ function alterLegendInfoClick(source) {
 						['C4b', '#ccc']]
 				});
 				
+				var v;
+				for(v=0; v < wetlandsLayers.length; v++){
+					var placeholder = document.createElement('DIV');
+					var placeholder2 = document.createElement('DIV');
+					
+					placeholder.setAttribute("class", "legendSquare");
+					paceholder2.setAttribute("class", "circleLegend");
+					
+					var placeholder3 = document.getElementById("legendv3");
+					placeholder3.appendChild(placeholder);
+					placeholder.appendChild(placeholder2);
+				}
+				
 				map.setLayoutProperty('Urban', 'visibility', 'none');
 				map.setLayoutProperty('Barren', 'visibility', 'none');
 				map.setLayoutProperty('Shrubland', 'visibility', 'none');
