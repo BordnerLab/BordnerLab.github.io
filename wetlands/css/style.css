@@ -412,12 +412,13 @@
 
 .containerLoad {
   position:absolute;
-  width: 200px;
-  height: 100px;
+  background: rgba(0,0,0,0.3);
+  width: 100vh;
+  height: 100vh;
   padding-top: 100px;
   margin: 0 auto;
-  left:50vh;
-  top: 50vh;
+  left:0;
+  top: 0;
   z-index: 100;
 }
 
