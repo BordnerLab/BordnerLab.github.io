@@ -567,21 +567,26 @@ function clickLegendBack() {
 	for(f=0; v < mainLegend.length; f++){
 		var placeholder = document.createElement('DIV');
 		var placeholder2 = document.createElement('DIV');
-		//var idHold = mainLegend[f][0];
-		var colorHold = "background:" + mainLegend[f][1];
-		//var textholder = document.createTextNode(idHold);
+		try {
+			var idHold = mainLegend[f][0];
+			var colorHold = "background:" + mainLegend[f][1];
+			var textholder = document.createTextNode(idHold);
 					
 					
-		placeholder.setAttribute("class", "legendSquare");
-		placeholder2.setAttribute("class", "circleLegend");
-		placeholder2.setAttribute("id", idHold);
-		placeholder2.setAttribute("style", colorHold);
+			placeholder.setAttribute("class", "legendSquare");
+			placeholder2.setAttribute("class", "circleLegend");
+			placeholder2.setAttribute("id", idHold);
+			placeholder2.setAttribute("style", colorHold);
 					
-		var placeholder3 = document.getElementById("legendv2").lastElementChild;
-		var placeholder4 = placeholder3.childNodes[0];
-		placeholder4.appendChild(placeholder);
-		placeholder.appendChild(placeholder2);
-		//placeholder2.appendChild(textholder);
+			var placeholder3 = document.getElementById("legendv2").lastElementChild;
+			var placeholder4 = placeholder3.childNodes[0];
+			placeholder4.appendChild(placeholder);
+			placeholder.appendChild(placeholder2);
+			placeholder2.appendChild(textholder);
+		} catch (err) {
+			console.log('nice try');
+		}
+		
 	}
 	
 	// remove text inside legend tooltip
