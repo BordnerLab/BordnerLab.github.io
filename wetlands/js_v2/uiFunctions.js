@@ -356,7 +356,8 @@ function alterLegendInfoClick(source) {
 					placeholder2.setAttribute("style", colorHold);
 					
 					var placeholder3 = document.getElementById("legendv3").lastElementChild;
-					placeholder3.appendChild(placeholder);
+					placeholder4 = placeholder3.lastElementChild;
+					placeholder4.appendChild(placeholder);
 					placeholder.appendChild(placeholder2);
 				}
 				
