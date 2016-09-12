@@ -12,9 +12,6 @@ var map = new mapboxgl.Map({
 
 	
 map.on('load', function () {
-	addMapSources();
-		
-	addCountyInitial();
 	
 	
 	
