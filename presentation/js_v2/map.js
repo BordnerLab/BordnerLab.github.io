@@ -5,7 +5,7 @@ var map = new mapboxgl.Map({
 	style: 'mapbox://styles/bordnerwlei/cirf7wsrr0003g8nlogxrqxyr',
 	center: [-89.5, 44.5],
 	zoom: 6,
-	preserveDrawingBuffer: true,
+	preserveDrawingBuffer: false,
 	hash: false,
 	pitch: 0.1
 });
@@ -15,8 +15,6 @@ map.addControl(new mapboxgl.Navigation());
 var geocoder = new mapboxgl.Geocoder({
 	container: 'geocoder-container'
 });
-	
-map.addControl(geocoder);
 	
 map.on('load', function () {
 	addMapSources();
@@ -119,8 +117,4 @@ map.on('load', function () {
 		}
 	});
 	*/
-});
-	
-geocoder.on('result', function(ev) {
-	map.getSource('single-point').setData(ev.result.geometry);
 });
