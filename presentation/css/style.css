@@ -416,7 +416,7 @@
 #storyNavigation {
 	position:absolute;
 	width:100%;
-	height: 50px;
+	height: 100px;
 	background: rgba(0,0,0,0.5);
 	color:white;
 	top:0;
@@ -426,7 +426,7 @@
 #storyNavigation #leftArrow {
 	position:absolute;
 	width:100px;
-	height:50px;
+	height:100px;
 	top:0;
 	left:0;
 	cursor:pointer;
@@ -436,7 +436,7 @@
 #storyNavigation #rightArrow {
 	position:absolute;
 	width:100px;
-	height:50px;
+	height:100px;
 	top:0;
 	right:0;
 	cursor:pointer;
