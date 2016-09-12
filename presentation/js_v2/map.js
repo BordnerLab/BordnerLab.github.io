@@ -32,6 +32,11 @@ map.on('load', function () {
 	});
 	
 	map.on('mousemove', function(e) {
+		document.getElementById("info").innerHTML = 
+			JSON.stringify(e.point) + '<br />' +
+			JSON.stringify(e.lngLat);
+		
+		
 		var features = map.queryRenderedFeatures(e.point, { layers: hoverLayers });
 			
 		if (features.length && features[0].layer.id == "county-fills") {
