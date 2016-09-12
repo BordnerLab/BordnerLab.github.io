@@ -9,12 +9,7 @@ var map = new mapboxgl.Map({
 	hash: false,
 	pitch: 0.1
 });
-	
-map.addControl(new mapboxgl.Navigation());
-	
-var geocoder = new mapboxgl.Geocoder({
-	container: 'geocoder-container'
-});
+
 	
 map.on('load', function () {
 	addMapSources();
