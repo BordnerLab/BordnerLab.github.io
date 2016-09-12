@@ -423,6 +423,21 @@
 	left:0;
 }
 
+#storyNavigation #leftArrow {
+	position:absolute;
+	width:100px;
+	height:50px'
+	top:0;
+	left:0;
+}
+
+#storyNavigation #rightArrow {
+	position:absolute;
+	width:100px;
+	height:50px;
+	top:0;
+	right:0;
+}
 
 
 
