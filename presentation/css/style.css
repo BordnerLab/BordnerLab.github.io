@@ -426,9 +426,11 @@
 #storyNavigation #leftArrow {
 	position:absolute;
 	width:100px;
-	height:50px'
+	height:50px;
 	top:0;
 	left:0;
+	cursor:pointer;
+	text-align:left;
 }
 
 #storyNavigation #rightArrow {
@@ -437,6 +439,8 @@
 	height:50px;
 	top:0;
 	right:0;
+	cursor:pointer;
+	text-align: right;
 }
 
 
