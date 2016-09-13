@@ -103,6 +103,8 @@ function MoveStoryModeBackward() {
 			zoom: 11,
 			animate: true
 		});
+	} else if (storyModeControl == 1) {
+	
 	} else if (storyModeControl == 0) {
 	
 	}
