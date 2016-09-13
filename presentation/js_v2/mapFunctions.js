@@ -28,7 +28,6 @@ function MoveStoryModeForward() {
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Chippewa Flowage";
-		document.getElementById("leftArrow").style.visibility = "visible";
 	} else if (storyModeControl == 1) {
 		storyModeControl = 2;
 		map.flyTo({
@@ -37,6 +36,7 @@ function MoveStoryModeForward() {
 			animate: true
 		});
 		storyTextHeader.innerHTML = "River at White City";
+		document.getElementById("leftArrow").style.visibility = "visible";
 	} else if (storyModeControl == 2) {
 		storyModeControl = 3;
 		map.flyTo({
