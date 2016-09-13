@@ -423,6 +423,10 @@
 	left:0;
 }
 
+#storyNavigation h1 {
+	text-align: center;
+}
+
 #storyNavigation #leftArrow {
 	position:absolute;
 	width:100px;
