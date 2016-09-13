@@ -69,6 +69,7 @@ function MoveStoryModeForward() {
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Green Bay";
+		document.getElementById("rightArrow").style.visibility = "hidden";
 	} else {
 	
 	}
@@ -84,6 +85,7 @@ function MoveStoryModeBackward() {
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Lakes Door County";
+		document.getElementById("rightArrow").style.visibility = "visible";
 	} else if (storyModeControl == 5) {
 		storyModeControl = 4;
 		map.flyTo({
