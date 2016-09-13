@@ -357,7 +357,7 @@
 	position: absolute;
 	background: #fff;
 	left: -300px;
-	top:110px;
+	top:300px;
 	width: 130px;
 	height: 110px;
 	border-radius:4px;
@@ -451,7 +451,7 @@
 #storySubContext {
 	position: absolute;
 	top: 150px;
-	right: 20px;
+	left: 20px;
 	background: #FBFCFC;
 	width: 175px;
 	height: 250px;
