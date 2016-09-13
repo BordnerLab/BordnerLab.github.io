@@ -18,6 +18,7 @@ function takeScreenshot() {
 
 
 var storyModeControl = 0;
+var storyTextHeader = document.getElementById("storyNavigationHeader");
 function MoveStoryModeForward() {
 	if (storyModeControl == 0) {
 		storyModeControl = 1;
@@ -26,6 +27,7 @@ function MoveStoryModeForward() {
 			zoom: 11,
 			animate: true
 		});
+		storyTextHeader.innerHTML = "Chippewa Flowage";
 	} else if (storyModeControl == 1) {
 		storyModeControl = 2;
 		map.flyTo({
@@ -33,6 +35,7 @@ function MoveStoryModeForward() {
 			zoom: 13,
 			animate: true
 		});
+		storyTextHeader.innerHTML = "River at White City";
 	} else if (storyModeControl == 2) {
 		storyModeControl = 3;
 		map.flyTo({
@@ -40,6 +43,7 @@ function MoveStoryModeForward() {
 			zoom: 13,
 			animate: true
 		});
+		storyTextHeader.innerHTML = "Lakes in Ashland County";
 	} else if (storyModeControl == 3) {
 		storyModeControl = 4;
 		map.flyTo({
@@ -47,6 +51,7 @@ function MoveStoryModeForward() {
 			zoom: 11,
 			animate: true
 		});
+		storyTextHeader.innerHTML = "Gile Flowage";
 	} else if (storyModeControl == 4) {
 		storyModeControl = 5;
 		map.flyTo({
@@ -54,6 +59,7 @@ function MoveStoryModeForward() {
 			zoom: 11,
 			animate: true
 		});
+		storyTextHeader.innerHTML = "Lakes Door County";
 	} else if (storyModeControl == 5) {
 		storyModeControl = 6;
 		map.flyTo({
@@ -61,6 +67,7 @@ function MoveStoryModeForward() {
 			zoom: 11,
 			animate: true
 		});
+		storyTextHeader.innerHTML = "Green Bay";
 	} else {
 	
 	}
@@ -75,6 +82,7 @@ function MoveStoryModeBackward() {
 			zoom: 11,
 			animate: true
 		});
+		storyTextHeader.innerHTML = "Lakes Door County";
 	} else if (storyModeControl == 5) {
 		storyModeControl = 4;
 		map.flyTo({
@@ -82,6 +90,7 @@ function MoveStoryModeBackward() {
 			zoom: 11,
 			animate: true
 		});
+		storyTextHeader.innerHTML = "Gile Flowage";
 	} else if (storyModeControl == 4) {
 		storyModeControl = 3;
 		map.flyTo({
@@ -89,6 +98,7 @@ function MoveStoryModeBackward() {
 			zoom: 13,
 			animate: true
 		});
+		storyTextHeader.innerHTML = "Lakes in Ashland County";
 	} else if (storyModeControl == 3) {
 		storyModeControl = 2;
 		map.flyTo({
@@ -96,6 +106,7 @@ function MoveStoryModeBackward() {
 			zoom: 13,
 			animate: true
 		});
+		storyTextHeader.innerHTML = "River at White City";
 	} else if (storyModeControl == 2) {
 		storyModeControl = 1;
 		map.flyTo({
@@ -103,6 +114,7 @@ function MoveStoryModeBackward() {
 			zoom: 11,
 			animate: true
 		});
+		storyTextHeader.innerHTML = "Chippewa Flowage";
 	} else if (storyModeControl == 1) {
 	
 	} else if (storyModeControl == 0) {
