@@ -447,6 +447,15 @@
 	text-align: right;
 }
 
+#storySubContext {
+	position: absolute;
+	top: 100px;
+	right: 20px;
+	background: rgba(0,0,0,0.5);
+	width: 100px;
+	height: 200px;
+}
+
 
 
 
