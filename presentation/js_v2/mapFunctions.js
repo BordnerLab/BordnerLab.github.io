@@ -17,6 +17,54 @@ function takeScreenshot() {
 
 
 
+var storyModeControl = 0;
+function MoveStoryModeForward() {
+	if (storyModeControl == 0) {
+		storyModeControl = 1;
+		map.flyTo({
+			center: [-91.872, 46.25538],
+			zoom: 13,
+			animate: true
+		});
+	} else if (storyModeControl == 1) {
+		storyModeControl = 2;
+		map.flyTo({
+			center: [-90.6785, 46.3181],
+			zoom: 13,
+			animate: true
+		});
+	} else if (storyModeControl == 2) {
+		storyModeControl = 3;
+		map.flyTo({
+			center: [-90.8785, 46.115569],
+			zoom: 13,
+			animate: true
+		});
+	} else if (storyModeControl == 3) {
+		storyModeControl = 4;
+		map.flyTo({
+			center: [-90.23016, 46.3976],
+			zoom: 13,
+			animate: true
+		});
+	} else if (storyModeControl == 4) {
+		storyModeControl = 5;
+		map.flyTo({
+			center: [-87.2341, 45.04789],
+			zoom: 13,
+			animate: true
+		});
+	} else if (storyModeControl == 5) {
+		storyModeControl = 6;
+		map.flyTo({
+			center: [-88.01247, 44.51006],
+			zoom: 13,
+			animate: true
+		});
+	} else {
+	
+	}
+};
 
 
 
