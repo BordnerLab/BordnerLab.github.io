@@ -435,6 +435,7 @@
 	left:0;
 	cursor:pointer;
 	text-align:left;
+	visibility: hidden;
 }
 
 #storyNavigation #rightArrow {
@@ -449,11 +450,11 @@
 
 #storySubContext {
 	position: absolute;
-	top: 100px;
+	top: 150px;
 	right: 20px;
 	background: rgba(0,0,0,0.5);
-	width: 100px;
-	height: 200px;
+	width: 175px;
+	height: 250px;
 }
 
 
