@@ -567,8 +567,14 @@ function removeLandingPage() {
 		function(){
 			var item = document.getElementById("landingPage");
 			item.parentNode.removeChild(item);
-			console.log('maple');
+			document.getElementById("containerLoad").style.visibility = "visible";
 		}, 1500);
+	
+	setTimeout(
+		function(){
+			document.getElementById("containerLoad").style.visibility = "hidden";
+			MoveStoryModeForward();
+		}, 5000);
 }
 
 
