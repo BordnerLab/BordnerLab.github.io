@@ -567,12 +567,12 @@ function removeLandingPage() {
 		function(){
 			var item = document.getElementById("landingPage");
 			item.parentNode.removeChild(item);
-			document.getElementById("containerLoad").style.visibility = "visible";
+			document.getElementById("loadingScreen").style.visibility = "visible";
 		}, 1500);
 	
 	setTimeout(
 		function(){
-			document.getElementById("containerLoad").style.visibility = "hidden";
+			document.getElementById("loadingSceen").style.visibility = "hidden";
 			MoveStoryModeForward();
 		}, 5000);
 }

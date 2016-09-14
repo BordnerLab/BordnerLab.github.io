@@ -377,6 +377,9 @@
 }
 
 
+#loadingScreen {
+	visibility: hidden;
+}
 
 .containerLoad {
   position:absolute;
@@ -388,7 +391,6 @@
   left:50vh;
   top: 35vh;
   z-index: 100;
-  visibility: hidden;
 }
 
 .ball {
