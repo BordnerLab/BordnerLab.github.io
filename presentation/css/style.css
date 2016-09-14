@@ -328,7 +328,6 @@
 	cursor:pointer;
 	text-align:left;
 	visibility: hidden;
-	font-size: 100px;
 }
 
 #storyNavigation #leftArrowText {
@@ -348,7 +347,6 @@
 	right:20px;
 	cursor:pointer;
 	text-align: right;
-	font-size: 100px;
 	visibility: hidden;
 }
 
