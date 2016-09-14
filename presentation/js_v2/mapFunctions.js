@@ -32,6 +32,7 @@ function MoveStoryModeForward() {
 		storyTextHeader.innerHTML = "Chippewa Flowage";
 		storySubTextHeader.innerHTML = "Chippewa Flowage";
 		storySubTextBody.innerHTML = "Chippewa Flowage";
+		document.getElementById("rightArrow").style.visibility = "visible";
 		document.getElementById("storySubContext").style.visibility = "visible";
 	} else if (storyModeControl == 1) {
 		storyModeControl = 2;

@@ -340,6 +340,7 @@
 	cursor:pointer;
 	text-align: right;
 	font-size: 100px;
+	visibility: hidden;
 }
 
 #storySubContext {
