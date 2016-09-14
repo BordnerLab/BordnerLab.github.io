@@ -65,7 +65,7 @@ function MoveStoryModeForward() {
 		storyModeControl = 4;
 		map.flyTo({
 			center: [-90.23016, 46.3976],
-			zoom: 11,
+			zoom: 12,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Gile Flowage";
@@ -122,7 +122,7 @@ function MoveStoryModeBackward() {
 		storyModeControl = 4;
 		map.flyTo({
 			center: [-90.23016, 46.3976],
-			zoom: 11,
+			zoom: 12,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Gile Flowage";
