@@ -572,9 +572,9 @@ function removeLandingPage() {
 	
 	setTimeout(
 		function(){
-			document.getElementById("loadingSceen").style.visibility = "hidden";
+			document.getElementById("loadingScreen").style.visibility = "hidden";
 			MoveStoryModeForward();
-		}, 5000);
+		}, 4000);
 }
 
 
