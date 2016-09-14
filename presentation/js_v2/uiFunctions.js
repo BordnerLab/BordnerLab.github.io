@@ -563,6 +563,11 @@ function showMorePolyInfo(source) {
 
 function removeLandingPage() {
 	document.getElementById("landingPage").style.opacity = "0";
+	setTimeout(
+		function(){
+			var item = document.getElementById("landingPage");
+			item.parentNode.removeChild(item);
+		}, 1500);
 }
 
 
