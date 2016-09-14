@@ -563,13 +563,18 @@ function showMorePolyInfo(source) {
 
 function removeLandingPage() {
 	document.getElementById("landingPage").style.opacity = "0";
+	
+	setTimeout(
+		function() {
+			document.getElementById("loadingScreen").style.visibility = "visible";
+		}, 1000);
+		
 	setTimeout(
 		function(){
 			var item = document.getElementById("landingPage");
 			item.parentNode.removeChild(item);
-			document.getElementById("loadingScreen").style.visibility = "visible";
 		}, 1500);
-	
+			
 	setTimeout(
 		function(){
 			document.getElementById("loadingScreen").style.visibility = "hidden";
