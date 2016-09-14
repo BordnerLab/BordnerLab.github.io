@@ -561,7 +561,9 @@ function showMorePolyInfo(source) {
 	}
 }
 
-
+function removeLandingPage() {
+	document.getElementById("landingPage").style.opacity = "0";
+}
 
 
 

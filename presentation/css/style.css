@@ -362,6 +362,17 @@
 	height:100%;
 	background:black;
 	opacity: 1;
+	-webkit-transition: opacity 1.5s;
+	-moz-transition: opacity 1.5s;
+	-o-transition: opacity 1.5s;
+	transition: opacity 1.5s;
+}
+
+#landingPage #landingPageButton {
+	width: 200px;
+	height: 200px;
+	background: white;
+	cursor:pointer;
 }
 
 
