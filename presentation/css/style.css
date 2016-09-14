@@ -322,7 +322,7 @@
 #storyNavigation #leftArrow {
 	position:absolute;
 	width:100px;
-	height:100px;
+	height:75px;
 	top:0;
 	left:20px;
 	cursor:pointer;
@@ -331,16 +331,34 @@
 	font-size: 100px;
 }
 
+#storyNavigation #leftArrowText {
+	position:absolute;
+	width:100px;
+	height:25px;
+	top:75px;
+	left:20px;
+	cursor:pointer;
+}
+
 #storyNavigation #rightArrow {
 	position:absolute;
 	width:100px;
-	height:100px;
+	height:75px;
 	top:0;
 	right:20px;
 	cursor:pointer;
 	text-align: right;
 	font-size: 100px;
 	visibility: hidden;
+}
+
+#storyNavigation #rightArrowText {
+	position: absolute;
+	width: 100px;
+	height:25px;
+	top:75px;
+	right:20px;
+	cursor:pointer;
 }
 
 #storySubContext {
