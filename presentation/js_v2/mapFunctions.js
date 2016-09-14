@@ -31,7 +31,7 @@ function MoveStoryModeForward() {
 		});
 		storyTextHeader.innerHTML = "Chippewa Flowage";
 		storySubTextHeader.innerHTML = "Chippewa Flowage";
-		storySubTextBody.innerHTML = "Chippewa Flowage";
+		storySubTextBody.innerHTML = "Information here on the Chippewa Flowage.";
 		document.getElementById("rightArrow").style.visibility = "visible";
 		document.getElementById("storySubContext").style.visibility = "visible";
 	} else if (storyModeControl == 1) {
@@ -43,7 +43,7 @@ function MoveStoryModeForward() {
 		});
 		storyTextHeader.innerHTML = "River at White City";
 		storySubTextHeader.innerHTML = "River at White City";
-		storySubTextBody.innerHTML = "River at White City";
+		storySubTextBody.innerHTML = "Information here on the River at White City.";
 		document.getElementById("leftArrow").style.visibility = "visible";
 	} else if (storyModeControl == 2) {
 		storyModeControl = 3;
@@ -54,7 +54,7 @@ function MoveStoryModeForward() {
 		});
 		storyTextHeader.innerHTML = "Lakes in Ashland County";
 		storySubTextHeader.innerHTML = "Lakes in Ashland County";
-		storySubTextBody.innerHTML = "Lakes in Ashland County";
+		storySubTextBody.innerHTML = "Information here on the Lakes in Ashland County.";
 	} else if (storyModeControl == 3) {
 		storyModeControl = 4;
 		map.flyTo({
@@ -64,7 +64,7 @@ function MoveStoryModeForward() {
 		});
 		storyTextHeader.innerHTML = "Gile Flowage";
 		storySubTextHeader.innerHTML = "Gile Flowage";
-		storySubTextBody.innerHTML = "Gile Flowage";
+		storySubTextBody.innerHTML = "Information here on the Gile Flowage.";
 	} else if (storyModeControl == 4) {
 		storyModeControl = 5;
 		map.flyTo({
@@ -72,9 +72,9 @@ function MoveStoryModeForward() {
 			zoom: 11,
 			animate: true
 		});
-		storyTextHeader.innerHTML = "Lakes Door County";
-		storySubTextHeader.innerHTML = "Lakes Door County";
-		storySubTextBody.innerHTML = "Lakes Door County";
+		storyTextHeader.innerHTML = "Lakes in Door County";
+		storySubTextHeader.innerHTML = "Lakes in Door County";
+		storySubTextBody.innerHTML = "Information here on the Lakes in Door County.";
 	} else if (storyModeControl == 5) {
 		storyModeControl = 6;
 		map.flyTo({
@@ -84,7 +84,7 @@ function MoveStoryModeForward() {
 		});
 		storyTextHeader.innerHTML = "Green Bay";
 		storySubTextHeader.innerHTML = "Green Bay";
-		storySubTextBody.innerHTML = "Green Bay";
+		storySubTextBody.innerHTML = "Information here on Green Bay.";
 		document.getElementById("rightArrow").style.visibility = "hidden";
 	} else {
 	
@@ -100,9 +100,9 @@ function MoveStoryModeBackward() {
 			zoom: 11,
 			animate: true
 		});
-		storyTextHeader.innerHTML = "Lakes Door County";
-		storySubTextHeader.innerHTML = "Lakes Door County";
-		storySubTextBody.innerHTML = "Lakes Door County";
+		storyTextHeader.innerHTML = "Lakes in Door County";
+		storySubTextHeader.innerHTML = "Lakes in Door County";
+		storySubTextBody.innerHTML = "Information here on the Lakes in Door County.";
 		document.getElementById("rightArrow").style.visibility = "visible";
 	} else if (storyModeControl == 5) {
 		storyModeControl = 4;
@@ -123,7 +123,7 @@ function MoveStoryModeBackward() {
 		});
 		storyTextHeader.innerHTML = "Lakes in Ashland County";
 		storySubTextHeader.innerHTML = "Lakes in Ashland County";
-		storySubTextBody.innerHTML = "Lakes in Ashland County";
+		storySubTextBody.innerHTML = "Information here on the Lakes in Ashland County.";
 	} else if (storyModeControl == 3) {
 		storyModeControl = 2;
 		map.flyTo({
@@ -133,7 +133,7 @@ function MoveStoryModeBackward() {
 		});
 		storyTextHeader.innerHTML = "River at White City";
 		storySubTextHeader.innerHTML = "River at White City";
-		storySubTextBody.innerHTML = "River at White City";
+		storySubTextBody.innerHTML = "Information here on the River at White City.";
 	} else if (storyModeControl == 2) {
 		storyModeControl = 1;
 		map.flyTo({
@@ -143,7 +143,7 @@ function MoveStoryModeBackward() {
 		});
 		storyTextHeader.innerHTML = "Chippewa Flowage";
 		storySubTextHeader.innerHTML = "Chippewa Flowage";
-		storySubTextBody.innerHTML = "Chippewa Flowage";
+		storySubTextBody.innerHTML = "Information here on the Chippewa Flowage.";
 		document.getElementById("leftArrow").style.visibility = "hidden";
 	} else if (storyModeControl == 1) {
 	
