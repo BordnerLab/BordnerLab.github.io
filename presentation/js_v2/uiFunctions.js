@@ -567,6 +567,7 @@ function removeLandingPage() {
 		function(){
 			var item = document.getElementById("landingPage");
 			item.parentNode.removeChild(item);
+			console.log('maple');
 		}, 1500);
 }
 
