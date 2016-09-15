@@ -250,7 +250,7 @@
 #circleSliderContainer {
 	position: absolute;
 	background: #fff;
-	left: 10px;
+	left: 20px;
 	top:450px;
 	width: 130px;
 	height: 110px;
@@ -321,6 +321,7 @@
 
 #storyNavigation h1 {
 	text-align: center;
+	background: orange;
 }
 
 #storyNavigation #leftArrow {
@@ -400,6 +401,7 @@
 	text-align: center;
 	visibility: hidden;
 	border: 1px solid black;
+	border-radius:4px;
 }
 
 #landingPage {
