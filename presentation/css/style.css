@@ -316,6 +316,7 @@
 	color:#212F3D;
 	top:0;
 	left:0;
+	border-bottom: 1px solid black;
 }
 
 #storyNavigation h1 {
