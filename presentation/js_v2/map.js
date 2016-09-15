@@ -12,11 +12,19 @@ var map = new mapboxgl.Map({
 
 	
 map.on('load', function () {
-	var n;
-	for (n=0; n < opacityLayers.length; n++) {
-		map.setPaintProperty(landcoverLayers[n], 'fill-opacity', 0);
-	}
+	
 	map.setPaintProperty("coastalWaters", "fill-opacity", 0);
+	map.setPaintProperty("Agriculture", "fill-opacity", 0);
+	map.setPaintProperty("Deciduous Forest", "fill-opacity", 0);
+	map.setPaintProperty("Other", "fill-opacity", 0);
+	map.setPaintProperty("Urban", "fill-opacity", 0);
+	map.setPaintProperty("Barren", "fill-opacity", 0);
+	map.setPaintProperty("Shrubland", "fill-opacity", 0);
+	map.setPaintProperty("Wetlands", "fill-opacity", 0);
+	map.setPaintProperty("Coniferous Forest", "fill-opacity", 0);
+	map.setPaintProperty("Mixed Forest", "fill-opacity", 0);
+	map.setPaintProperty("Unknown Cover", "fill-opacity", 0);
+	
 	
 		
 	var popup = new mapboxgl.Popup({
