@@ -142,7 +142,7 @@
 }
 
 #slider .rs-bg-color {
-	background-color: white;
+	background-color: transparent;
 }
 
 #circleSliderControls {
@@ -437,7 +437,7 @@
   padding-top: 0px;
   margin: 0 auto;
   left:50vh;
-  top: 35vh;
+  top: 45vh;
   z-index: 100;
 }
 
