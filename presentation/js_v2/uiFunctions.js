@@ -6,8 +6,8 @@ $("#slider").roundSlider({
 	max:100,
 	step:1,
 	value: 100,
-	radius: 70,
-	width: 30,
+	radius: 75,
+	width: 20,
 	handleSize: 22,
 	startAngle: 315,
 	endAngle: "+360",
@@ -349,7 +349,7 @@ function removeLandingPage() {
 	setTimeout(
 		function() {
 			document.getElementById("loadingScreen").style.visibility = "visible";
-		}, 500);
+		}, 100);
 		
 	setTimeout(
 		function(){
