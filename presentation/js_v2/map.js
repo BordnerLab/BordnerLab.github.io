@@ -96,14 +96,4 @@ map.on('load', function () {
 		}
 					
 	});
-	/*
-	map.on ('render', function() {
-		if (getCanvasControl == true) {
-			data = map.getCanvas().toDataURL("image/png");
-			return data;
-		} else {
-			return;
-		}
-	});
-	*/
 });

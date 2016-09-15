@@ -1,48 +1,6 @@
 
 
 
-$('.scroll-pane').jScrollPane({
-	verticalDragMinHeight: 20,
-	verticalDragMaxHeight: 20
-});
-
-
-
-var api = $('.scroll-pane').data('jsp');
-var throttleTimeout;
-$(window).bind(
-	'resize',
-	function()
-	{
-		if (!throttleTimeout) {
-			throttleTimeout = setTimeout(
-				function()
-				{
-					api.reinitialise();
-					throttleTimeout = null;
-				},
-				50
-			);
-		}
-	}
-);
-
-var toolbarControl = 0;
-function toggleToolbar() {
-	if (toolbarControl == 0) {
-		document.getElementById("toolbar").style.left = "50px";
-		document.getElementById("grabHandleToggle").className = "fa fa-angle-left fa-3x";
-		toolbarControl = 1;
-		return toolbarControl;
-	} else if (toolbarControl > 0) {
-		document.getElementById("toolbar").style.left = "0px";
-		document.getElementById("grabHandleToggle").className = "fa fa-angle-right fa-3x";
-		toolbarControl = 0;
-		return toolbarControl;
-	}
-};
-
-
 $("#slider").roundSlider({
 	min:0,
 	max:100,
@@ -152,20 +110,6 @@ function circleToggleColor(source) {
 };
 
 
-var displaySearchBarControl = 0;
-function displaySearchBar() {
-	if (displaySearchBarControl == 0) {
-		document.getElementById("geocoder-container").style.visibility = "visible";
-		document.getElementById("geocoder-container").style.width = "200px";
-		document.getElementById("searchBarToggle").className = "fa fa-times fa-3x";
-		displaySearchBarControl = 1;
-	} else if (displaySearchBarControl > 0) {
-		document.getElementById("geocoder-container").style.visibility = "hidden";
-		document.getElementById("geocoder-container").style.width= "0px";
-		document.getElementById("searchBarToggle").className = "fa fa-search fa-3x";
-		displaySearchBarControl = 0;
-	}
-};
 
 var showOpacityControlsControl = 0;
 function showOpacityControls() {
@@ -223,6 +167,7 @@ function toggleThreeDdisplay(source) {
 	}
 };
 
+
 var showButton02ControlsControl = 0;
 function showButton02Controls() {
 	if (showButton02ControlsControl == 0) {
@@ -235,19 +180,6 @@ function showButton02Controls() {
 		document.getElementById("button02").style.background = "#fff";
 		map.setStyle('mapbox://styles/bordnerwlei/cirf7wsrr0003g8nlogxrqxyr');
 		showButton02ControlsControl = 0;
-	}	
-};
-
-var showButton03ControlsControl = 0;
-function showButton03Controls() {
-	if (showButton03ControlsControl == 0) {
-		document.getElementById("button03").style.color = "#fff";
-		document.getElementById("button03").style.background = "#154360";
-		showButton03ControlsControl = 1;
-	} else if (showButton03ControlsControl > 0) {
-		document.getElementById("button03").style.color = "black";
-		document.getElementById("button03").style.background = "#fff";
-		showButton03ControlsControl = 0;
 	}	
 };
 
@@ -409,157 +341,7 @@ function alterLegendInfoClick(source) {
 };
 
 
-function alterLegendInfo(source) {
-	var placeholder = document.getElementById("legendv2Info");
-	var sourcePlaceholder = document.getElementById(source);
-	switch (source) {
-		case "AG":
-			placeholder.innerHTML = "Agriculture";
-			placeholder.style.background = "#E59966";
-			placeholder.style.border = "1px solid #ddd";
-			break;
-		case "UR":
-			placeholder.innerHTML = "Urban";
-			placeholder.style.background = "#C03921";
-			placeholder.style.border = "1px solid #ddd";
-			break;
-		case "BA":
-			placeholder.innerHTML = "Barren";
-			placeholder.style.background = "#AFB7C0";
-			placeholder.style.border = "1px solid #ddd";
-			break;
-		case "SL":
-			placeholder.innerHTML = "Shrubland";
-			placeholder.style.background = "#FAD79E";
-			placeholder.style.border = "1px solid #ddd";
-			break;
-		case "MF":
-			placeholder.innerHTML = "Mixed Forest";
-			placeholder.style.background = "#A66ABE";
-			placeholder.style.border = "1px solid #ddd";
-			break;
-		case "WL":
-			placeholder.innerHTML = "Wetlands";
-			placeholder.style.background = "#5FAEE3";
-			placeholder.style.border = "1px solid #ddd";
-			break;
-		case "DF":
-			placeholder.innerHTML = "Deciduous Forest";
-			placeholder.style.background = "#54C083";
-			placeholder.style.border = "1px solid #ddd";
-			break;
-		case "CF":
-			placeholder.innerHTML = "Coniferous Forest";
-			placeholder.style.background = "#19703E";
-			placeholder.style.border = "1px solid #ddd";
-			break;
-		case "O":
-			placeholder.innerHTML = "Other";
-			placeholder.style.background = "#76D6C3";
-			placeholder.style.border = "1px solid #ddd";
-			break;
-		case "U":
-			placeholder.innerHTML = "Unknown";
-			placeholder.style.background = "#FADC70";
-			placeholder.style.border = "1px solid #ddd";
-	}
-};
 
-function exitLegendInfo(source) {
-	var placeholder = document.getElementById("legendv2Info");
-	var sourcePlaceholder = document.getElementById(source);
-	
-	placeholder.innerHTML = "";
-	placeholder.style.background = "transparent";
-	placeholder.style.border = "1px solid transparent";
-};
-
-function clickLegendBack() {
-	document.getElementById("loadingScreen").style.visibility = "visible";
-	// Show all layers
-	map.setLayoutProperty('Agriculture', 'visibility', 'visible');
-	map.setLayoutProperty('Deciduous Forest', 'visibility', 'visible');
-	map.setLayoutProperty('Other', 'visibility', 'visible');
-	map.setLayoutProperty('Urban', 'visibility', 'visible');
-	map.setLayoutProperty('Barren', 'visibility', 'visible');
-	map.setLayoutProperty('Shrubland', 'visibility', 'visible');
-	map.setLayoutProperty('Wetlands', 'visibility', 'visible');
-	map.setLayoutProperty('Coniferous Forest', 'visibility', 'visible');
-	map.setLayoutProperty('Mixed Forest', 'visibility', 'visible');
-	map.setLayoutProperty('Unknown Cover', 'visibility', 'visible');
-	
-	// hide wetlands layer
-	map.setPaintProperty('Wetlands', 'fill-color', '#5FAEE3');
-	
-	// remove back button
-	var m1 = document.getElementById("legendv2").lastElementChild;
-	var m2 = m1.childNodes[0];
-	var m3 = m2.childNodes[0];
-	m2.removeChild(m3);
-	
-	// remove wetlands legend
-	var v;
-	for(v=0; v < wetlandsLayers.length; v++){
-		var p1 = document.getElementById("legendv2").lastElementChild;
-		var p2 = p1.childNodes[0];
-		var p3 = p2.childNodes[0];
-		p2.removeChild(p3);
-	}
-	
-	// populate with original legend
-	var f;
-	for(f=0; f < mainLegend.length; f++){
-		var placeholder = document.createElement('DIV');
-		var placeholder2 = document.createElement('DIV');
-		var idHold = mainLegend[f][0];
-		var colorHold = "background:" + mainLegend[f][1];
-		var textholder = document.createTextNode(idHold);
-					
-					
-		placeholder.setAttribute("class", "legendSquare");
-		placeholder2.setAttribute("class", "circleLegend");
-		placeholder2.setAttribute("id", idHold);
-		placeholder2.setAttribute("style", colorHold);
-		placeholder2.setAttribute("onclick", "alterLegendInfoClick(this.id)");
-		placeholder2.setAttribute("onmouseover", "alterLegendInfo(this.id)");
-		placeholder2.setAttribute("onmouseout", "exitLegendInfo(this.id)");
-					
-		var placeholder3 = document.getElementById("legendv2").lastElementChild;
-		var placeholder4 = placeholder3.childNodes[0];
-		placeholder4.appendChild(placeholder);
-		placeholder.appendChild(placeholder2);
-		placeholder2.appendChild(textholder);
-	}
-	
-	// remove text inside legend tooltip
-	var tooltipRef = document.getElementById("legendv2Info");
-	tooltipRef.innerHTML = "";
-	tooltipRef.style.background = "transparent";
-	tooltipRef.style.border = "1px solid transparent";
-	
-	setTimeout(
-		function(){
-			document.getElementById("loadingScreen").style.visibility = "hidden";
-		}, 3000);
-	
-};
-
-
-var showMorePolyInfoControl = 0;
-function showMorePolyInfo(source) {
-	
-	if (showMorePolyInfoControl == 0) {
-		document.getElementById("upArrow").setAttribute("class", "fa fa-angle-double-down fa-2x");
-		document.getElementById("polyClickedInfoBox").style.transform = "translate(0, 0)";
-		
-		showMorePolyInfoControl = 1;
-	} else if (showMorePolyInfoControl > 0) {
-		document.getElementById("upArrow").setAttribute("class", "fa fa-angle-double-up fa-2x");
-		document.getElementById("polyClickedInfoBox").style.transform = "translate(0, 75px)";
-		
-		showMorePolyInfoControl = 0;
-	}
-}
 
 function removeLandingPage() {
 	document.getElementById("landingPage").style.opacity = "0";
