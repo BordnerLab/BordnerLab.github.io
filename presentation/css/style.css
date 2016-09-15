@@ -345,11 +345,12 @@
 
 #storyNavigation #leftArrowBackground {
 	position: absolute;
-	width: 120px;
+	width: 130px;
 	height: 100px;
 	top: 0px;
 	left: 0px;
-	background: #5499C7;
+	/*background: #5499C7;*/
+	border-right: 6px solid #5499C7;
 	z-index: 9;
 }
 
@@ -377,11 +378,12 @@
 
 #storyNavigation #rightArrowBackground {
 	position: absolute;
-	width: 120px;
+	width: 130px;
 	height: 100px;
 	top:0px;
 	right:0px;
-	background: #5499C7;
+	/*background: #5499C7;*/
+	border-left: 6px solid #5499C7;
 	z-index: 9;
 }
 
