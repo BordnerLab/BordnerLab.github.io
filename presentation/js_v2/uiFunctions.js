@@ -8,7 +8,7 @@ $("#slider").roundSlider({
 	value: 100,
 	radius: 75,
 	width: 20,
-	handleSize: 22,
+	handleSize: 30,
 	startAngle: 315,
 	endAngle: "+360",
 	animation: true,
