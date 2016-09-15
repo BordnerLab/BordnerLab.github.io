@@ -349,7 +349,7 @@ function removeLandingPage() {
 	setTimeout(
 		function() {
 			document.getElementById("loadingScreen").style.visibility = "visible";
-		}, 1000);
+		}, 500);
 		
 	setTimeout(
 		function(){
