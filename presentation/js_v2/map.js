@@ -12,8 +12,11 @@ var map = new mapboxgl.Map({
 
 	
 map.on('load', function () {
-	
-	
+	var n;
+	for (n=0; n < opacityLayers.length; n++) {
+		map.setPaintProperty(landcoverLayers[n], 'fill-opacity', 0);
+	}
+	map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 	
 		
 	var popup = new mapboxgl.Popup({
