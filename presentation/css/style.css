@@ -330,6 +330,7 @@
 	cursor:pointer;
 	text-align:left;
 	visibility: hidden;
+	background: #5499C7;
 }
 
 #storyNavigation #leftArrowText {
@@ -339,6 +340,7 @@
 	top:50px;
 	left:20px;
 	text-align:left;
+	background: #5499C7;
 }
 
 #storyNavigation #rightArrow {
@@ -350,6 +352,7 @@
 	cursor:pointer;
 	text-align: right;
 	visibility: hidden;
+	background: #5499C7;
 }
 
 #storyNavigation #rightArrowText {
@@ -359,6 +362,7 @@
 	top:50px;
 	right:20px;
 	text-align:right;
+	background: #5499C7;
 }
 
 #storySubContext {
