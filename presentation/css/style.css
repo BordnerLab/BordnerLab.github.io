@@ -336,7 +336,7 @@
 	height:25px;
 	top:50px;
 	left:20px;
-	cursor:pointer;
+	text-align:left;
 }
 
 #storyNavigation #rightArrow {
@@ -356,7 +356,7 @@
 	height:25px;
 	top:50px;
 	right:20px;
-	cursor:pointer;
+	text-align:right;
 }
 
 #storySubContext {
