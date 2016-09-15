@@ -134,7 +134,7 @@
 
 #slider {
 	top: 465px;
-	left: 20px;
+	left: 30px;
 	-webkit-transition: left .35s;
 	-moz-transition: left .35s;
 	-o-transition: left .35s;
@@ -254,6 +254,7 @@
 	top:450px;
 	width: 130px;
 	height: 110px;
+	border: 1px solid black;
 	border-radius:4px;
 	-webkit-transition: left .35s;
 	-moz-transition: left .35s;
