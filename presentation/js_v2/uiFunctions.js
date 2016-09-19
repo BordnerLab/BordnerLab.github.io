@@ -33,7 +33,8 @@ $("#slider").roundSlider({
 });
 
 function onCircleChange (e) {
-	var circleValue = e.value;
+	circleValue = e.value;
+	console.log(circleValue);
 	var n;
 	for (n=0; n < opacityLayers.length; n++) {
 		map.setPaintProperty(opacityLayers[n], 'fill-opacity', parseInt(circleValue, 10) / 100);

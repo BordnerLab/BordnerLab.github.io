@@ -71,6 +71,8 @@ var opacityLayers = [
 
 var threeDControl = false;
 
+var circleValue = 100;
+
 
 
 

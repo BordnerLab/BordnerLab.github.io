@@ -419,8 +419,12 @@
 }
 
 #landingPage #landingPageButton {
-	width: 200px;
-	height: 200px;
+	width: 50%;
+	height: 50%;
+	margin-top:25%;
+	margin-bottom: 25%;
+	margin-left: 25%;
+	margin-right: 25%;
 	background: white;
 	cursor:pointer;
 }
