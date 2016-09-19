@@ -15,6 +15,8 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-91.872, 46.25538],
 			zoom: 11,
+			pitch: 0,
+			bearing: 0,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Chippewa Flowage";
@@ -27,8 +29,10 @@ function MoveStoryModeForward() {
 	} else if (storyModeControl == 1) {
 		storyModeControl = 2;
 		map.flyTo({
-			center: [-90.872, 46.25538],
+			center: [-91.872, 46.25538],
 			zoom: 13,
+			pitch: 20,
+			bearing: 20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Chippewa Flowage 1";
@@ -40,8 +44,10 @@ function MoveStoryModeForward() {
 	} else if (storyModeControl == 2) {
 		storyModeControl = 3;
 		map.flyTo({
-			center: [-90.872, 46.25538],
+			center: [-91.872, 46.25538],
 			zoom: 13,
+			pitch: 25,
+			bearing: -20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Chippewa Flowage 2";
