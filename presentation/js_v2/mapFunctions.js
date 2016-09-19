@@ -60,6 +60,8 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-90.6785, 46.3181],
 			zoom: 13,
+			pitch: 0,
+			bearing: 0,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "River at White City";
@@ -72,6 +74,8 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-90.6785, 46.3181],
 			zoom: 13,
+			pitch: 20,
+			bearing: 20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "River at White City 1";
@@ -84,6 +88,8 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-90.6785, 46.3181],
 			zoom: 13,
+			pitch: 25,
+			bearing: -20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "River at White City 2";
@@ -96,6 +102,8 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-90.8785, 46.115569],
 			zoom: 13,
+			pitch: 0,
+			bearing: 0,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Lakes in Ashland County";
@@ -108,6 +116,8 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-90.8785, 46.115569],
 			zoom: 13,
+			pitch: 20,
+			bearing: 20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Lakes in Ashland County 1";
@@ -120,6 +130,8 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-90.8785, 46.115569],
 			zoom: 13,
+			pitch: 25,
+			bearing: -20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Lakes in Ashland County 2";
@@ -132,6 +144,8 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-90.23016, 46.3976],
 			zoom: 12,
+			pitch: 0,
+			bearing: 0,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Gile Flowage";
@@ -144,6 +158,8 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-90.23016, 46.3976],
 			zoom: 12,
+			pitch: 20,
+			bearing: 20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Gile Flowage 1";
@@ -156,6 +172,8 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-90.23016, 46.3976],
 			zoom: 12,
+			pitch: 25,
+			bearing: -20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Gile Flowage 2";
@@ -168,6 +186,8 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-87.2341, 45.04789],
 			zoom: 11,
+			pitch: 0,
+			bearing: 0,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Lakes in Door County";
@@ -180,6 +200,8 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-87.2341, 45.04789],
 			zoom: 11,
+			pitch: 20,
+			bearing: -20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Lakes in Door County 1";
@@ -192,6 +214,8 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-87.2341, 45.04789],
 			zoom: 11,
+			pitch: 25,
+			bearing: -20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Lakes in Door County 2";
@@ -204,6 +228,8 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-88.01247, 44.51006],
 			zoom: 11,
+			pitch: 0,
+			bearing: 0,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Green Bay";
@@ -216,6 +242,8 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-88.01247, 44.51006],
 			zoom: 11,
+			pitch: 20,
+			bearing: 20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Green Bay 1";
@@ -228,6 +256,8 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-88.01247, 44.51006],
 			zoom: 11,
+			pitch: 25,
+			bearing: -20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Green Bay 2";
@@ -248,6 +278,8 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-87.2341, 45.04789],
 			zoom: 11,
+			pitch: 20,
+			bearing: 20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Green Bay 1";
@@ -261,6 +293,8 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-87.2341, 45.04789],
 			zoom: 11,
+			pitch: 0,
+			bearing: 0,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Green Bay";
@@ -274,6 +308,8 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-87.2341, 45.04789],
 			zoom: 11,
+			pitch: 25,
+			bearing: -20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Lakes in Door County 2";
@@ -287,6 +323,8 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-87.2341, 45.04789],
 			zoom: 11,
+			pitch: 20,
+			bearing: 20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Lakes in Door County 1";
@@ -300,6 +338,8 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-87.2341, 45.04789],
 			zoom: 11,
+			pitch: 0,
+			bearing: 0,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Lakes in Door County";
@@ -313,6 +353,8 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-90.23016, 46.3976],
 			zoom: 12,
+			pitch: 25,
+			bearing: -20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Gile Flowage 2";
@@ -325,6 +367,8 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-90.23016, 46.3976],
 			zoom: 12,
+			pitch: 20,
+			bearing: 20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Gile Flowage 1";
@@ -337,6 +381,8 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-90.23016, 46.3976],
 			zoom: 12,
+			pitch: 0,
+			bearing: 0,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Gile Flowage";
@@ -349,6 +395,8 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-90.8785, 46.115569],
 			zoom: 13,
+			pitch: 25,
+			bearing: -20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Lakes in Ashland County 2";
@@ -361,6 +409,8 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-90.8785, 46.115569],
 			zoom: 13,
+			pitch: 20,
+			bearing: 20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Lakes in Ashland County 1";
@@ -373,6 +423,8 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-90.8785, 46.115569],
 			zoom: 13,
+			pitch: 0,
+			bearing: 0,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Lakes in Ashland County";
@@ -385,6 +437,8 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-90.6785, 46.3181],
 			zoom: 13,
+			pitch: 25,
+			bearing: -20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "River at White City 2";
@@ -397,6 +451,8 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-90.6785, 46.3181],
 			zoom: 13,
+			pitch: 20,
+			bearing: 20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "River at White City 1";
@@ -409,6 +465,8 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-90.6785, 46.3181],
 			zoom: 13,
+			pitch: 0,
+			bearing: 0,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "River at White City";
@@ -421,6 +479,8 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-91.872, 46.25538],
 			zoom: 11,
+			pitch: 25,
+			bearing: -20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Chippewa Flowage 2";
@@ -433,6 +493,8 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-91.872, 46.25538],
 			zoom: 11,
+			pitch: 20,
+			bearing: 20,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Chippewa Flowage 1";
@@ -445,6 +507,8 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-91.872, 46.25538],
 			zoom: 11,
+			pitch: 0,
+			bearing: 0,
 			animate: true
 		});
 		storyTextHeader.innerHTML = "Chippewa Flowage";
