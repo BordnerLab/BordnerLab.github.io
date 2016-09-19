@@ -5,7 +5,7 @@ $("#slider").roundSlider({
 	min:0,
 	max:100,
 	step:1,
-	value: 100,
+	value: circleValue,
 	radius: 75,
 	width: 20,
 	handleSize: 30,
