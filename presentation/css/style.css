@@ -135,6 +135,7 @@
 #slider {
 	top: 465px;
 	left: 32px;
+	visibility: hidden;
 	-webkit-transition: left .35s;
 	-moz-transition: left .35s;
 	-o-transition: left .35s;
@@ -255,6 +256,7 @@
 	width: 175px;
 	height: 200px;
 	border: 1px solid black;
+	visibility: hidden;
 	border-radius:4px;
 	-webkit-transition: left .35s;
 	-moz-transition: left .35s;
