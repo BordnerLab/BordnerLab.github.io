@@ -417,7 +417,7 @@
 	-o-transition: opacity 1.5s;
 	transition: opacity 1.5s;
 	z-index: 10000;
-	background: url('captureSaveDarkest.jpg') no-repeat center center fixed;
+	background: url(captureSaveDarkest.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
