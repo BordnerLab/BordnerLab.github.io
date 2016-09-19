@@ -298,7 +298,7 @@ function MoveStoryModeBackward() {
 	if (storyModeControl == 18) {
 		storyModeControl = 17;
 		map.flyTo({
-			center: [-87.2341, 45.04789],
+			center: [-88.01247, 44.51006],
 			zoom: 11,
 			pitch: 20,
 			bearing: 20,
@@ -315,7 +315,7 @@ function MoveStoryModeBackward() {
 	} else if (storyModeControl == 17) {
 		storyModeControl = 16;
 		map.flyTo({
-			center: [-87.2341, 45.04789],
+			center: [-88.01247, 44.51006],
 			zoom: 11,
 			pitch: 0,
 			bearing: 0,
@@ -344,6 +344,8 @@ function MoveStoryModeBackward() {
 		document.getElementById("rightArrow").style.visibility = "visible";
 		document.getElementById("leftArrowText").innerHTML = "Gile Flowage";
 		document.getElementById("rightArrowText").innerHTML = "Green Bay";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
 	} else if (storyModeControl == 15) {
 		storyModeControl = 14;
 		map.flyTo({
@@ -392,6 +394,8 @@ function MoveStoryModeBackward() {
 		storySubTextBody.innerHTML = "Gile Flowage 2";
 		document.getElementById("leftArrowText").innerHTML = "Lakes in Ashland County";
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Door County";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
 	} else if (storyModeControl == 12) {
 		storyModeControl = 11;
 		map.flyTo({
@@ -438,6 +442,8 @@ function MoveStoryModeBackward() {
 		storySubTextBody.innerHTML = "Information here on the Lakes in Ashland County 2.";
 		document.getElementById("leftArrowText").innerHTML = "River at White City";
 		document.getElementById("rightArrowText").innerHTML = "Gile Flowage";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
 	}else if (storyModeControl == 9) {
 		storyModeControl = 8;
 		map.flyTo({
@@ -484,6 +490,8 @@ function MoveStoryModeBackward() {
 		storySubTextBody.innerHTML = "Information here on the River at White City 2.";
 		document.getElementById("leftArrowText").innerHTML = "Chippewa Flowage";
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Ashland County";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
 	} else if (storyModeControl == 6) {
 		storyModeControl = 5;
 		map.flyTo({
@@ -530,6 +538,8 @@ function MoveStoryModeBackward() {
 		storySubTextBody.innerHTML = "Information here on the Chippewa Flowage 2.";
 		document.getElementById("leftArrowText").innerHTML = "";
 		document.getElementById("rightArrowText").innerHTML = "River at White City";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
 	} else if (storyModeControl == 3) {
 		storyModeControl = 2;
 		map.flyTo({
