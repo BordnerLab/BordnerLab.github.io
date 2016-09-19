@@ -438,6 +438,19 @@
 	text-align: center;
 }
 
+#mapStart {
+	background: transparent;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+}
+
+#mapStart : hover {
+	background: black;
+}
+
 
 #loadingScreen {
 	visibility: hidden;
