@@ -41,6 +41,8 @@ function MoveStoryModeForward() {
 		document.getElementById("leftArrow").style.visibility = "visible";
 		document.getElementById("leftArrowText").innerHTML = "Chippewa Flowage";
 		document.getElementById("rightArrowText").innerHTML = "Chippewa Flowage 2";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
 	} else if (storyModeControl == 2) {
 		storyModeControl = 3;
 		map.flyTo({
@@ -69,6 +71,8 @@ function MoveStoryModeForward() {
 		storySubTextBody.innerHTML = "Information here on the River at White City.";
 		document.getElementById("leftArrowText").innerHTML = "Chippewa Flowage 2";
 		document.getElementById("rightArrowText").innerHTML = "River at White City 1";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 	} else if (storyModeControl == 4) {
 		storyModeControl = 5;
 		map.flyTo({
@@ -83,6 +87,8 @@ function MoveStoryModeForward() {
 		storySubTextBody.innerHTML = "Information here on the River at White City 1";
 		document.getElementById("leftArrowText").innerHTML = "River at White City";
 		document.getElementById("rightArrowText").innerHTML = "River at White City 2";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
 	} else if (storyModeControl == 5) {
 		storyModeControl = 6;
 		map.flyTo({
@@ -111,6 +117,8 @@ function MoveStoryModeForward() {
 		storySubTextBody.innerHTML = "Information here on the Lakes in Ashland County.";
 		document.getElementById("leftArrowText").innerHTML = "River at White City 2";
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Ashland County 1";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 	} else if (storyModeControl == 7) {
 		storyModeControl = 8;
 		map.flyTo({
@@ -125,6 +133,8 @@ function MoveStoryModeForward() {
 		storySubTextBody.innerHTML = "Information here on the Lakes in Ashland County 1.";
 		document.getElementById("leftArrowText").innerHTML = "Lakes in Ashland County";
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Ashland County 2";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
 	} else if (storyModeControl == 8) {
 		storyModeControl = 9;
 		map.flyTo({
@@ -153,6 +163,8 @@ function MoveStoryModeForward() {
 		storySubTextBody.innerHTML = "Information here on the Gile Flowage.";
 		document.getElementById("leftArrowText").innerHTML = "Lakes in Ashland County 2";
 		document.getElementById("rightArrowText").innerHTML = "Gile Flowage 1";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 	} else if (storyModeControl == 10) {
 		storyModeControl = 11;
 		map.flyTo({
@@ -167,6 +179,8 @@ function MoveStoryModeForward() {
 		storySubTextBody.innerHTML = "Information here on the Gile Flowage 1.";
 		document.getElementById("leftArrowText").innerHTML = "Gile Flowage";
 		document.getElementById("rightArrowText").innerHTML = "Gile Flowage 2";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
 	} else if (storyModeControl == 11) {
 		storyModeControl = 12;
 		map.flyTo({
@@ -195,6 +209,8 @@ function MoveStoryModeForward() {
 		storySubTextBody.innerHTML = "Information here on the Lakes in Door County.";
 		document.getElementById("leftArrowText").innerHTML = "Gile Flowage 2";
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Door County 1";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 	} else if (storyModeControl == 13) {
 		storyModeControl = 14;
 		map.flyTo({
@@ -209,6 +225,8 @@ function MoveStoryModeForward() {
 		storySubTextBody.innerHTML = "Information here on the Lakes in Door County 1.";
 		document.getElementById("leftArrowText").innerHTML = "Lakes in Door County";
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Door County 2";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
 	} else if (storyModeControl == 14) {
 		storyModeControl = 15;
 		map.flyTo({
@@ -237,6 +255,8 @@ function MoveStoryModeForward() {
 		storySubTextBody.innerHTML = "Information here on Green Bay.";
 		document.getElementById("leftArrowText").innerHTML = "Lakes in Door County 2";
 		document.getElementById("rightArrowText").innerHTML = "Green Bay 1";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 	} else if (storyModeControl == 16) {
 		storyModeControl = 17;
 		map.flyTo({
@@ -251,6 +271,8 @@ function MoveStoryModeForward() {
 		storySubTextBody.innerHTML = "Information here on Green Bay 1.";	
 		document.getElementById("leftArrowText").innerHTML = "Green Bay";
 		document.getElementById("rightArrowText").innerHTML = "Green Bay 2";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
 	} else if (storyModeControl == 17) {
 		storyModeControl = 18;
 		map.flyTo({
@@ -288,6 +310,8 @@ function MoveStoryModeBackward() {
 		document.getElementById("rightArrow").style.visibility = "visible";
 		document.getElementById("leftArrowText").innerHTML = "Gile Flowage";
 		document.getElementById("rightArrowText").innerHTML = "Green Bay";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
 	} else if (storyModeControl == 17) {
 		storyModeControl = 16;
 		map.flyTo({
@@ -303,6 +327,8 @@ function MoveStoryModeBackward() {
 		document.getElementById("rightArrow").style.visibility = "visible";
 		document.getElementById("leftArrowText").innerHTML = "Gile Flowage";
 		document.getElementById("rightArrowText").innerHTML = "Green Bay";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 	} else if (storyModeControl == 16) {
 		storyModeControl = 15;
 		map.flyTo({
@@ -333,6 +359,8 @@ function MoveStoryModeBackward() {
 		document.getElementById("rightArrow").style.visibility = "visible";
 		document.getElementById("leftArrowText").innerHTML = "Gile Flowage";
 		document.getElementById("rightArrowText").innerHTML = "Green Bay";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
 	} else if (storyModeControl == 14) {
 		storyModeControl = 13;
 		map.flyTo({
@@ -348,6 +376,8 @@ function MoveStoryModeBackward() {
 		document.getElementById("rightArrow").style.visibility = "visible";
 		document.getElementById("leftArrowText").innerHTML = "Gile Flowage";
 		document.getElementById("rightArrowText").innerHTML = "Green Bay";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 	} else if (storyModeControl == 13) {
 		storyModeControl = 12;
 		map.flyTo({
@@ -376,6 +406,8 @@ function MoveStoryModeBackward() {
 		storySubTextBody.innerHTML = "Gile Flowage 1";
 		document.getElementById("leftArrowText").innerHTML = "Lakes in Ashland County";
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Door County";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
 	} else if (storyModeControl == 11) {
 		storyModeControl = 10;
 		map.flyTo({
@@ -390,6 +422,8 @@ function MoveStoryModeBackward() {
 		storySubTextBody.innerHTML = "Gile Flowage";
 		document.getElementById("leftArrowText").innerHTML = "Lakes in Ashland County";
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Door County";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 	} else if (storyModeControl == 10) {
 		storyModeControl = 9;
 		map.flyTo({
@@ -418,6 +452,8 @@ function MoveStoryModeBackward() {
 		storySubTextBody.innerHTML = "Information here on the Lakes in Ashland County 1.";
 		document.getElementById("leftArrowText").innerHTML = "River at White City";
 		document.getElementById("rightArrowText").innerHTML = "Gile Flowage";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
 	} else if (storyModeControl == 8) {
 		storyModeControl = 7;
 		map.flyTo({
@@ -432,6 +468,8 @@ function MoveStoryModeBackward() {
 		storySubTextBody.innerHTML = "Information here on the Lakes in Ashland County.";
 		document.getElementById("leftArrowText").innerHTML = "River at White City";
 		document.getElementById("rightArrowText").innerHTML = "Gile Flowage";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 	} else if (storyModeControl == 7) {
 		storyModeControl = 6;
 		map.flyTo({
@@ -460,6 +498,8 @@ function MoveStoryModeBackward() {
 		storySubTextBody.innerHTML = "Information here on the River at White City 1.";
 		document.getElementById("leftArrowText").innerHTML = "Chippewa Flowage";
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Ashland County";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
 	} else if (storyModeControl == 5) {
 		storyModeControl = 4;
 		map.flyTo({
@@ -474,6 +514,8 @@ function MoveStoryModeBackward() {
 		storySubTextBody.innerHTML = "Information here on the River at White City.";
 		document.getElementById("leftArrowText").innerHTML = "Chippewa Flowage";
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Ashland County";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 	} else if (storyModeControl == 4) {
 		storyModeControl = 3;
 		map.flyTo({
@@ -502,6 +544,8 @@ function MoveStoryModeBackward() {
 		storySubTextBody.innerHTML = "Information here on the Chippewa Flowage 1.";
 		document.getElementById("leftArrowText").innerHTML = "";
 		document.getElementById("rightArrowText").innerHTML = "";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
 	} else if (storyModeControl == 2) {
 		storyModeControl = 1;
 		map.flyTo({
@@ -517,6 +561,8 @@ function MoveStoryModeBackward() {
 		document.getElementById("leftArrow").style.visibility = "hidden";
 		document.getElementById("leftArrowText").innerHTML = "";
 		document.getElementById("rightArrowText").innerHTML = "River at White City";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 	} else if (storyModeControl == 1) {
 	
 	} else if (storyModeControl == 0) {
