@@ -415,7 +415,7 @@
 	-moz-transition: opacity 1.5s;
 	-o-transition: opacity 1.5s;
 	transition: opacity 1.5s;
-	z-index: 100,
+	z-index: 10000;
 }
 
 #landingPage #landingPageButton {
