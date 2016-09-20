@@ -43,8 +43,8 @@ function MoveStoryModeForward() {
 		document.getElementById("rightArrowText").innerHTML = "Chippewa Flowage 2";
 		
 		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
-		document.getElementById("slider").style.visibility = "visible";
-		document.getElementById("circleSliderContainer").style.visibility = "visible";
+		document.getElementById("slider").style.opacity = "1";
+		document.getElementById("circleSliderContainer").style.opacity = "1";
 	} else if (storyModeControl == 2) {
 		storyModeControl = 3;
 		map.flyTo({

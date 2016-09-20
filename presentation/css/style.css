@@ -135,11 +135,11 @@
 #slider {
 	top: 465px;
 	left: 32px;
-	visibility: hidden;
-	-webkit-transition: left .35s;
-	-moz-transition: left .35s;
-	-o-transition: left .35s;
-	transition: left .35s;
+	opacity: 0;
+	-webkit-transition: opacity .35s;
+	-moz-transition: opacity .35s;
+	-o-transition: opacity .35s;
+	transition: opacity .35s;
 }
 
 #slider .rs-bg-color {
@@ -256,12 +256,12 @@
 	width: 175px;
 	height: 200px;
 	border: 1px solid black;
-	visibility: hidden;
+	opacity: 0;
 	border-radius:4px;
-	-webkit-transition: left .35s;
-	-moz-transition: left .35s;
-	-o-transition: left .35s;
-	transition: left .35s;
+	-webkit-transition: opacity .35s;
+	-moz-transition: opacity .35s;
+	-o-transition: opacity .35s;
+	transition: opacity .35s;
 }
 
 #opacityExit {
