@@ -367,7 +367,7 @@ function removeLandingPage() {
 
 
 function landingPageButtonOver() {
-	document.getElementById("mapStart").style.background = "blue";
+	document.getElementById("mapStart").style.background = "#1F618D";
 };
 
 function landingPageButtonOut() {
