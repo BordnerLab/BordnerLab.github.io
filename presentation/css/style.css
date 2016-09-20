@@ -434,7 +434,6 @@
 	margin-right: 25%;
 	background: transparent;
 	color: white;
-	cursor:pointer;
 	text-align: center;
 }
 
@@ -444,12 +443,17 @@
 }
 
 #mapStart {
-	background: black;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	background: transparent;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	padding-left: 10px;
 	padding-right: 10px;
 	border-radius: 4px;
+	-webkit-transition: background .25s;
+	-moz-transition: background .25s;
+	-o-transition: background .25s;
+	transition: background .25s;
+	cursor:pointer;
 }
 
 .containerLoad {

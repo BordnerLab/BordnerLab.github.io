@@ -366,6 +366,15 @@ function removeLandingPage() {
 }
 
 
+function landingPageButtonOver() {
+	document.getElementById("mapStart").style.background = "blue";
+};
+
+function landingPageButtonOut() {
+	document.getElementById("mapStart").style.background = "transparent";
+};
+	
+
 
 
 
