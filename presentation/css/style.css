@@ -443,6 +443,10 @@
 	visibility: hidden;
 }
 
+#mapStart {
+	background: black;
+}
+
 .containerLoad {
   position:absolute;
   background: transparent;
