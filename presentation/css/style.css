@@ -454,6 +454,7 @@
 	-o-transition: background .5s;
 	transition: background .5s;
 	cursor:pointer;
+	border: 1px solid white;
 }
 
 .containerLoad {
