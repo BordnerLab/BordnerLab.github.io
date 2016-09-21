@@ -15,7 +15,7 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-91.872, 46.25538],
 			zoom: 11,
-			pitch: 0,
+			pitch: 0.01,
 			bearing: 0,
 			animate: true
 		});
@@ -64,7 +64,7 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-90.6785, 46.3181],
 			zoom: 13,
-			pitch: 0,
+			pitch: 0.01,
 			bearing: 0,
 			animate: true
 		});
@@ -114,7 +114,7 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-90.8785, 46.115569],
 			zoom: 13,
-			pitch: 0,
+			pitch: 0.01,
 			bearing: 0,
 			animate: true
 		});
@@ -164,7 +164,7 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-90.23016, 46.3976],
 			zoom: 12,
-			pitch: 0,
+			pitch: 0.01,
 			bearing: 0,
 			animate: true
 		});
@@ -214,7 +214,7 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-87.2341, 45.04789],
 			zoom: 11,
-			pitch: 0,
+			pitch: 0.01,
 			bearing: 0,
 			animate: true
 		});
@@ -264,7 +264,7 @@ function MoveStoryModeForward() {
 		map.flyTo({
 			center: [-88.01247, 44.51006],
 			zoom: 11,
-			pitch: 0,
+			pitch: 0.01,
 			bearing: 0,
 			animate: true
 		});
@@ -339,7 +339,7 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-88.01247, 44.51006],
 			zoom: 11,
-			pitch: 0,
+			pitch: 0.01,
 			bearing: 0,
 			animate: true
 		});
@@ -394,7 +394,7 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-87.2341, 45.04789],
 			zoom: 11,
-			pitch: 0,
+			pitch: 0.01,
 			bearing: 0,
 			animate: true
 		});
@@ -447,7 +447,7 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-90.23016, 46.3976],
 			zoom: 12,
-			pitch: 0,
+			pitch: 0.01,
 			bearing: 0,
 			animate: true
 		});
@@ -499,7 +499,7 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-90.8785, 46.115569],
 			zoom: 13,
-			pitch: 0,
+			pitch: 0.01,
 			bearing: 0,
 			animate: true
 		});
@@ -551,7 +551,7 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-90.6785, 46.3181],
 			zoom: 13,
-			pitch: 0,
+			pitch: 0.01,
 			bearing: 0,
 			animate: true
 		});
@@ -603,7 +603,7 @@ function MoveStoryModeBackward() {
 		map.flyTo({
 			center: [-91.872, 46.25538],
 			zoom: 11,
-			pitch: 0,
+			pitch: 0.01,
 			bearing: 0,
 			animate: true
 		});
