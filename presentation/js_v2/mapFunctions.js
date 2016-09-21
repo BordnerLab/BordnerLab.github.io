@@ -43,6 +43,16 @@ function MoveStoryModeForward() {
 		document.getElementById("rightArrowText").innerHTML = "Chippewa Flowage 2";
 		
 		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
+		map.setPaintProperty("Agriculture", "fill-opacity", 1);
+		map.setPaintProperty("Deciduous Forest", "fill-opacity", 1);
+		map.setPaintProperty("Other", "fill-opacity", 1);
+		map.setPaintProperty("Urban", "fill-opacity", 1);
+		map.setPaintProperty("Barren", "fill-opacity", 1);
+		map.setPaintProperty("Shrubland", "fill-opacity", 1);
+		map.setPaintProperty("Wetlands", "fill-opacity", 1);
+		map.setPaintProperty("Coniferous Forest", "fill-opacity", 1);
+		map.setPaintProperty("Mixed Forest", "fill-opacity", 1);
+		map.setPaintProperty("Unknown Cover", "fill-opacity", 1);
 		document.getElementById("slider").style.opacity = "1";
 		document.getElementById("circleSliderContainer").style.opacity = "1";
 	} else if (storyModeControl == 2) {
@@ -174,7 +184,7 @@ function MoveStoryModeForward() {
 		document.getElementById("leftArrowText").innerHTML = "Lakes in Ashland County 2";
 		document.getElementById("rightArrowText").innerHTML = "Gile Flowage 1";
 		
-		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
+		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
 		document.getElementById("slider").style.opacity = "0";
 		document.getElementById("circleSliderContainer").style.opacity = "0";
 	} else if (storyModeControl == 10) {
@@ -192,7 +202,16 @@ function MoveStoryModeForward() {
 		document.getElementById("leftArrowText").innerHTML = "Gile Flowage";
 		document.getElementById("rightArrowText").innerHTML = "Gile Flowage 2";
 		
-		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
+		map.setPaintProperty("Agriculture", "fill-opacity", 1);
+		map.setPaintProperty("Deciduous Forest", "fill-opacity", 1);
+		map.setPaintProperty("Other", "fill-opacity", 1);
+		map.setPaintProperty("Urban", "fill-opacity", 1);
+		map.setPaintProperty("Barren", "fill-opacity", 1);
+		map.setPaintProperty("Shrubland", "fill-opacity", 1);
+		map.setPaintProperty("Wetlands", "fill-opacity", 1);
+		map.setPaintProperty("Coniferous Forest", "fill-opacity", 1);
+		map.setPaintProperty("Mixed Forest", "fill-opacity", 1);
+		map.setPaintProperty("Unknown Cover", "fill-opacity", 1);
 		document.getElementById("slider").style.opacity = "1";
 		document.getElementById("circleSliderContainer").style.opacity = "1";
 	} else if (storyModeControl == 11) {
@@ -209,6 +228,17 @@ function MoveStoryModeForward() {
 		storySubTextBody.innerHTML = "Information here on the Gile Flowage 2.";
 		document.getElementById("leftArrowText").innerHTML = "Gile Flowage 1";
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Door County";
+		
+		map.setPaintProperty("Agriculture", "fill-opacity", 0);
+		map.setPaintProperty("Deciduous Forest", "fill-opacity", 0);
+		map.setPaintProperty("Other", "fill-opacity", 0);
+		map.setPaintProperty("Urban", "fill-opacity", 0);
+		map.setPaintProperty("Barren", "fill-opacity", 0);
+		map.setPaintProperty("Shrubland", "fill-opacity", 0);
+		map.setPaintProperty("Wetlands", "fill-opacity", 1);
+		map.setPaintProperty("Coniferous Forest", "fill-opacity", 0);
+		map.setPaintProperty("Mixed Forest", "fill-opacity", 0);
+		map.setPaintProperty("Unknown Cover", "fill-opacity", 0);
 	} else if (storyModeControl == 12) {
 		storyModeControl = 13;
 		map.flyTo({
