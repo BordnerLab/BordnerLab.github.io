@@ -85,6 +85,16 @@ function MoveStoryModeForward() {
 		document.getElementById("rightArrowText").innerHTML = "River at White City 1";
 		
 		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
+		map.setPaintProperty("Agriculture", "fill-opacity", 0);
+		map.setPaintProperty("Deciduous Forest", "fill-opacity", 0);
+		map.setPaintProperty("Other", "fill-opacity", 0);
+		map.setPaintProperty("Urban", "fill-opacity", 0);
+		map.setPaintProperty("Barren", "fill-opacity", 0);
+		map.setPaintProperty("Shrubland", "fill-opacity", 0);
+		map.setPaintProperty("Wetlands", "fill-opacity", 0);
+		map.setPaintProperty("Coniferous Forest", "fill-opacity", 0);
+		map.setPaintProperty("Mixed Forest", "fill-opacity", 0);
+		map.setPaintProperty("Unknown Cover", "fill-opacity", 0);
 		document.getElementById("slider").style.opacity = "0";
 		document.getElementById("circleSliderContainer").style.opacity = "0";
 	} else if (storyModeControl == 4) {
