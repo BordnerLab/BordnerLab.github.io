@@ -7,7 +7,8 @@ var map = new mapboxgl.Map({
 	zoom: 6,
 	preserveDrawingBuffer: false,
 	hash: false,
-	pitch: 0.1
+	pitch: 0.1,
+	interactive: false
 });
 
 	
