@@ -38,6 +38,7 @@ function MoveStoryModeForward() {
 		map.setLayoutProperty('Wetlands', 'visibility', 'none');
 		map.setLayoutProperty('Coniferous Forest', 'visibility', 'none');
 		map.setLayoutProperty('Mixed Forest', 'visibility', 'none');
+		map.setLayoutProperty('Unknown Cover', 'visibility', 'none');
 		
 	} else if (storyModeControl == 1) {
 		storyModeControl = 2;
@@ -54,6 +55,18 @@ function MoveStoryModeForward() {
 		document.getElementById("leftArrow").style.visibility = "visible";
 		document.getElementById("leftArrowText").innerHTML = "Chippewa Flowage";
 		document.getElementById("rightArrowText").innerHTML = "Chippewa Flowage 2";
+		
+		map.setLayoutProperty('coastalWaters', 'visibility', 'visible');
+		map.setLayoutProperty('Agriculture', 'visibility', 'visible');
+		map.setLayoutProperty('Deciduous Forest', 'visibility', 'visible');
+		map.setLayoutProperty('Other', 'visibility', 'visible');
+		map.setLayoutProperty('Urban', 'visibility', 'visible');
+		map.setLayoutProperty('Barren', 'visibility', 'visible');
+		map.setLayoutProperty('Shrubland', 'visibility', 'visible');
+		map.setLayoutProperty('Wetlands', 'visibility', 'visible');
+		map.setLayoutProperty('Coniferous Forest', 'visibility', 'visible');
+		map.setLayoutProperty('Mixed Forest', 'visibility', 'visible');
+		map.setLayoutProperty('Unknown Cover', 'visibility', 'visible');
 		
 		map.setPaintProperty("coastalWaters", "fill-opacity", parseInt(circleValue, 10) / 100);
 		map.setPaintProperty("Agriculture", "fill-opacity", parseInt(circleValue, 10) / 100);
@@ -99,6 +112,18 @@ function MoveStoryModeForward() {
 		document.getElementById("leftArrowText").innerHTML = "Chippewa Flowage 2";
 		document.getElementById("rightArrowText").innerHTML = "River at White City 1";
 		
+		map.setLayoutProperty('coastalWaters', 'visibility', 'none');
+		map.setLayoutProperty('Agriculture', 'visibility', 'none');
+		map.setLayoutProperty('Deciduous Forest', 'visibility', 'none');
+		map.setLayoutProperty('Other', 'visibility', 'none');
+		map.setLayoutProperty('Urban', 'visibility', 'none');
+		map.setLayoutProperty('Barren', 'visibility', 'none');
+		map.setLayoutProperty('Shrubland', 'visibility', 'none');
+		map.setLayoutProperty('Wetlands', 'visibility', 'none');
+		map.setLayoutProperty('Coniferous Forest', 'visibility', 'none');
+		map.setLayoutProperty('Mixed Forest', 'visibility', 'none');
+		map.setLayoutProperty('Unknown Cover', 'visibility', 'none');
+		
 		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 		map.setPaintProperty("Agriculture", "fill-opacity", 0);
 		map.setPaintProperty("Deciduous Forest", "fill-opacity", 0);
@@ -128,6 +153,8 @@ function MoveStoryModeForward() {
 		storySubTextBody.innerHTML = "Information here on the River at White City 1";
 		document.getElementById("leftArrowText").innerHTML = "River at White City";
 		document.getElementById("rightArrowText").innerHTML = "River at White City 2";
+		
+		map.setLayoutProperty('coastalWaters', 'visibility', 'visible');
 		
 		map.setPaintProperty("coastalWaters", "fill-opacity", parseInt(circleValue, 10) / 100);
 		document.getElementById("slider").style.opacity = "1";
@@ -163,6 +190,8 @@ function MoveStoryModeForward() {
 		document.getElementById("leftArrowText").innerHTML = "River at White City 2";
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Ashland County 1";
 		
+		map.setLayoutProperty('coastalWaters', 'visibility', 'none');
+		
 		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 		document.getElementById("slider").style.opacity = "0";
 		document.getElementById("circleSliderContainer").style.opacity = "0";
@@ -182,6 +211,8 @@ function MoveStoryModeForward() {
 		storySubTextBody.innerHTML = "Information here on the Lakes in Ashland County 1.";
 		document.getElementById("leftArrowText").innerHTML = "Lakes in Ashland County";
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Ashland County 2";
+		
+		map.setLayoutProperty('coastalWaters', 'visibility', 'visible');
 		
 		map.setPaintProperty("coastalWaters", "fill-opacity", parseInt(circleValue, 10) / 100);
 		document.getElementById("slider").style.opacity = "1";
@@ -235,6 +266,17 @@ function MoveStoryModeForward() {
 		document.getElementById("leftArrowText").innerHTML = "Gile Flowage";
 		document.getElementById("rightArrowText").innerHTML = "Gile Flowage 2";
 		
+		map.setLayoutProperty('Agriculture', 'visibility', 'visible');
+		map.setLayoutProperty('Deciduous Forest', 'visibility', 'visible');
+		map.setLayoutProperty('Other', 'visibility', 'visible');
+		map.setLayoutProperty('Urban', 'visibility', 'visible');
+		map.setLayoutProperty('Barren', 'visibility', 'visible');
+		map.setLayoutProperty('Shrubland', 'visibility', 'visible');
+		map.setLayoutProperty('Wetlands', 'visibility', 'visible');
+		map.setLayoutProperty('Coniferous Forest', 'visibility', 'visible');
+		map.setLayoutProperty('Mixed Forest', 'visibility', 'visible');
+		map.setLayoutProperty('Unknown Cover', 'visibility', 'visible');
+		
 		map.setPaintProperty("Agriculture", "fill-opacity", parseInt(circleValue, 10) / 100);
 		map.setPaintProperty("Deciduous Forest", "fill-opacity", parseInt(circleValue, 10) / 100);
 		map.setPaintProperty("Other", "fill-opacity", parseInt(circleValue, 10) / 100);
@@ -264,6 +306,16 @@ function MoveStoryModeForward() {
 		document.getElementById("leftArrowText").innerHTML = "Gile Flowage 1";
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Door County";
 		
+		map.setLayoutProperty('Agriculture', 'visibility', 'none');
+		map.setLayoutProperty('Deciduous Forest', 'visibility', 'none');
+		map.setLayoutProperty('Other', 'visibility', 'none');
+		map.setLayoutProperty('Urban', 'visibility', 'none');
+		map.setLayoutProperty('Barren', 'visibility', 'none');
+		map.setLayoutProperty('Shrubland', 'visibility', 'none');
+		map.setLayoutProperty('Coniferous Forest', 'visibility', 'none');
+		map.setLayoutProperty('Mixed Forest', 'visibility', 'none');
+		map.setLayoutProperty('Unknown Cover', 'visibility', 'none');
+		
 		map.setPaintProperty("Agriculture", "fill-opacity", 0);
 		map.setPaintProperty("Deciduous Forest", "fill-opacity", 0);
 		map.setPaintProperty("Other", "fill-opacity", 0);
@@ -292,6 +344,9 @@ function MoveStoryModeForward() {
 		document.getElementById("leftArrowText").innerHTML = "Gile Flowage 2";
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Door County 1";
 		
+		map.setLayoutProperty('coastalWaters', 'visibility', 'none');
+		map.setLayoutProperty('Wetlands', 'visibility', 'none');
+		
 		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 		map.setPaintProperty("Wetlands", "fill-opacity", 0);
 		document.getElementById("slider").style.opacity = "0";
@@ -312,6 +367,9 @@ function MoveStoryModeForward() {
 		storySubTextBody.innerHTML = "Information here on the Lakes in Door County 1.";
 		document.getElementById("leftArrowText").innerHTML = "Lakes in Door County";
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Door County 2";
+		
+		map.setLayoutProperty('coastalWaters', 'visibility', 'visible');
+		map.setLayoutProperty('Wetlands', 'visibility', 'visible');
 		
 		map.setPaintProperty("coastalWaters", "fill-opacity", parseInt(circleValue, 10) / 100);
 		map.setPaintProperty("Wetlands", "fill-opacity", parseInt(circleValue, 10) / 100);
@@ -348,6 +406,9 @@ function MoveStoryModeForward() {
 		document.getElementById("leftArrowText").innerHTML = "Lakes in Door County 2";
 		document.getElementById("rightArrowText").innerHTML = "Green Bay 1";
 		
+		map.setLayoutProperty('coastalWaters', 'visibility', 'none');
+		map.setLayoutProperty('Wetlands', 'visibility', 'none');
+		
 		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 		map.setPaintProperty("Wetlands", "fill-opacity", 0);
 		document.getElementById("slider").style.opacity = "0";
@@ -368,6 +429,18 @@ function MoveStoryModeForward() {
 		storySubTextBody.innerHTML = "Information here on Green Bay 1.";	
 		document.getElementById("leftArrowText").innerHTML = "Green Bay";
 		document.getElementById("rightArrowText").innerHTML = "Green Bay 2";
+		
+		map.setLayoutProperty('coastalWaters', 'visibility', 'visible');
+		map.setLayoutProperty('Agriculture', 'visibility', 'visible');
+		map.setLayoutProperty('Deciduous Forest', 'visibility', 'visible');
+		map.setLayoutProperty('Other', 'visibility', 'visible');
+		map.setLayoutProperty('Urban', 'visibility', 'visible');
+		map.setLayoutProperty('Barren', 'visibility', 'visible');
+		map.setLayoutProperty('Shrubland', 'visibility', 'visible');
+		map.setLayoutProperty('Wetlands', 'visibility', 'visible');
+		map.setLayoutProperty('Coniferous Forest', 'visibility', 'visible');
+		map.setLayoutProperty('Mixed Forest', 'visibility', 'visible');
+		map.setLayoutProperty('Unknown Cover', 'visibility', 'visible');
 		
 		map.setPaintProperty("coastalWaters", "fill-opacity", parseInt(circleValue, 10) / 100);
 		map.setPaintProperty("Agriculture", "fill-opacity", parseInt(circleValue, 10) / 100);
@@ -399,6 +472,16 @@ function MoveStoryModeForward() {
 		document.getElementById("rightArrow").style.visibility = "hidden";
 		document.getElementById("leftArrowText").innerHTML = "Green Bay 1";
 		document.getElementById("rightArrowText").innerHTML = "";
+		
+		map.setLayoutProperty('coastalWaters', 'visibility', 'none');
+		map.setLayoutProperty('Agriculture', 'visibility', 'none');
+		map.setLayoutProperty('Deciduous Forest', 'visibility', 'none');
+		map.setLayoutProperty('Other', 'visibility', 'none');
+		map.setLayoutProperty('Barren', 'visibility', 'none');
+		map.setLayoutProperty('Shrubland', 'visibility', 'none');
+		map.setLayoutProperty('Coniferous Forest', 'visibility', 'none');
+		map.setLayoutProperty('Mixed Forest', 'visibility', 'none');
+		map.setLayoutProperty('Unknown Cover', 'visibility', 'none');
 		
 		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 		map.setPaintProperty("Agriculture", "fill-opacity", 0);
@@ -437,6 +520,18 @@ function MoveStoryModeBackward() {
 		document.getElementById("leftArrowText").innerHTML = "Gile Flowage";
 		document.getElementById("rightArrowText").innerHTML = "Green Bay";
 		
+		map.setLayoutProperty('coastalWaters', 'visibility', 'visible');
+		map.setLayoutProperty('Agriculture', 'visibility', 'visible');
+		map.setLayoutProperty('Deciduous Forest', 'visibility', 'visible');
+		map.setLayoutProperty('Other', 'visibility', 'visible');
+		map.setLayoutProperty('Urban', 'visibility', 'visible');
+		map.setLayoutProperty('Barren', 'visibility', 'visible');
+		map.setLayoutProperty('Shrubland', 'visibility', 'visible');
+		map.setLayoutProperty('Wetlands', 'visibility', 'visible');
+		map.setLayoutProperty('Coniferous Forest', 'visibility', 'visible');
+		map.setLayoutProperty('Mixed Forest', 'visibility', 'visible');
+		map.setLayoutProperty('Unknown Cover', 'visibility', 'visible');
+		
 		map.setPaintProperty("coastalWaters", "fill-opacity", parseInt(circleValue, 10) / 100);
 		map.setPaintProperty("Agriculture", "fill-opacity", parseInt(circleValue, 10) / 100);
 		map.setPaintProperty("Deciduous Forest", "fill-opacity", parseInt(circleValue, 10) / 100);
@@ -465,6 +560,18 @@ function MoveStoryModeBackward() {
 		document.getElementById("rightArrow").style.visibility = "visible";
 		document.getElementById("leftArrowText").innerHTML = "Gile Flowage";
 		document.getElementById("rightArrowText").innerHTML = "Green Bay";
+		
+		map.setLayoutProperty('coastalWaters', 'visibility', 'none');
+		map.setLayoutProperty('Agriculture', 'visibility', 'none');
+		map.setLayoutProperty('Deciduous Forest', 'visibility', 'none');
+		map.setLayoutProperty('Other', 'visibility', 'none');
+		map.setLayoutProperty('Urban', 'visibility', 'none');
+		map.setLayoutProperty('Barren', 'visibility', 'none');
+		map.setLayoutProperty('Shrubland', 'visibility', 'none');
+		map.setLayoutProperty('Wetlands', 'visibility', 'none');
+		map.setLayoutProperty('Coniferous Forest', 'visibility', 'none');
+		map.setLayoutProperty('Mixed Forest', 'visibility', 'none');
+		map.setLayoutProperty('Unknown Cover', 'visibility', 'none');
 		
 		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 		map.setPaintProperty("Agriculture", "fill-opacity", 0);
@@ -496,6 +603,9 @@ function MoveStoryModeBackward() {
 		document.getElementById("rightArrow").style.visibility = "visible";
 		document.getElementById("leftArrowText").innerHTML = "Gile Flowage";
 		document.getElementById("rightArrowText").innerHTML = "Green Bay";
+		
+		map.setLayoutProperty('coastalWaters', 'visibility', 'visible');
+		map.setLayoutProperty('Wetlands', 'visibility', 'visible');
 		
 		map.setPaintProperty("coastalWaters", "fill-opacity", parseInt(circleValue, 10) / 100);
 		map.setPaintProperty("Wetlands", "fill-opacity", parseInt(circleValue, 10) / 100);
@@ -534,6 +644,9 @@ function MoveStoryModeBackward() {
 		document.getElementById("leftArrowText").innerHTML = "Gile Flowage";
 		document.getElementById("rightArrowText").innerHTML = "Green Bay";
 		
+		map.setLayoutProperty('coastalWaters', 'visibility', 'none');
+		map.setLayoutProperty('Wetlands', 'visibility', 'none');
+		
 		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 		map.setPaintProperty("Wetlands", "fill-opacity", 0);
 		document.getElementById("slider").style.opacity = "0";
@@ -555,6 +668,9 @@ function MoveStoryModeBackward() {
 		document.getElementById("leftArrowText").innerHTML = "Lakes in Ashland County";
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Door County";
 		
+		map.setLayoutProperty('coastalWaters', 'visibility', 'visible');
+		map.setLayoutProperty('Wetlands', 'visibility', 'visible');
+		
 		map.setPaintProperty("coastalWaters", "fill-opacity", parseInt(circleValue, 10) / 100);
 		map.setPaintProperty("Wetlands", "fill-opacity", parseInt(circleValue, 10) / 100);
 		document.getElementById("slider").style.opacity = "1";
@@ -575,6 +691,16 @@ function MoveStoryModeBackward() {
 		storySubTextBody.innerHTML = "Gile Flowage 1";
 		document.getElementById("leftArrowText").innerHTML = "Lakes in Ashland County";
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Door County";
+		
+		map.setLayoutProperty('Agriculture', 'visibility', 'visible');
+		map.setLayoutProperty('Deciduous Forest', 'visibility', 'visible');
+		map.setLayoutProperty('Other', 'visibility', 'visible');
+		map.setLayoutProperty('Urban', 'visibility', 'visible');
+		map.setLayoutProperty('Barren', 'visibility', 'visible');
+		map.setLayoutProperty('Shrubland', 'visibility', 'visible');
+		map.setLayoutProperty('Coniferous Forest', 'visibility', 'visible');
+		map.setLayoutProperty('Mixed Forest', 'visibility', 'visible');
+		map.setLayoutProperty('Unknown Cover', 'visibility', 'visible');
 		
 		map.setPaintProperty("Agriculture", "fill-opacity", parseInt(circleValue, 10) / 100);
 		map.setPaintProperty("Deciduous Forest", "fill-opacity", parseInt(circleValue, 10) / 100);
@@ -601,6 +727,17 @@ function MoveStoryModeBackward() {
 		storySubTextBody.innerHTML = "Gile Flowage";
 		document.getElementById("leftArrowText").innerHTML = "Lakes in Ashland County";
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Door County";
+		
+		map.setLayoutProperty('Agriculture', 'visibility', 'none');
+		map.setLayoutProperty('Deciduous Forest', 'visibility', 'none');
+		map.setLayoutProperty('Other', 'visibility', 'none');
+		map.setLayoutProperty('Urban', 'visibility', 'none');
+		map.setLayoutProperty('Barren', 'visibility', 'none');
+		map.setLayoutProperty('Shrubland', 'visibility', 'none');
+		map.setLayoutProperty('Wetlands', 'visibility', 'none');
+		map.setLayoutProperty('Coniferous Forest', 'visibility', 'none');
+		map.setLayoutProperty('Mixed Forest', 'visibility', 'none');
+		map.setLayoutProperty('Unknown Cover', 'visibility', 'none');
 		
 		map.setPaintProperty("Agriculture", "fill-opacity", 0);
 		map.setPaintProperty("Deciduous Forest", "fill-opacity", 0);
@@ -664,6 +801,8 @@ function MoveStoryModeBackward() {
 		document.getElementById("leftArrowText").innerHTML = "River at White City";
 		document.getElementById("rightArrowText").innerHTML = "Gile Flowage";
 		
+		map.setLayoutProperty('coastalWaters', 'visibility', 'none');
+		
 		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 		document.getElementById("slider").style.opacity = "0";
 		document.getElementById("circleSliderContainer").style.opacity = "0";
@@ -683,6 +822,8 @@ function MoveStoryModeBackward() {
 		storySubTextBody.innerHTML = "Information here on the River at White City 2.";
 		document.getElementById("leftArrowText").innerHTML = "Chippewa Flowage";
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Ashland County";
+		
+		map.setLayoutProperty('coastalWaters', 'visibility', 'visible');
 		
 		map.setPaintProperty("coastalWaters", "fill-opacity", parseInt(circleValue, 10) / 100);
 		document.getElementById("slider").style.opacity = "1";
@@ -718,6 +859,8 @@ function MoveStoryModeBackward() {
 		document.getElementById("leftArrowText").innerHTML = "Chippewa Flowage";
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Ashland County";
 		
+		map.setLayoutProperty('coastalWaters', 'visibility', 'none');
+		
 		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 		document.getElementById("slider").style.opacity = "0";
 		document.getElementById("circleSliderContainer").style.opacity = "0";
@@ -737,6 +880,18 @@ function MoveStoryModeBackward() {
 		storySubTextBody.innerHTML = "Information here on the Chippewa Flowage 2.";
 		document.getElementById("leftArrowText").innerHTML = "";
 		document.getElementById("rightArrowText").innerHTML = "River at White City";
+		
+		map.setLayoutProperty('coastalWaters', 'visibility', 'visible');
+		map.setLayoutProperty('Agriculture', 'visibility', 'visible');
+		map.setLayoutProperty('Deciduous Forest', 'visibility', 'visible');
+		map.setLayoutProperty('Other', 'visibility', 'visible');
+		map.setLayoutProperty('Urban', 'visibility', 'visible');
+		map.setLayoutProperty('Barren', 'visibility', 'visible');
+		map.setLayoutProperty('Shrubland', 'visibility', 'visible');
+		map.setLayoutProperty('Wetlands', 'visibility', 'visible');
+		map.setLayoutProperty('Coniferous Forest', 'visibility', 'visible');
+		map.setLayoutProperty('Mixed Forest', 'visibility', 'visible');
+		map.setLayoutProperty('Unknown Cover', 'visibility', 'visible');
 		
 		map.setPaintProperty("coastalWaters", "fill-opacity", parseInt(circleValue, 10) / 100);
 		map.setPaintProperty("Agriculture", "fill-opacity", parseInt(circleValue, 10) / 100);
@@ -782,6 +937,18 @@ function MoveStoryModeBackward() {
 		document.getElementById("leftArrow").style.visibility = "hidden";
 		document.getElementById("leftArrowText").innerHTML = "";
 		document.getElementById("rightArrowText").innerHTML = "River at White City";
+		
+		map.setLayoutProperty('coastalWaters', 'visibility', 'none');
+		map.setLayoutProperty('Agriculture', 'visibility', 'none');
+		map.setLayoutProperty('Deciduous Forest', 'visibility', 'none');
+		map.setLayoutProperty('Other', 'visibility', 'none');
+		map.setLayoutProperty('Urban', 'visibility', 'none');
+		map.setLayoutProperty('Barren', 'visibility', 'none');
+		map.setLayoutProperty('Shrubland', 'visibility', 'none');
+		map.setLayoutProperty('Wetlands', 'visibility', 'none');
+		map.setLayoutProperty('Coniferous Forest', 'visibility', 'none');
+		map.setLayoutProperty('Mixed Forest', 'visibility', 'none');
+		map.setLayoutProperty('Unknown Cover', 'visibility', 'none');
 		
 		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 		map.setPaintProperty("Agriculture", "fill-opacity", 0);
