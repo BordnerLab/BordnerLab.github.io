@@ -26,6 +26,18 @@ function MoveStoryModeForward() {
 		document.getElementById("storySubContext").style.visibility = "visible";
 		document.getElementById("leftArrowText").innerHTML = "";
 		document.getElementById("rightArrowText").innerHTML = "Chippewa Flowage 1";
+		
+		map.setLayoutProperty('coastalWaters', 'visibility', 'none');
+		map.setLayoutProperty('Agriculture', 'visibility', 'none');
+		map.setLayoutProperty('Deciduous Forest', 'visibility', 'none');
+		map.setLayoutProperty('Other', 'visibility', 'none');
+		map.setLayoutProperty('Urban', 'visibility', 'none');
+		map.setLayoutProperty('Barren', 'visibility', 'none');
+		map.setLayoutProperty('Shrubland', 'visibility', 'none');
+		map.setLayoutProperty('Wetlands', 'visibility', 'none');
+		map.setLayoutProperty('Coniferous Forest', 'visibility', 'none');
+		map.setLayoutProperty('Mixed Forest', 'visibility', 'none');
+		map.setLayoutProperty('Unknown Cover', 'visibility' 'none');
 	} else if (storyModeControl == 1) {
 		storyModeControl = 2;
 		map.flyTo({
