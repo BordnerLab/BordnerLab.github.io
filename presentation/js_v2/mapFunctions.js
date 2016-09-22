@@ -27,7 +27,7 @@ function MoveStoryModeForward() {
 		document.getElementById("leftArrowText").innerHTML = "";
 		document.getElementById("rightArrowText").innerHTML = "Chippewa Flowage 1";
 		
-		/*
+		
 		map.setLayoutProperty('coastalWaters', 'visibility', 'none');
 		map.setLayoutProperty('Agriculture', 'visibility', 'none');
 		map.setLayoutProperty('Deciduous Forest', 'visibility', 'none');
@@ -39,7 +39,7 @@ function MoveStoryModeForward() {
 		map.setLayoutProperty('Coniferous Forest', 'visibility', 'none');
 		map.setLayoutProperty('Mixed Forest', 'visibility', 'none');
 		map.setLayoutProperty('Unknown Cover', 'visibility' 'none');
-		*/
+		
 	} else if (storyModeControl == 1) {
 		storyModeControl = 2;
 		map.flyTo({
