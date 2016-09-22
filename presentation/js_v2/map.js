@@ -53,14 +53,15 @@ map.on('load', function () {
 		}
 		
 		var feature = features[0];
-			
+		
+		var mouseMoveInfo = feature.properties.Cov1 + "<br>" + feature.properties.MinDiam1;
 		if (feature.layer.id == "county-fills") {
 			popup.setLngLat(e.lngLat)
 				.setHTML(feature.properties.COUNTY_NAM)
 				.addTo(map);
 		} else {
 			popup.setLngLat(e.lngLat)
-				.setHTML(feature.properties.Cov1)
+				.setHTML(mouseMoveInfo)
 				.addTo(map);
 		}
 	});

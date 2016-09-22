@@ -265,6 +265,7 @@ function MoveStoryModeForward() {
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Door County 1";
 		
 		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
+		map.setPaintProperty("Wetlands", "fill-opacity", 0);
 		document.getElementById("slider").style.opacity = "0";
 		document.getElementById("circleSliderContainer").style.opacity = "0";
 	} else if (storyModeControl == 13) {
@@ -283,6 +284,7 @@ function MoveStoryModeForward() {
 		document.getElementById("rightArrowText").innerHTML = "Lakes in Door County 2";
 		
 		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
+		map.setPaintProperty("Wetlands", "fill-opacity", 1);
 		document.getElementById("slider").style.opacity = "1";
 		document.getElementById("circleSliderContainer").style.opacity = "1";
 	} else if (storyModeControl == 14) {
@@ -315,6 +317,7 @@ function MoveStoryModeForward() {
 		document.getElementById("rightArrowText").innerHTML = "Green Bay 1";
 		
 		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
+		map.setPaintProperty("Wetlands", "fill-opacity", 0);
 		document.getElementById("slider").style.opacity = "0";
 		document.getElementById("circleSliderContainer").style.opacity = "0";
 	} else if (storyModeControl == 16) {
@@ -333,6 +336,16 @@ function MoveStoryModeForward() {
 		document.getElementById("rightArrowText").innerHTML = "Green Bay 2";
 		
 		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
+		map.setPaintProperty("Agriculture", "fill-opacity", 1);
+		map.setPaintProperty("Deciduous Forest", "fill-opacity", 1);
+		map.setPaintProperty("Other", "fill-opacity", 1);
+		map.setPaintProperty("Urban", "fill-opacity", 1);
+		map.setPaintProperty("Barren", "fill-opacity", 1);
+		map.setPaintProperty("Shrubland", "fill-opacity", 1);
+		map.setPaintProperty("Wetlands", "fill-opacity", 1);
+		map.setPaintProperty("Coniferous Forest", "fill-opacity", 1);
+		map.setPaintProperty("Mixed Forest", "fill-opacity", 1);
+		map.setPaintProperty("Unknown Cover", "fill-opacity", 1);
 		document.getElementById("slider").style.opacity = "1";
 		document.getElementById("circleSliderContainer").style.opacity = "1";
 	} else if (storyModeControl == 17) {
@@ -350,6 +363,18 @@ function MoveStoryModeForward() {
 		document.getElementById("rightArrow").style.visibility = "hidden";
 		document.getElementById("leftArrowText").innerHTML = "Green Bay 1";
 		document.getElementById("rightArrowText").innerHTML = "";
+		
+		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
+		map.setPaintProperty("Agriculture", "fill-opacity", 0);
+		map.setPaintProperty("Deciduous Forest", "fill-opacity", 0);
+		map.setPaintProperty("Other", "fill-opacity", 0);
+		map.setPaintProperty("Urban", "fill-opacity", 1);
+		map.setPaintProperty("Barren", "fill-opacity", 0);
+		map.setPaintProperty("Shrubland", "fill-opacity", 0);
+		map.setPaintProperty("Wetlands", "fill-opacity", 1);
+		map.setPaintProperty("Coniferous Forest", "fill-opacity", 0);
+		map.setPaintProperty("Mixed Forest", "fill-opacity", 0);
+		map.setPaintProperty("Unknown Cover", "fill-opacity", 0);
 	} else {
 	
 	}
