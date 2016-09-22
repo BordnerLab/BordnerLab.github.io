@@ -55,6 +55,8 @@ function MoveStoryModeForward() {
 		map.setPaintProperty("Unknown Cover", "fill-opacity", 1);
 		document.getElementById("slider").style.opacity = "1";
 		document.getElementById("circleSliderContainer").style.opacity = "1";
+		
+		opacityLayers.push('coastalWaters', 'Agriculture', 'Deciduous Forest', 'Other', 'Urban', 'Barren', 'Shrubland', 'Wetlands', 'Coniferous Forest', 'Mixed Forest', 'Unknown Cover');
 	} else if (storyModeControl == 2) {
 		storyModeControl = 3;
 		map.flyTo({
@@ -97,6 +99,8 @@ function MoveStoryModeForward() {
 		map.setPaintProperty("Unknown Cover", "fill-opacity", 0);
 		document.getElementById("slider").style.opacity = "0";
 		document.getElementById("circleSliderContainer").style.opacity = "0";
+		
+		opacityLayers.length = 0;
 	} else if (storyModeControl == 4) {
 		storyModeControl = 5;
 		map.flyTo({
@@ -115,6 +119,8 @@ function MoveStoryModeForward() {
 		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
 		document.getElementById("slider").style.opacity = "1";
 		document.getElementById("circleSliderContainer").style.opacity = "1";
+		
+		opacityLayers.push('coastalWaters');
 	} else if (storyModeControl == 5) {
 		storyModeControl = 6;
 		map.flyTo({
@@ -147,6 +153,8 @@ function MoveStoryModeForward() {
 		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 		document.getElementById("slider").style.opacity = "0";
 		document.getElementById("circleSliderContainer").style.opacity = "0";
+		
+		opacityLayers.length = 0;
 	} else if (storyModeControl == 7) {
 		storyModeControl = 8;
 		map.flyTo({
@@ -165,6 +173,8 @@ function MoveStoryModeForward() {
 		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
 		document.getElementById("slider").style.opacity = "1";
 		document.getElementById("circleSliderContainer").style.opacity = "1";
+		
+		opacityLayers.push('coastalWaters');
 	} else if (storyModeControl == 8) {
 		storyModeControl = 9;
 		map.flyTo({
@@ -224,6 +234,8 @@ function MoveStoryModeForward() {
 		map.setPaintProperty("Unknown Cover", "fill-opacity", 1);
 		document.getElementById("slider").style.opacity = "1";
 		document.getElementById("circleSliderContainer").style.opacity = "1";
+		
+		opacityLayers.push('Agriculture', 'Deciduous Forest', 'Other', 'Urban', 'Barren', 'Shrubland', 'Wetlands', 'Coniferous Forest', 'Mixed Forest', 'Unknown Cover');
 	} else if (storyModeControl == 11) {
 		storyModeControl = 12;
 		map.flyTo({
@@ -249,6 +261,9 @@ function MoveStoryModeForward() {
 		map.setPaintProperty("Coniferous Forest", "fill-opacity", 0);
 		map.setPaintProperty("Mixed Forest", "fill-opacity", 0);
 		map.setPaintProperty("Unknown Cover", "fill-opacity", 0);
+		
+		opacityLayers.length = 0;
+		opacityLayers.push('coastalWaters', 'Wetlands');
 	} else if (storyModeControl == 12) {
 		storyModeControl = 13;
 		map.flyTo({
@@ -268,6 +283,8 @@ function MoveStoryModeForward() {
 		map.setPaintProperty("Wetlands", "fill-opacity", 0);
 		document.getElementById("slider").style.opacity = "0";
 		document.getElementById("circleSliderContainer").style.opacity = "0";
+		
+		opacityLayers.length = 0;
 	} else if (storyModeControl == 13) {
 		storyModeControl = 14;
 		map.flyTo({
@@ -287,6 +304,8 @@ function MoveStoryModeForward() {
 		map.setPaintProperty("Wetlands", "fill-opacity", 1);
 		document.getElementById("slider").style.opacity = "1";
 		document.getElementById("circleSliderContainer").style.opacity = "1";
+		
+		opacityLayers.push('coastalWaters', 'Wetlands');
 	} else if (storyModeControl == 14) {
 		storyModeControl = 15;
 		map.flyTo({
@@ -320,6 +339,8 @@ function MoveStoryModeForward() {
 		map.setPaintProperty("Wetlands", "fill-opacity", 0);
 		document.getElementById("slider").style.opacity = "0";
 		document.getElementById("circleSliderContainer").style.opacity = "0";
+		
+		opacityLayers.length = 0;
 	} else if (storyModeControl == 16) {
 		storyModeControl = 17;
 		map.flyTo({
@@ -348,6 +369,8 @@ function MoveStoryModeForward() {
 		map.setPaintProperty("Unknown Cover", "fill-opacity", 1);
 		document.getElementById("slider").style.opacity = "1";
 		document.getElementById("circleSliderContainer").style.opacity = "1";
+		
+		opacityLayers.push('coastalWaters', 'Agriculture', 'Deciduous Forest', 'Other', 'Urban', 'Barren', 'Shrubland', 'Wetlands', 'Coniferous Forest', 'Mixed Forest', 'Unknown Cover');
 	} else if (storyModeControl == 17) {
 		storyModeControl = 18;
 		map.flyTo({
@@ -375,6 +398,9 @@ function MoveStoryModeForward() {
 		map.setPaintProperty("Coniferous Forest", "fill-opacity", 0);
 		map.setPaintProperty("Mixed Forest", "fill-opacity", 0);
 		map.setPaintProperty("Unknown Cover", "fill-opacity", 0);
+		
+		opacityLayers.length = 0;
+		opacityLayers.push('Urban');
 	} else {
 	
 	}
@@ -409,6 +435,8 @@ function MoveStoryModeBackward() {
 		map.setPaintProperty("Coniferous Forest", "fill-opacity", 1);
 		map.setPaintProperty("Mixed Forest", "fill-opacity", 1);
 		map.setPaintProperty("Unknown Cover", "fill-opacity", 1);
+		
+		opacityLayers.push('coastalWaters', 'Agriculture', 'Deciduous Forest', 'Other', 'Barren', 'Shrubland', 'Wetlands', 'Coniferous Forest', 'Mixed Forest', 'Unknown Cover');
 	} else if (storyModeControl == 17) {
 		storyModeControl = 16;
 		map.flyTo({
@@ -438,6 +466,8 @@ function MoveStoryModeBackward() {
 		map.setPaintProperty("Unknown Cover", "fill-opacity", 0);
 		document.getElementById("slider").style.opacity = "0";
 		document.getElementById("circleSliderContainer").style.opacity = "0";
+		
+		opacityLayers.length = 0;
 	} else if (storyModeControl == 16) {
 		storyModeControl = 15;
 		map.flyTo({
@@ -458,6 +488,8 @@ function MoveStoryModeBackward() {
 		map.setPaintProperty("Wetlands", "fill-opacity", 1);
 		document.getElementById("slider").style.opacity = "0";
 		document.getElementById("circleSliderContainer").style.opacity = "0";
+		
+		opacityLayers.push('coastalWaters', 'Wetlands');
 	} else if (storyModeControl == 15) {
 		storyModeControl = 14;
 		map.flyTo({
@@ -493,6 +525,8 @@ function MoveStoryModeBackward() {
 		map.setPaintProperty("Wetlands", "fill-opacity", 0);
 		document.getElementById("slider").style.opacity = "0";
 		document.getElementById("circleSliderContainer").style.opacity = "0";
+		
+		opacityLayers.length = 0;
 	} else if (storyModeControl == 13) {
 		storyModeControl = 12;
 		map.flyTo({
@@ -512,6 +546,8 @@ function MoveStoryModeBackward() {
 		map.setPaintProperty("Wetlands", "fill-opacity", 1);
 		document.getElementById("slider").style.opacity = "1";
 		document.getElementById("circleSliderContainer").style.opacity = "1";
+		
+		opacityLayers.push('coastalWaters', 'Wetlands');
 	} else if (storyModeControl == 12) {
 		storyModeControl = 11;
 		map.flyTo({
@@ -536,6 +572,8 @@ function MoveStoryModeBackward() {
 		map.setPaintProperty("Coniferous Forest", "fill-opacity", 1);
 		map.setPaintProperty("Mixed Forest", "fill-opacity", 1);
 		map.setPaintProperty("Unknown Cover", "fill-opacity", 1);
+		
+		opacityLayers.push('Agriculture', 'Deciduous Forest', 'Other', 'Urban', 'Barren', 'Shrubland', 'Coniferous Forest', 'Mixed Forest', 'Unknown Cover');
 	} else if (storyModeControl == 11) {
 		storyModeControl = 10;
 		map.flyTo({
@@ -563,6 +601,9 @@ function MoveStoryModeBackward() {
 		map.setPaintProperty("Unknown Cover", "fill-opacity", 0);
 		document.getElementById("slider").style.opacity = "0";
 		document.getElementById("circleSliderContainer").style.opacity = "0";
+		
+		opacityLayers.length = 0;
+		opacityLayers.push('coastalWaters');
 	} else if (storyModeControl == 10) {
 		storyModeControl = 9;
 		map.flyTo({
@@ -613,6 +654,8 @@ function MoveStoryModeBackward() {
 		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 		document.getElementById("slider").style.opacity = "0";
 		document.getElementById("circleSliderContainer").style.opacity = "0";
+		
+		opacityLayers.length = 0;
 	} else if (storyModeControl == 7) {
 		storyModeControl = 6;
 		map.flyTo({
@@ -631,6 +674,8 @@ function MoveStoryModeBackward() {
 		map.setPaintProperty("coastalWaters", "fill-opacity", 1);
 		document.getElementById("slider").style.opacity = "1";
 		document.getElementById("circleSliderContainer").style.opacity = "1";
+		
+		opacityLayers.push('coastalWaters');
 	} else if (storyModeControl == 6) {
 		storyModeControl = 5;
 		map.flyTo({
@@ -663,6 +708,8 @@ function MoveStoryModeBackward() {
 		map.setPaintProperty("coastalWaters", "fill-opacity", 0);
 		document.getElementById("slider").style.opacity = "0";
 		document.getElementById("circleSliderContainer").style.opacity = "0";
+		
+		opacityLayers.length = 0;
 	} else if (storyModeControl == 4) {
 		storyModeControl = 3;
 		map.flyTo({
@@ -691,6 +738,8 @@ function MoveStoryModeBackward() {
 		map.setPaintProperty("Unknown Cover", "fill-opacity", 1);
 		document.getElementById("slider").style.opacity = "1";
 		document.getElementById("circleSliderContainer").style.opacity = "1";
+		
+		opacityLayers.push('coastalWaters', 'Agriculture', 'Deciduous Forest', 'Other', 'Urban', 'Barren', 'Shrubland', 'Wetlands', 'Confierous Forest', 'Mixed Forest', 'Unknown Cover');
 	} else if (storyModeControl == 3) {
 		storyModeControl = 2;
 		map.flyTo({
@@ -734,6 +783,8 @@ function MoveStoryModeBackward() {
 		map.setPaintProperty("Unknown Cover", "fill-opacity", 0);
 		document.getElementById("slider").style.opacity = "0";
 		document.getElementById("circleSliderContainer").style.opacity = "0";
+		
+		opacityLayers.length = 0;
 	} else if (storyModeControl == 1) {
 	
 	} else if (storyModeControl == 0) {
