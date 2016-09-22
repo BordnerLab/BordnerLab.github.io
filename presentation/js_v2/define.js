@@ -38,7 +38,7 @@ var toggle03Control = false;
 var toggle04Control = false;
 
 var opacityLayers = [
-	"coastalWaters"
+	/*"coastalWaters"*/
 ];
 
 var threeDControl = false;
