@@ -54,7 +54,8 @@ map.on('load', function () {
 		
 		var feature = features[0];
 		
-		var mouseMoveInfo = feature.properties.Cov1 + "<br>" + feature.properties.MinDiam1;
+		var mouseMoveInfo = "Cover Type: " + feature.properties.Cov1 + "<br>" + "Min Diam: " + feature.properties.MinDiam1
+			+ "<br>" + "Max Diam: " + feature.properties.MaxDiam1 + "<br>" + "Density: " + feature.properties.Den1;
 		if (feature.layer.id == "county-fills") {
 			popup.setLngLat(e.lngLat)
 				.setHTML(feature.properties.COUNTY_NAM)
