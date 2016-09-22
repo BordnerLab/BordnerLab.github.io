@@ -38,7 +38,6 @@ function MoveStoryModeForward() {
 		map.setLayoutProperty('Wetlands', 'visibility', 'none');
 		map.setLayoutProperty('Coniferous Forest', 'visibility', 'none');
 		map.setLayoutProperty('Mixed Forest', 'visibility', 'none');
-		map.setLayoutProperty('Unknown Cover', 'visibility' 'none');
 		
 	} else if (storyModeControl == 1) {
 		storyModeControl = 2;
