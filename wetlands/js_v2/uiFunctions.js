@@ -476,7 +476,7 @@ function exitLegendInfo(source) {
 	placeholder.style.border = "1px solid transparent";
 };
 
-function clickLegendBack() {
+function clickLegendBack(source) {
 	document.getElementById("loadingScreen").style.visibility = "visible";
 	// Show all layers
 	map.setLayoutProperty('Agriculture', 'visibility', 'visible');
@@ -492,6 +492,7 @@ function clickLegendBack() {
 	
 	// hide wetlands layer
 	map.setPaintProperty('Wetlands', 'fill-color', '#5FAEE3');
+	map.setPaintProperty('Agriculture', 'fill-color', '#E59966');
 	
 	// remove back button
 	var m1 = document.getElementById("legendv2").lastElementChild;
@@ -500,12 +501,22 @@ function clickLegendBack() {
 	m2.removeChild(m3);
 	
 	// remove wetlands legend
-	var v;
-	for(v=0; v < wetlandsLayers.length; v++){
-		var p1 = document.getElementById("legendv2").lastElementChild;
-		var p2 = p1.childNodes[0];
-		var p3 = p2.childNodes[0];
-		p2.removeChild(p3);
+	if (source == 'Wetlands'){
+		var v;
+		for(v=0; v < wetlandsLayers.length; v++){
+			var p1 = document.getElementById("legendv2").lastElementChild;
+			var p2 = p1.childNodes[0];
+			var p3 = p2.childNodes[0];
+			p2.removeChild(p3);
+		}
+	} else if (source == 'Agriculture') {
+		var v;
+		for (v=0; v < agricultureLayers.length; v++) {
+			var p1 = document.getElementById("legendv2").lastElementChild;
+			var p2 = p1.childNodes[0];
+			var p3 = p2.childNodes[0];
+			p2.removeChild(p3);
+		}
 	}
 	
 	// populate with original legend

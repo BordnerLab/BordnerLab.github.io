@@ -57,7 +57,7 @@ function changeLegendAndMapWetlands(){
 	var backHolder = document.createElement('DIV');
 	var textBackHolder = document.createTextNode("Back");
 	backHolder.setAttribute("class", "legendSquarev2");
-	backHolder.setAttribute("onclick", "clickLegendBack()");
+	backHolder.setAttribute("onclick", "clickLegendBack('Wetlands')");
 	var m1 = document.getElementById("legendv2").lastElementChild;
 	var m2 = m1.childNodes[0];
 	backHolder.appendChild(textBackHolder);
@@ -117,7 +117,7 @@ function changeLegendAndMapAgriculture(){
 	var backHolder = document.createElement('DIV');
 	var textBackHolder = document.createTextNode("Back");
 	backHolder.setAttribute("class", "legendSquarev2");
-	backHolder.setAttribute("onclick", "clickLegendBack()");
+	backHolder.setAttribute("onclick", "clickLegendBack('Agriculture')");
 	var m1 = document.getElementById("legendv2").lastElementChild;
 	var m2 = m1.childNodes[0];
 	backHolder.appendChild(textBackHolder);
