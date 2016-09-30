@@ -103,7 +103,7 @@ map.on('load', function () {
 				});
 			}
 			
-			console.log(feature);
+			console.log(feature.layer.paint.fill-outline.color);
 		} else {
 			
 		}
