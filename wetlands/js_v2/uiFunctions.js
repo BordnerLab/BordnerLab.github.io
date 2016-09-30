@@ -641,7 +641,7 @@ function clickLegendBack(source) {
 	setTimeout(
 		function(){
 			document.getElementById("loadingScreen").style.visibility = "hidden";
-		}, 1500);
+		}, 2500);
 	
 };
 

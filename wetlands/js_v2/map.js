@@ -50,6 +50,9 @@ map.on('load', function () {
 		}
 		
 		var feature = features[0];
+		
+		var textInPopUp = feature.properties.Cov1 + "<br>" + "Min Diam: " + feature.properties.MinDiam1 +
+		"<br>" + "Max Diam: " + feature.properties.MaxDiam1 + "<br>" + "Density: " + feature.properties.Den1;
 			
 		if (feature.layer.id == "county-fills") {
 			popup.setLngLat(e.lngLat)
@@ -57,7 +60,7 @@ map.on('load', function () {
 				.addTo(map);
 		} else {
 			popup.setLngLat(e.lngLat)
-				.setHTML(feature.properties.Cov1)
+				.setHTML(textInPopUp)
 				.addTo(map);
 		}
 	});
