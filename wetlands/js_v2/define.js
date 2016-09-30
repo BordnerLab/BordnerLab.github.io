@@ -51,6 +51,19 @@ var wetlandsLayers = [
 	['C4b', '#ccc']
 ];
 
+var agricultureLayers = [
+	['AP', '#fbb03b'],
+	['BB', '#223b53'],
+	['C', '#e55e5e'],
+	['CS', '#3bb2d0'],
+	['F4', '#ccc'],
+	['FP', '#fff'],
+	['P', '#fff'],
+	['PP', '#fff'],
+	['SP', '#fff'],
+	['OR', '#fff']
+];
+
 
 
 var waterDisplayControl = false;

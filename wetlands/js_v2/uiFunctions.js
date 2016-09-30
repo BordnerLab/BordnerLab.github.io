@@ -261,6 +261,8 @@ function alterLegendInfoClick(source) {
 			case "AG":
 				map.setLayoutProperty('Agriculture', 'visibility', 'visible');
 				
+				changeLegendAndMapAgriculture();
+				
 				map.setLayoutProperty('Urban', 'visibility', 'none');
 				map.setLayoutProperty('Barren', 'visibility', 'none');
 				map.setLayoutProperty('Shrubland', 'visibility', 'none');
@@ -326,7 +328,7 @@ function alterLegendInfoClick(source) {
 			case "WL":
 				map.setLayoutProperty('Wetlands', 'visibility', 'visible');
 				
-				changeLegendAndMap();
+				changeLegendAndMapWetlands();
 				
 				map.setLayoutProperty('Urban', 'visibility', 'none');
 				map.setLayoutProperty('Barren', 'visibility', 'none');
@@ -540,7 +542,7 @@ function clickLegendBack() {
 	setTimeout(
 		function(){
 			document.getElementById("loadingScreen").style.visibility = "hidden";
-		}, 3000);
+		}, 1500);
 	
 };
 
