@@ -102,6 +102,8 @@ map.on('load', function () {
 					animate: true
 				});
 			}
+			
+			console.log(feature);
 		} else {
 			
 		}

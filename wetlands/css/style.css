@@ -139,12 +139,13 @@
 	width: auto;
 	padding:5px;
 	text-align:center;
-	left:0;
+	left:10px;
 	bottom:55vh;
 	height: auto;
 	background: transparent;
 	border: 1px solid transparent;
 	font-size:18px;
+	border-radius: 5px;
 }
 		
 #legend .legendSquare {
