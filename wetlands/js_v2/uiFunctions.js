@@ -276,6 +276,8 @@ function alterLegendInfoClick(source) {
 			case "UR":
 				map.setLayoutProperty('Urban', 'visibility', 'visible');
 				
+				changeLegendAndMapUrban();
+				
 				map.setLayoutProperty('Agriculture', 'visibility', 'none');
 				map.setLayoutProperty('Barren', 'visibility', 'none');
 				map.setLayoutProperty('Shrubland', 'visibility', 'none');
@@ -288,6 +290,8 @@ function alterLegendInfoClick(source) {
 				break;
 			case "BA":
 				map.setLayoutProperty('Barren', 'visibility', 'visible');
+				
+				changeLegendAndMapBarren();
 				
 				map.setLayoutProperty('Urban', 'visibility', 'none');
 				map.setLayoutProperty('Agriculture', 'visibility', 'none');
@@ -302,6 +306,8 @@ function alterLegendInfoClick(source) {
 			case "SL":
 				map.setLayoutProperty('Shrubland', 'visibility', 'visible');
 				
+				changeLegendAndMapShrubland();
+				
 				map.setLayoutProperty('Urban', 'visibility', 'none');
 				map.setLayoutProperty('Barren', 'visibility', 'none');
 				map.setLayoutProperty('Agriculture', 'visibility', 'none');
@@ -314,6 +320,8 @@ function alterLegendInfoClick(source) {
 				break;
 			case "MF":
 				map.setLayoutProperty('Mixed Forest', 'visibility', 'visible');
+				
+				changeLegendAndMapMixedForest();
 				
 				map.setLayoutProperty('Urban', 'visibility', 'none');
 				map.setLayoutProperty('Barren', 'visibility', 'none');
@@ -343,6 +351,8 @@ function alterLegendInfoClick(source) {
 			case "DF":
 				map.setLayoutProperty('Deciduous Forest', 'visibility', 'visible');
 				
+				changeLegendAndMapDeciduousForest();
+				
 				map.setLayoutProperty('Urban', 'visibility', 'none');
 				map.setLayoutProperty('Barren', 'visibility', 'none');
 				map.setLayoutProperty('Shrubland', 'visibility', 'none');
@@ -355,6 +365,8 @@ function alterLegendInfoClick(source) {
 				break;
 			case "CF":
 				map.setLayoutProperty('Coniferous Forest', 'visibility', 'visible');
+				
+				changeLegendAndMapConiferousForest();
 				
 				map.setLayoutProperty('Urban', 'visibility', 'none');
 				map.setLayoutProperty('Barren', 'visibility', 'none');
@@ -369,6 +381,8 @@ function alterLegendInfoClick(source) {
 			case "O":
 				map.setLayoutProperty('Other', 'visibility', 'visible');
 				
+				changeLegendAndMapOther();
+				
 				map.setLayoutProperty('Urban', 'visibility', 'none');
 				map.setLayoutProperty('Barren', 'visibility', 'none');
 				map.setLayoutProperty('Shrubland', 'visibility', 'none');
@@ -381,6 +395,8 @@ function alterLegendInfoClick(source) {
 				break;
 			case "U":
 				map.setLayoutProperty('Unknown Cover', 'visibility', 'visible');
+				
+				changeLegendAndMapUnknown();
 				
 				map.setLayoutProperty('Urban', 'visibility', 'none');
 				map.setLayoutProperty('Barren', 'visibility', 'none');
@@ -493,6 +509,14 @@ function clickLegendBack(source) {
 	// hide wetlands layer
 	map.setPaintProperty('Wetlands', 'fill-color', '#5FAEE3');
 	map.setPaintProperty('Agriculture', 'fill-color', '#E59966');
+	map.setPaintProperty('Urban', 'fill-color', '#C0392A');
+	map.setPaintProperty('Barren', 'fill-color', '#AFB7C0');
+	map.setPaintProperty('Shrubland', 'fill-color', '#FAD79E');
+	map.setPaintProperty('Mixed Forest', 'fill-color', '#A66ABE');
+	map.setPaintProperty('Deciduous Forest', 'fill-color', '#54C083');
+	map.setPaintProperty('Coniferous Forest', 'fill-color', '#19703E');
+	map.setPaintProperty('Other', 'fill-color', '#76D6C3');
+	map.setPaintProperty('Unknown Cover', 'fill-color', '#FADC70');
 	
 	// remove back button
 	var m1 = document.getElementById("legendv2").lastElementChild;
@@ -512,6 +536,70 @@ function clickLegendBack(source) {
 	} else if (source == 'Agriculture') {
 		var v;
 		for (v=0; v < agricultureLayers.length; v++) {
+			var p1 = document.getElementById("legendv2").lastElementChild;
+			var p2 = p1.childNodes[0];
+			var p3 = p2.childNodes[0];
+			p2.removeChild(p3);
+		}
+	} else if (source == 'Urban') {
+		var v;
+		for (v=0; v < urbanLayers.length; v++) {
+			var p1 = document.getElementById("legendv2").lastElementChild;
+			var p2 = p1.childNodes[0];
+			var p3 = p2.childNodes[0];
+			p2.removeChild(p3);
+		}
+	} else if (source == 'Barren') {
+		var v;
+		for (v=0; v < barrenLayers.length; v++) {
+			var p1 = document.getElementById("legendv2").lastElementChild;
+			var p2 = p1.childNodes[0];
+			var p3 = p2.childNodes[0];
+			p2.removeChild(p3);
+		}
+	} else if (source == 'Deciduous Forest') {
+		var v;
+		for (v=0; v < deciduousforestLayers.length; v++) {
+			var p1 = document.getElementById("legendv2").lastElementChild;
+			var p2 = p1.childNodes[0];
+			var p3 = p2.childNodes[0];
+			p2.removeChild(p3);
+		}
+	} else if (source == 'Other') {
+		var v;
+		for (v=0; v < otherLayers.length; v++) {
+			var p1 = document.getElementById("legendv2").lastElementChild;
+			var p2 = p1.childNodes[0];
+			var p3 = p2.childNodes[0];
+			p2.removeChild(p3);
+		}
+	} else if (source == 'Shrubland') {
+		var v;
+		for (v=0; v < shrublandLayers.length; v++) {
+			var p1 = document.getElementById("legendv2").lastElementChild;
+			var p2 = p1.childNodes[0];
+			var p3 = p2.childNodes[0];
+			p2.removeChild(p3);
+		}
+	} else if (source == 'Coniferous Forest') {
+		var v;
+		for (v=0; v < coniferousforestLayers.length; v++) {
+			var p1 = document.getElementById("legendv2").lastElementChild;
+			var p2 = p1.childNodes[0];
+			var p3 = p2.childNodes[0];
+			p2.removeChild(p3);
+		}
+	} else if (source == 'Mixed Forest') {
+		var v;
+		for (v=0; v < mixedforestLayers.length; v++) {
+			var p1 = document.getElementById("legendv2").lastElementChild;
+			var p2 = p1.childNodes[0];
+			var p3 = p2.childNodes[0];
+			p2.removeChild(p3);
+		}
+	} else if (source == 'Unknown') {
+		var v;
+		for (v=0; v < unknownLayers.length; v++) {
 			var p1 = document.getElementById("legendv2").lastElementChild;
 			var p2 = p1.childNodes[0];
 			var p3 = p2.childNodes[0];

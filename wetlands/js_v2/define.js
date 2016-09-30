@@ -64,6 +64,65 @@ var agricultureLayers = [
 	['OR', '#D6DBDF']
 ];
 
+var urbanLayers = [
+	['ARPT', '#D98880'],
+	['CM', '#C39BD3'],
+	['CT', '#7FB3D5'],
+	['FF', '#5DADE2'],
+	['FG', '#76D7C4'],
+	['FX', '#7DCEA0'],
+	['GC', '#F1C40F'],
+	['MY', '#FDEBD0'],
+	['Qz', '#873600'],
+	['CA', '#D6DBDF'],
+	['PD', '#2C3E50'],
+	['U', '#641E16']
+];
+
+var barrenLayers = [
+	['CL', '#D98880'],
+	['GP', '#C39BD3'],
+	['MF', '#7FB3D5'],
+	['RO', '#5DADE2'],
+	['A', '#76D7C4'],
+	['CPP', '#7DCEA0'],
+	['O', '#F1C40F']
+];
+
+var deciduousforestLayers = [
+	['A1', '#D98880'],
+	['A2', '#C39BD3'],
+	['B', '#7FB3D5'],
+	['C1', '#5DADE2'],
+	['C1b', '#76D7C4'],
+	['D', '#7DCEA0'],
+	['D1', '#F1C40F'],
+	['D1b', '#FDEBD0'],
+	['D1u', '#873600'],
+	['D1uu', '#D6DBDF'],
+	['D3b', '#2C3E50']
+];
+
+var otherLayers = [
+
+];
+
+var shrublandLayers = [
+
+];
+
+var coniferousforestLayers = [
+
+];
+
+var mixedforestLayers = [
+
+];
+
+var unknownLayers = [
+
+];
+
 
 
 var waterDisplayControl = false;
