@@ -393,7 +393,7 @@ function alterLegendInfoClick(source) {
 				map.setLayoutProperty('Agriculture', 'visibility', 'none');
 				
 		}
-		alterLegendInfoClickControl = 1;
+		//alterLegendInfoClickControl = 1;
 	} else if (alterLegendInfoClickControl > 0) {
 		map.setLayoutProperty('Unknown Cover', 'visibility', 'visible');
 				
