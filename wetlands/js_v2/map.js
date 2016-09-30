@@ -102,8 +102,6 @@ map.on('load', function () {
 					animate: true
 				});
 			}
-			
-			console.log(feature.layer.paint.fill-outline.color);
 		} else {
 			
 		}
