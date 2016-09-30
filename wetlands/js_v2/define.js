@@ -104,23 +104,53 @@ var deciduousforestLayers = [
 ];
 
 var otherLayers = [
-
+	['BD', '#D98880'],
+	['BF', '#C39BD3'],
+	['BP', '#7FB3D5'],
+	['IS', '#5DADE2'],
+	['D5', '#76D7C4'],
+	['D5b', '#7DCEA0'],
+	['S', '#F1C40F'],
+	['Blowdown', '#FDEBD0'],
+	['Cutover', '#873600'],
+	['Rcnt. Cut', '#D6DBDF'],
+	['Slash', '#2C3E50']
 ];
 
 var shrublandLayers = [
-
+	['D4', '#D98880'],
+	['E1', '#C39BD3'],
+	['E4', '#7FB3D5'],
+	['UG', '#5DADE2']
 ];
 
 var coniferousforestLayers = [
-
+	['B2', '#D98880'],
+	['B3', '#C39BD3'],
+	['C2', '#7FB3D5'],
+	['C3', '#5DADE2'],
+	['D2', '#76D7C4'],
+	['D3', '#7DCEA0']
 ];
 
 var mixedforestLayers = [
-
+	['B1', '#D98880'],
+	['B1b', '#C39BD3'],
+	['UF', '#7FB3D5']
 ];
 
 var unknownLayers = [
-
+	['A5', '#D98880'],
+	['AA', '#C39BD3'],
+	['AC', '#7FB3D5'],
+	['AR', '#5DADE2'],
+	['CCC', '#76D7C4'],
+	['CP', '#7DCEA0'],
+	['D3u', '#F1C40F'],
+	['E2', '#FDEBD0'],
+	['F', '#873600'],
+	['OA', '#D6DBDF'],
+	['OC', '#2C3E50']
 ];
 
 
