@@ -52,16 +52,16 @@ var wetlandsLayers = [
 ];
 
 var agricultureLayers = [
-	['AP', '#fbb03b'],
-	['BB', '#223b53'],
-	['C', '#e55e5e'],
-	['CS', '#3bb2d0'],
-	['F4', '#ccc'],
-	['FP', '#fff'],
-	['P', '#fff'],
-	['PP', '#fff'],
-	['SP', '#fff'],
-	['OR', '#fff']
+	['AP', '#D98880'],
+	['BB', '#C39BD3'],
+	['C', '#7FB3D5'],
+	['CS', '#5DADE2'],
+	['F4', '#76D7C4'],
+	['FP', '#7DCEA0'],
+	['P', '#F1C40F'],
+	['PP', '#FDEBD0'],
+	['SP', '#873600'],
+	['OR', '#D6DBDF']
 ];
 
 
