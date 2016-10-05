@@ -615,5 +615,12 @@ function changeLegendAndMapUnknown(){
 
 
 function clickSpecificLegend(source) {
-	alert(source);
+	var xm;
+	for(xm=0; xm < wetlandsLayers.length; xm++) {
+		placeMe = wetlandLayers[xm];
+		if (placeMe == source) {
+			alert(source);
+		}
+	}
+	
 };
