@@ -617,7 +617,7 @@ function changeLegendAndMapUnknown(){
 function clickSpecificLegend(source) {
 	var xm;
 	for(xm=0; xm < wetlandsLayers.length; xm++) {
-		placeMe = wetlandsLayers[xm];
+		placeMe = wetlandsLayers[xm][0];
 		console.log(placeMe);
 		if (placeMe == source) {
 			placeYou = wetlandsLayers[xm][2];
