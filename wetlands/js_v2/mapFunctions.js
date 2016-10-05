@@ -136,6 +136,7 @@ function changeLegendAndMapAgriculture(){
 		placeholder2.setAttribute("class", "circleLegend");
 		placeholder2.setAttribute("id", idHold);
 		placeholder2.setAttribute("style", colorHold);
+		placeholder2.setAttribute("onclick", "clickSpecificLegend(this.id)")
 					
 		var placeholder3 = document.getElementById("legendv2").lastElementChild;
 		var placeholder4 = placeholder3.childNodes[0];
@@ -601,4 +602,9 @@ function changeLegendAndMapUnknown(){
 		placeholder.appendChild(placeholder2);
 		placeholder2.appendChild(textholder);
 	}
+};
+
+
+function clickSpecificLegend(source) {
+	alert(source);
 };
