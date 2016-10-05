@@ -620,7 +620,8 @@ function clickSpecificLegend(source) {
 		placeMe = wetlandsLayers[xm];
 		console.log(placeMe);
 		if (placeMe == source) {
-			alert(source);
+			placeYou = wetlandsLayers[xm][2];
+			alert(placeYou);
 		} else {
 			return
 		}
