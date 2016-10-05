@@ -4,6 +4,7 @@ var map = new mapboxgl.Map({
 	container: 'map',
 	style: 'mapbox://styles/bordnerwlei/cirf7wsrr0003g8nlogxrqxyr',
 	center: [-88.0198, 44.5192],
+	minZoom: 9,
 	zoom: 9,
 	preserveDrawingBuffer: true,
 	hash: false,
