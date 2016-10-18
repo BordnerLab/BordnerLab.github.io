@@ -300,7 +300,7 @@ function addCountyInitial() {
 		'paint': {
 			'fill-color': 'orange',
 			'fill-extrude-height': 100,
-			'fill-extrude-base': 100,
+			'fill-extrude-base': 0,
 			'fill-opacity': 0.5
 		}
 	});
@@ -312,7 +312,7 @@ function addCountyInitial() {
 		'paint': {
 			'fill-color': 'blue',
 			'fill-extrude-height': 200,
-			'fill-extrude-base': 200,
+			'fill-extrude-base': 0,
 			'fill-opacity': 0.5
 		}
 	});
