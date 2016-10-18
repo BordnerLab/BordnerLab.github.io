@@ -2,22 +2,15 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2b
 	
 var map = new mapboxgl.Map({
 	container: 'map',
-	style: 'mapbox://styles/bordnerwlei/cirf7wsrr0003g8nlogxrqxyr',
-	//center: [-88.0198, 44.5192],
+	style: 'mapbox://styles/mapbox/streets-v9',
 	center: [-91.0879, 46.2998],
 	zoom: 9,
 	preserveDrawingBuffer: true,
 	hash: false,
-	pitch: 0.1
+	pitch: 45
 });
 	
-map.addControl(new mapboxgl.Navigation());
-	
-var geocoder = new mapboxgl.Geocoder({
-	container: 'geocoder-container'
-});
-	
-map.addControl(geocoder);
+//map.addControl(new mapboxgl.Navigation());
 	
 map.on('load', function () {
 	addMapSources();
@@ -118,9 +111,6 @@ map.on('load', function () {
 		}
 	});
 	*/
-	map.setPaintProperty('Deciduous Forest', 'fill-extrude-height', 100);
-	map.setPaintProperty('Coniferous Forest', 'fill-extrude-height', 100);
-	map.setPaintProperty('Mixed Forest', 'fill-extrude-height', 100);
 });
 	
 geocoder.on('result', function(ev) {

@@ -259,18 +259,23 @@ var threeDControl = false;
 
 
 
+
+
+
 function addMapSources() {
 	map.addSource('coastalCounties', {
 		'type': 'geojson',
 		'data': 'data/counties.geojson'
 	});
 	
-	map.addSource('single-point', {
+	map.addSource('bayfieldwetlands', {
 		'type': 'geojson',
-		'data': {
-			'type': 'FeatureCollection',
-			'features': []
-		}
+		'data': 'data/wetlands/bayfield_wetlands.geojson'
+	});
+	
+	map.addSource('ashlandwetlands', {
+		'type': 'geojson',
+		'data': 'data/wetlands/ashland_wetlands.geojson'
 	});
 };
 
@@ -289,12 +294,26 @@ function addCountyInitial() {
 	});
 	
 	map.addLayer({
-		'id': 'point',
-		'source': 'single-point',
-		'type': 'circle',
+		'id': 'bayfieldwetlands',
+		'type': 'fill',
+		'source': 'bayfieldwetlands',
 		'paint': {
-			'circle-radius': 10,
-			'circle-color': '#007cbf'
+			'fill-color': 'orange',
+			'fill-extrude-height': 100,
+			'fill-extrude-base': 100,
+			'fill-opacity': 0.5
+		}
+	});
+	
+	map.addLayer({
+		'id': 'ashlandwetlands',
+		'type': 'fill',
+		'source': 'ashlandwetlands',
+		'paint': {
+			'fill-color': 'blue',
+			'fill-extrude-height': 200,
+			'fill-extrude-base': 200,
+			'fill-opacity': 0.5
 		}
 	});
 };
