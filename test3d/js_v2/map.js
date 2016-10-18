@@ -3,7 +3,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2b
 var map = new mapboxgl.Map({
 	container: 'map',
 	style: 'mapbox://styles/bordnerwlei/cirf7wsrr0003g8nlogxrqxyr',
-	center: [-88.0198, 44.5192],
+	//center: [-88.0198, 44.5192],
+	center: [-91.0879, 46.2998],
 	zoom: 9,
 	preserveDrawingBuffer: true,
 	hash: false,
@@ -117,6 +118,10 @@ map.on('load', function () {
 		}
 	});
 	*/
+	map.setPaintProperty('Deciduous Forest', 'fill-extrude-height', {
+		'property': 'MaxDiam1',
+		'type': 'identity'
+	});
 });
 	
 geocoder.on('result', function(ev) {

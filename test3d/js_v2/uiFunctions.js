@@ -205,7 +205,7 @@ function toggleThreeDdisplay(source) {
 	if (toggleThreeDdisplayControl == 0) {
 		document.getElementById(source).style.background = "#1F618D";
 		document.getElementById(source).style.color = "white";
-		map.setPitch(35);
+		map.setPitch(40);
 		threeDControl = true;
 		toggleThreeDdisplayControl = 1;
 		

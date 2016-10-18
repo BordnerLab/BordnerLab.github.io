@@ -23,14 +23,6 @@ function takeScreenshot() {
 
 
 
-
-
-
-
-
-
-
-
 function changeLegendAndMapWetlands(){
 	map.setPaintProperty('Wetlands', 'fill-color', {
 		property: 'Cov1',
