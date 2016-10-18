@@ -4,7 +4,7 @@ var map = new mapboxgl.Map({
 	container: 'map',
 	style: 'mapbox://styles/mapbox/streets-v9',
 	center: [-91.0879, 46.2998],
-	zoom: 9,
+	zoom: 13,
 	preserveDrawingBuffer: true,
 	hash: false,
 	pitch: 45
