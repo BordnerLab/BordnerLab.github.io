@@ -118,10 +118,9 @@ map.on('load', function () {
 		}
 	});
 	*/
-	map.setPaintProperty('Deciduous Forest', 'fill-extrude-height', {
-		'property': 'MaxDiam1',
-		'type': 'identity'
-	});
+	map.setPaintProperty('Deciduous Forest', 'fill-extrude-height', 100);
+	map.setPaintProperty('Coniferous Forest', 'fill-extrude-height', 100);
+	map.setPaintProperty('Mixed Forest', 'fill-extrude-height', 100);
 });
 	
 geocoder.on('result', function(ev) {
