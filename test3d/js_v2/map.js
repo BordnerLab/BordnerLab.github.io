@@ -2,7 +2,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2b
 	
 var map = new mapboxgl.Map({
 	container: 'map',
-	style: 'mapbox://styles/mapbox/streets-v9',
+	//style: 'mapbox://styles/mapbox/streets-v9',
+	style: 'mapbox://styles/bordnerwlei/cirf7wsrr0003g8nlogxrqxyr',
 	center: [-91.0879, 46.2998],
 	zoom: 13,
 	preserveDrawingBuffer: true,
@@ -13,13 +14,24 @@ var map = new mapboxgl.Map({
 //map.addControl(new mapboxgl.Navigation());
 	
 map.on('load', function () {
-	addMapSources();
+	//addMapSources();
 		
-	addCountyInitial();
+	//addCountyInitial();
 	
 	
 	
-		
+	map.setPaintProperty('Deciduous Forest', 'fill-extrude-height', 100);
+	map.setPaintProperty('Deciduous Forest', 'fill-extrude-base', 0);
+	map.setPaintProperty('Deciduous Forest', 'fill-opacity', 0.5);
+	
+	map.setPaintProperty('Coniferous Forest', 'fill-extrude-height', 200);
+	map.setPaintProperty('Coniferous Forest', 'fill-extrude-base', 0);
+	map.setPaintProperty('Coniferous Forest', 'fill-opacity', 0.5);
+	
+	map.setPaintProperty('Mixed Forest', 'fill-extrude-height', 300);
+	map.setPaintProperty('Mixed Forest', 'fill-extrude-base', 0);
+	map.setPaintProperty('Mixed Forest', 'fill-opacity', 0.5);
+	
 	var popup = new mapboxgl.Popup({
 		closeButton: false,
 		closeOnClick: false
