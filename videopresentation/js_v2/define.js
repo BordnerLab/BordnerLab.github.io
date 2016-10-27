@@ -1,6 +1,8 @@
 
 
 var clickedCountyName;
+
+var hoveredCountyLandcover;
 	
 var hoverLayers = [
 	"Agriculture",

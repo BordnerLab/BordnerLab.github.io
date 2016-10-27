@@ -57,7 +57,9 @@ map.on('load', function () {
 		
 		var feature = features[0];
 		
-		var textInPopUp = feature.properties.Cov1 + "<br>" + "Min Diam: " + feature.properties.MinDiam1 +
+		findLongCoverName(feature);
+		
+		var textInPopUp = hoveredCountyLandcover + "<br>" + "Min Diam: " + feature.properties.MinDiam1 +
 		"<br>" + "Max Diam: " + feature.properties.MaxDiam1 + "<br>" + "Density: " + feature.properties.Den1;
 			
 		if (feature.layer.id == "county-fills") {
@@ -130,3 +132,13 @@ geocoder.on('result', function(ev) {
 	map.getSource('single-point').setData(ev.result.geometry);
 });
 */
+
+function findLongCoverName(source) {
+	var b;
+	for (b=0; b < combinationLayers.length; b++) {
+		if (source.properties.Cov1 == combinationLayers[b][0]) {
+			hoveredCountyLandcover = combinationLayers[b][2];
+		}
+	}
+	return hoveredCountyLandcover;
+};
