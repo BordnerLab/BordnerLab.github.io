@@ -618,7 +618,8 @@ function clickSpecificLegend(source) {
 	var m;
 	for(m=0; m < combinationLayers.length; m++) {
 		if (source == combinationLayers[m][0]) {
-			console.log(combinationLayers[m][2]);
+			legendHoverCover = (combinationLayers[m][2]);
 		}
 	}
+	return legendHoverCover;
 };
