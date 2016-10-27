@@ -120,8 +120,7 @@
 	width: 100%;
 	background: #5499C7;
 	cursor:pointer;
-	margin-left:-2px;
-	text-align:right;
+	margin-left:0px;
 }
 
 #legendv2 .legendSquare .circleLegend {

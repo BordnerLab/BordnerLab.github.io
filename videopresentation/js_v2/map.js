@@ -59,7 +59,7 @@ map.on('load', function () {
 		
 		findLongCoverName(feature);
 		
-		var textInPopUp = hoveredCountyLandcover + "<br>" + "Min Diam: " + feature.properties.MinDiam1 +
+		var textInPopUp = feature.properties.Cov1 + ": " + hoveredCountyLandcover + "<br>" + "Min Diam: " + feature.properties.MinDiam1 +
 		"<br>" + "Max Diam: " + feature.properties.MaxDiam1 + "<br>" + "Density: " + feature.properties.Den1;
 			
 		if (feature.layer.id == "county-fills") {
