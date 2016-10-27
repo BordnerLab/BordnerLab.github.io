@@ -67,7 +67,7 @@ function changeLegendAndMapWetlands(){
 	for(v=0; v < wetlandsLayers.length; v++){
 		var placeholder = document.createElement('DIV');
 		var placeholder2 = document.createElement('DIV');
-		var idHold = wetlandsLayers[v][0];
+		var idHold = wetlandsLayers[v][2];
 		var colorHold = "background:" + wetlandsLayers[v][1];
 		var textholder = document.createTextNode(idHold);
 					
