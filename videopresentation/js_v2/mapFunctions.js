@@ -615,11 +615,10 @@ function changeLegendAndMapUnknown(){
 
 
 function clickSpecificLegend(source) {
-	console.log(source);
 	var m;
 	for(m=0; m < combinationLayers.length; m++) {
 		if (source == combinationLayers[m][0]) {
-			alert(combinationLayers[m][2]);
+			console.log(combinationLayers[m][2]);
 		}
 	}
 };
