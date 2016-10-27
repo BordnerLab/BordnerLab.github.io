@@ -615,6 +615,7 @@ function changeLegendAndMapUnknown(){
 
 
 function clickSpecificLegend(source) {
+	console.log('hello');
 	var xm;
 	for(xm=0; xm < combinationLayers.length; xm++) {
 		placeMe = combinationLayers[xm][0];
