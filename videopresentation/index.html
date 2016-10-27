@@ -6,49 +6,120 @@
 	<meta http-equiv="X-UA-Compatible" content="IE-edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>Bordner Presentation</title>
-	
-	<!-- google font -->
-	<link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+	<title>Experimental Map</title>
 	<!-- link mapbox library -->
 	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.js'></script>
+	
 	<!-- link mapbox styling -->
 	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.css' rel='stylesheet' />
-	<!-- bootstrap css -->
+	
 	<link href="lib/bootstrap/bootstrap.css" rel="stylesheet">
+	
 	<!-- link font awesome -->
 	<link rel="stylesheet" href="lib/font-awesome-4.6.3/css/font-awesome.min.css">
-	<!-- roundslider css -->
+	
 	<link rel="stylesheet" href="lib/roundslider/roundslider.css">
-	<!-- custom scroll css -->
+	
 	<link rel="stylesheet" href="lib/scroll/jquery.jscrollpane.css">
-	<!-- custom css -->
+	
 	<link rel="stylesheet" href="css/style.css" />
+	
 </head>
-
 <body>
 	<div class="myWrapper">
-	
 	<div id='map'></div>
 	
-	<div id="circleSliderContainer"></div>
+	<i id="searchBarToggle" class="fa fa-search fa-3x" aria-hidden="true" onclick="displaySearchBar()"></i>
+	<div id='geocoder-container'></i></div>
+	
+	
+	
+	<div id="sliderBox" onclick="toggleThreeDdisplay(this.id)">
+		3D
+	</div>
+	
+	
+	
+	
+	<div id='toolbar'>
+		<div id='grabHandle' onclick="toggleToolbar()"><i id="grabHandleToggle" class="fa fa-angle-right fa-3x" aria-hidden="true"></i></div>
+		<div id='button01' style="position:absolute; height:50px; width: 50px; background:#fff; color:black; top:0; border-top-left-radius:4px; border-top-right-radius:4px; cursor:pointer; border:1px solid #ddd;" onclick="showOpacityControls()"><i class="fa fa-adjust fa-2x" aria-hidden="true" style="margin-top:7.5px;"></i></div>
+		<div id='button02' style="position:absolute; height:50px; width:50px; background:#fff; color:black; top:50px; cursor:pointer; border: 1px solid #ddd;" onclick="showButton02Controls()"><i class="fa fa-map fa-2x" aria-hidden="true" style="margin-top:7.5px;"></i></div>
+		<div id='button03' style="position:absolute; height:50px; width:50px; background:#fff; color:black; top:100px; cursor:pointer; border: 1px solid #ddd;" onclick="showButton03Controls()"><i class="fa fa-cog fa-2x" aria-hidden="true" style="margin-top:7.5px;"></i></div>
+		<div id='button04' style="position:absolute; height:50px; width:50px; background:#fff; color: black; top:150px; border-bottom-left-radius:4px; border-bottom-right-radius:4px; cursor:pointer; border:1px solid #ddd;" onclick="takeScreenshot()"><i class="fa fa-camera fa-2x" aria-hidden="true" style="margin-top:7.5px;"></i></div>
+	</div>
+	
+	
+	<div id="legendv2Info">
+	
+	</div>
+	<div id='legendv2' class="scroll-pane">
+		<div class="legendSquare">
+			<div id="AG" class="circleLegend" style="background: #E59966;" onclick="alterLegendInfoClick(this.id)" onmouseover="alterLegendInfo(this.id)" onmouseout="exitLegendInfo(this.id)">AG</div>
+		</div>
+		<div class="legendSquare">
+			<div id="UR" class="circleLegend" style="background:#C0392A;" onclick="alterLegendInfoClick(this.id)" onmouseover="alterLegendInfo(this.id)" onmouseout="exitLegendInfo(this.id)">UR</div>
+		</div>
+		<div class="legendSquare">
+			<div id="BA" class="circleLegend" style="background:#AFB7C0;" onclick="alterLegendInfoClick(this.id)" onmouseover="alterLegendInfo(this.id)" onmouseout="exitLegendInfo(this.id)">BA</div>
+		</div>
+		<div class="legendSquare">
+			<div id="SL" class="circleLegend" style="background:#FAD79E;" onclick="alterLegendInfoClick(this.id)" onmouseover="alterLegendInfo(this.id)" onmouseout="exitLegendInfo(this.id)">SL</div>
+		</div>
+		<div class="legendSquare">
+			<div id="MF" class="circleLegend" style="background:#A66ABE;" onclick="alterLegendInfoClick(this.id)" onmouseover="alterLegendInfo(this.id)" onmouseout="exitLegendInfo(this.id)">MF</div>
+		</div>
+		<div class="legendSquare">
+			<div id="WL" class="circleLegend" style="background:#5FAEE3;" onclick="alterLegendInfoClick(this.id)" onmouseover="alterLegendInfo(this.id)" onmouseout="exitLegendInfo(this.id)">WL</div>
+		</div>
+		<div class="legendSquare">
+			<div id="DF" class="circleLegend" style="background:#54C083;" onclick="alterLegendInfoClick(this.id)" onmouseover="alterLegendInfo(this.id)" onmouseout="exitLegendInfo(this.id)">DF</div>
+		</div>
+		<div class="legendSquare">
+			<div id="CF" class="circleLegend" style="background:#19703E;" onclick="alterLegendInfoClick(this.id)" onmouseover="alterLegendInfo(this.id)" onmouseout="exitLegendInfo(this.id)">CF</div>
+		</div>
+		<div class="legendSquare">
+			<div id="O" class="circleLegend" style="background:#76D6C3;" onclick="alterLegendInfoClick(this.id)" onmouseover="alterLegendInfo(this.id)" onmouseout="exitLegendInfo(this.id)">O</div>
+		</div>
+		<div class="legendSquare">
+			<div id="U" class="circleLegend" style="background:#FADC70;" onclick="alterLegendInfoClick(this.id)" onmouseover="alterLegendInfo(this.id)" onmouseout="exitLegendInfo(this.id)">U</div>
+		</div>
+	</div>
+	
+	<!--
+	<div id="polyClickedInfoBox">
+		<div id="polyClickedTab" onclick="showMorePolyInfo(this.id)">
+			<h2>A1</h2>
+			<i id ="upArrow" class="fa fa-angle-double-up fa-2x" aria-hidden="true"></i>
+		</div>
+	</div>
+	-->
+	
+	
+	<div id="circleSliderContainer">
+		<i id="opacityExit" class="fa fa-times" aria-hidden="true" onclick="closeOpacityControls()"></i>
+	</div>
 	
 	<div id="slider"></div>
 	
-	<div id="storyNavigation">
-		<h1 id="storyNavigationHeader"></h1>
-		<div id="leftArrow" onclick="MoveStoryModeBackward()"><i class="fa fa-long-arrow-left fa-5x" aria-hidden="true"></i></div>
-		<div id="leftArrowText"></div>
-		<div id="rightArrow" onclick="MoveStoryModeForward()" ><i class="fa fa-long-arrow-right fa-5x" aria-hidden="true"></i></div>
-		<div id="rightArrowText"></div>
-		<div id="rightArrowBackground"></div>
-		<div id="leftArrowBackground"></div>
-	</div>
-	
-	<div id="storySubContext">
-		<h4 id="storySubContextHeader"></h4>
-		<hr>
-		<p id="storySubContextBody"></p>
+	<div id="circleSliderControls">
+		<div class="circleToggles" style="top:0;">
+			<div id="toggle01" class="circleToggleCircles" style="background: #fff;" onclick="circleToggleColor(this.id)"></div>
+		</div>
+		<div class="circleToggles" style="top:25%;">
+			<div id="toggle02" class="circleToggleCircles" style="background: #5499C7;" onclick="circleToggleColor(this.id)"></div>
+		</div>
+		<div class="circleToggles" style="top:50%;">
+			<div id="toggle03" class="circleToggleCircles" style="background: #fff;" onclick="circleToggleColor(this.id)"></div>
+		</div>
+		<div class="circleToggles" style="top:75%;">
+			<div id="toggle04" class="circleToggleCircles" style="background: #fff;" onclick="circleToggleColor(this.id)"></div>
+		</div>
+		
+		<div class="circleTogglesInfo" style="top:0;">Landcover</div>
+		<div class="circleTogglesInfo" style="top:25%;">Water</div>
+		<div class="circleTogglesInfo" style="top:50%;">Points</div>
+		<div class="circleTogglesInfo" style="top:75%;">Lines</div>
 	</div>
 	
 	<div id="loadingScreen" class="containerLoad">
@@ -59,34 +130,21 @@
 		<div class="ball"></div>
 		<div class="ball"></div>
 		<div class="ball"></div>
-		<h3 style="text-align: center;">Preparing Map Data</h3>
+	</div>
 	</div>
 	
-	<div id="landingPage">
-		<div id="landingPageButton">
-		<h1>Wisconsin Economic Inventory Digital Tour</h1>
-		<hr>
-		<h3>Take a step by step guided tour of the Wisconsin Economic Inventory; a Depression-era project that took inventory of the land resources in Wisconsin.</h3>
-		<h3 id="mapStart" onmouseover="landingPageButtonOver()" onmouseout="landingPageButtonOut()" onclick="removeLandingPage()">Begin guided tour through Wisconsin's historical land cover</h3>
-		</div>
-	</div>
 	
-	</div>
-	
-	<!-- jquery library -->
 	<script src='lib/roundslider/jquery-1.11.3.min.js'></script>
-	<!-- mapbox geocoder library -->
 	<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.js'></script>
-	<!-- mapbox geocoder css -->
 	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.css' type='text/css' />
-	<!-- bootstrap library -->
+	
 	<script src="lib/bootstrap/bootstrap.js"></script>
-	<!-- round slider library -->
+	
 	<script src='lib/roundslider/roundslider.js'></script>
-	<!-- scroll and mouse scroll jquery library -->
+	
 	<script src='lib/scroll/jquery.mousewheel.js'></script>
 	<script src='lib/scroll/jquery.jscrollpane.min.js'></script>
-	<!-- custom scripts -->
+	
 	<script src='js_v2/define.js'></script>
 	<script src='js_v2/map.js'></script>
 	<script src='js_v2/mapFunctions.js'></script>
@@ -103,6 +161,5 @@
 	ga('send', 'pageview');
 
 	</script>
-	
 </body>
 </html>
