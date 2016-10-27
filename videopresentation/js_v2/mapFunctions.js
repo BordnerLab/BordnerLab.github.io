@@ -128,7 +128,7 @@ function changeLegendAndMapAgriculture(){
 	for(v=0; v < agricultureLayers.length; v++){
 		var placeholder = document.createElement('DIV');
 		var placeholder2 = document.createElement('DIV');
-		var idHold = agricultureLayers[v][0];
+		var idHold = agricultureLayers[v][2];
 		var colorHold = "background:" + agricultureLayers[v][1];
 		var textholder = document.createTextNode(idHold);
 					
@@ -190,7 +190,7 @@ function changeLegendAndMapUrban(){
 	for(v=0; v < urbanLayers.length; v++){
 		var placeholder = document.createElement('DIV');
 		var placeholder2 = document.createElement('DIV');
-		var idHold = urbanLayers[v][0];
+		var idHold = urbanLayers[v][2];
 		var colorHold = "background:" + urbanLayers[v][1];
 		var textholder = document.createTextNode(idHold);
 					
@@ -248,7 +248,7 @@ function changeLegendAndMapBarren(){
 	for(v=0; v < barrenLayers.length; v++){
 		var placeholder = document.createElement('DIV');
 		var placeholder2 = document.createElement('DIV');
-		var idHold = barrenLayers[v][0];
+		var idHold = barrenLayers[v][2];
 		var colorHold = "background:" + barrenLayers[v][1];
 		var textholder = document.createTextNode(idHold);
 					
@@ -309,7 +309,7 @@ function changeLegendAndMapDeciduousForest(){
 	for(v=0; v < deciduousforestLayers.length; v++){
 		var placeholder = document.createElement('DIV');
 		var placeholder2 = document.createElement('DIV');
-		var idHold = deciduousforestLayers[v][0];
+		var idHold = deciduousforestLayers[v][2];
 		var colorHold = "background:" + deciduousforestLayers[v][1];
 		var textholder = document.createTextNode(idHold);
 					
@@ -370,7 +370,7 @@ function changeLegendAndMapOther(){
 	for(v=0; v < otherLayers.length; v++){
 		var placeholder = document.createElement('DIV');
 		var placeholder2 = document.createElement('DIV');
-		var idHold = otherLayers[v][0];
+		var idHold = otherLayers[v][2];
 		var colorHold = "background:" + otherLayers[v][1];
 		var textholder = document.createTextNode(idHold);
 					
@@ -424,7 +424,7 @@ function changeLegendAndMapShrubland(){
 	for(v=0; v < shrublandLayers.length; v++){
 		var placeholder = document.createElement('DIV');
 		var placeholder2 = document.createElement('DIV');
-		var idHold = shrublandLayers[v][0];
+		var idHold = shrublandLayers[v][2];
 		var colorHold = "background:" + shrublandLayers[v][1];
 		var textholder = document.createTextNode(idHold);
 					
@@ -480,7 +480,7 @@ function changeLegendAndMapConiferousForest(){
 	for(v=0; v < coniferousforestLayers.length; v++){
 		var placeholder = document.createElement('DIV');
 		var placeholder2 = document.createElement('DIV');
-		var idHold = coniferousforestLayers[v][0];
+		var idHold = coniferousforestLayers[v][2];
 		var colorHold = "background:" + coniferousforestLayers[v][1];
 		var textholder = document.createTextNode(idHold);
 					
@@ -533,7 +533,7 @@ function changeLegendAndMapMixedForest(){
 	for(v=0; v < mixedforestLayers.length; v++){
 		var placeholder = document.createElement('DIV');
 		var placeholder2 = document.createElement('DIV');
-		var idHold = mixedforestLayers[v][0];
+		var idHold = mixedforestLayers[v][2];
 		var colorHold = "background:" + mixedforestLayers[v][1];
 		var textholder = document.createTextNode(idHold);
 					
@@ -594,7 +594,7 @@ function changeLegendAndMapUnknown(){
 	for(v=0; v < unknownLayers.length; v++){
 		var placeholder = document.createElement('DIV');
 		var placeholder2 = document.createElement('DIV');
-		var idHold = unknownLayers[v][0];
+		var idHold = unknownLayers[v][2];
 		var colorHold = "background:" + unknownLayers[v][1];
 		var textholder = document.createTextNode(idHold);
 					
