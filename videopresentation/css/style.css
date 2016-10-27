@@ -111,6 +111,7 @@
 	width: 100%;
 	background: #FBFCFC;
 	margin-top:10px;
+	z-index: 1000;
 }
 
 #legendv2 .legendSquarev2 {
@@ -133,7 +134,7 @@
 	width: 75px;
 	border: .1px solid black;
 	margin-left:2px;
-	z-index: 150;
+	z-index: 1000;
 }
 #legendv2Info {
 	position: absolute;
