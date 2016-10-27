@@ -615,17 +615,11 @@ function changeLegendAndMapUnknown(){
 
 
 function clickSpecificLegend(source) {
-	console.log('hello');
 	console.log(source);
-	var xm;
-	for(xm=0; xm < combinationLayers.length; xm++) {
-		placeMe = combinationLayers[xm][0];
-		if (placeMe == source) {
-			placeYou = combinationLayers[xm][2];
-			alert(placeYou);
-		} else {
-			return
+	var m;
+	for(m=0; m < combinationLayers.length; m++) {
+		if (source == combinationLayers[m][0]) {
+			alert(combinationLayers[m][2]);
 		}
 	}
-	
 };
