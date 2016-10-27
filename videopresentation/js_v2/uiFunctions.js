@@ -614,7 +614,7 @@ function clickLegendBack(source) {
 		var placeholder2 = document.createElement('DIV');
 		var idHold = mainLegend[f][0];
 		var colorHold = "background:" + mainLegend[f][1];
-		var textholder = document.createTextNode(idHold);
+		var textholder = document.createTextNode(mainLegend[f][2]);
 					
 					
 		placeholder.setAttribute("class", "legendSquare");
