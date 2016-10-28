@@ -16,7 +16,8 @@ var hoverLayers = [
 	"Wetlands",
 	"Coniferous Forest",
 	"Mixed Forest",
-	"Unknown Cover"
+	"Unknown Cover",
+	"pointMerge"
 ];
 
 var landcoverLayers = [
