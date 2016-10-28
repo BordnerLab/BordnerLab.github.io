@@ -69,8 +69,9 @@ map.on('load', function () {
 				.setHTML(textInPopUp)
 				.addTo(map);
 		} else if (feature.layer.id == "pointMerge") {
+			findLongPointName(feature);
 			popup.setLngLat(e.lngLat)
-				.setHTML(feature.properties.Point_Type)
+				.setHTML(feature.properties.Point_Type + ": " + hoveredCountyPoint)
 				.addTo(map);
 		}
 	});
@@ -143,4 +144,14 @@ function findLongCoverName(source) {
 		}
 	}
 	return hoveredCountyLandcover;
+};
+
+function findLongPointName(source) {
+	var b;
+	for (b=0; b < pointLayers.length; b++) {
+		if (source.properties.Point_Type == pointLayers[b][0]) {
+			hoverCountyPoint = pointLayers[b][1];
+		}
+	}
+	return hoveredCountyPoint;
 };

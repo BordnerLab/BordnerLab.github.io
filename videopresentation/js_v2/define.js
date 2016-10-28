@@ -3,6 +3,7 @@
 var clickedCountyName;
 
 var hoveredCountyLandcover;
+var hoveredCountyPoint;
 
 var legendHoverCover;
 	
@@ -44,6 +45,34 @@ var mainLegend = [
 	["CF", "#19703E", "Coniferous Forest"],
 	["O", "#76D6C3", "Other"],
 	["U", "#FADC70", "Unknown"]
+];
+
+var pointLayers = [
+	['C', 'Cemetery'],
+	['CF', 'Cheese Factory'],
+	['CH', 'Church'],
+	['CR', 'Cannery'],
+	['E', 'Erosion'],
+	['F/G', 'Unknown'],
+	['FB', 'Farm'],
+	['FF', 'Fur Farm'],
+	['FT', 'Fire Tower'],
+	['GC', 'Golf Course'],
+	['GL', 'Unknown'],
+	['GP', 'Gravel Pit'],
+	['H', 'Hotel'],
+	['O', 'Orchard'],
+	['OH', 'Occupied House'],
+	['OSCH', 'Occupied School'],
+	['Qu', 'Quarry'],
+	['S', 'Spring'],
+	['SH', 'Summer House'],
+	['SL', 'Unknown'],
+	['SP', 'Unknown'],
+	['T', 'Tavern'],
+	['TH', 'Townhall'],
+	['U', 'Unknown'],
+	['VH', 'Vacant House']
 ];
 
 var combinationLayers = [
