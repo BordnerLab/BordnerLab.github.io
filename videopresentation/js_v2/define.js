@@ -18,7 +18,14 @@ var hoverLayers = [
 	"Coniferous Forest",
 	"Mixed Forest",
 	"Unknown Cover",
-	"pointMerge"
+	"pointsUnknown",
+	"pointsOther",
+	"pointsSpring",
+	"pointsUrban",
+	"pointsFarm",
+	"pointsResidence",
+	"pointsCemetery",
+	"pointsErosion"
 ];
 
 var landcoverLayers = [
@@ -306,11 +313,12 @@ function addMapSources() {
 			'features': []
 		}
 	});
-	
+	/*
 	map.addSource('pointMerge', {
 		'type': 'geojson',
 		'data': 'data/points/pointMerge.geojson'
 	});
+	*/
 };
 
 function addCountyInitial() {
@@ -336,7 +344,7 @@ function addCountyInitial() {
 			'circle-color': '#007cbf'
 		}
 	});
-	
+	/*
 	map.addLayer({
 		'id': 'pointMerge',
 		'source': 'pointMerge',
@@ -345,6 +353,7 @@ function addCountyInitial() {
 			'icon-image': 'harbor-15'
 		}
 	});
+	*/
 };
 
 
