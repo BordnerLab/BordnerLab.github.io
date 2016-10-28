@@ -70,7 +70,7 @@ map.on('load', function () {
 				.addTo(map);
 		} else if (feature.layer.id == "pointMerge") {
 			popup.setLngLat(e.lngLat)
-				.setHTML(feature.properties.Point_Type);
+				.setHTML(feature.properties.Point_Type)
 				.addTo(map);
 		}
 	});
