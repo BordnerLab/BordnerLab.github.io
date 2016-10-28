@@ -276,11 +276,6 @@ function addMapSources() {
 			'features': []
 		}
 	});
-	
-	map.addSource('pointMerge' , {
-		'type': 'geojson',
-		'data': 'data/points/pointMerge.geojson'
-	});
 };
 
 function addCountyInitial() {
@@ -300,16 +295,6 @@ function addCountyInitial() {
 	map.addLayer({
 		'id': 'point',
 		'source': 'single-point',
-		'type': 'circle',
-		'paint': {
-			'circle-radius': 10,
-			'circle-color': '#007cbf'
-		}
-	});
-	
-	map.addLayer({
-		'id': 'pointMerge',
-		'source': 'pointMerge',
 		'type': 'circle',
 		'paint': {
 			'circle-radius': 10,
