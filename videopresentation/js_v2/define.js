@@ -312,7 +312,7 @@ function addCountyInitial() {
 		'source': 'pointMerge',
 		'type': 'symbol',
 		'layout': {
-			'icon-image': 'monument-15'
+			'icon-image': 'harbor-15'
 		}
 	});
 };
