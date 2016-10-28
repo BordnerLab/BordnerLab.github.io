@@ -310,10 +310,9 @@ function addCountyInitial() {
 	map.addLayer({
 		'id': 'pointMerge',
 		'source': 'pointMerge',
-		'type': 'circle',
-		'paint': {
-			'circle-radius': 2,
-			'circle-color': '#007cbf'
+		'type': 'symbol',
+		'layout': {
+			'icon-image': 'monument-15'
 		}
 	});
 };
