@@ -26,7 +26,12 @@ calcButton.onclick = function() {
 	var data = draw.getAll();
 	
 	console.log(data.features[0]);
+	var points = map.getLayer('pointsResidence');
+	var polygon = data.features[0];
 	
+	var ptsWithin = turf.within(points, polygon);
+	
+	console.log(ptsWithin);
 	
 	/*
 	var data = draw.getAll();
