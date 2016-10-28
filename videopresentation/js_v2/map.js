@@ -10,6 +10,31 @@ var map = new mapboxgl.Map({
 	pitch: 0.1
 });
 
+var draw = mapboxgl.Draw({
+	drawing: true,
+	displayControlsDefault: false,
+	controls: {
+		polygon: true,
+		trash: true
+	}
+});
+
+map.addControl(draw);
+
+var calcButton = document.getElementById('calculate');
+calcButton.onclick = function() {
+	var data = draw.getAll();
+	if (data.feature.length > 0) {
+		var area = turf.area(data);
+		var rounded_area = Math.round(area*100)/100;
+		var answer = document.getElementById('calculated-area');
+		answer.innerHTML = '<p><strong>' + rounded_area + '</strong></p><p>square meters</p>';
+	} else {
+		alert('Use the draw tools to draw a polygon!');
+	}
+};
+
+
 /*
 map.addControl(new mapboxgl.Navigation());
 */
