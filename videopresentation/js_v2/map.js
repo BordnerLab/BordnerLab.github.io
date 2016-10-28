@@ -56,6 +56,7 @@ map.on('load', function () {
 		}
 		
 		var feature = features[0];
+		console.log(feature)
 			
 		if (feature.layer.id == "county-fills") {
 			popup.setLngLat(e.lngLat)
