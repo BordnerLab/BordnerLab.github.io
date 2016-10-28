@@ -25,14 +25,10 @@ var calcButton = document.getElementById('calculate');
 calcButton.onclick = function() {
 	var data = draw.getAll();
 	
-	var features = map.queryRenderedFeatures(data, { layers: hoverLayers});
+	console.log(data);
 	
 	if (data.feature.length > 0) {
 		alert('woohoo!');
-	}
-	
-	if (features.length > 0) {
-		alert('yay!');
 	}
 	/*
 	var data = draw.getAll();
