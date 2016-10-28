@@ -56,20 +56,19 @@ map.on('load', function () {
 		}
 		
 		var feature = features[0];
-		console.log(feature)
 			
 		if (feature.layer.id == "county-fills") {
 			popup.setLngLat(e.lngLat)
 				.setHTML(feature.properties.COUNTY_NAM)
 				.addTo(map);
-		} else if (feature.layer.id != "county-fills" && feature.layer.id != "pointMerge") {
+		} else if (feature.layer.id != "county-fills" && feature.layer.id == "pointsErosion" && feature.layer.id == "pointsCemetery" && feature.layer.id == "pointsResidence" && feature.layer.id == "pointsFarm" && feature.layer.id == "pointsUnknown" && feature.layer.id == "pointsOther" && feature.layer.id == "pointsSpring" && feature.layer.id == "pointsUrban") {
 			findLongCoverName(feature);
 			var textInPopUp = feature.properties.Cov1 + ": " + hoveredCountyLandcover + "<br>" + "Min Diam: " + feature.properties.MinDiam1 +
 			"<br>" + "Max Diam: " + feature.properties.MaxDiam1 + "<br>" + "Density: " + feature.properties.Den1;
 			popup.setLngLat(e.lngLat)
 				.setHTML(textInPopUp)
 				.addTo(map);
-		} else if (feature.layer.id == "pointMerge") {
+		} else if (feature.layer.id == "pointsErosion" || feature.layer.id == "pointsCemetery" || feature.layer.id == "pointsResidence" || feature.layer.id == "pointsFarm" || feature.layer.id == "pointsUnknown" || feature.layer.id == "pointsOther" || feature.layer.id == "pointsSpring" || feature.layer.id == "pointsUrban") {
 			findLongPointName(feature);
 			popup.setLngLat(e.lngLat)
 				.setHTML(feature.properties.Point_Type + ": " + hoveredCountyPoint)
@@ -85,6 +84,7 @@ map.on('load', function () {
 		var features = map.queryRenderedFeatures(e.point, { layers: hoverLayers });
 		
 		var feature = features[0];
+		console.log(feature)
 		
 		if (features.length && feature.layer.id == "county-fills") {
 			map.flyTo({
