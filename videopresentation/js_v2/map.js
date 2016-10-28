@@ -150,7 +150,7 @@ function findLongPointName(source) {
 	var b;
 	for (b=0; b < pointLayers.length; b++) {
 		if (source.properties.Point_Type == pointLayers[b][0]) {
-			hoverCountyPoint = pointLayers[b][1];
+			hoveredCountyPoint = pointLayers[b][1];
 		}
 	}
 	return hoveredCountyPoint;
