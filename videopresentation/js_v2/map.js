@@ -23,6 +23,8 @@ map.addControl(draw);
 
 var calcButton = document.getElementById('calculate');
 calcButton.onclick = function() {
+	alert('woohoo!');
+	/*
 	var data = draw.getAll();
 	if (data.feature.length > 0) {
 		var area = turf.area(data);
@@ -32,6 +34,7 @@ calcButton.onclick = function() {
 	} else {
 		alert('Use the draw tools to draw a polygon!');
 	}
+	*/
 };
 
 
