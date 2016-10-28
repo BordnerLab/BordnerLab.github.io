@@ -25,11 +25,9 @@ var calcButton = document.getElementById('calculate');
 calcButton.onclick = function() {
 	var data = draw.getAll();
 	
-	console.log(data);
+	console.log(data.features[0]);
 	
-	if (data.feature.length > 0) {
-		alert('woohoo!');
-	}
+	
 	/*
 	var data = draw.getAll();
 	if (data.feature.length > 0) {
