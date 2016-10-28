@@ -84,7 +84,6 @@ map.on('load', function () {
 		var features = map.queryRenderedFeatures(e.point, { layers: hoverLayers });
 		
 		var feature = features[0];
-		console.log(feature)
 		
 		if (features.length && feature.layer.id == "county-fills") {
 			map.flyTo({
