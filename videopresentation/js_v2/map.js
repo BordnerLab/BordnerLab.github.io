@@ -56,19 +56,21 @@ map.on('load', function () {
 		}
 		
 		var feature = features[0];
-		
-		findLongCoverName(feature);
-		
-		var textInPopUp = feature.properties.Cov1 + ": " + hoveredCountyLandcover + "<br>" + "Min Diam: " + feature.properties.MinDiam1 +
-		"<br>" + "Max Diam: " + feature.properties.MaxDiam1 + "<br>" + "Density: " + feature.properties.Den1;
 			
 		if (feature.layer.id == "county-fills") {
 			popup.setLngLat(e.lngLat)
 				.setHTML(feature.properties.COUNTY_NAM)
 				.addTo(map);
-		} else {
+		} else if (feature.layer.id != "county-fills" && feature.layer.id != "pointMerge") {
+			findLongCoverName(feature);
+			var textInPopUp = feature.properties.Cov1 + ": " + hoveredCountyLandcover + "<br>" + "Min Diam: " + feature.properties.MinDiam1 +
+			"<br>" + "Max Diam: " + feature.properties.MaxDiam1 + "<br>" + "Density: " + feature.properties.Den1;
 			popup.setLngLat(e.lngLat)
 				.setHTML(textInPopUp)
+				.addTo(map);
+		} else if (feature.layer.id == "pointMerge") {
+			popup.setLngLat(e.lngLat)
+				.setHTML(feature.properties.Point_Type);
 				.addTo(map);
 		}
 	});
