@@ -61,14 +61,14 @@ map.on('load', function () {
 			popup.setLngLat(e.lngLat)
 				.setHTML(feature.properties.COUNTY_NAM)
 				.addTo(map);
-		} else if (feature.layer.id != "county-fills" && feature.layer.id == "pointsErosion" && feature.layer.id == "pointsCemetery" && feature.layer.id == "pointsResidence" && feature.layer.id == "pointsFarm" && feature.layer.id == "pointsUnknown" && feature.layer.id == "pointsOther" && feature.layer.id == "pointsSpring" && feature.layer.id == "pointsUrban") {
+		} else if (feature.layer.id != "county-fills" && feature.layer.type != "symbol") {
 			findLongCoverName(feature);
 			var textInPopUp = feature.properties.Cov1 + ": " + hoveredCountyLandcover + "<br>" + "Min Diam: " + feature.properties.MinDiam1 +
 			"<br>" + "Max Diam: " + feature.properties.MaxDiam1 + "<br>" + "Density: " + feature.properties.Den1;
 			popup.setLngLat(e.lngLat)
 				.setHTML(textInPopUp)
 				.addTo(map);
-		} else if (feature.layer.id == "pointsErosion" || feature.layer.id == "pointsCemetery" || feature.layer.id == "pointsResidence" || feature.layer.id == "pointsFarm" || feature.layer.id == "pointsUnknown" || feature.layer.id == "pointsOther" || feature.layer.id == "pointsSpring" || feature.layer.id == "pointsUrban") {
+		} else if (feature.layer.type == "symbol") {
 			findLongPointName(feature);
 			popup.setLngLat(e.lngLat)
 				.setHTML(feature.properties.Point_Type + ": " + hoveredCountyPoint)
