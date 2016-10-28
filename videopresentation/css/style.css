@@ -135,9 +135,9 @@
 	border: .1px solid black;
 	margin-left:2px;
 	z-index: 1000;
-	color: #FBFCFC;
-	/*color: #FDFEFE;
-	color: #F7F9F9;*/
+	/*color: #FBFCFC;*/
+	/*color: #FDFEFE;*/
+	color: #F7F9F9;
 }
 #legendv2Info {
 	position: absolute;
