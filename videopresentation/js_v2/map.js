@@ -23,7 +23,6 @@ map.addControl(draw);
 
 var calcButton = document.getElementById('calculate');
 calcButton.onclick = function() {
-	alert('woohoo!');
 	var data = draw.getAll();
 	
 	var features = map.queryRenderedFeatures(data, { layers: hoverLayers});
