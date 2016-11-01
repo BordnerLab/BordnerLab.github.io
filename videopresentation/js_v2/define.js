@@ -109,7 +109,7 @@ var combinationLayers = [
 	['Qz', '#A93226', 'Quarry'],
 	['CA', '#D6DBDF', 'Camp'],
 	['PD', '#5D6D7E', 'Public Dump'],
-	['U', '#641E16', 'U -'],
+	['U', '#E67E22', 'U -'],
 	['CL', '#D98880', 'Clay Pit'],
 	['GP', '#C39BD3', 'Gravel Pit'],
 	['MF', '#7FB3D5', 'Mud Flats'],
@@ -200,7 +200,7 @@ var urbanLayers = [
 	['Qz', '#A93226', 'Quarry'],
 	['CA', '#D6DBDF', 'Camp'],
 	['PD', '#5D6D7E', 'Public Dump'],
-	['U', '#641E16', 'U -']
+	['U', '#E67E22', 'U -']
 ];
 
 var barrenLayers = [
