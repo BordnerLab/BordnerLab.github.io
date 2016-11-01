@@ -108,7 +108,7 @@ var combinationLayers = [
 	['MY', '#FDEBD0', 'Mill Yard'],
 	['Qz', '#A93226', 'Quarry'],
 	['CA', '#D6DBDF', 'Camp'],
-	['PD', '#2C3E50', 'Public Dump'],
+	['PD', '#5D6D7E', 'Public Dump'],
 	['U', '#641E16', 'U -'],
 	['CL', '#D98880', 'Clay Pit'],
 	['GP', '#C39BD3', 'Gravel Pit'],
@@ -127,7 +127,7 @@ var combinationLayers = [
 	['D1b', '#FDEBD0', 'Inferior D1'],
 	['D1u', '#A93226', 'Good Quality with White Oak'],
 	['D1uu', '#D6DBDF', 'Medium Gr. Mostly Red Oak'],
-	['D3b', '#2C3E50', 'Balsam'],
+	['D3b', '#5D6D7E', 'Balsam'],
 	['BD', '#D98880', 'Beaver Dam'],
 	['BF', '#C39BD3', 'Beaver Flowage'],
 	['BP', '#7FB3D5', 'Beaver Pond'],
@@ -138,7 +138,7 @@ var combinationLayers = [
 	['Blowdown', '#FDEBD0', 'Blowdown'],
 	['Cutover', '#A93226', 'Cutover'],
 	['Rcnt. Cut', '#D6DBDF', 'Recent Cut'],
-	['Slash', '#2C3E50', 'Slash'],
+	['Slash', '#5D6D7E', 'Slash'],
 	['D4', '#D98880', 'Leather Leaf'],
 	['E1', '#C39BD3', 'Pin Cherry'],
 	['E4', '#7FB3D5', 'Weedy Peat'],
@@ -162,7 +162,7 @@ var combinationLayers = [
 	['E2', '#FDEBD0', 'E2 -'],
 	['F', '#A93226', 'F -'],
 	['OA', '#D6DBDF', 'OA -'],
-	['OC', '#2C3E50', 'OC -']
+	['OC', '#5D6D7E', 'OC -']
 ];
 
 
@@ -199,7 +199,7 @@ var urbanLayers = [
 	['MY', '#FDEBD0', 'Mill Yard'],
 	['Qz', '#A93226', 'Quarry'],
 	['CA', '#D6DBDF', 'Camp'],
-	['PD', '#2C3E50', 'Public Dump'],
+	['PD', '#5D6D7E', 'Public Dump'],
 	['U', '#641E16', 'U -']
 ];
 
@@ -224,7 +224,7 @@ var deciduousforestLayers = [
 	['D1b', '#FDEBD0', 'Inferior D1'],
 	['D1u', '#A93226', 'Good Quality with White Oak'],
 	['D1uu', '#D6DBDF', 'Medium Gr. Mostly Red Oak'],
-	['D3b', '#2C3E50', 'Balsam']
+	['D3b', '#5D6D7E', 'Balsam']
 ];
 
 var otherLayers = [
@@ -238,7 +238,7 @@ var otherLayers = [
 	['Blowdown', '#FDEBD0', 'Blowdown'],
 	['Cutover', '#A93226', 'Cutover'],
 	['Rcnt. Cut', '#D6DBDF', 'Recent Cut'],
-	['Slash', '#2C3E50', 'Slash']
+	['Slash', '#5D6D7E', 'Slash']
 ];
 
 var shrublandLayers = [
@@ -274,7 +274,7 @@ var unknownLayers = [
 	['E2', '#FDEBD0', 'E2 -'],
 	['F', '#A93226', 'F -'],
 	['OA', '#D6DBDF', 'OA -'],
-	['OC', '#2C3E50', 'OC -']
+	['OC', '#5D6D7E', 'OC -']
 ];
 
 
