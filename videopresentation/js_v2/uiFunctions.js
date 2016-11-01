@@ -133,7 +133,7 @@ function circleToggleColor(source) {
 				document.getElementById(source).style.background = "#5499C7";
 				toggle03Control = true;
 				
-				opacityLayers.push('pointsErosion', 'pointsCemetery', 'pointsResidence', 'pointsFarm', 'pointsUnknown', 'pointsOther', 'pointsSpring', 'pointsUrban');
+				symbolOpacityLayers.push('pointsErosion', 'pointsCemetery', 'pointsResidence', 'pointsFarm', 'pointsUnknown', 'pointsOther', 'pointsSpring', 'pointsUrban');
 				break;
 			} else if (toggle03Control == true) {
 				document.getElementById(source).style.background = "#fff";
@@ -142,9 +142,9 @@ function circleToggleColor(source) {
 				var ab;
 				for(ab=0; ab < pointLayerNames.length; ab++){
 					var placeholder02 = pointLayerNames[ab];
-					var index02 = opacityLayers.indexOf(placeholder02);
+					var index02 = symbolOpacityLayers.indexOf(placeholder02);
 					if (index02 != -1){
-						opacityLayers.splice(index02, 1);
+						symbolOpacityLayers.splice(index02, 1);
 					}
 				}
 				break;
@@ -154,7 +154,7 @@ function circleToggleColor(source) {
 				document.getElementById(source).style.background = "#5499C7";
 				toggle04Control = true;
 				
-				opacityLayers.push('naturalLines', 'manLines');
+				lineOpacityLayers.push('naturalLines', 'manLines');
 				break;
 				
 			} else if (toggle04Control == true) {
@@ -164,9 +164,9 @@ function circleToggleColor(source) {
 				var bc;
 				for(bc=0; bc < lineLayerNames.length; bc++){
 					var placeholder03 = lineLayerNames[bc];
-					var index03 = opacityLayers.indexOf(placeholder03);
+					var index03 = lineOpacityLayers.indexOf(placeholder03);
 					if (index03 != -1){
-						opacityLayers.splice(index03, 1);
+						lineOpacityLayers.splice(index03, 1);
 					}
 				}
 			}

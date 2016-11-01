@@ -311,6 +311,10 @@ var opacityLayers = [
 	"coastalWaters"
 ];
 
+var lineOpacityLayers = [];
+
+var symbolOpacityLayers = [];
+
 var threeDControl = false;
 
 
