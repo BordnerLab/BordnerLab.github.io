@@ -96,7 +96,7 @@ var combinationLayers = [
 	['FP', '#7DCEA0', 'Forest Plantation'],
 	['P', '#F1C40F', 'Pasture'],
 	['PP', '#FDEBD0', 'Permanent Pasture'],
-	['SP', '#873600', 'Stump Pasture'],
+	['SP', '#A93226', 'Stump Pasture'],
 	['OR', '#D6DBDF', 'Orchard'],
 	['ARPT', '#D98880', 'Airport'],
 	['CM', '#C39BD3', 'Cemetery'],
@@ -106,7 +106,7 @@ var combinationLayers = [
 	['FX', '#7DCEA0', 'Fox Farm'],
 	['GC', '#F1C40F', 'Golf Course'],
 	['MY', '#FDEBD0', 'Mill Yard'],
-	['Qz', '#873600', 'Quarry'],
+	['Qz', '#A93226', 'Quarry'],
 	['CA', '#D6DBDF', 'Camp'],
 	['PD', '#2C3E50', 'Public Dump'],
 	['U', '#641E16', 'U -'],
@@ -125,7 +125,7 @@ var combinationLayers = [
 	['D', '#7DCEA0', 'Scrub Oak'],
 	['D1', '#F1C40F', 'Oak - Hickory'],
 	['D1b', '#FDEBD0', 'Inferior D1'],
-	['D1u', '#873600', 'Good Quality with White Oak'],
+	['D1u', '#A93226', 'Good Quality with White Oak'],
 	['D1uu', '#D6DBDF', 'Medium Gr. Mostly Red Oak'],
 	['D3b', '#2C3E50', 'Balsam'],
 	['BD', '#D98880', 'Beaver Dam'],
@@ -136,7 +136,7 @@ var combinationLayers = [
 	['D5b', '#7DCEA0', 'Dead Timber'],
 	['S', '#F1C40F', 'Stump'],
 	['Blowdown', '#FDEBD0', 'Blowdown'],
-	['Cutover', '#873600', 'Cutover'],
+	['Cutover', '#A93226', 'Cutover'],
 	['Rcnt. Cut', '#D6DBDF', 'Recent Cut'],
 	['Slash', '#2C3E50', 'Slash'],
 	['D4', '#D98880', 'Leather Leaf'],
@@ -160,7 +160,7 @@ var combinationLayers = [
 	['CP', '#7DCEA0', 'CP -'],
 	['D3u', '#F1C40F', 'D3u -'],
 	['E2', '#FDEBD0', 'E2 -'],
-	['F', '#873600', 'F -'],
+	['F', '#A93226', 'F -'],
 	['OA', '#D6DBDF', 'OA -'],
 	['OC', '#2C3E50', 'OC -']
 ];
@@ -184,7 +184,7 @@ var agricultureLayers = [
 	['FP', '#7DCEA0', 'Forest Plantation'],
 	['P', '#F1C40F', 'Pasture'],
 	['PP', '#FDEBD0', 'Permanent Pasture'],
-	['SP', '#873600', 'Stump Pasture'],
+	['SP', '#A93226', 'Stump Pasture'],
 	['OR', '#D6DBDF', 'Orchard']
 ];
 
@@ -197,7 +197,7 @@ var urbanLayers = [
 	['FX', '#7DCEA0', 'Fox Farm'],
 	['GC', '#F1C40F', 'Golf Course'],
 	['MY', '#FDEBD0', 'Mill Yard'],
-	['Qz', '#873600', 'Quarry'],
+	['Qz', '#A93226', 'Quarry'],
 	['CA', '#D6DBDF', 'Camp'],
 	['PD', '#2C3E50', 'Public Dump'],
 	['U', '#641E16', 'U -']
@@ -222,7 +222,7 @@ var deciduousforestLayers = [
 	['D', '#7DCEA0', 'Scrub Oak'],
 	['D1', '#F1C40F', 'Oak - Hickory'],
 	['D1b', '#FDEBD0', 'Inferior D1'],
-	['D1u', '#873600', 'Good Quality with White Oak'],
+	['D1u', '#A93226', 'Good Quality with White Oak'],
 	['D1uu', '#D6DBDF', 'Medium Gr. Mostly Red Oak'],
 	['D3b', '#2C3E50', 'Balsam']
 ];
@@ -236,7 +236,7 @@ var otherLayers = [
 	['D5b', '#7DCEA0', 'Dead Timber'],
 	['S', '#F1C40F', 'Stump'],
 	['Blowdown', '#FDEBD0', 'Blowdown'],
-	['Cutover', '#873600', 'Cutover'],
+	['Cutover', '#A93226', 'Cutover'],
 	['Rcnt. Cut', '#D6DBDF', 'Recent Cut'],
 	['Slash', '#2C3E50', 'Slash']
 ];
@@ -272,7 +272,7 @@ var unknownLayers = [
 	['CP', '#7DCEA0', 'CP -'],
 	['D3u', '#F1C40F', 'D3u -'],
 	['E2', '#FDEBD0', 'E2 -'],
-	['F', '#873600', 'F -'],
+	['F', '#A93226', 'F -'],
 	['OA', '#D6DBDF', 'OA -'],
 	['OC', '#2C3E50', 'OC -']
 ];
