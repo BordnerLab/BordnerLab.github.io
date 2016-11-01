@@ -41,6 +41,17 @@ var landcoverLayers = [
 	"Unknown Cover"
 ];
 
+var pointLayerNames = [
+	"pointsErosion",
+	"pointsCemetery",
+	"pointsResidence",
+	"pointsFarm",
+	"pointsUnknown",
+	"pointsOther",
+	"pointsSpring",
+	"pointsUrban"
+];
+
 var mainLegend = [
 	["AG", "#E59966", "Agriculture"],
 	["UR", "#C0392A", "Urban"],

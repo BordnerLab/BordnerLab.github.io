@@ -132,10 +132,21 @@ function circleToggleColor(source) {
 			if (toggle03Control == false) {
 				document.getElementById(source).style.background = "#5499C7";
 				toggle03Control = true;
+				
+				opacityLayers.push('pointsErosion', 'pointsCemetery', 'pointsResidence', 'pointsFarm', 'pointsUnknown', 'pointsOther', 'pointsSpring', 'pointsUrban');
 				break;
 			} else if (toggle03Control == true) {
 				document.getElementById(source).style.background = "#fff";
 				toggle03Control = false;
+				
+				var a;
+				for(a=0; a < pointLayerNames.length; a++){
+					var placeholder = pointsLayerNames[a];
+					var index = opacityLayers.indexOf(placeholder);
+					if (index != -1){
+						opacityLayers.splice(index, 1);
+					}
+				}
 				break;
 			}
 		case "toggle04":
