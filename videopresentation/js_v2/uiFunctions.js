@@ -139,12 +139,12 @@ function circleToggleColor(source) {
 				document.getElementById(source).style.background = "#fff";
 				toggle03Control = false;
 				
-				var a;
-				for(a=0; a < pointLayerNames.length; a++){
-					var placeholder = pointsLayerNames[a];
-					var index = opacityLayers.indexOf(placeholder);
-					if (index != -1){
-						opacityLayers.splice(index, 1);
+				var ab;
+				for(ab=0; ab < pointLayerNames.length; ab++){
+					var placeholder02 = pointLayerNames[ab];
+					var index02 = opacityLayers.indexOf(placeholder02);
+					if (index02 != -1){
+						opacityLayers.splice(index02, 1);
 					}
 				}
 				break;
