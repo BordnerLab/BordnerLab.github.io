@@ -79,6 +79,8 @@ function onCircleChange (e) {
 	var n;
 	for (n=0; n < opacityLayers.length; n++) {
 		map.setPaintProperty(opacityLayers[n], 'fill-opacity', parseInt(circleValue, 10) / 100);
+		map.setPaintProperty(lineOpacityLayers[n], 'line-opacity', parseInt(circleValue, 10) / 100);
+		map.setPaintProperty(symbolOpacityLayers[n], 'icon-opacity', parseInt(circleValue, 10) / 100);
 	}
 };
 
