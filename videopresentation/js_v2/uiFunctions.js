@@ -154,10 +154,21 @@ function circleToggleColor(source) {
 				document.getElementById(source).style.background = "#5499C7";
 				toggle04Control = true;
 				
+				opacityLayers.push('naturalLines', 'manLines');
+				break;
+				
 			} else if (toggle04Control == true) {
 				document.getElementById(source).style.background = "#fff";
 				toggle04Control = false;
 				
+				var bc;
+				for(bc=0; bc < lineLayerNames.length; bc++){
+					var placeholder03 = lineLayerNames[bc];
+					var index03 = opacityLayers.indexOf(placeholder03);
+					if (index03 != -1){
+						opacityLayers.splice(index03, 1);
+					}
+				}
 			}
 	}
 };

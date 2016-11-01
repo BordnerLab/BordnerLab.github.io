@@ -52,6 +52,11 @@ var pointLayerNames = [
 	"pointsUrban"
 ];
 
+var lineLayerNames = [
+	"naturalLines",
+	"manLines"
+];
+
 var mainLegend = [
 	["AG", "#E59966", "Agriculture"],
 	["UR", "#C0392A", "Urban"],
