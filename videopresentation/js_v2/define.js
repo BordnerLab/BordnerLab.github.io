@@ -84,7 +84,7 @@ var pointLayers = [
 
 var combinationLayers = [
 	['A3', '#fbb03b', 'Swamp Hardwoods'],
-	['A4', '#223b53', 'Tagalder, Willow, Dogwood, Etc.'],
+	['A4', '#2980B9', 'Tagalder, Willow, Dogwood, Etc.'],
 	['B4', '#e55e5e', 'Cat Tail Marsh'],
 	['C4', '#3bb2d0', 'Grass Marsh'],
 	['C4b', '#ccc', 'Sedge Marsh'],
@@ -169,7 +169,7 @@ var combinationLayers = [
 
 var wetlandsLayers = [
 	['A3', '#fbb03b', 'Swamp Hardwoods'],
-	['A4', '#223b53', 'Tagalder, Willow, Dogwood, Etc.'],
+	['A4', '#2980B9', 'Tagalder, Willow, Dogwood, Etc.'],
 	['B4', '#e55e5e', 'Cat Tail Marsh'],
 	['C4', '#3bb2d0', 'Grass Marsh'],
 	['C4b', '#ccc', 'Sedge Marsh']
