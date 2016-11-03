@@ -188,6 +188,7 @@ function circleToggleColor(source) {
 			if (toggle04Control == false) {
 				document.getElementById(source).style.background = "#5499C7";
 				toggle04Control = true;
+				document.getElementById('legendv2line').style.visibility = "visible";
 				
 				lineOpacityLayers.push('lineMerge');
 				map.setLayoutProperty('lineMerge', 'visibility', 'visible');
@@ -205,6 +206,7 @@ function circleToggleColor(source) {
 			} else if (toggle04Control == true) {
 				document.getElementById(source).style.background = "#fff";
 				toggle04Control = false;
+				document.getElementById('legendv2line').style.visibility = "hidden";
 				
 				map.setLayoutProperty('lineMerge', 'visibility', 'none');
 				
