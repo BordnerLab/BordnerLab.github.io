@@ -86,6 +86,9 @@ var pointLayers = [
 ];
 
 var filterPointLayer = [];
+var filtersForPoints = [
+	"all"
+];
 
 var lineLayers = [
 	['ARR', 'Abandoned Railroad'],
