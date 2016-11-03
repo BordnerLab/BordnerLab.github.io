@@ -85,7 +85,7 @@ var pointLayers = [
 	['VH', 'Vacant House', 'VHpoint']
 ];
 
-var filterPointLayer [];
+var filterPointLayer = [];
 
 var lineLayers = [
 	['ARR', 'Abandoned Railroad'],
