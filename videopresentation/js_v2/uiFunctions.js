@@ -103,7 +103,13 @@ function circleToggleColor(source) {
 				document.getElementById(source).style.background = "#5499C7";
 				toggle01Control = true;
 				
-				opacityLayers.push('Agriculture', 'Deciduous Forest', 'Other', 'Urban', 'Barren', 'Shrubland', 'Wetlands', 'Coniferous Forest', 'Mixed Forest', 'Unknown Cover');
+				var xc;
+				for(xc=0; xc < landcoverLayers.length; xc++){
+					var placeholderxc = landcoverLayers[xc];
+					map.setLayoutProperty(placeholderxc, 'visibility', 'visible');
+					opacityLayers.push(placeholderxc);
+				}
+				
 				break;
 			} else if (toggle01Control == true) {
 				document.getElementById(source).style.background = "#fff";
@@ -112,6 +118,7 @@ function circleToggleColor(source) {
 				var a;
 				for(a=0; a < landcoverLayers.length; a++){
 					var placeholder = landcoverLayers[a];
+					map.setLayoutProperty(placeholder, 'visibility', 'none');
 					var index = opacityLayers.indexOf(placeholder);
 					if (index != -1){
 						opacityLayers.splice(index, 1);
@@ -125,11 +132,15 @@ function circleToggleColor(source) {
 				document.getElementById(source).style.background = "#5499C7";
 				toggle02Control = true;
 				
+				map.setLayoutProperty('coastalWaters', 'visibility', 'visible');
+				
 				opacityLayers.push('coastalWaters');
 				break;
 			} else if (toggle02Control == true) {
 				document.getElementById(source).style.background = "#fff";
 				toggle02Control = false;
+				
+				map.setLayoutProperty('coastalWaters', 'visibility', 'none');
 				
 				var index2 = opacityLayers.indexOf('coastalWaters');
 				if (index != -1){
@@ -143,7 +154,13 @@ function circleToggleColor(source) {
 				document.getElementById(source).style.background = "#5499C7";
 				toggle03Control = true;
 				
-				symbolOpacityLayers.push('pointsErosion', 'pointsCemetery', 'pointsResidence', 'pointsFarm', 'pointsUnknown', 'pointsOther', 'pointsSpring', 'pointsUrban');
+				var xv;
+				for(xv=0; xv < pointLayerNames.length; xv++){
+					var placeholderxv = pointLayerNames[xv];
+					map.setLayoutProperty(placeholderxv, 'visibility', 'visible');
+					symbolOpacityLayers.push(placeholderxv);
+				}
+			
 				break;
 			} else if (toggle03Control == true) {
 				document.getElementById(source).style.background = "#fff";
@@ -152,6 +169,8 @@ function circleToggleColor(source) {
 				var ab;
 				for(ab=0; ab < pointLayerNames.length; ab++){
 					var placeholder02 = pointLayerNames[ab];
+					map.setLayoutProperty('placeholder02', 'visibility', 'none');
+					
 					var index02 = symbolOpacityLayers.indexOf(placeholder02);
 					if (index02 != -1){
 						symbolOpacityLayers.splice(index02, 1);
@@ -164,7 +183,13 @@ function circleToggleColor(source) {
 				document.getElementById(source).style.background = "#5499C7";
 				toggle04Control = true;
 				
-				lineOpacityLayers.push('naturalLines', 'manLines');
+				var xb;
+				for(xb=0; xb < lineLayerNames.length; xb++){
+					var placeholderxb = lineLayerNames[xb];
+					map.setLayoutProperty(placeholderxb, 'visibility', 'visible');
+					lineOpacityLayers.push(placeholderxb);
+				}
+				
 				break;
 				
 			} else if (toggle04Control == true) {
@@ -174,6 +199,8 @@ function circleToggleColor(source) {
 				var bc;
 				for(bc=0; bc < lineLayerNames.length; bc++){
 					var placeholder03 = lineLayerNames[bc];
+					map.setLayoutProperty(placeholder03, 'visibility', 'none');
+					
 					var index03 = lineOpacityLayers.indexOf(placeholder03);
 					if (index03 != -1){
 						lineOpacityLayers.splice(index03, 1);
