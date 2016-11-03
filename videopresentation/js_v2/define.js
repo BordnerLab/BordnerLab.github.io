@@ -4,6 +4,7 @@ var clickedCountyName;
 
 var hoveredCountyLandcover;
 var hoveredCountyPoint;
+var hoveredCountyLine;
 
 var legendHoverCover;
 	
@@ -84,7 +85,23 @@ var pointLayers = [
 ];
 
 var lineLayers = [
-	
+	['ARR', 'Abandoned Railroad'],
+	['BL', 'Shoreline'],
+	['CB', 'Civil Town Boundary'],
+	['DD', 'Drainage Ditch'],
+	['FL', 'Non-drivable Fire Lane'],
+	['HR', 'Hard Surfaced Road'],
+	['I', 'Intermittent Stream'],
+	['ID', 'Improved Dirt Road'],
+	['IG', 'Improved Gravel Road'],
+	['PL', 'Power Line'],
+	['R', 'Stream'],
+	['RR', 'Railroad'],
+	['TL', 'Telephone Line'],
+	['TR', 'Trail'],
+	['U', 'Unknown'],
+	['UD', 'Unimproved Dirt Road'],
+	['UG', 'Unimproved Gravel Road']
 ];
 
 var combinationLayers = [

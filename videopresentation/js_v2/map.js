@@ -140,7 +140,7 @@ map.on('load', function () {
 			popup.setLngLat(e.lngLat)
 				.setHTML(feature.properties.COUNTY_NAM)
 				.addTo(map);
-		} else if (feature.layer.id != "county-fills" && feature.layer.type != "circle") {
+		} else if (feature.layer.id != "county-fills" && feature.layer.type != "circle" && feature.layer.type != "line") {
 			findLongCoverName(feature);
 			var textInPopUp = feature.properties.Cov1 + ": " + hoveredCountyLandcover + "<br>" + "Min Diam: " + feature.properties.MinDiam1 +
 			"<br>" + "Max Diam: " + feature.properties.MaxDiam1 + "<br>" + "Density: " + feature.properties.Den1;
@@ -151,6 +151,11 @@ map.on('load', function () {
 			findLongPointName(feature);
 			popup.setLngLat(e.lngLat)
 				.setHTML(feature.properties.Point_Type + ": " + hoveredCountyPoint)
+				.addTo(map);
+		} else if (feature.layer.type == "line") {
+			findLongLineName(feature);
+			popup.setLngLat(e.lngLat)
+				.setHTML(feature.properties.Line_Type + ": " + hoveredCountyLine)
 				.addTo(map);
 		}
 	});
@@ -233,4 +238,14 @@ function findLongPointName(source) {
 		}
 	}
 	return hoveredCountyPoint;
+};
+
+function findLongLineName(source) {
+	var b;
+	for (b=0; b < lineLayers.length; b++) {
+		if (source.properties.Line_Type == lineLayers[b][0]) {
+			hoveredCountyLine = lineLayers[b][1];
+		}
+	}
+	return hoveredCountyLine;
 };
