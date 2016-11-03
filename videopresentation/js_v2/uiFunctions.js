@@ -738,6 +738,7 @@ function showMorePolyInfo(source) {
 function showPoints(source) {
 	var placeholder = document.getElementById(source);
 	if (placeholder.style.background != '#fff') {
+		alert('forward');
 		placeholder.style.background = '#fff';
 		var a;
 		for (a=0; a < pointLayers.length; a++){
@@ -745,12 +746,12 @@ function showPoints(source) {
 				addPointToFilter = pointLayers[a][0];
 				filterPointLayer.push(addPointToFilter);
 				filtersForPoints.push(['!=', 'Point_Type', addPointToFilter]);
-				console.log(filtersForPoints);
 			}
 		}
 		
 		map.setFilter('pointMerge', filtersForPoints);
 	} else if (placeholder.style.background == '#fff') {
+		alert('back');
 		placeholder.style.background = "";
 		
 		var b;
