@@ -189,12 +189,16 @@ function circleToggleColor(source) {
 				document.getElementById(source).style.background = "#5499C7";
 				toggle04Control = true;
 				
+				lineOpacityLayers.push('lineMerge');
+				map.setLayoutProperty('lineMerge', 'visibility', 'visible');
+				/*
 				var xb;
 				for(xb=0; xb < lineLayerNames.length; xb++){
 					var placeholderxb = lineLayerNames[xb];
 					map.setLayoutProperty(placeholderxb, 'visibility', 'visible');
 					lineOpacityLayers.push(placeholderxb);
 				}
+				*/
 				
 				break;
 				
@@ -202,10 +206,11 @@ function circleToggleColor(source) {
 				document.getElementById(source).style.background = "#fff";
 				toggle04Control = false;
 				
+				map.setLayoutProperty('lineMerge', 'visibility', 'none');
+				
 				var bc;
 				for(bc=0; bc < lineLayerNames.length; bc++){
 					var placeholder03 = lineLayerNames[bc];
-					map.setLayoutProperty(placeholder03, 'visibility', 'none');
 					
 					var index03 = lineOpacityLayers.indexOf(placeholder03);
 					if (index03 != -1){

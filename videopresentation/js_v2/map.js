@@ -53,8 +53,7 @@ map.on('load', function () {
 	addCountyInitial();
 	
 	map.setLayoutProperty('pointMerge', 'visibility', 'none');
-	map.setLayoutProperty('manLines', 'visibility', 'none');
-	map.setLayoutProperty('naturalLines', 'visibility', 'none');
+	map.setLayoutProperty('lineMerge', 'visibility', 'none');
 	
 	map.setPaintProperty('pointMerge', 'circle-color', {
 		property: 'Point_Type',

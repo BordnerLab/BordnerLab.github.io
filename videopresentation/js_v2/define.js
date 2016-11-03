@@ -39,8 +39,7 @@ var pointLayerNames = [
 ];
 
 var lineLayerNames = [
-	"naturalLines",
-	"manLines"
+	"lineMerge"
 ];
 
 var mainLegend = [
