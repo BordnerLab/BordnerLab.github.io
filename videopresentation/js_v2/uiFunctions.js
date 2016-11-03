@@ -745,8 +745,8 @@ function showPoints(source) {
 			if(pointLayers[a][2] == source) {
 				addPointToFilter = pointLayers[a][0];
 				filterPointLayer.push(addPointToFilter);
-				filterForPoints.push(['==', 'Point_Type', addPointToFilter]);
-				console.log(filterForPoints);
+				filtersForPoints.push(['==', 'Point_Type', addPointToFilter]);
+				console.log(filtersForPoints);
 			}
 		}
 		
