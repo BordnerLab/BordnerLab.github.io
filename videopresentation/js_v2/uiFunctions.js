@@ -735,6 +735,35 @@ function showMorePolyInfo(source) {
 }
 
 
+function showPoints(source) {
+	var placeholder = document.getElementById('Cpoint');
+	if (placeholder.style.background != '#fff') {
+		placeholder.style.background == '#fff';
+		var a;
+		for (a=0; a < pointLayers.length; a++){
+			if(pointLayers[a][2] == source) {
+				addPointToFilter = pointLayers[a][0];
+				filterPointLayer.push(addPointToFilter);
+			}
+		}
+		
+		map.setFilter('pointMerge', ["!=", 'Point_Type', filterPointLayer]);
+	} else if (placeholder.style.background == '#fff') {
+		placeholder.style.background = "";
+		
+		var b;
+		for(b=0; b < pointLayers.length; b++){
+			var placeholder2 = pointLayers[b][0];
+			var index = filterPointLayer.indexOf(placeholder2);
+			if (index != -1){
+				filterPointLayer.splice(index, 1);
+			}
+		}
+		map.setFilter('pointMerge', ["!=", 'Point_Type', filterPointLayer]);
+	}
+};
+
+
 
 
 

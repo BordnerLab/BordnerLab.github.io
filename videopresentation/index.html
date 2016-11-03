@@ -29,7 +29,6 @@
 	<div class="myWrapper">
 	<div id='map'></div>
 	
-	<div id='control-container'></div>
 	<!--
 	<div class='calculation-box'>
 		<p>Draw a polygon using the draw tools.</p>
@@ -99,79 +98,79 @@
 	
 	<div id='legendv2point' class="scroll-pane">
 		<div class="legendSquare">
-			<div id="C" class="circleLegend" style="background: #E6B0AA;">Cemetery</div>
+			<div id="Cpoint" class="circleLegend" onclick = "showPoints(source)" style="background: #E6B0AA;">Cemetery</div>
 		</div>
 		<div class="legendSquare">
-			<div id="CF" class="circleLegend" style="background: #D2B4DE;">Cheese Factory</div>
+			<div id="CFpoint" class="circleLegend" style="background: #D2B4DE;">Cheese Factory</div>
 		</div>
 		<div class="legendSquare">
-			<div id="CH" class="circleLegend" style="background: #A9CCE3;">Church</div>
+			<div id="CHpoint" class="circleLegend" style="background: #A9CCE3;">Church</div>
 		</div>
 		<div class="legendSquare">
-			<div id="CR" class="circleLegend" style="background: #A2D9CE;">Cannery</div>
+			<div id="CRpoint" class="circleLegend" style="background: #A2D9CE;">Cannery</div>
 		</div>
 		<div class="legendSquare">
-			<div id="E" class="circleLegend" style="background: #ABEBC6;">Erosion</div>
+			<div id="Epoint" class="circleLegend" style="background: #ABEBC6;">Erosion</div>
 		</div>
 		<div class="legendSquare">
-			<div id="F/G" class="circleLegend" style="background: #F9E79F;">Fill Station/Garage</div>
+			<div id="F/Gpoint" class="circleLegend" style="background: #F9E79F;">Fill Station/Garage</div>
 		</div>
 		<div class="legendSquare">
-			<div id="FB" class="circleLegend" style="background: #EDBB99;">Farm</div>
+			<div id="FBpoint" class="circleLegend" style="background: #EDBB99;">Farm</div>
 		</div>
 		<div class="legendSquare">
-			<div id="FF" class="circleLegend" style="background: #CD6155;">Fur Farm</div>
+			<div id="FFpoint" class="circleLegend" style="background: #CD6155;">Fur Farm</div>
 		</div>
 		<div class="legendSquare">
-			<div id="FT" class="circleLegend" style="background: #E59966;">Fire Tower</div>
+			<div id="FTpoint" class="circleLegend" style="background: #E59966;">Fire Tower</div>
 		</div>
 		<div class="legendSquare">
-			<div id="GC" class="circleLegend" style="background: #28B463;">Golf Course</div>
+			<div id="GCpoint" class="circleLegend" style="background: #28B463;">Golf Course</div>
 		</div>
 		<div class="legendSquare">
-			<div id="GL" class="circleLegend" style="background: #FADBD8;">Grist Mill</div>
+			<div id="GLpoint" class="circleLegend" style="background: #FADBD8;">Grist Mill</div>
 		</div>
 		<div class="legendSquare">
-			<div id="GP" class="circleLegend" style="background: #EB984E;">Gravel Pit</div>
+			<div id="GPpoint" class="circleLegend" style="background: #EB984E;">Gravel Pit</div>
 		</div>
 		<div class="legendSquare">
-			<div id="H" class="circleLegend" style="background: #F4D03F;">Hotel</div>
+			<div id="Hpoint" class="circleLegend" style="background: #F4D03F;">Hotel</div>
 		</div>
 		<div class="legendSquare">
-			<div id="O" class="circleLegend" style="background: #58D68D;">Orchard</div>
+			<div id="Opoint" class="circleLegend" style="background: #58D68D;">Orchard</div>
 		</div>
 		<div class="legendSquare">
-			<div id="OH" class="circleLegend" style="background: #48C9B0;">Occupied House</div>
+			<div id="OHpoint" class="circleLegend" style="background: #48C9B0;">Occupied House</div>
 		</div>
 		<div class="legendSquare">
-			<div id="OSCH" class="circleLegend" style="background: #5499C7;">Occupied School</div>
+			<div id="OSCHpoint" class="circleLegend" style="background: #5499C7;">Occupied School</div>
 		</div>
 		<div class="legendSquare">
-			<div id="Qu" class="circleLegend" style="background: #AF7AC5;">Quarry</div>
+			<div id="Qupoint" class="circleLegend" style="background: #AF7AC5;">Quarry</div>
 		</div>
 		<div class="legendSquare">
-			<div id="S" class="circleLegend" style="background: #EC7063;">Store</div>
+			<div id="Spoint" class="circleLegend" style="background: #EC7063;">Store</div>
 		</div>
 		<div class="legendSquare">
-			<div id="SH" class="circleLegend" style="background: #F5CBA7;">Summer House</div>
+			<div id="SHpoint" class="circleLegend" style="background: #F5CBA7;">Summer House</div>
 		</div>
 		<div class="legendSquare">
-			<div id="SL" class="circleLegend" style="background: #FAD7A0;">Saw Mill</div>
+			<div id="SLpoint" class="circleLegend" style="background: #FAD7A0;">Saw Mill</div>
 		</div>
 		<div class="legendSquare">
-			<div id="SP" class="circleLegend" style="background: #A9DFBF;">Spring</div>
+			<div id="SPpoint" class="circleLegend" style="background: #A9DFBF;">Spring</div>
 		</div>
 		<div class="legendSquare">
-			<div id="T" class="circleLegend" style="background: #A3E4D7;">Tavern</div>
+			<div id="Tpoint" class="circleLegend" style="background: #A3E4D7;">Tavern</div>
 		</div>
 		<div class="legendSquare">
-			<div id="TH" class="circleLegend" style="background: #AED6F1;">Townhall</div>
+			<div id="THpoint" class="circleLegend" style="background: #AED6F1;">Townhall</div>
 		</div>
 		<div class="legendSquare">
-			<div id="U" class="circleLegend" style="background: #D7BDE2;">U - Unknown</div>
+			<div id="Upoint" class="circleLegend" style="background: #D7BDE2;">U - Unknown</div>
 		</div>
 		<div class="legendSquare">
-			<div id="VH" class="circleLegend" style="background: #F5B7B1;">Vacant House</div>
+			<div id="VHpoint" class="circleLegend" style="background: #F5B7B1;">Vacant House</div>
 		</div>
 	</div>
 	

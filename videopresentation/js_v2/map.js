@@ -10,11 +10,6 @@ var map = new mapboxgl.Map({
 	pitch: 0.1
 });
 
-var controller = new mapboxgl.NavigationControl({
-	container: 'control-container'
-});
-
-map.addControl(controller);
 
 // disable map rotation using right click + drag
 map.dragRotate.disable();
