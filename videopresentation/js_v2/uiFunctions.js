@@ -736,10 +736,9 @@ function showMorePolyInfo(source) {
 
 
 function showPoints(source) {
-	alert('clicked');
 	var placeholder = document.getElementById(source);
 	if (placeholder.style.background != '#fff') {
-		placeholder.style.background == '#fff';
+		placeholder.style.background = '#fff';
 		var a;
 		for (a=0; a < pointLayers.length; a++){
 			if(pointLayers[a][2] == source) {
@@ -766,6 +765,14 @@ function showPoints(source) {
 	}
 };
 
+function showLines(source) {
+	var lineHolder = document.getElementById(source);
+	if (lineHolder.style.background != '#fff') {
+		lineHolder.style.background = '#fff';
+	} else if (lineHolder.style.background == '#fff') {
+		lineHolder.style.background = '';
+	}
+};
 
 
 

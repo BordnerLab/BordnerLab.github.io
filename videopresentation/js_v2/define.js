@@ -91,23 +91,28 @@ var filtersForPoints = [
 ];
 
 var lineLayers = [
-	['ARR', 'Abandoned Railroad'],
-	['BL', 'Shoreline'],
-	['CB', 'Civil Town Boundary'],
-	['DD', 'Drainage Ditch'],
-	['FL', 'Non-drivable Fire Lane'],
-	['HR', 'Hard Surfaced Road'],
-	['I', 'Intermittent Stream'],
-	['ID', 'Improved Dirt Road'],
-	['IG', 'Improved Gravel Road'],
-	['PL', 'Power Line'],
-	['R', 'Stream'],
-	['RR', 'Railroad'],
-	['TL', 'Telephone Line'],
-	['TR', 'Trail'],
-	['U', 'Unknown'],
-	['UD', 'Unimproved Dirt Road'],
-	['UG', 'Unimproved Gravel Road']
+	['ARR', 'Abandoned Railroad', 'Arrline'],
+	['BL', 'Shoreline', 'BLline'],
+	['CB', 'Civil Town Boundary', 'CBline'],
+	['DD', 'Drainage Ditch', 'DDline'],
+	['FL', 'Non-drivable Fire Lane', 'FLline'],
+	['HR', 'Hard Surfaced Road', 'HRline'],
+	['I', 'Intermittent Stream', 'Iline'],
+	['ID', 'Improved Dirt Road', 'IDline'],
+	['IG', 'Improved Gravel Road', 'IGline'],
+	['PL', 'Power Line', 'PLline'],
+	['R', 'Stream', 'Rline'],
+	['RR', 'Railroad', 'RRline'],
+	['TL', 'Telephone Line', 'TLline'],
+	['TR', 'Trail', 'TRline'],
+	['U', 'Unknown', 'Uline'],
+	['UD', 'Unimproved Dirt Road', 'UDline'],
+	['UG', 'Unimproved Gravel Road', 'UGline']
+];
+
+var filterLineLayer = [];
+var filtersForLines = [
+	"all"
 ];
 
 var combinationLayers = [
