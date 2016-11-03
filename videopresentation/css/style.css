@@ -19,6 +19,14 @@
 .mapboxgl-popup {
 
 }
+
+#control-container {
+	position: absolute;
+	top:0;
+	left:0;
+	width: auto;
+	height: auto;
+}
 		
 #geocoder-container {
 	position: absolute;
