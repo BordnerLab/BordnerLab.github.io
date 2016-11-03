@@ -19,7 +19,8 @@ var hoverLayers = [
 	"Coniferous Forest",
 	"Mixed Forest",
 	"Unknown Cover",
-	"pointMerge"
+	"pointMerge",
+	"lineMerge"
 ];
 
 var landcoverLayers = [
