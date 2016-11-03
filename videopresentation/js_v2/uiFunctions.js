@@ -741,6 +741,7 @@ function showPoints(source) {
 		
 		placeholder.classList.add("filterPoint");
 		placeholder.style.background = '#fff';
+		placeholder.style.color = 'grey';
 		var a;
 		for (a=0; a < pointLayers.length; a++){
 			if(pointLayers[a][2] == source) {
@@ -758,6 +759,7 @@ function showPoints(source) {
 		for (v=0; v < pointLayers.length; v++){
 			if(pointLayers[v][2] == source) {
 				placeholder.style.background = pointLayers[v][3];
+				placeholder.style.color = 'black';
 			}
 		}
 		
