@@ -737,7 +737,7 @@ function showMorePolyInfo(source) {
 
 function showPoints(source) {
 	var placeholder = document.getElementById(source);
-	if (($(source).hasClass("filterPoint")) == false) {
+	if (placeholder.classList.contains("filterPoint") == false) {
 		
 		placeholder.classList.add("filterPoint");
 		placeholder.style.background = '#fff';
@@ -751,7 +751,7 @@ function showPoints(source) {
 		}
 		
 		map.setFilter('pointMerge', filtersForPoints);
-	} else if (($(source).hasClass("filterPoint")) == true) {
+	} else if (placeholder.classList.contains("filterPoint") == true) {
 		placeholder.classList.remove("filterPoint");
 		placeholder.style.background = "";
 		
