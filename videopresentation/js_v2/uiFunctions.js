@@ -157,6 +157,7 @@ function circleToggleColor(source) {
 			if (toggle03Control == false) {
 				document.getElementById(source).style.background = "#5499C7";
 				toggle03Control = true;
+				document.getElementById('legendv2point').style.visibility = "visible";
 				
 				symbolOpacityLayers.push('pointMerge');
 				map.setLayoutProperty('pointMerge', 'visibility', 'visible');
@@ -165,6 +166,7 @@ function circleToggleColor(source) {
 			} else if (toggle03Control == true) {
 				document.getElementById(source).style.background = "#fff";
 				toggle03Control = false;
+				document.getElementById('legendv2point').style.visibility = "hidden";
 				
 				map.setLayoutProperty('pointMerge', 'visibility', 'none');
 				
