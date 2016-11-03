@@ -42,14 +42,7 @@ var landcoverLayers = [
 ];
 
 var pointLayerNames = [
-	"pointsErosion",
-	"pointsCemetery",
-	"pointsResidence",
-	"pointsFarm",
-	"pointsUnknown",
-	"pointsOther",
-	"pointsSpring",
-	"pointsUrban"
+	"pointMerge"
 ];
 
 var lineLayerNames = [

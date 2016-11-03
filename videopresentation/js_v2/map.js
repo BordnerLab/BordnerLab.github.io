@@ -52,6 +52,39 @@ map.on('load', function () {
 		
 	addCountyInitial();
 	
+	map.setLayoutProperty('pointMerge', 'visibility', 'none');
+	map.setLayoutProperty('manLines', 'visibility', 'none');
+	map.setLayoutProperty('naturalLines', 'visibility', 'none');
+	
+	map.setPaintProperty('pointMerge', 'circle-color', {
+		property: 'Point_Type',
+		type: 'categorical',
+		stops: [
+			['C', '#fff'],
+			['CF', '#fff'],
+			['CH', '#fff'],
+			['CR', '#fff'],
+			['E', '#fff'],
+			['F/G', '#fff'],
+			['FB', '#fff'],
+			['FF', '#fff'],
+			['FT', '#fff'],
+			['GC', '#fff'],
+			['GP', '#fff'],
+			['H', '#fff'],
+			['O', '#fff'],
+			['OH', '#fff'],
+			['OSCH', '#fff'],
+			['Qu', '#fff'],
+			['S', '#fff'],
+			['SH', '#fff'],
+			['SL', '#fff'],
+			['SP', '#fff'],
+			['T', '#fff'],
+			['TH', '#fff'],
+			['U', '#fff'],
+			['VH', '#fff']]
+	});
 	
 	
 		
@@ -84,14 +117,14 @@ map.on('load', function () {
 			popup.setLngLat(e.lngLat)
 				.setHTML(feature.properties.COUNTY_NAM)
 				.addTo(map);
-		} else if (feature.layer.id != "county-fills" && feature.layer.type != "symbol") {
+		} else if (feature.layer.id != "county-fills" && feature.layer.type != "circle") {
 			findLongCoverName(feature);
 			var textInPopUp = feature.properties.Cov1 + ": " + hoveredCountyLandcover + "<br>" + "Min Diam: " + feature.properties.MinDiam1 +
 			"<br>" + "Max Diam: " + feature.properties.MaxDiam1 + "<br>" + "Density: " + feature.properties.Den1;
 			popup.setLngLat(e.lngLat)
 				.setHTML(textInPopUp)
 				.addTo(map);
-		} else if (feature.layer.type == "symbol") {
+		} else if (feature.layer.type == "circle") {
 			findLongPointName(feature);
 			popup.setLngLat(e.lngLat)
 				.setHTML(feature.properties.Point_Type + ": " + hoveredCountyPoint)

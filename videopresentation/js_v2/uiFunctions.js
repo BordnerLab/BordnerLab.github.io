@@ -88,7 +88,7 @@ function onCircleChange (e) {
 	
 	var nb;
 	for (nb=0; nb < symbolOpacityLayers.length; nb++) {
-		map.setPaintProperty(symbolOpacityLayers[nb], 'icon-opacity', parseInt(circleValue, 10) / 100);
+		map.setPaintProperty(symbolOpacityLayers[nb], 'circle-opacity', parseInt(circleValue, 10) / 100);
 	}
 };
 
