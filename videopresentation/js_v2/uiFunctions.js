@@ -737,9 +737,9 @@ function showMorePolyInfo(source) {
 
 function showPoints(source) {
 	var placeholder = document.getElementById(source);
-	console.log(source.style.background);
-	console.log(placeholder);
-	if (placeholder.style.background != '#fff') {
+	if (($(source).hasClass("filterPoint")) == false) {
+		
+		$(source).addClass("filterPoint");
 		placeholder.style.background = '#fff';
 		var a;
 		for (a=0; a < pointLayers.length; a++){
@@ -751,7 +751,8 @@ function showPoints(source) {
 		}
 		
 		map.setFilter('pointMerge', filtersForPoints);
-	} else if (placeholder.style.background == '#fff') {
+	} else if (($(source).hasClass("filterPoint")) == true) {
+		$(source).removeClass("filterPoint");
 		placeholder.style.background = "";
 		
 		var b;
