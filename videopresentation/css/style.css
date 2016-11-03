@@ -136,6 +136,51 @@
 	margin-left:2px;
 	z-index: 1000;
 }
+
+#legendv2point {
+	position: absolute;
+	width: 125px;
+	height: 50vh;
+	bottom:0;
+	right: 0px;
+	background: #FBFCFC;
+	-moz-box-shadow: 1px 2px 2px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 1px 2px 2px rgba(0,0,0,0.1);
+	box-shadow: 1px 2px 0px 2px rgba(0,0,0,0.1);
+	overflow: auto;
+}
+
+#legendv2point .legendSquare {
+	height: auto;
+	width: 100%;
+	background: #FBFCFC;
+	margin-top:10px;
+	z-index: 1000;
+}
+
+#legendv2point .legendSquarev2 {
+	height: auto;
+	padding-top:5px;
+	padding-bottom:5px;
+	width: 100%;
+	background: #5499C7;
+	cursor:pointer;
+	margin-left:0px;
+	text-align:center;
+}
+
+#legendv2point .legendSquare .circleLegend {
+	text-align:center;
+	font-size: 12px;
+	border-radius: 25px;
+	cursor: pointer;
+	height: auto;
+	width: 120px;
+	border: .1px solid black;
+	margin-left:2px;
+	z-index: 1000;
+}
+
 #legendv2Info {
 	position: absolute;
 	color:black;

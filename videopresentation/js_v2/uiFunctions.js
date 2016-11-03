@@ -104,6 +104,7 @@ function circleToggleColor(source) {
 			if (toggle01Control == false) {
 				document.getElementById(source).style.background = "#5499C7";
 				toggle01Control = true;
+				document.getElementById('legendv2').style.visibility = 'visible';
 				
 				var xc;
 				for(xc=0; xc < landcoverLayers.length; xc++){
@@ -116,6 +117,7 @@ function circleToggleColor(source) {
 			} else if (toggle01Control == true) {
 				document.getElementById(source).style.background = "#fff";
 				toggle01Control = false;
+				document.getElementById('legendv2').style.visibility = 'hidden';
 				
 				var a;
 				for(a=0; a < landcoverLayers.length; a++){
