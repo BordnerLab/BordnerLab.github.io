@@ -736,7 +736,8 @@ function showMorePolyInfo(source) {
 
 
 function showPoints(source) {
-	var placeholder = document.getElementById('Cpoint');
+	alert('clicked');
+	var placeholder = document.getElementById(source);
 	if (placeholder.style.background != '#fff') {
 		placeholder.style.background == '#fff';
 		var a;
