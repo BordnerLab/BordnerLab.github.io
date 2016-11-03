@@ -160,7 +160,7 @@ map.on('load', function () {
 			findLongPointName(feature);
 			popup.setLngLat(e.lngLat)
 				.setHTML(feature.properties.Point_Type + ": " + hoveredCountyPoint + "<br>" + "Number of Houses: " + feature.properties.Num_of_Hou + 
-				"<br>" + "Distance to Road: " + feature.properties.Dis_to_Roa);
+				"<br>" + "Distance to Road: " + feature.properties.Dis_to_Roa)
 				.addTo(map);
 		} else if (feature.layer.type == "line") {
 			findLongLineName(feature);
