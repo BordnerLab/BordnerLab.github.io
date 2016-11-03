@@ -154,22 +154,18 @@ function circleToggleColor(source) {
 				document.getElementById(source).style.background = "#5499C7";
 				toggle03Control = true;
 				
-				var xv;
-				for(xv=0; xv < pointLayerNames.length; xv++){
-					var placeholderxv = pointLayerNames[xv];
-					map.setLayoutProperty(placeholderxv, 'visibility', 'visible');
-					symbolOpacityLayers.push(placeholderxv);
-				}
+				map.setLayoutProperty('pointMerge', 'visibility', 'visible');
 			
 				break;
 			} else if (toggle03Control == true) {
 				document.getElementById(source).style.background = "#fff";
 				toggle03Control = false;
 				
+				map.setLayoutProperty('pointMerge', 'visibility', 'none');
+				
 				var ab;
 				for(ab=0; ab < pointLayerNames.length; ab++){
 					var placeholder02 = pointLayerNames[ab];
-					map.setLayoutProperty('placeholder02', 'visibility', 'none');
 					
 					var index02 = symbolOpacityLayers.indexOf(placeholder02);
 					if (index02 != -1){
