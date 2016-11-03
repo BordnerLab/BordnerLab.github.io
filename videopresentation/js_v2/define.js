@@ -18,14 +18,7 @@ var hoverLayers = [
 	"Coniferous Forest",
 	"Mixed Forest",
 	"Unknown Cover",
-	"pointsUnknown",
-	"pointsOther",
-	"pointsSpring",
-	"pointsUrban",
-	"pointsFarm",
-	"pointsResidence",
-	"pointsCemetery",
-	"pointsErosion"
+	"pointMerge"
 ];
 
 var landcoverLayers = [
@@ -301,6 +294,16 @@ var toggle03Control = false;
 var toggle04Control = false;
 
 var opacityLayers = [
+	"Agriculture",
+	"Deciduous Forest",
+	"Other",
+	"Urban",
+	"Barren",
+	"Shrubland",
+	"Wetlands",
+	"Coniferous Forest",
+	"Mixed Forest",
+	"Unknown Cover",
 	"coastalWaters"
 ];
 
