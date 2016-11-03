@@ -86,13 +86,12 @@ function onCircleChange (e) {
 		map.setPaintProperty(lineOpacityLayers[na], 'line-opacity', parseInt(circleValue, 10) / 100);
 	}
 	
-	map.setPaintProperty('pointMerge', 'circle-opacity', parseInt(circleValue, 10) / 100);
-	/*
+	
 	var nb;
 	for (nb=0; nb < symbolOpacityLayers.length; nb++) {
 		map.setPaintProperty(symbolOpacityLayers[nb], 'circle-opacity', parseInt(circleValue, 10) / 100);
 	}
-	*/
+	
 };
 
 function circleToolTip(args) {
@@ -157,6 +156,7 @@ function circleToggleColor(source) {
 				document.getElementById(source).style.background = "#5499C7";
 				toggle03Control = true;
 				
+				symbolOpacityLayers.push('pointMerge');
 				map.setLayoutProperty('pointMerge', 'visibility', 'visible');
 			
 				break;
