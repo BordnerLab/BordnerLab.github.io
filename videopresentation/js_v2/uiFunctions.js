@@ -746,6 +746,7 @@ function showPoints(source) {
 			if(pointLayers[a][2] == source) {
 				addPointToFilter = pointLayers[a][0];
 				filterPointLayer.push(addPointToFilter);
+				console.log(filterPointLayer);
 				filtersForPoints.push(['!=', 'Point_Type', addPointToFilter]);
 			}
 		}
@@ -753,7 +754,12 @@ function showPoints(source) {
 		map.setFilter('pointMerge', filtersForPoints);
 	} else if (placeholder.classList.contains("filterPoint") == true) {
 		placeholder.classList.remove("filterPoint");
-		placeholder.style.background = "";
+		var v;
+		for (v=0; v < pointLayers.length; v++){
+			if(pointLayers[v][2] == source) {
+				placeholder.style.background = pointLayers[v][3];
+			}
+		}
 		
 		var b;
 		for(b=0; b < pointLayers.length; b++){
@@ -766,6 +772,7 @@ function showPoints(source) {
 		
 		filtersForPoints.length = 0;
 		filtersForPoints.push("all");
+		console.log(filterPointLayer);
 		
 		var c;
 		for(c=0; c < filterPointLayer.length; c++) {
