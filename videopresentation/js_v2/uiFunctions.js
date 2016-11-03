@@ -767,7 +767,7 @@ function showPoints(source) {
 		
 		var c;
 		for(c=0; c < filterPointLayer.length; c++) {
-			filtersForPoints.push(['!=', 'Point_Type', filterPointLayer[c]);
+			filtersForPoints.push(['!=', 'Point_Type', filterPointLayer[c]]);
 		}
 		
 		map.setFilter('pointMerge', filtersForPoints);
