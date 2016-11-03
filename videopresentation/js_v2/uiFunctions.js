@@ -739,7 +739,7 @@ function showPoints(source) {
 	var placeholder = document.getElementById(source);
 	if (($(source).hasClass("filterPoint")) == false) {
 		
-		$(source).addClass("filterPoint");
+		placeholder.classList.add("filterPoint");
 		placeholder.style.background = '#fff';
 		var a;
 		for (a=0; a < pointLayers.length; a++){
@@ -752,7 +752,7 @@ function showPoints(source) {
 		
 		map.setFilter('pointMerge', filtersForPoints);
 	} else if (($(source).hasClass("filterPoint")) == true) {
-		$(source).removeClass("filterPoint");
+		placeholder.classList.remove("filterPoint");
 		placeholder.style.background = "";
 		
 		var b;
