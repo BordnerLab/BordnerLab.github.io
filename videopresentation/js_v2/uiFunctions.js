@@ -764,9 +764,12 @@ function showPoints(source) {
 		var b;
 		for(b=0; b < pointLayers.length; b++){
 			var placeholder2 = pointLayers[b][0];
-			var index = filterPointLayer.indexOf(placeholder2);
-			if (index != -1){
-				filterPointLayer.splice(index, 1);
+			var placeholder3 = pointLayers[b][2];
+			if (source == placeholder3) {
+				var index = filterPointLayer.indexOf(placeholder2);
+				if (index != -1){
+					filterPointLayer.splice(index, 1);
+				}
 			}
 		}
 		
