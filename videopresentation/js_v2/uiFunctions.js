@@ -789,11 +789,53 @@ function showPoints(source) {
 };
 
 function showLines(source) {
-	var lineHolder = document.getElementById(source);
-	if (lineHolder.style.background != '#fff') {
-		lineHolder.style.background = '#fff';
-	} else if (lineHolder.style.background == '#fff') {
-		lineHolder.style.background = '';
+	var placeholder = document.getElementById(source);
+	if (placeholder.classList.contains("filterLine") == false) {
+		
+		placeholder.classList.add("filterLine");
+		placeholder.style.background = '#fff';
+		placeholder.style.color = 'grey';
+		var a;
+		for (a=0; a < lineLayers.length; a++){
+			if(lineLayers[a][2] == source) {
+				addLineToFilter = lineLayers[a][0];
+				filterLineLayer.push(addLineToFilter);
+				filtersForLines.push(['!=', 'Line_Type', addLineToFilter]);
+			}
+		}
+		
+		map.setFilter('lineMerge', filtersForLines);
+	} else if (placeholder.classList.contains("filterLine") == true) {
+		placeholder.classList.remove("filterLine");
+		var v;
+		for (v=0; v < lineLayers.length; v++){
+			if(lineLayers[v][2] == source) {
+				placeholder.style.background = lineLayers[v][3];
+				placeholder.style.color = 'black';
+			}
+		}
+		
+		var b;
+		for(b=0; b < lineLayers.length; b++){
+			var placeholder2 = lineLayers[b][0];
+			var placeholder3 = lineLayers[b][2];
+			if (source == placeholder3) {
+				var index = filterLineLayer.indexOf(placeholder2);
+				if (index != -1){
+					filterLineLayer.splice(index, 1);
+				}
+			}
+		}
+		
+		filtersForLines.length = 0;
+		filtersForLines.push("all");
+		
+		var c;
+		for(c=0; c < filterLineLayer.length; c++) {
+			filtersForLines.push(['!=', 'Line_Type', filterLineLayer[c]]);
+		}
+		
+		map.setFilter('lineMerge', filtersForLines);
 	}
 };
 
