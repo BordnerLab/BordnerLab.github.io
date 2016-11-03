@@ -61,26 +61,30 @@ var pointLayers = [
 	['CH', 'Church'],
 	['CR', 'Cannery'],
 	['E', 'Erosion'],
-	['F/G', 'Unknown'],
+	['F/G', 'Filling Station/Garage'],
 	['FB', 'Farm'],
 	['FF', 'Fur Farm'],
 	['FT', 'Fire Tower'],
 	['GC', 'Golf Course'],
-	['GL', 'Unknown'],
+	['GL', 'Grist Mill'],
 	['GP', 'Gravel Pit'],
 	['H', 'Hotel'],
 	['O', 'Orchard'],
 	['OH', 'Occupied House'],
 	['OSCH', 'Occupied School'],
 	['Qu', 'Quarry'],
-	['S', 'Spring'],
+	['S', 'Store'],
 	['SH', 'Summer House'],
-	['SL', 'Unknown'],
-	['SP', 'Unknown'],
+	['SL', 'Saw Mill'],
+	['SP', 'Spring'],
 	['T', 'Tavern'],
 	['TH', 'Townhall'],
 	['U', 'Unknown'],
 	['VH', 'Vacant House']
+];
+
+var lineLayers = [
+	
 ];
 
 var combinationLayers = [
