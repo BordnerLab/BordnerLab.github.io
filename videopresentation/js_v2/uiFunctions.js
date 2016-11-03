@@ -744,12 +744,12 @@ function showPoints(source) {
 			if(pointLayers[a][2] == source) {
 				addPointToFilter = pointLayers[a][0];
 				filterPointLayer.push(addPointToFilter);
-				filtersForPoints.push(['==', 'Point_Type', addPointToFilter]);
+				filtersForPoints.push(['!=', 'Point_Type', addPointToFilter]);
 				console.log(filtersForPoints);
 			}
 		}
 		
-		map.setFilter('pointMerge', ["!=", 'Point_Type', filterPointLayer]);
+		map.setFilter('pointMerge', filtersForPoints);
 	} else if (placeholder.style.background == '#fff') {
 		placeholder.style.background = "";
 		
@@ -761,7 +761,16 @@ function showPoints(source) {
 				filterPointLayer.splice(index, 1);
 			}
 		}
-		map.setFilter('pointMerge', ["!=", 'Point_Type', filterPointLayer]);
+		
+		filtersForPoints.length = 0;
+		filtersForPoints.push("all");
+		
+		var c;
+		for(c=0; c < filterPointLayer.length; c++) {
+			filtersForPoints.push(['!=', 'Point_Type', filterPointLayer[c]);
+		}
+		
+		map.setFilter('pointMerge', filtersForPoints);
 	}
 };
 
