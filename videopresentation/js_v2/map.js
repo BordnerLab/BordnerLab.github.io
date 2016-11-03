@@ -85,6 +85,29 @@ map.on('load', function () {
 			['VH', '#fff']]
 	});
 	
+	map.setPaintProperty('lineMerge', 'line-color', {
+		property: 'Line_Type',
+		type: 'categorical',
+		stops: [
+			['ARR', '#fff'],
+			['BL', '#fff'],
+			['CB', '#fff'],
+			['DD', '#fff'],
+			['FL', '#fff'],
+			['HR', '#fff'],
+			['I', '#fff'],
+			['ID', '#fff'],
+			['IG', '#fff'],
+			['PL', '#fff'],
+			['R', '#fff'],
+			['RR', '#fff'],
+			['TL', '#fff'],
+			['TR', '#fff'],
+			['U', '#fff'],
+			['UD', '#fff'],
+			['UG', '#fff']]
+	});
+	
 	
 		
 	var popup = new mapboxgl.Popup({
