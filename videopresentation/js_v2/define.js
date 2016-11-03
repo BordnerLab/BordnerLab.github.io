@@ -103,7 +103,7 @@ var lineLayers = [
 	['PL', 'Power Line', 'PLline', '#A2D9CE'],
 	['R', 'Stream', 'Rline', '#ABEBC6'],
 	['RR', 'Railroad', 'RRline', '#F9E79F'],
-	['TL', 'Telephone Line', 'TLline' '#E8F8F5'],
+	['TL', 'Telephone Line', 'TLline', '#E8F8F5'],
 	['TR', 'Trail', 'TRline', '#EAFAF1'],
 	['U', 'Unknown', 'Uline', '#FDEDEC'],
 	['UD', 'Unimproved Dirt Road', 'UDline', '#F5EEF8'],
