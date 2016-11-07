@@ -105,6 +105,7 @@ function circleToggleColor(source) {
 				document.getElementById(source).style.background = "#5499C7";
 				toggle01Control = true;
 				document.getElementById('legendv2').style.visibility = 'visible';
+				api.reinitialise();
 				
 				var xc;
 				for(xc=0; xc < landcoverLayers.length; xc++){
@@ -135,6 +136,7 @@ function circleToggleColor(source) {
 			if (toggle02Control == false) {
 				document.getElementById(source).style.background = "#5499C7";
 				toggle02Control = true;
+				api.reinitialise();
 				
 				map.setLayoutProperty('coastalWaters', 'visibility', 'visible');
 				
@@ -157,6 +159,7 @@ function circleToggleColor(source) {
 			if (toggle03Control == false) {
 				document.getElementById(source).style.background = "#5499C7";
 				toggle03Control = true;
+				api.reinitialise();
 				document.getElementById('legendv2point').style.visibility = "visible";
 				
 				symbolOpacityLayers.push('pointMerge');
@@ -188,6 +191,7 @@ function circleToggleColor(source) {
 			if (toggle04Control == false) {
 				document.getElementById(source).style.background = "#5499C7";
 				toggle04Control = true;
+				api.reinitialise();
 				document.getElementById('legendv2line').style.visibility = "visible";
 				
 				lineOpacityLayers.push('lineMerge');
@@ -327,6 +331,7 @@ function showButton03Controls() {
 var alterLegendInfoClickControl = 0;
 function alterLegendInfoClick(source) {
 	var sourcePlaceholder = document.getElementById(source);
+	api.reinitialise();
 	
 	if (alterLegendInfoClickControl == 0) {
 		switch (source) {
