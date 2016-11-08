@@ -152,7 +152,7 @@ map.on('load', function () {
 		} else if (feature.layer.id != "county-fills" && feature.layer.type != "circle" && feature.layer.type != "line") {
 			findLongCoverName(feature);
 			var textInPopUp = feature.properties.Cov1 + ": " + hoveredCountyLandcover + "<br>" + "Min Diam: " + feature.properties.MinDiam1 +
-			"<br>" + "Max Diam: " + feature.properties.MaxDiam1 + "<br>" + "Density: " + feature.properties.Den1;
+			" in" + "<br>" + "Max Diam: " + feature.properties.MaxDiam1 + " in" + "<br>" + "Density: " + feature.properties.Den1;
 			popup.setLngLat(e.lngLat)
 				.setHTML(textInPopUp)
 				.addTo(map);
