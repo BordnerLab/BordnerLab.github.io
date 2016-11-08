@@ -333,6 +333,7 @@ function showButton03Controls() {
 var alterLegendInfoClickControl = 0;
 function alterLegendInfoClick(source) {
 	var sourcePlaceholder = document.getElementById(source);
+	keepV2Info = false;
 	
 	
 	if (alterLegendInfoClickControl == 0) {
@@ -563,15 +564,20 @@ function alterLegendInfo(source) {
 };
 
 function exitLegendInfo(source) {
+	
 	var placeholder = document.getElementById("legendv2Info");
 	var sourcePlaceholder = document.getElementById(source);
 	
-	placeholder.innerHTML = "";
-	placeholder.style.background = "transparent";
-	placeholder.style.border = "1px solid transparent";
+	if (keepV2Info == true) {
+	
+		placeholder.innerHTML = "";
+		placeholder.style.background = "transparent";
+		placeholder.style.border = "1px solid transparent";
+	}
 };
 
 function clickLegendBack(source) {
+	keepV2Info = true;
 	document.getElementById("loadingScreen").style.visibility = "visible";
 	// Show all layers
 	map.setLayoutProperty('Agriculture', 'visibility', 'visible');

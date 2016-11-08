@@ -7,6 +7,8 @@ var hoveredCountyPoint;
 var hoveredCountyLine;
 
 var legendHoverCover;
+
+var keepV2Info = true;
 	
 var hoverLayers = [
 	"Agriculture",
@@ -72,7 +74,7 @@ var pointLayers = [
 	['GP', 'Gravel Pit', 'GPpoint', '#EB984E'],
 	['H', 'Hotel', 'Hpoint', '#F4D03F'],
 	['O', 'Orchard', 'Opoint', '#58D68D'],
-	['OH', 'Occupied House', 'OHpoint', '#48C9B0'],
+	['OH', 'Occupied House', 'OHpoint', '#AED6F1'],
 	['OSCH', 'Occupied School', 'OSCHpoint', '#5499C7'],
 	['Qu', 'Quarry', 'Qupoint', '#AF7AC5'],
 	['S', 'Store', 'Spoint', '#EC7063'],
@@ -93,15 +95,15 @@ var filtersForPoints = [
 var lineLayers = [
 	['ARR', 'Abandoned Railroad', 'Arrline' , '#F5B7B1'],
 	['BL', 'Shoreline', 'BLline', '#D7BDE2'],
-	['CB', 'Civil Town Boundary', 'CBline', '#AED6F1'],
+	['CB', 'Civil Town Boundary', 'CBline', '#58D68D'],
 	['DD', 'Drainage Ditch', 'DDline', '#FAD7A0'],
 	['FL', 'Non-drivable Fire Lane', 'FLline', '#EC7063'],
-	['HR', 'Hard Surfaced Road', 'HRline', '#5499C7'],
-	['I', 'Intermittent Stream', 'Iline', '#58D68D'],
+	['HR', 'Hard Surfaced Road', 'HRline', '#ABEBC6'],
+	['I', 'Intermittent Stream', 'Iline', '#AED6F1'],
 	['ID', 'Improved Dirt Road', 'IDline', '#EB984E'],
 	['IG', 'Improved Gravel Road', 'IGline', '#E6B0AA'],
 	['PL', 'Power Line', 'PLline', '#A2D9CE'],
-	['R', 'Stream', 'Rline', '#ABEBC6'],
+	['R', 'Stream', 'Rline', '#5499C7'],
 	['RR', 'Railroad', 'RRline', '#F9E79F'],
 	['TL', 'Telephone Line', 'TLline', '#E8F8F5'],
 	['TR', 'Trail', 'TRline', '#EAFAF1'],
