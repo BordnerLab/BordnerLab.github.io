@@ -2,7 +2,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2b
 	
 var map = new mapboxgl.Map({
 	container: 'map',
-	style: 'mapbox://styles/bordnerwlei/cirf7wsrr0003g8nlogxrqxyr',
+	style: 'mapbox://styles/bordnerwlei/cirf7wsrr0003g8nlogxrqxyr', //this style is important, contains layer files referenced in code
 	center: [-88.0198, 44.5192],
 	zoom: 9,
 	preserveDrawingBuffer: false,
@@ -18,7 +18,7 @@ map.dragRotate.disable();
 map.touchZoomRotate.disableRotation();
 
 
-
+/* EXPERIMENTAL, KEPT FOR POSSIBLE FUTURE USE*/
 /*
 var draw = mapboxgl.Draw({
 	drawing: true,
@@ -55,15 +55,20 @@ var geocoder = new mapboxgl.Geocoder({
 /*
 map.addControl(geocoder);
 */
+
 	
 map.on('load', function () {
+	//call to function in define.js
 	addMapSources();
-		
+	
+	//call to function in define.js
 	addCountyInitial();
 	
+	//hide layers on startup that we don't want visible - for performance purposes
 	map.setLayoutProperty('pointMerge', 'visibility', 'none');
 	map.setLayoutProperty('lineMerge', 'visibility', 'none');
 	
+	//color points according to attribute
 	map.setPaintProperty('pointMerge', 'circle-color', {
 		property: 'Point_Type',
 		type: 'categorical',
@@ -95,6 +100,7 @@ map.on('load', function () {
 			['VH', '#F5B7B1']]
 	});
 	
+	//color lines according to attribute
 	map.setPaintProperty('lineMerge', 'line-color', {
 		property: 'Line_Type',
 		type: 'categorical',
