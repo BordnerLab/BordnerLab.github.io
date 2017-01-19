@@ -1,15 +1,16 @@
 
-
+// keeps track of clicked county 
 var clickedCountyName;
 
-var hoveredCountyLandcover;
-var hoveredCountyPoint;
-var hoveredCountyLine;
+var hoveredCountyLandcover; // storing variable
+var hoveredCountyPoint;		// storing variable
+var hoveredCountyLine;		// storing variable
 
-var legendHoverCover;
+var legendHoverCover;		// storing variable
 
-var keepV2Info = true;
-	
+var keepV2Info = true;		// control variable	
+
+// list of layers to allow hover functions
 var hoverLayers = [
 	"Agriculture",
 	"Deciduous Forest",
@@ -25,6 +26,7 @@ var hoverLayers = [
 	"lineMerge"
 ];
 
+// list of major landcover layers
 var landcoverLayers = [
 	"Agriculture",
 	"Deciduous Forest",
@@ -38,14 +40,17 @@ var landcoverLayers = [
 	"Unknown Cover"
 ];
 
+// list of point layers
 var pointLayerNames = [
 	"pointMerge"
 ];
 
+// list of line layers
 var lineLayerNames = [
 	"lineMerge"
 ];
 
+// for legend, aggregates
 var mainLegend = [
 	["AG", "#E59966", "Agriculture"],
 	["UR", "#C0392A", "Urban"],
@@ -59,6 +64,7 @@ var mainLegend = [
 	["U", "#FADC70", "Unknown"]
 ];
 
+// for point legend
 var pointLayers = [
 	['C', 'Cemetery', 'Cpoint', '#E6B0AA'],
 	['CF', 'Cheese Factory', 'CFpoint', '#D2B4DE'],
@@ -87,11 +93,13 @@ var pointLayers = [
 	['VH', 'Vacant House', 'VHpoint', '#F5B7B1']
 ];
 
-var filterPointLayer = [];
+var filterPointLayer = [];	// storing list
+// list for filtering points
 var filtersForPoints = [
 	"all"
 ];
 
+// for line legend
 var lineLayers = [
 	['ARR', 'Abandoned Railroad', 'Arrline' , '#F5B7B1'],
 	['BL', 'Shoreline', 'BLline', '#D7BDE2'],
@@ -112,11 +120,13 @@ var lineLayers = [
 	['UG', 'Unimproved Gravel Road', 'UGline', '#F9EBEA']
 ];
 
-var filterLineLayer = [];
+var filterLineLayer = [];	// storing list
+// for filtering lines
 var filtersForLines = [
 	"all"
 ];
 
+// all landcover layers
 var combinationLayers = [
 	['A3', '#fbb03b', 'Swamp Hardwoods'],
 	['A4', '#2980B9', 'Tagalder, Willow, Dogwood, Etc.'],
@@ -200,8 +210,7 @@ var combinationLayers = [
 	['OC', '#5D6D7E', 'OC -']
 ];
 
-
-
+// wetland landcover layers
 var wetlandsLayers = [
 	['A3', '#fbb03b', 'Swamp Hardwoods'],
 	['A4', '#2980B9', 'Tagalder, Willow, Dogwood, Etc.'],
@@ -210,6 +219,7 @@ var wetlandsLayers = [
 	['C4b', '#ccc', 'Sedge Marsh']
 ];
 
+// agriculture landcover layers
 var agricultureLayers = [
 	['AP', '#D98880', 'Abandoned Pasture'],
 	['BB', '#C39BD3', 'Blueberry'],
@@ -223,6 +233,7 @@ var agricultureLayers = [
 	['OR', '#D6DBDF', 'Orchard']
 ];
 
+// urban landcover layers
 var urbanLayers = [
 	['ARPT', '#D98880', 'Airport'],
 	['CM', '#C39BD3', 'Cemetery'],
@@ -238,6 +249,7 @@ var urbanLayers = [
 	['U', '#E67E22', 'U -']
 ];
 
+// barren landcover layers
 var barrenLayers = [
 	['CL', '#D98880', 'Clay Pit'],
 	['GP', '#C39BD3', 'Gravel Pit'],
@@ -248,6 +260,7 @@ var barrenLayers = [
 	['O', '#F1C40F', 'Open']
 ];
 
+// deciduous forest landcover layers
 var deciduousforestLayers = [
 	['A1', '#D98880', 'Upland Hardwoods'],
 	['A2', '#C39BD3', 'Hemlock with Hardwood'],
@@ -262,6 +275,7 @@ var deciduousforestLayers = [
 	['D3b', '#5D6D7E', 'Balsam']
 ];
 
+// other landcover layers
 var otherLayers = [
 	['BD', '#D98880', 'Beaver Dam'],
 	['BF', '#C39BD3', 'Beaver Flowage'],
@@ -276,6 +290,7 @@ var otherLayers = [
 	['Slash', '#5D6D7E', 'Slash']
 ];
 
+// shrubland landcover layers
 var shrublandLayers = [
 	['D4', '#D98880', 'Leather Leaf'],
 	['E1', '#C39BD3', 'Pin Cherry'],
@@ -283,6 +298,7 @@ var shrublandLayers = [
 	['UG', '#5DADE2', 'Unknown Grassland']
 ];
 
+// confierous forest landcover layers
 var coniferousforestLayers = [
 	['B2', '#D98880', 'White Pine'],
 	['B3', '#C39BD3', 'White Cedar'],
@@ -292,12 +308,14 @@ var coniferousforestLayers = [
 	['D3', '#7DCEA0', 'Black Spruce']
 ];
 
+// mixed forest landcover layers
 var mixedforestLayers = [
 	['B1', '#D98880', 'Hardwood with Conifers'],
 	['B1b', '#C39BD3', 'Inferior B1'],
 	['UF', '#7FB3D5', 'Unknown Forest']
 ];
 
+// unknown landcover layers
 var unknownLayers = [
 	['A5', '#D98880', 'A5 -'],
 	['AA', '#C39BD3', 'AA -'],
@@ -312,20 +330,19 @@ var unknownLayers = [
 	['OC', '#5D6D7E', 'OC -']
 ];
 
-
-
-var waterDisplayControl = false;
-var wetlandsDisplayControl = true;
+var waterDisplayControl = false;	// control variable
+var wetlandsDisplayControl = true;	// control variable
 
 var data;
 var getCanvasControl = false;
 
 
-var toggle01Control = true;
-var toggle02Control = true;
-var toggle03Control = false;
-var toggle04Control = false;
+var toggle01Control = true;	// control variable
+var toggle02Control = true;	// control variable
+var toggle03Control = false;	// control variable
+var toggle04Control = false;	// control variable
 
+// layers to include in adjusting opacity
 var opacityLayers = [
 	"Agriculture",
 	"Deciduous Forest",
@@ -340,15 +357,16 @@ var opacityLayers = [
 	"coastalWaters"
 ];
 
+// layers for adjusting line opacity
 var lineOpacityLayers = [];
 
 var symbolOpacityLayers = [];
 
 var threeDControl = false;
 
-
-
-
+// function to add sources to map
+// here is where you can add additional data, 
+// other than the major landcover, points, line, and water data
 function addMapSources() {
 	map.addSource('coastalCounties', {
 		'type': 'geojson',
@@ -362,14 +380,11 @@ function addMapSources() {
 			'features': []
 		}
 	});
-	/*
-	map.addSource('pointMerge', {
-		'type': 'geojson',
-		'data': 'data/points/pointMerge.geojson'
-	});
-	*/
 };
 
+// function to add layers to map
+// first you would add the source in the function above,
+// then you would add the layer to the map from that source
 function addCountyInitial() {
 	map.addLayer({
 		'id': 'county-borders',
@@ -393,16 +408,6 @@ function addCountyInitial() {
 			'circle-color': '#007cbf'
 		}
 	});
-	/*
-	map.addLayer({
-		'id': 'pointMerge',
-		'source': 'pointMerge',
-		'type': 'symbol',
-		'layout': {
-			'icon-image': 'harbor-15'
-		}
-	});
-	*/
 };
 
 

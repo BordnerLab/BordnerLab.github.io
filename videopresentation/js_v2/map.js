@@ -1,5 +1,8 @@
+
+// bordner account mapbox gl access token
 mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2bmtkcjUzaG5meCJ9.eswxCZSAnob59HR0wEaTpA';
-	
+
+// variable to initiate map
 var map = new mapboxgl.Map({
 	container: 'map',
 	style: 'mapbox://styles/bordnerwlei/cirf7wsrr0003g8nlogxrqxyr', //this style is important, contains layer files referenced in code
@@ -7,7 +10,7 @@ var map = new mapboxgl.Map({
 	zoom: 9,
 	preserveDrawingBuffer: false,
 	hash: false,
-	pitch: 0.1
+	pitch: 0.1 // pitch set to 0.1 is important, on some computers if not set map will not display
 });
 
 

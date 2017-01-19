@@ -1,9 +1,10 @@
+
+// simply stores last clicked county (not currently in use)
 function determineClick(feature) {
 	clickedCountyName = feature.properties.COUNTY_NAM;	
 };
 
-
-
+// takes screenshot of map area (not currently in use)
 function takeScreenshot() {
 	//window.open(window.location.href, '_blank');
 	var data1 = map.getCanvas().toDataURL("image/png");
@@ -15,23 +16,9 @@ function takeScreenshot() {
 	window.open(data1);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// changes map and legend to only display wetland features
 function changeLegendAndMapWetlands(){
+	// changes wetlands fill color based on code
 	map.setPaintProperty('Wetlands', 'fill-color', {
 		property: 'Cov1',
 		type: 'categorical',
@@ -42,7 +29,8 @@ function changeLegendAndMapWetlands(){
 			['C4', '#3bb2d0'],
 			['C4b', '#ccc']]
 	});
-				
+	
+	// removes previous legend items
 	var c;
 	for(c=0; c < mainLegend.length; c++){
 		var placeholder = mainLegend[c][0];
@@ -53,7 +41,8 @@ function changeLegendAndMapWetlands(){
 		var p3 = p2.childNodes[0];
 		p2.removeChild(p3);
 	}
-				
+	
+	// sets up items in legend
 	var backHolder = document.createElement('DIV');
 	var textBackHolder = document.createTextNode("Back");
 	backHolder.setAttribute("class", "legendSquarev2");
@@ -62,7 +51,8 @@ function changeLegendAndMapWetlands(){
 	var m2 = m1.childNodes[0];
 	backHolder.appendChild(textBackHolder);
 	m2.appendChild(backHolder);
-				
+	
+	// creates legend items from wetlands layers
 	var v;
 	for(v=0; v < wetlandsLayers.length; v++){
 		var placeholder = document.createElement('DIV');
@@ -70,7 +60,6 @@ function changeLegendAndMapWetlands(){
 		var idHold = wetlandsLayers[v][2];
 		var colorHold = "background:" + wetlandsLayers[v][1];
 		var textholder = document.createTextNode(idHold);
-					
 					
 		placeholder.setAttribute("class", "legendSquare");
 		placeholder2.setAttribute("class", "circleLegend");
@@ -86,8 +75,9 @@ function changeLegendAndMapWetlands(){
 	}
 };
 
-
+// changes map and legend to only display agriculture features
 function changeLegendAndMapAgriculture(){
+	// changes agriculture fill color based on code
 	map.setPaintProperty('Agriculture', 'fill-color', {
 		property: 'Cov1',
 		type: 'categorical',
@@ -103,7 +93,8 @@ function changeLegendAndMapAgriculture(){
 			['SP', '#873600'],
 			['OR', '#D6DBDF']]
 	});
-				
+	
+	// removes previous legend items
 	var c;
 	for(c=0; c < mainLegend.length; c++){
 		var placeholder = mainLegend[c][0];
@@ -114,7 +105,8 @@ function changeLegendAndMapAgriculture(){
 		var p3 = p2.childNodes[0];
 		p2.removeChild(p3);
 	}
-				
+	
+	// sets up items in legend
 	var backHolder = document.createElement('DIV');
 	var textBackHolder = document.createTextNode("Back");
 	backHolder.setAttribute("class", "legendSquarev2");
@@ -123,7 +115,8 @@ function changeLegendAndMapAgriculture(){
 	var m2 = m1.childNodes[0];
 	backHolder.appendChild(textBackHolder);
 	m2.appendChild(backHolder);
-				
+	
+	// creates legend items from agriculture layers
 	var v;
 	for(v=0; v < agricultureLayers.length; v++){
 		var placeholder = document.createElement('DIV');
@@ -131,7 +124,6 @@ function changeLegendAndMapAgriculture(){
 		var idHold = agricultureLayers[v][2];
 		var colorHold = "background:" + agricultureLayers[v][1];
 		var textholder = document.createTextNode(idHold);
-					
 					
 		placeholder.setAttribute("class", "legendSquare");
 		placeholder2.setAttribute("class", "circleLegend");
@@ -147,7 +139,9 @@ function changeLegendAndMapAgriculture(){
 	}
 };
 
+// changes map and legend to only display urban features
 function changeLegendAndMapUrban(){
+	// changes urban fill color based on code
 	map.setPaintProperty('Urban', 'fill-color', {
 		property: 'Cov1',
 		type: 'categorical',
@@ -165,7 +159,8 @@ function changeLegendAndMapUrban(){
 			['PD', '#2C3E50'],
 			['U', '#641E16']]
 	});
-				
+	
+	// removes previous legend items
 	var c;
 	for(c=0; c < mainLegend.length; c++){
 		var placeholder = mainLegend[c][0];
@@ -176,7 +171,8 @@ function changeLegendAndMapUrban(){
 		var p3 = p2.childNodes[0];
 		p2.removeChild(p3);
 	}
-				
+	
+	// sets up items in legend
 	var backHolder = document.createElement('DIV');
 	var textBackHolder = document.createTextNode("Back");
 	backHolder.setAttribute("class", "legendSquarev2");
@@ -185,7 +181,8 @@ function changeLegendAndMapUrban(){
 	var m2 = m1.childNodes[0];
 	backHolder.appendChild(textBackHolder);
 	m2.appendChild(backHolder);
-				
+	
+	// creates legend items from urban layers
 	var v;
 	for(v=0; v < urbanLayers.length; v++){
 		var placeholder = document.createElement('DIV');
@@ -193,8 +190,7 @@ function changeLegendAndMapUrban(){
 		var idHold = urbanLayers[v][2];
 		var colorHold = "background:" + urbanLayers[v][1];
 		var textholder = document.createTextNode(idHold);
-					
-					
+						
 		placeholder.setAttribute("class", "legendSquare");
 		placeholder2.setAttribute("class", "circleLegend");
 		placeholder2.setAttribute("id", idHold);
@@ -209,8 +205,9 @@ function changeLegendAndMapUrban(){
 	}
 };
 
-
+// changes map and legend to only display barren features
 function changeLegendAndMapBarren(){
+	// changes barren fill color based on code
 	map.setPaintProperty('Barren', 'fill-color', {
 		property: 'Cov1',
 		type: 'categorical',
@@ -223,7 +220,8 @@ function changeLegendAndMapBarren(){
 			['CPP', '#7DCEA0'],
 			['O', '#F1C40F']]
 	});
-				
+	
+	// removes previous legend items
 	var c;
 	for(c=0; c < mainLegend.length; c++){
 		var placeholder = mainLegend[c][0];
@@ -234,7 +232,8 @@ function changeLegendAndMapBarren(){
 		var p3 = p2.childNodes[0];
 		p2.removeChild(p3);
 	}
-				
+	
+	// sets up items in legend
 	var backHolder = document.createElement('DIV');
 	var textBackHolder = document.createTextNode("Back");
 	backHolder.setAttribute("class", "legendSquarev2");
@@ -243,7 +242,8 @@ function changeLegendAndMapBarren(){
 	var m2 = m1.childNodes[0];
 	backHolder.appendChild(textBackHolder);
 	m2.appendChild(backHolder);
-				
+	
+	// creates legend items from barren layers
 	var v;
 	for(v=0; v < barrenLayers.length; v++){
 		var placeholder = document.createElement('DIV');
@@ -251,8 +251,7 @@ function changeLegendAndMapBarren(){
 		var idHold = barrenLayers[v][2];
 		var colorHold = "background:" + barrenLayers[v][1];
 		var textholder = document.createTextNode(idHold);
-					
-					
+						
 		placeholder.setAttribute("class", "legendSquare");
 		placeholder2.setAttribute("class", "circleLegend");
 		placeholder2.setAttribute("id", idHold);
@@ -267,7 +266,9 @@ function changeLegendAndMapBarren(){
 	}
 };
 
+// changes map and legend to only display deciduous forest features
 function changeLegendAndMapDeciduousForest(){
+	// changes deciduous forest fill color based on code
 	map.setPaintProperty('Deciduous Forest', 'fill-color', {
 		property: 'Cov1',
 		type: 'categorical',
@@ -284,7 +285,8 @@ function changeLegendAndMapDeciduousForest(){
 			['D1uu', '#D6DBDF'],
 			['D3b', '#2C3E50']]
 	});
-				
+		
+	// removes previous legend items
 	var c;
 	for(c=0; c < mainLegend.length; c++){
 		var placeholder = mainLegend[c][0];
@@ -295,7 +297,8 @@ function changeLegendAndMapDeciduousForest(){
 		var p3 = p2.childNodes[0];
 		p2.removeChild(p3);
 	}
-				
+	
+	// sets up items in legend
 	var backHolder = document.createElement('DIV');
 	var textBackHolder = document.createTextNode("Back");
 	backHolder.setAttribute("class", "legendSquarev2");
@@ -304,7 +307,8 @@ function changeLegendAndMapDeciduousForest(){
 	var m2 = m1.childNodes[0];
 	backHolder.appendChild(textBackHolder);
 	m2.appendChild(backHolder);
-				
+	
+	// creates legend items from deciduous forest layers
 	var v;
 	for(v=0; v < deciduousforestLayers.length; v++){
 		var placeholder = document.createElement('DIV');
@@ -312,8 +316,7 @@ function changeLegendAndMapDeciduousForest(){
 		var idHold = deciduousforestLayers[v][2];
 		var colorHold = "background:" + deciduousforestLayers[v][1];
 		var textholder = document.createTextNode(idHold);
-					
-					
+						
 		placeholder.setAttribute("class", "legendSquare");
 		placeholder2.setAttribute("class", "circleLegend");
 		placeholder2.setAttribute("id", idHold);
@@ -328,7 +331,9 @@ function changeLegendAndMapDeciduousForest(){
 	}
 };
 
+// changes map and legend to only display other features
 function changeLegendAndMapOther(){
+	// changes other fill color based on code
 	map.setPaintProperty('Other', 'fill-color', {
 		property: 'Cov1',
 		type: 'categorical',
@@ -345,7 +350,8 @@ function changeLegendAndMapOther(){
 			['Rcnt. Cut', '#D6DBDF'],
 			['Slash', '#2C3E50']]
 	});
-				
+	
+	// removes previous legend items
 	var c;
 	for(c=0; c < mainLegend.length; c++){
 		var placeholder = mainLegend[c][0];
@@ -356,7 +362,8 @@ function changeLegendAndMapOther(){
 		var p3 = p2.childNodes[0];
 		p2.removeChild(p3);
 	}
-				
+	
+	// sets up items in legend
 	var backHolder = document.createElement('DIV');
 	var textBackHolder = document.createTextNode("Back");
 	backHolder.setAttribute("class", "legendSquarev2");
@@ -365,7 +372,8 @@ function changeLegendAndMapOther(){
 	var m2 = m1.childNodes[0];
 	backHolder.appendChild(textBackHolder);
 	m2.appendChild(backHolder);
-				
+	
+	// creates legend items from other layers
 	var v;
 	for(v=0; v < otherLayers.length; v++){
 		var placeholder = document.createElement('DIV');
@@ -373,7 +381,6 @@ function changeLegendAndMapOther(){
 		var idHold = otherLayers[v][2];
 		var colorHold = "background:" + otherLayers[v][1];
 		var textholder = document.createTextNode(idHold);
-					
 					
 		placeholder.setAttribute("class", "legendSquare");
 		placeholder2.setAttribute("class", "circleLegend");
@@ -389,7 +396,9 @@ function changeLegendAndMapOther(){
 	}
 };
 
+// changes map and legend to only display shrubland features
 function changeLegendAndMapShrubland(){
+	// changes shrubland fill color based on code
 	map.setPaintProperty('Shrubland', 'fill-color', {
 		property: 'Cov1',
 		type: 'categorical',
@@ -399,7 +408,8 @@ function changeLegendAndMapShrubland(){
 			['E4', '#7FB3D5'],
 			['UG', '#5DADE2']]
 	});
-				
+	
+	// removes previous legend items
 	var c;
 	for(c=0; c < mainLegend.length; c++){
 		var placeholder = mainLegend[c][0];
@@ -410,7 +420,8 @@ function changeLegendAndMapShrubland(){
 		var p3 = p2.childNodes[0];
 		p2.removeChild(p3);
 	}
-				
+	
+	// sets up items in legend
 	var backHolder = document.createElement('DIV');
 	var textBackHolder = document.createTextNode("Back");
 	backHolder.setAttribute("class", "legendSquarev2");
@@ -419,7 +430,8 @@ function changeLegendAndMapShrubland(){
 	var m2 = m1.childNodes[0];
 	backHolder.appendChild(textBackHolder);
 	m2.appendChild(backHolder);
-				
+	
+	// creates legend items from shrubland layers
 	var v;
 	for(v=0; v < shrublandLayers.length; v++){
 		var placeholder = document.createElement('DIV');
@@ -427,8 +439,7 @@ function changeLegendAndMapShrubland(){
 		var idHold = shrublandLayers[v][2];
 		var colorHold = "background:" + shrublandLayers[v][1];
 		var textholder = document.createTextNode(idHold);
-					
-					
+						
 		placeholder.setAttribute("class", "legendSquare");
 		placeholder2.setAttribute("class", "circleLegend");
 		placeholder2.setAttribute("id", idHold);
@@ -443,7 +454,9 @@ function changeLegendAndMapShrubland(){
 	}
 };
 
+// changes map and legend to only display coniferous forest features
 function changeLegendAndMapConiferousForest(){
+	// changes coniferous forest fill color based on code
 	map.setPaintProperty('Coniferous Forest', 'fill-color', {
 		property: 'Cov1',
 		type: 'categorical',
@@ -455,7 +468,8 @@ function changeLegendAndMapConiferousForest(){
 			['D2', '#76D7C4'],
 			['D3', '#7DCEA0']]
 	});
-				
+
+	// removes previous legend items
 	var c;
 	for(c=0; c < mainLegend.length; c++){
 		var placeholder = mainLegend[c][0];
@@ -466,7 +480,8 @@ function changeLegendAndMapConiferousForest(){
 		var p3 = p2.childNodes[0];
 		p2.removeChild(p3);
 	}
-				
+	
+	// sets up items in legend
 	var backHolder = document.createElement('DIV');
 	var textBackHolder = document.createTextNode("Back");
 	backHolder.setAttribute("class", "legendSquarev2");
@@ -475,15 +490,15 @@ function changeLegendAndMapConiferousForest(){
 	var m2 = m1.childNodes[0];
 	backHolder.appendChild(textBackHolder);
 	m2.appendChild(backHolder);
-				
+	
+	// creates legend items from coniferous forest layers
 	var v;
 	for(v=0; v < coniferousforestLayers.length; v++){
 		var placeholder = document.createElement('DIV');
 		var placeholder2 = document.createElement('DIV');
 		var idHold = coniferousforestLayers[v][2];
 		var colorHold = "background:" + coniferousforestLayers[v][1];
-		var textholder = document.createTextNode(idHold);
-					
+		var textholder = document.createTextNode(idHold);	
 					
 		placeholder.setAttribute("class", "legendSquare");
 		placeholder2.setAttribute("class", "circleLegend");
@@ -499,7 +514,9 @@ function changeLegendAndMapConiferousForest(){
 	}
 };
 
+// changes map and legend to only display mixed forest features
 function changeLegendAndMapMixedForest(){
+	// changes mixed forest fill color based on code
 	map.setPaintProperty('Mixed Forest', 'fill-color', {
 		property: 'Cov1',
 		type: 'categorical',
@@ -508,7 +525,8 @@ function changeLegendAndMapMixedForest(){
 			['B1b', '#C39BD3'],
 			['UF', '#7FB3D5']]
 	});
-				
+
+	// removes previous legend items
 	var c;
 	for(c=0; c < mainLegend.length; c++){
 		var placeholder = mainLegend[c][0];
@@ -519,7 +537,8 @@ function changeLegendAndMapMixedForest(){
 		var p3 = p2.childNodes[0];
 		p2.removeChild(p3);
 	}
-				
+	
+	// sets up items in legend
 	var backHolder = document.createElement('DIV');
 	var textBackHolder = document.createTextNode("Back");
 	backHolder.setAttribute("class", "legendSquarev2");
@@ -528,7 +547,8 @@ function changeLegendAndMapMixedForest(){
 	var m2 = m1.childNodes[0];
 	backHolder.appendChild(textBackHolder);
 	m2.appendChild(backHolder);
-				
+	
+	// creates legend items from mixed forest layers
 	var v;
 	for(v=0; v < mixedforestLayers.length; v++){
 		var placeholder = document.createElement('DIV');
@@ -536,8 +556,7 @@ function changeLegendAndMapMixedForest(){
 		var idHold = mixedforestLayers[v][2];
 		var colorHold = "background:" + mixedforestLayers[v][1];
 		var textholder = document.createTextNode(idHold);
-					
-					
+		
 		placeholder.setAttribute("class", "legendSquare");
 		placeholder2.setAttribute("class", "circleLegend");
 		placeholder2.setAttribute("id", idHold);
@@ -552,7 +571,9 @@ function changeLegendAndMapMixedForest(){
 	}
 };
 
+// changes map and legend to only display unknown features
 function changeLegendAndMapUnknown(){
+	// changes unknown cover fill color based on code
 	map.setPaintProperty('Unknown Cover', 'fill-color', {
 		property: 'Cov1',
 		type: 'categorical',
@@ -569,7 +590,8 @@ function changeLegendAndMapUnknown(){
 			['OA', '#D6DBDF'],
 			['OC', '#2C3E50']]
 	});
-				
+	
+	// removes previous legend items
 	var c;
 	for(c=0; c < mainLegend.length; c++){
 		var placeholder = mainLegend[c][0];
@@ -580,7 +602,8 @@ function changeLegendAndMapUnknown(){
 		var p3 = p2.childNodes[0];
 		p2.removeChild(p3);
 	}
-				
+	
+	// sets up items in legend
 	var backHolder = document.createElement('DIV');
 	var textBackHolder = document.createTextNode("Back");
 	backHolder.setAttribute("class", "legendSquarev2");
@@ -589,7 +612,8 @@ function changeLegendAndMapUnknown(){
 	var m2 = m1.childNodes[0];
 	backHolder.appendChild(textBackHolder);
 	m2.appendChild(backHolder);
-				
+	
+	// creates legend items from unknown layers
 	var v;
 	for(v=0; v < unknownLayers.length; v++){
 		var placeholder = document.createElement('DIV');
@@ -597,8 +621,7 @@ function changeLegendAndMapUnknown(){
 		var idHold = unknownLayers[v][2];
 		var colorHold = "background:" + unknownLayers[v][1];
 		var textholder = document.createTextNode(idHold);
-					
-					
+						
 		placeholder.setAttribute("class", "legendSquare");
 		placeholder2.setAttribute("class", "circleLegend");
 		placeholder2.setAttribute("id", idHold);
@@ -613,7 +636,7 @@ function changeLegendAndMapUnknown(){
 	}
 };
 
-
+// function for legend functionality
 function clickSpecificLegend(source) {
 	var m;
 	for(m=0; m < combinationLayers.length; m++) {
