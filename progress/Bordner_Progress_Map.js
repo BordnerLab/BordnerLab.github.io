@@ -151,7 +151,8 @@ function checkFND(value_in){
 function getColor(d_in) {
 	var d =  d_in.substr(d_in.length - 4);
 	//console.log(d)
-	return d == "2016"  ? '#e68079' : 
+	return d == "2017"  ? '#decbe4' :
+		   d == "2016"  ? '#e68079' : 
 		   d == "2015"  ? '#7cd3fb' : 
 		   d == "2014"  ? '#c8efc9' : 
 		   d == "2008"  ? '#f5da88' : 
@@ -313,8 +314,8 @@ var legend = L.control({position: 'topright'});
 legend.onAdd = function (map) {
 
 	var div = L.DomUtil.create('div', 'info legend'),
-		grades = ["2016","2015","2014","2008"],
-		labelLabel = ["2016","2015","2014","2008"],
+		grades = ["2017","2016","2015","2014","2008"],
+		labelLabel = ["2017","2016","2015","2014","2008"],
 		labels = [],
 		from, to;
 
