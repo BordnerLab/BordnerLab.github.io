@@ -37,7 +37,7 @@
 	</div>
 	
 	<script src="jquery-3.1.1.min.js"></script>
-	<script src='https://npmcdn.com/@turf/turf/turf.min.js'></script> 
+	<script src='https://api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js'></script> 
 	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js'></script>
 	<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.0.1/mapbox-gl-geocoder.js'></script>
 	<script>
@@ -113,12 +113,14 @@
 					console.log(ev.result.geometry.coordinates);
 					console.log(map.getLayer('point'));
 					
-					var point = map.getLayer('point');
+				
 					var poly = map.getLayer('RCP');
+					console.log(poly);
 					
-					var isInside = turf.inside(point, poly);
+					var myPoint = turf.point(ev.result.geometry);
 					
-					console.log(isInside);
+					
+					
 					
 				});
 			});
