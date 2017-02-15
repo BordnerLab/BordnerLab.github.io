@@ -4,81 +4,118 @@
     <meta charset='utf-8' />
     <title></title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css' rel='stylesheet' />
+	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.0.1/mapbox-gl-geocoder.css' type='text/css' />
     <style>
         body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
+        #map { position:absolute; top:0; bottom:0; width:0%; height: 0%; visibility: hidden; }
+		#geocoder-container > div {
+			min-width:50%;
+			margin-left:25%;
+		}
+		
+		#myContainer {
+			position: absolute;
+			width: 400px;
+			height: 500px;
+			background: black;
+			top: 50px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+		
+		#myContainer h1 {
+			color: white;
+		}
     </style>
 </head>
 <body>
+	<div id='map'></div>
+	<div id='myContainer'>
+		<h1>Let's Search!</h1>
+	</div>
+	
+	<script src="jquery-3.1.1.min.js"></script>
+	<script src='https://npmcdn.com/@turf/turf/turf.min.js'></script> 
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js'></script>
+	<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.0.1/mapbox-gl-geocoder.js'></script>
+	<script>
+		$(function() {
+			mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2bmtkcjUzaG5meCJ9.eswxCZSAnob59HR0wEaTpA';
+			var map = new mapboxgl.Map({
+				container: 'map',
+				style: 'mapbox://styles/mapbox/streets-v9',
+				center: [-79.4512, 43.6568],
+				zoom: 13
+			});
+			
+			// create geocoder
+			var geocoder = new MapboxGeocoder({
+				accessToken: mapboxgl.accessToken
+			});
+			// call function addGeocoder
+			addGeocoder();
+			// function which adds the geocoder to the map
+			function addGeocoder() {
+				map.addControl(geocoder);
+				// call function removeGeocoder
+				removeGeocoder();
+			};
+			// function which removes geocoder from the map and adds it to myContainer
+			function removeGeocoder() {
+				var myBox = document.getElementById('myContainer');
+				var p;
+				p = $('.mapboxgl-ctrl-geocoder').detach();
+				p.appendTo(myBox);
+			};
 
-<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.0.1/mapbox-gl-geocoder.js'></script>
-<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.0.1/mapbox-gl-geocoder.css' type='text/css' />
-<script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
-<style>
-#geocoder-container > div {
-    min-width:50%;
-    margin-left:25%;
-}
-</style>
-<div id='map'></div>
+			// After the map style has loaded on the page, add a source layer and default
+			// styling for a single point.
+			map.on('load', function() {
+				map.addSource('single-point', {
+					"type": "geojson",
+					"data": {
+						"type": "FeatureCollection",
+						"features": []
+					}
+				});
+				
+				map.addSource('RCP', {
+					"type": "geojson",
+					"data": "reduced_cost_programs.json"
+				});
 
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2bmtkcjUzaG5meCJ9.eswxCZSAnob59HR0wEaTpA';
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
-    center: [-79.4512, 43.6568],
-    zoom: 13
-});
+				map.addLayer({
+					"id": "point",
+					"source": "single-point",
+					"type": "circle",
+					"paint": {
+						"circle-radius": 5,
+						"circle-color": "#007cbf"
+					}
+				});
+				
+				map.addLayer({
+					"id": "point",
+					"source": "RCP",
+					"type": "fill",
+					"paint": {
+						"fill-color": "black",
+						"fill-opacity": 0.7
+					}
+				});
 
-var geocoder = new MapboxGeocoder({
-    accessToken: mapboxgl.accessToken
-});
-
-map.addControl(geocoder);
-
-// After the map style has loaded on the page, add a source layer and default
-// styling for a single point.
-map.on('load', function() {
-    map.addSource('single-point', {
-        "type": "geojson",
-        "data": {
-            "type": "FeatureCollection",
-            "features": []
-        }
-    });
-
-    map.addLayer({
-        "id": "point",
-        "source": "single-point",
-        "type": "circle",
-        "paint": {
-            "circle-radius": 10,
-            "circle-color": "#007cbf"
-        }
-    });
-
-    // Listen for the `geocoder.input` event that is triggered when a user
-    // makes a selection and add a symbol that matches the result.
-    geocoder.on('result', function(ev) {
-        map.getSource('single-point').setData(ev.result.geometry);
-    });
-});
-
-var pt; // pt = latLong of point
-var poly; // poly = multipolygon shapefile
-
-var i;
-for (i=0; i < poly.length; i++) { // run over every polygon in shapefile
-	var isInside = turf.inside(pt, poly[i]); // if point is inside shapefile at position i
-	if (isInside == true) {
-		//stored poly[i] 
-	} else if (inInside == false) {
-		// do nothing
-	}
-}
-</script>
+				// Listen for the `geocoder.input` event that is triggered when a user
+				// makes a selection and add a symbol that matches the result.
+				geocoder.on('result', function(ev) {
+					map.getSource('single-point').setData(ev.result.geometry);
+					console.log(ev.result.geometry.coordinates);
+					console.log(map.getLayer('point'));
+				});
+			});
+		});
+		
+	</script>
 </body>
 </html>
