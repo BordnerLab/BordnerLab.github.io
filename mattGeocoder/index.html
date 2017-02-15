@@ -97,7 +97,7 @@
 				});
 				
 				map.addLayer({
-					"id": "point",
+					"id": "RCP",
 					"source": "RCP",
 					"type": "fill",
 					"paint": {
@@ -112,6 +112,14 @@
 					map.getSource('single-point').setData(ev.result.geometry);
 					console.log(ev.result.geometry.coordinates);
 					console.log(map.getLayer('point'));
+					
+					var point = map.getLayer('point');
+					var poly = map.getLayer('RCP');
+					
+					var isInside = turf.inside(point, poly);
+					
+					console.log(isInside);
+					
 				});
 			});
 		});
