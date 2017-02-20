@@ -84,6 +84,20 @@
 
 				});
 				
+				map.addLayer({
+					'id': 'programs',
+					'type': 'fill',
+					'source': {
+						'type': 'geojson',
+						'data': 'programs.geojson'
+					},
+					'layout': {},
+					'paint': {
+						'fill-color': 'black',
+						'fill-opacity': 0.5
+					}
+				});
+				
 				map.addSource('single-point', {
 					"type": "geojson",
 					"data": {
