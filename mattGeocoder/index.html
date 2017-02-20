@@ -82,7 +82,7 @@
 						'fill-opacity': 0.4
 					}
 
-				}, 'water');
+				});
 				
 				map.addSource('single-point', {
 					"type": "geojson",
@@ -108,7 +108,7 @@
 					map.getSource('single-point').setData(ev.result.geometry);
 				
 					
-					var features = map.queryRenderedFeatures(ev.result.geometry, { layers: ["urban-areas-fill"] });
+					var features = map.queryRenderedFeatures(ev.result.geometry, { layers: ['urban-areas-fill'] });
 					if (features.length) {
 						console.log(features);
 					} else {
