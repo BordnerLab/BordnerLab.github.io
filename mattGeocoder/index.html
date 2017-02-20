@@ -106,8 +106,12 @@
 					map.getSource('single-point').setData(ev.result.geometry);
 					console.log(ev.result.geometry.coordinates);
 					
-					var features = map.queryRenderedFeatures(ev.result.geometry);
-					console.log(features);
+					var features = map.queryRenderedFeatures(ev.result.geometry, { layers: ["programs"] });
+					if (features.length) {
+						console.log(features);
+					} else {
+						console.log(features);
+					}
 				
 					
 					
