@@ -68,19 +68,6 @@
 			// After the map style has loaded on the page, add a source layer and default
 			// styling for a single point.
 			map.on('load', function() {
-				map.addLayer({
-					'id': 'programs',
-					'type': 'fill',
-					'source': {
-						'type': 'geojson',
-						'data': 'programs.geojson'
-					},
-					'layout': {},
-					'paint': {
-						'fill-color': '#f08',
-						'fill-opacity': 0.4
-					}
-				});
 				
 				map.addLayer({
 					'id': 'urban-areas-fill',
@@ -121,7 +108,7 @@
 					map.getSource('single-point').setData(ev.result.geometry);
 				
 					
-					var features = map.queryRenderedFeatures(ev.result.geometry, { layers: ["programs"] });
+					var features = map.queryRenderedFeatures(ev.result.geometry, { layers: ["urban-areas-fill"] });
 					if (features.length) {
 						console.log(features);
 					} else {
