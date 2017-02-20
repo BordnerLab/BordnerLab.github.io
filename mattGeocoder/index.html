@@ -107,6 +107,9 @@
 					map.getSource('single-point').setData(ev.result.geometry);
 				
 					
+					var features = map.queryRenderedFeatures(ev.result.geometry.coordinates, { layers: ['programs'] });
+					console.log(features);
+					/*
 					window.setTimeout(function(){
 						var features = map.queryRenderedFeatures(ev.result.geometry);
 						if (features.length) {
@@ -115,6 +118,7 @@
 							console.log(features);
 						}
 					}, 3000);
+					*/
 				
 	
 					
