@@ -108,7 +108,10 @@
 				
 					
 					var features = map.queryRenderedFeatures(ev.result.geometry.coordinates, { layers: ['programs'] });
+					console.log(features);
 					console.log(features[0]);
+					alert(features[0].properties.ATT + "<br>" + features[0].properties.CenturyLin + "<br>" + features[0].properties.Charter_Co + "<br>" + features[0].properties.Comcast + "<br>" + 
+						features[0].properties.Frontier_C);
 					/*
 					window.setTimeout(function(){
 						var features = map.queryRenderedFeatures(ev.result.geometry);
