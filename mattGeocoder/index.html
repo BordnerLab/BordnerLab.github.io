@@ -59,9 +59,12 @@
 			// function which adds the geocoder to the map
 			function addGeocoder() {
 				map.addControl(geocoder);
+				
+				$('.mapboxgl-ctrl-geocoder').detach().appendTo('#myContainer');
 				// call function removeGeocoder
-				removeGeocoder();
+				/*removeGeocoder();*/
 			};
+			/*
 			// function which removes geocoder from the map and adds it to myContainer
 			function removeGeocoder() {
 				var myBox = document.getElementById('myContainer');
@@ -69,6 +72,7 @@
 				p = $('.mapboxgl-ctrl-geocoder').detach();
 				p.appendTo(myBox);
 			};
+			*/
 
 			// After the map style has loaded on the page, add a source layer and default
 			// styling for a single point.
@@ -81,9 +85,9 @@
 					}
 				});
 				
-				map.addSource('RCP', {
+				map.addSource('programs', {
 					"type": "geojson",
-					"data": "reduced_cost_programs.json"
+					"data": "programs.geojson"
 				});
 
 				map.addLayer({
@@ -97,8 +101,8 @@
 				});
 				
 				map.addLayer({
-					"id": "RCP",
-					"source": "RCP",
+					"id": "programs",
+					"source": "programs",
 					"type": "fill",
 					"paint": {
 						"fill-color": "black",
@@ -111,13 +115,14 @@
 				geocoder.on('result', function(ev) {
 					map.getSource('single-point').setData(ev.result.geometry);
 					console.log(ev.result.geometry.coordinates);
-					console.log(map.getLayer('point'));
 					
+					var features = map.queryRenderedFeatures(ev.result.geometry.coordinates);
+					console.log(features);
 				
-					var poly = map.getLayer('RCP');
-					console.log(poly);
 					
-					var myPoint = turf.point(ev.result.geometry.coordinates);
+					
+					
+					
 					
 					
 					
