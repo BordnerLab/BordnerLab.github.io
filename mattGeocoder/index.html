@@ -108,22 +108,16 @@
 					map.getSource('single-point').setData(ev.result.geometry);
 				
 					
-					var features = map.queryRenderedFeatures(ev.result.geometry, { layers: ['urban-areas-fill'] });
-					if (features.length) {
-						console.log(features);
-					} else {
-						console.log(features);
-					}
+					window.setTimeout(function(){
+						var features = map.queryRenderedFeatures(ev.result.geometry, { layers: ['urban-areas-fill'] });
+						if (features.length) {
+							console.log(features);
+						} else {
+							console.log(features);
+						}
+					}, 3000);
 				
-					
-					
-					
-					
-					
-					
-					
-					
-					
+	
 					
 				});
 			});
