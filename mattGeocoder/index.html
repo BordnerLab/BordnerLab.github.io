@@ -8,7 +8,8 @@
 	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.0.1/mapbox-gl-geocoder.css' type='text/css' />
     <style>
         body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:0%; height: 0%; visibility: hidden; }
+        #map { position:absolute; top:0; bottom:0; width:20%; height: 20%; visibility: visible; }
+		
 		#geocoder-container > div {
 			min-width:50%;
 			margin-left:25%;
@@ -61,18 +62,8 @@
 				map.addControl(geocoder);
 				
 				$('.mapboxgl-ctrl-geocoder').detach().appendTo('#myContainer');
-				// call function removeGeocoder
-				/*removeGeocoder();*/
 			};
-			/*
-			// function which removes geocoder from the map and adds it to myContainer
-			function removeGeocoder() {
-				var myBox = document.getElementById('myContainer');
-				var p;
-				p = $('.mapboxgl-ctrl-geocoder').detach();
-				p.appendTo(myBox);
-			};
-			*/
+		
 
 			// After the map style has loaded on the page, add a source layer and default
 			// styling for a single point.
@@ -116,7 +107,7 @@
 					map.getSource('single-point').setData(ev.result.geometry);
 					console.log(ev.result.geometry.coordinates);
 					
-					var features = map.queryRenderedFeatures(ev.result.geometry.coordinates);
+					var features = map.queryRenderedFeatures(ev.result.geometry);
 					console.log(features);
 				
 					
