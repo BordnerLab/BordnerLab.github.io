@@ -109,7 +109,7 @@
 				
 					
 					window.setTimeout(function(){
-						var features = map.queryRenderedFeatures(ev.result.geometry, { layers: ['urban-areas-fill'] });
+						var features = map.queryRenderedFeatures(ev.result.geometry);
 						if (features.length) {
 							console.log(features);
 						} else {
