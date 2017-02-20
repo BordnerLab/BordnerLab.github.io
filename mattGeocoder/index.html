@@ -75,11 +75,6 @@
 						"features": []
 					}
 				});
-				
-				map.addSource('programs', {
-					"type": "geojson",
-					"data": "programs.geojson"
-				});
 
 				map.addLayer({
 					"id": "point",
@@ -91,13 +86,17 @@
 					}
 				});
 				
-				map.addLayer({
-					"id": "programs",
-					"source": "programs",
-					"type": "fill",
-					"paint": {
-						"fill-color": "black",
-						"fill-opacity": 0.7
+				 map.addLayer({
+					'id': 'programs',
+					'type': 'fill',
+					'source': {
+						'type': 'geojson',
+						'data': 'programs.geojson'
+					},
+					'layout': {},
+					'paint': {
+						'fill-color': '#f08',
+						'fill-opacity': 0.4
 					}
 				});
 
