@@ -19,7 +19,8 @@
 			position: absolute;
 			width: 400px;
 			height: 500px;
-			background: black;
+			background: transparent;
+			border: 1px solid black;
 			top: 50px;
 			left: 0;
 			right: 0;
@@ -27,7 +28,8 @@
 		}
 		
 		#myContainer h1 {
-			color: white;
+			color: black;
+			text-align: center;
 		}
     </style>
 </head>
@@ -47,6 +49,7 @@
 			var text2;
 			var text3;
 			var text4;
+			var text5;
 			
 			mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2bmtkcjUzaG5meCJ9.eswxCZSAnob59HR0wEaTpA';
 			var map = new mapboxgl.Map({
@@ -73,17 +76,20 @@
 				text2 = document.createElement("h3");
 				text3 = document.createElement("h3");
 				text4 = document.createElement("h3");
+				text5 = document.createElement("h3");
 				
 				text1.setAttribute("id", "text1");
 				text2.setAttribute("id", "text2");
 				text3.setAttribute("id", "text3");
 				text4.setAttribute("id", "text4");
+				text5.setAttribute("id", "text5");
 				
 				
 				$(text1).appendTo("#myContainer");
 				$(text2).appendTo("#myContainer");
 				$(text3).appendTo("#myContainer");
 				$(text4).appendTo("#myContainer");
+				$(text5).appendTo("#myContainer");
 				
 			};
 		
@@ -139,6 +145,9 @@
 					
 					document.getElementById('text1').innerHTML = "ATT: " + features[0].properties.ATT;
 					document.getElementById('text2').innerHTML = "CenturyLin: " + features[0].properties.CenturyLin;
+					document.getElementById('text3').innerHTML = "Charter_Co: " + features[0].properties.Charter_Co;
+					document.getElementById('text4').innerHTML = "Comcast: " + features[0].properties.Comcast;
+					document.getElementById('text5').innerHTML = "Frontier_C: " + features[0].properties.Frontier_C;
 					
 					// continue with this format
 					
