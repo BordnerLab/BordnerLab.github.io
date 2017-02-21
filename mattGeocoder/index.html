@@ -43,6 +43,11 @@
 	<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.0.1/mapbox-gl-geocoder.js'></script>
 	<script>
 		$(function() {
+			var text1;
+			var text2;
+			var text3;
+			var text4;
+			
 			mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2bmtkcjUzaG5meCJ9.eswxCZSAnob59HR0wEaTpA';
 			var map = new mapboxgl.Map({
 				container: 'map',
@@ -63,10 +68,11 @@
 				
 				$('.mapboxgl-ctrl-geocoder').detach().appendTo('#myContainer');
 				
-				var text1 = document.createElement("h3");
-				var text2 = document.createElement("h3");
-				var text3 = document.createElement("h3");
-				var text4 = document.createElement("h3");
+				
+				text1 = document.createElement("h3");
+				text2 = document.createElement("h3");
+				text3 = document.createElement("h3");
+				text4 = document.createElement("h3");
 				
 				text1.setAttribute("id", "text1");
 				text2.setAttribute("id", "text2");
@@ -78,6 +84,7 @@
 				$(text2).appendTo("#myContainer");
 				$(text3).appendTo("#myContainer");
 				$(text4).appendTo("#myContainer");
+				
 			};
 		
 
@@ -128,9 +135,11 @@
 					console.log(features[0]);
 					alert(features[0].properties.ATT + "<br>" + features[0].properties.CenturyLin + "<br>" + features[0].properties.Charter_Co + "<br>" + features[0].properties.Comcast + "<br>" + 
 						features[0].properties.Frontier_C);
-						
+					
+					
 					document.getElementById('text1').innerHTML = "ATT: " + features[0].properties.ATT;
 					document.getElementById('text2').innerHTML = "CenturyLin: " + features[0].properties.CenturyLin;
+					
 					// continue with this format
 					
 					/*
