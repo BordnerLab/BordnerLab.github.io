@@ -137,17 +137,15 @@
 				
 					
 					var features = map.queryRenderedFeatures(ev.result.geometry.coordinates, { layers: ['programs'] });
-					console.log(features);
-					console.log(features[0]);
-					alert(features[0].properties.ATT + "<br>" + features[0].properties.CenturyLin + "<br>" + features[0].properties.Charter_Co + "<br>" + features[0].properties.Comcast + "<br>" + 
-						features[0].properties.Frontier_C);
+					
+					var layer = features[0];
 					
 					
-					document.getElementById('text1').innerHTML = "ATT: " + features[0].properties.ATT;
-					document.getElementById('text2').innerHTML = "CenturyLin: " + features[0].properties.CenturyLin;
-					document.getElementById('text3').innerHTML = "Charter_Co: " + features[0].properties.Charter_Co;
-					document.getElementById('text4').innerHTML = "Comcast: " + features[0].properties.Comcast;
-					document.getElementById('text5').innerHTML = "Frontier_C: " + features[0].properties.Frontier_C;
+					document.getElementById('text1').innerHTML = "ATT: " + layer.properties.ATT;
+					document.getElementById('text2').innerHTML = "CenturyLin: " + layer.properties.CenturyLin;
+					document.getElementById('text3').innerHTML = "Charter_Co: " + layer.properties.Charter_Co;
+					document.getElementById('text4').innerHTML = "Comcast: " + layer.properties.Comcast;
+					document.getElementById('text5').innerHTML = "Frontier_C: " + layer.properties.Frontier_C;
 					
 					// continue with this format
 					
