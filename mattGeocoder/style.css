@@ -8,19 +8,15 @@ body {
 	position:absolute;
 	top:0;
 	bottom:0;
-	width:20%;
-	height: 20%;
-	visibility: visible; 
+	width:0%;
+	height: 0%;
+	visibility: hidden; 
 }
-		
-#geocoder-container > div {
-	min-width:50%;
-	margin-left:25%;
-}
+
 		
 #myContainer {
 	position: absolute;
-	width: 400px;
+	width: 500px;
 	height: 500px;
 	background: transparent;
 	border: 1px solid black;
@@ -32,5 +28,15 @@ body {
 		
 #myContainer h1 {
 	color: black;
+	text-align: center;
+}
+
+#myContainer h3 {
+	color: black;
+	text-align: center;
+}
+
+#loadText {
+	visibility: hidden;
 	text-align: center;
 }
