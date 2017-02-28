@@ -122,26 +122,36 @@ var geoC = (function() {
 		if (ATT != "No discount program") {
 			link1.setAttribute("href", ATT);
 			link1.innerHTML = "ATT: " + ATT;
+		} else {
+			link1.innerHTML = "No discount program";
 		}
 		
 		if (CenturyLin != "No discount program") {
 			link2.setAttribute("href", CenturyLin);
 			link2.innerHTML = "CenturyLin: " + CenturyLin;
+		} else {
+			link2.innerHTML = "No discount program";
 		}
 		
 		if (CharterCo != "No discount program") {
 			link3.setAttribute("href", CharterCo);
 			link3.innerHTML = "CharterCo: " + CharterCo;
+		} else {
+			link3.innerHTML = "No discount program";
 		}
 		
 		if (Comcast != "No discount program") {
 			link4.setAttribute("href", Comast);
 			link4.innerHTML = "Comcast: " + Comcast;
+		} else {
+			link4.innerHTML = "No discount program";
 		}
 		
 		if (FrontierC != "No discount program") {
 			link5.setAttribute("href", FrontierC);
 			link5.innerHTML = "FrontierC: " + FrontierC;
+		} else {
+			link5.innerHTML = "No discount program";
 		}
 		
 		$(link1).appendTo("#myContainer");
