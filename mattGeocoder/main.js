@@ -122,6 +122,11 @@ var geoC = (function() {
 		link4.setAttribute("class", "gonnaRemove");
 		link5.setAttribute("class", "gonnaRemove");
 		
+		break1.setAttribute("class", "gonnaRemove");
+		break2.setAttribute("class", "gonnaRemove");
+		break3.setAttribute("class", "gonnaRemove");
+		break4.setAttribute("class", "gonnaRemove");
+		
 		link1.setAttribute("target", "_blank");
 		link2.setAttribute("target", "_blank");
 		link3.setAttribute("target", "_blank");
