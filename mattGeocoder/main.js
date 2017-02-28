@@ -1,71 +1,49 @@
 
 var geoC = (function() {
-	var text1;
-	var text2;
-	var text3;
-	var text4;
-	var text5;
-	var loadText;
-			
+	// declare variables
+	var loadText = document.getElementById("loadText");
+	
+	// create and connect to map
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2bmtkcjUzaG5meCJ9.eswxCZSAnob59HR0wEaTpA';
 	var map = new mapboxgl.Map({
 		container: 'map',
 		style: 'mapbox://styles/bordnerwlei/cizepw2le005h2so39v1oa0i1',
 		center: [-89.4012, 43.0731],
-		zoom: 13
+		zoom: 13,
+		pitch: 0.1
 	});
 			
 	// create geocoder
 	var geocoder = new MapboxGeocoder({
 		accessToken: mapboxgl.accessToken
 	});
-	// call function addGeocoder
-	addGeocoder();
-	// function which adds the geocoder to the map
-	function addGeocoder() {
-		map.addControl(geocoder);
-				
-		$('.mapboxgl-ctrl-geocoder').detach().appendTo('#myContainer');
-		
-		$('.mapboxgl-ctrl-geocoder').attr("id", "myGeocoder");
-		var myGeocoder = document.getElementById("myGeocoder");
-		myGeocoder.style.width = "100%";
-		myGeocoder.style.left = "0";
-		myGeocoder.style.right = "0";
-		myGeocoder.style.margin = "0 auto";
-				
-		loadText = document.createElement("h3");
-		text1 = document.createElement("h3");
-		text2 = document.createElement("h3");
-		text3 = document.createElement("h3");
-		text4 = document.createElement("h3");
-		text5 = document.createElement("h3");
-		var myLine = document.createElement("hr");
-		
-		loadText.setAttribute("id", "loadText");
-		text1.setAttribute("id", "text1");
-		text2.setAttribute("id", "text2");
-		text3.setAttribute("id", "text3");
-		text4.setAttribute("id", "text4");
-		text5.setAttribute("id", "text5");
-				
-		$(loadText).appendTo("#myContainer");
-		$(myLine).appendTo("#myContainer");
-		$(text1).appendTo("#myContainer");
-		$(text2).appendTo("#myContainer");
-		$(text3).appendTo("#myContainer");
-		$(text4).appendTo("#myContainer");
-		$(text5).appendTo("#myContainer");
-		
-		loadText.innerHTML = "Loading...";
-				
-	};
+	
+	// add geocoder 
+	map.addControl(geocoder);
+	
+	// remove and append geocoder
+	$('.mapboxgl-ctrl-geocoder').detach().appendTo('#myContainer');
+	
+	// assign geocoder
+	$('.mapboxgl-ctrl-geocoder').attr("id", "myGeocoder");
+	
+	// create line
+	//myLine = document.createElement("hr");
+	// create load text
+	//loadText = document.createElement("h3");
+	// assign load text id
+	//loadText.setAttribute("id", "loadText");
+	// append load text
+	//$(loadText).appendTo("#myContainer");
+	// assign load text content
+	//loadText.innerHTML = "Loading...";
+	// append line
+	//$(myLine).appendTo("#myContainer");
 		
 
-	// After the map style has loaded on the page, add a source layer and default
-	// styling for a single point.
+	
 	map.on('load', function() {
-				
+		// add polygon layer
 		map.addLayer({
 			'id': 'programs',
 			'type': 'fill',
@@ -79,7 +57,8 @@ var geoC = (function() {
 				'fill-opacity': 0.5
 			}
 		});
-				
+		
+		// add point source
 		map.addSource('single-point', {
 			"type": "geojson",
 			"data": {
@@ -87,7 +66,8 @@ var geoC = (function() {
 				"features": []
 			}
 		});
-
+		
+		// add point layer
 		map.addLayer({
 			"id": "point",
 			"source": "single-point",
@@ -98,24 +78,77 @@ var geoC = (function() {
 			}
 		});
 
-		// Listen for the `geocoder.input` event that is triggered when a user
-		// makes a selection and add a symbol that matches the result.
+		// Listen for the `geocoder.input` event
 		geocoder.on('result', function(ev) {
 			map.getSource('single-point').setData(ev.result.geometry);
 			loadText.style.visibility = "visible";
-			
+			var para = document.getElementsByClassName('gonnaRemove');
+			while (para[0]) {
+				para[0].parentNode.removeChild(para[0]);
+			}
 			
 			window.setTimeout(function() {
 				loadText.style.visibility = "hidden";
 				var features = map.queryRenderedFeatures(ev.result.geometry.coordinates, { layers: ['programs'] });
 				var layer = features[0];
-					
-				document.getElementById('text1').innerHTML = "ATT: " + layer.properties.ATT;
-				document.getElementById('text2').innerHTML = "CenturyLin: " + layer.properties.CenturyLin;
-				document.getElementById('text3').innerHTML = "Charter_Co: " + layer.properties.Charter_Co;
-				document.getElementById('text4').innerHTML = "Comcast: " + layer.properties.Comcast;
-				document.getElementById('text5').innerHTML = "Frontier_C: " + layer.properties.Frontier_C;	
+				
+				// here we can replace with a function call with parameters
+				addAndPopulateLinks(layer.properties.ATT, layer.properties.CenturyLin, 
+					layer.properties.Charter_Co, layer.properties.Comcast, layer.properties.Frontier_C);
 			}, 3000);		
 		});
 	});
+	
+	// function to add and populate links
+	function addAndPopulateLinks(ATT, CenturyLin, CharterCo, Comcast, FrontierC) {
+		var link1 = document.createElement("a");
+		var link2 = document.createElement("a");
+		var link3 = document.createElement("a");
+		var link4 = document.createElement("a");
+		var link5 = document.createElement("a");
+		
+		link1.setAttribute("class", "gonnaRemove");
+		link2.setAttribute("class", "gonnaRemove");
+		link3.setAttribute("class", "gonnaRemove");
+		link4.setAttribute("class", "gonnaRemove");
+		link5.setAttribute("class", "gonnaRemove");
+		
+		link1.setAttribute("target", "_blank");
+		link2.setAttribute("target", "_blank");
+		link3.setAttribute("target", "_blank");
+		link4.setAttribute("target", "_blank");
+		link5.setAttribute("target", "_blank");
+		
+		if (ATT != "No discount program") {
+			link1.setAttribute("href", ATT);
+			link1.innerHTML = "ATT: " + ATT;
+		}
+		
+		if (CenturyLin != "No discount program") {
+			link2.setAttribute("href", CenturyLin);
+			link2.innerHTML = "CenturyLin: " + CenturyLin;
+		}
+		
+		if (CharterCo != "No discount program") {
+			link3.setAttribute("href", CharterCo);
+			link3.innerHTML = "CharterCo: " + CharterCo;
+		}
+		
+		if (Comcast != "No discount program") {
+			link4.setAttribute("href", Comast);
+			link4.innerHTML = "Comcast: " + Comcast;
+		}
+		
+		if (FrontierC != "No discount program") {
+			link5.setAttribute("href", FrontierC);
+			link5.innerHTML = "FrontierC: " + FrontierC;
+		}
+		
+		$(link1).appendTo("#myContainer");
+		$(link2).appendTo("#myContainer");
+		$(link3).appendTo("#myContainer");
+		$(link4).appendTo("#myContainer");
+		$(link5).appendTo("#myContainer");
+	}
+	
 })();
