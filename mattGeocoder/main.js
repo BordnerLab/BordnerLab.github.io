@@ -28,21 +28,7 @@ var geoC = (function() {
 	// assign geocoder
 	$('.mapboxgl-ctrl-geocoder').attr("id", "myGeocoder");
 	
-	// create line
-	//myLine = document.createElement("hr");
-	// create load text
-	//loadText = document.createElement("h3");
-	// assign load text id
-	//loadText.setAttribute("id", "loadText");
-	// append load text
-	//$(loadText).appendTo("#myContainer");
-	// assign load text content
-	//loadText.innerHTML = "Loading...";
-	// append line
-	//$(myLine).appendTo("#myContainer");
-		
-
-	
+	// ensures map has loaded before continuing
 	map.on('load', function() {
 		// add polygon layer
 		map.addLayer({
@@ -81,21 +67,26 @@ var geoC = (function() {
 
 		// Listen for the `geocoder.input` event
 		geocoder.on('result', function(ev) {
+			// add point to map where searched
 			map.getSource('single-point').setData(ev.result.geometry);
+			// display loading visual
 			loadText.style.visibility = "visible";
+			// retrieve and remove all classes with 'gonnaRemove'
 			var para = document.getElementsByClassName('gonnaRemove');
 			while (para[0]) {
 				para[0].parentNode.removeChild(para[0]);
 			}
 			
+			// Set timer to ensure loading
 			window.setTimeout(function() {
+				// control to not run twice
 				if (geocoderControl == false) {
 					geocoderControl = true;
 					loadText.style.visibility = "hidden";
 					var features = map.queryRenderedFeatures(ev.result.geometry.coordinates, { layers: ['programs'] });
 					var layer = features[0];
 				
-					// here we can replace with a function call with parameters
+					// call function with property parameters
 					addAndPopulateLinks(layer.properties.ATT, layer.properties.CenturyLin, 
 						layer.properties.Charter_Co, layer.properties.Comcast, layer.properties.Frontier_C);
 				}
@@ -105,34 +96,40 @@ var geoC = (function() {
 	
 	// function to add and populate links
 	function addAndPopulateLinks(ATT, CenturyLin, CharterCo, Comcast, FrontierC) {
+		// create links
 		var link1 = document.createElement("a");
 		var link2 = document.createElement("a");
 		var link3 = document.createElement("a");
 		var link4 = document.createElement("a");
 		var link5 = document.createElement("a");
 		
+		// create breaks
 		var break1 = document.createElement("br");
 		var break2 = document.createElement("br");
 		var break3 = document.createElement("br");
 		var break4 = document.createElement("br");
 		
+		// attribute links with 'gonnaRemove' class
 		link1.setAttribute("class", "gonnaRemove");
 		link2.setAttribute("class", "gonnaRemove");
 		link3.setAttribute("class", "gonnaRemove");
 		link4.setAttribute("class", "gonnaRemove");
 		link5.setAttribute("class", "gonnaRemove");
 		
+		// attribute breaks with 'gonnaRemove' class
 		break1.setAttribute("class", "gonnaRemove");
 		break2.setAttribute("class", "gonnaRemove");
 		break3.setAttribute("class", "gonnaRemove");
 		break4.setAttribute("class", "gonnaRemove");
 		
+		// attribute links with blank target for opening in new tab
 		link1.setAttribute("target", "_blank");
 		link2.setAttribute("target", "_blank");
 		link3.setAttribute("target", "_blank");
 		link4.setAttribute("target", "_blank");
 		link5.setAttribute("target", "_blank");
 		
+		// check if properties has link
 		if (ATT != "No discount program") {
 			link1.setAttribute("href", ATT);
 			link1.innerHTML = "ATT: " + ATT;
@@ -169,7 +166,7 @@ var geoC = (function() {
 		}
 		
 		
-		
+		// append links and breaks to container
 		$(link1).appendTo("#myContainer");
 		$(break1).appendTo("#myContainer");
 		$(link2).appendTo("#myContainer");
@@ -180,6 +177,7 @@ var geoC = (function() {
 		$(break4).appendTo("#myContainer");
 		$(link5).appendTo("#myContainer");
 		
+		// set timer to allow function to run again
 		window.setTimeout(function() {
 			geocoderControl = false;
 		}, 4000);
