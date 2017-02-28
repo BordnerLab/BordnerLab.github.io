@@ -87,14 +87,18 @@ var geoC = (function() {
 				para[0].parentNode.removeChild(para[0]);
 			}
 			
+			var executed = false;
 			window.setTimeout(function() {
-				loadText.style.visibility = "hidden";
-				var features = map.queryRenderedFeatures(ev.result.geometry.coordinates, { layers: ['programs'] });
-				var layer = features[0];
+				if (!executed) {
+					loadText.style.visibility = "hidden";
+					var features = map.queryRenderedFeatures(ev.result.geometry.coordinates, { layers: ['programs'] });
+					var layer = features[0];
 				
-				// here we can replace with a function call with parameters
-				addAndPopulateLinks(layer.properties.ATT, layer.properties.CenturyLin, 
-					layer.properties.Charter_Co, layer.properties.Comcast, layer.properties.Frontier_C);
+					// here we can replace with a function call with parameters
+					addAndPopulateLinks(layer.properties.ATT, layer.properties.CenturyLin, 
+						layer.properties.Charter_Co, layer.properties.Comcast, layer.properties.Frontier_C);
+					executed = true;
+				}
 			}, 3000);		
 		});
 	});
