@@ -2,6 +2,7 @@
 var geoC = (function() {
 	// declare variables
 	var loadText = document.getElementById("loadText");
+	var geocoderControl = false;
 	
 	// create and connect to map
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2bmtkcjUzaG5meCJ9.eswxCZSAnob59HR0wEaTpA';
@@ -87,9 +88,9 @@ var geoC = (function() {
 				para[0].parentNode.removeChild(para[0]);
 			}
 			
-			var executed = false;
 			window.setTimeout(function() {
-				if (!executed) {
+				if (geocoderControl == false) {
+					geocoderControl = true;
 					loadText.style.visibility = "hidden";
 					var features = map.queryRenderedFeatures(ev.result.geometry.coordinates, { layers: ['programs'] });
 					var layer = features[0];
@@ -97,7 +98,6 @@ var geoC = (function() {
 					// here we can replace with a function call with parameters
 					addAndPopulateLinks(layer.properties.ATT, layer.properties.CenturyLin, 
 						layer.properties.Charter_Co, layer.properties.Comcast, layer.properties.Frontier_C);
-					executed = true;
 				}
 			}, 3000);		
 		});
@@ -110,6 +110,11 @@ var geoC = (function() {
 		var link3 = document.createElement("a");
 		var link4 = document.createElement("a");
 		var link5 = document.createElement("a");
+		
+		var break1 = document.createElement("br");
+		var break2 = document.createElement("br");
+		var break3 = document.createElement("br");
+		var break4 = document.createElement("br");
 		
 		link1.setAttribute("class", "gonnaRemove");
 		link2.setAttribute("class", "gonnaRemove");
@@ -158,11 +163,21 @@ var geoC = (function() {
 			link5.innerHTML = "No discount program";
 		}
 		
+		
+		
 		$(link1).appendTo("#myContainer");
+		$(break1).appendTo("#myContainer");
 		$(link2).appendTo("#myContainer");
+		$(break2).appendTo("#myContainer");
 		$(link3).appendTo("#myContainer");
+		$(break3).appendTo("#myContainer");
 		$(link4).appendTo("#myContainer");
+		$(break4).appendTo("#myContainer");
 		$(link5).appendTo("#myContainer");
+		
+		window.setTimeout(function() {
+			geocoderControl = false;
+		}, 4000);
 	}
 	
 })();
