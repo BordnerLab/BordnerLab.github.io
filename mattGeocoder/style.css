@@ -49,6 +49,14 @@ body {
 	transition: .15s color;
 }
 
+#myContainer .noLink {
+	color: black;
+}
+
+#myContainer .noLink:hover {
+	color: black;
+}
+
 #myContainer a:hover {
 	color: #154360;
 }
