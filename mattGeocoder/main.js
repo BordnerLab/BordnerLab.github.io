@@ -1,8 +1,10 @@
 
 var geoC = (function() {
 	// declare variables
-	var loadText = document.getElementById("loadText");
 	var geocoderControl = false;
+	var titleText = "Enter Your Address";
+	var loaderText = "Loading...";
+	var subText = "";
 	
 	// create and connect to map
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2bmtkcjUzaG5meCJ9.eswxCZSAnob59HR0wEaTpA';
@@ -14,6 +16,16 @@ var geoC = (function() {
 		pitch: 0.1
 	});
 			
+	// create and assign title
+	var myTitle = document.createElement("h1");
+	myTitle.innerHTML = titleText;
+	$(myTitle).appendTo("#myContainer");
+	
+	// create and assign sub text
+	var mySubText = document.createElement("p");
+	mySubText.innerHTML = subText;
+	$(mySubText).appendTo("#myContainer");
+	
 	// create geocoder
 	var geocoder = new MapboxGeocoder({
 		accessToken: mapboxgl.accessToken
@@ -27,6 +39,16 @@ var geoC = (function() {
 	
 	// assign geocoder
 	$('.mapboxgl-ctrl-geocoder').attr("id", "myGeocoder");
+	
+	// create and assign line
+	var myLine = document.createElement("hr");
+	$(myLine).appendTo("#myContainer");
+	
+	// create and assign loading text
+	var myLoader = document.createElement("h3");
+	myLoader.setAttribute("id", "loadText");
+	myLoader.innerHTML = loaderText;
+	$(myLoader).appendTo("#myContainer");
 	
 	// ensures map has loaded before continuing
 	map.on('load', function() {
@@ -70,7 +92,7 @@ var geoC = (function() {
 			// add point to map where searched
 			map.getSource('single-point').setData(ev.result.geometry);
 			// display loading visual
-			loadText.style.visibility = "visible";
+			myLoader.style.visibility = "visible";
 			// retrieve and remove all classes with 'gonnaRemove'
 			var para = document.getElementsByClassName('gonnaRemove');
 			while (para[0]) {
@@ -82,7 +104,7 @@ var geoC = (function() {
 				// control to not run twice
 				if (geocoderControl == false) {
 					geocoderControl = true;
-					loadText.style.visibility = "hidden";
+					myLoader.style.visibility = "hidden";
 					var features = map.queryRenderedFeatures(ev.result.geometry.coordinates, { layers: ['programs'] });
 					var layer = features[0];
 				
@@ -132,35 +154,35 @@ var geoC = (function() {
 		// check if properties has link
 		if (ATT != "No discount program") {
 			link1.setAttribute("href", ATT);
-			link1.innerHTML = "ATT: " + ATT;
+			link1.innerHTML = "<b>ATT: </b>" + ATT;
 		} else {
 			link1.innerHTML = "No discount program";
 		}
 		
 		if (CenturyLin != "No discount program") {
 			link2.setAttribute("href", CenturyLin);
-			link2.innerHTML = "CenturyLin: " + CenturyLin;
+			link2.innerHTML = "<b>CenturyLin: </b>" + CenturyLin;
 		} else {
 			link2.innerHTML = "No discount program";
 		}
 		
 		if (CharterCo != "No discount program") {
 			link3.setAttribute("href", CharterCo);
-			link3.innerHTML = "CharterCo: " + CharterCo;
+			link3.innerHTML = "<b>CharterCo: </b>" + CharterCo;
 		} else {
 			link3.innerHTML = "No discount program";
 		}
 		
 		if (Comcast != "No discount program") {
 			link4.setAttribute("href", Comast);
-			link4.innerHTML = "Comcast: " + Comcast;
+			link4.innerHTML = "<b>Comcast: </b>" + Comcast;
 		} else {
 			link4.innerHTML = "No discount program";
 		}
 		
 		if (FrontierC != "No discount program") {
 			link5.setAttribute("href", FrontierC);
-			link5.innerHTML = "FrontierC: " + FrontierC;
+			link5.innerHTML = "<b>FrontierC: </b>" + FrontierC;
 		} else {
 			link5.innerHTML = "No discount program";
 		}
