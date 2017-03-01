@@ -164,7 +164,7 @@ var geoC = (function() {
 			link1.innerHTML = "<b>ATT: </b>" + ATT;
 		} else {
 			link1.innerHTML = "<b>ATT: </b>No discount program";
-			link1.setAttribute("class", "noLink");
+			link1.setAttribute("class", "noLink gonnaRemove");
 		}
 		
 		if (CenturyLin != "No discount program") {
@@ -172,7 +172,7 @@ var geoC = (function() {
 			link2.innerHTML = "<b>CenturyLin: </b>" + CenturyLin;
 		} else {
 			link2.innerHTML = "<b>CenturyLin: </b>No discount program";
-			link2.setAttribute("class", "noLink");
+			link2.setAttribute("class", "noLink gonnaRemove");
 		}
 		
 		if (CharterCo != "No discount program") {
@@ -180,7 +180,7 @@ var geoC = (function() {
 			link3.innerHTML = "<b>CharterCo: </b>" + CharterCo;
 		} else {
 			link3.innerHTML = "<b>CharterCo: </b>No discount program";
-			link3.setAttribute("class", "noLink");
+			link3.setAttribute("class", "noLink gonnaRemove");
 		}
 		
 		if (Comcast != "No discount program") {
@@ -188,7 +188,7 @@ var geoC = (function() {
 			link4.innerHTML = "<b>Comcast: </b>" + Comcast;
 		} else {
 			link4.innerHTML = "<b>Comcast: </b>No discount program";
-			link4.setAttribute("class", "noLink");
+			link4.setAttribute("class", "noLink gonnaRemove");
 		}
 		
 		if (FrontierC != "No discount program") {
@@ -196,7 +196,7 @@ var geoC = (function() {
 			link5.innerHTML = "<b>FrontierC: </b>" + FrontierC;
 		} else {
 			link5.innerHTML = "<b>FrontierC: </b>No discount program";
-			link5.setAttribute("class", "noLink");
+			link5.setAttribute("class", "noLink gonnaRemove");
 		}
 		
 		
