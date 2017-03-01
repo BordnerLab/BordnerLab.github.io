@@ -23,20 +23,18 @@ body {
 	left: 0;
 	right: 0;
 	margin: 0 auto;
+	text-align: center;
 }
 
 #myContainer h1 {
 	color: black;
-	text-align: center;
 }
 
 #myContainer h3 {
 	color: black;
-	text-align: center;
 }
 
 #myContainer a {
-	text-align: center;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
@@ -51,12 +49,11 @@ body {
 }
 
 #myContainer p {
-	text-align: center;
+
 }
 
 #loadText {
 	visibility: hidden;
-	text-align: center;
 }
 
 #myGeocoder {

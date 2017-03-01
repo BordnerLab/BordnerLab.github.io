@@ -5,6 +5,7 @@ var geoC = (function() {
 	var titleText = "Enter Your Address";
 	var loaderText = "Loading...";
 	var subText = "";
+	var errorText = "The address you have chosen is not valid, please enter a new address.";
 	
 	// create and connect to map
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2bmtkcjUzaG5meCJ9.eswxCZSAnob59HR0wEaTpA';
@@ -107,10 +108,15 @@ var geoC = (function() {
 					myLoader.style.visibility = "hidden";
 					var features = map.queryRenderedFeatures(ev.result.geometry.coordinates, { layers: ['programs'] });
 					var layer = features[0];
-				
+					
+					
 					// call function with property parameters
-					addAndPopulateLinks(layer.properties.ATT, layer.properties.CenturyLin, 
-						layer.properties.Charter_Co, layer.properties.Comcast, layer.properties.Frontier_C);
+					try {
+						addAndPopulateLinks(layer.properties.ATT, layer.properties.CenturyLin, 
+							layer.properties.Charter_Co, layer.properties.Comcast, layer.properties.Frontier_C);
+					} catch(err) {
+						catchUndefinedLayer(err);
+					}
 				}
 			}, 3000);		
 		});
@@ -118,6 +124,7 @@ var geoC = (function() {
 	
 	// function to add and populate links
 	function addAndPopulateLinks(ATT, CenturyLin, CharterCo, Comcast, FrontierC) {
+
 		// create links
 		var link1 = document.createElement("a");
 		var link2 = document.createElement("a");
@@ -203,6 +210,17 @@ var geoC = (function() {
 		window.setTimeout(function() {
 			geocoderControl = false;
 		}, 4000);
-	}
+	};
+	
+	function catchUndefinedLayer(err) {
+		var myErrorText = document.createElement("h3");
+		myErrorText.setAttribute("class", "gonnaRemove");
+		myErrorText.innerHTML = errorText;
+		$(myErrorText).appendTo("#myContainer");
+		// set timer to allow function to run again
+		window.setTimeout(function() {
+			geocoderControl = false;
+		}, 4000);
+	};
 	
 })();
