@@ -132,7 +132,7 @@ var geoC = (function() {
 		// check if properties has link
 		if (ATT != "No discount program") {
 			link1.setAttribute("href", ATT);
-			link1.innerHTML = "ATT: " + ATT;
+			link1.innerHTML = "<b>ATT: </b>" + ATT;
 		} else {
 			link1.innerHTML = "No discount program";
 		}

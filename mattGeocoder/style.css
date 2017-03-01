@@ -43,6 +43,10 @@ body {
 	margin: 0 auto;
 }
 
+#myContainer b {
+	color: black;
+}
+
 #loadText {
 	visibility: hidden;
 	text-align: center;
