@@ -220,11 +220,12 @@ var geoC = (function() {
 	function catchUndefinedLayer(err) {
 		var myErrorText = document.createElement("h3");
 		myErrorText.setAttribute("class", "gonnaRemove");
-		myErrorText.innerHTML = errorText;
+		myErrorText.innerHTML = errorText + ": " + err;
 		$(myErrorText).appendTo("#myContainer");
 		// set timer to allow function to run again
 		window.setTimeout(function() {
 			geocoderControl = false;
+			console.log(geocoderControl);
 		}, 4000);
 	};
 	
