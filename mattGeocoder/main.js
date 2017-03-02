@@ -103,21 +103,39 @@ var geoC = (function() {
 			// Set timer to ensure loading
 			window.setTimeout(function() {
 				// control to not run twice
-				if (geocoderControl == false) {
-					geocoderControl = true;
-					myLoader.style.visibility = "hidden";
-					var features = map.queryRenderedFeatures(ev.result.geometry.coordinates, { layers: ['programs'] });
-					var layer = features[0];
+				//if (geocoderControl == false) {
+					//geocoderControl = true;
+				myLoader.style.visibility = "hidden";
+				var features = map.queryRenderedFeatures(ev.result.geometry.coordinates, { layers: ['programs'] });
+				var layer = features[0];
+				var poly = turf.polygon([[
+					[-81, 41],
+					[-81, 47],
+					[-72, 47],
+					[-72, 41],
+					[-81, 41]
+				]]);
+				try {
+					var isInside = turf.inside(ev.result.geometry, poly);
+				} catch(err) {
+					console.log(err);
+				}
 					
-					
-					// call function with property parameters
-					try {
+				// call function with property parameters
+				try {
+					if (geocoderControl == false) {
 						addAndPopulateLinks(layer.properties.ATT, layer.properties.CenturyLin, 
 							layer.properties.Charter_Co, layer.properties.Comcast, layer.properties.Frontier_C);
-					} catch(err) {
-						catchUndefinedLayer(err);
+						geocoderControl = true;
 					}
+				} catch(err) {
+					if (geocoderControl == false) {
+						catchUndefinedLayer(err);
+						geocoderControl = true;
+					}
+					
 				}
+				//}
 			}, 3000);		
 		});
 	});
@@ -225,7 +243,6 @@ var geoC = (function() {
 		// set timer to allow function to run again
 		window.setTimeout(function() {
 			geocoderControl = false;
-			console.log(geocoderControl);
 		}, 4000);
 	};
 	
