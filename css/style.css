@@ -32,6 +32,15 @@ h3 {
   vertical-align: top;
 }
 
+a {
+  text-decoration: none;
+}
+a:link {
+  color: #c56e6b;
+}
+a:visited {
+  color: #a05d5b;
+}
 
 #title {
   background-image: url(../img/captureSaveDarkest.jpg);
