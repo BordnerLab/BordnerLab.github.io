@@ -3,7 +3,7 @@ var geoC = (function() {
 	// declare variables
 	var geocoderControl = false;
 	var titleText = "Enter Your Address";
-	var loaderText = "Loading...";
+	//var loaderText = "Loading...";
 	var subText = "";
 	var errorText = "The address you have chosen is not valid, please enter a new address.";
 	
@@ -45,19 +45,11 @@ var geoC = (function() {
 	var myLine = document.createElement("hr");
 	$(myLine).appendTo("#myContainer");
 	
-	// create and assign loading text
-	/*
-	var myLoader = document.createElement("h3");
-	myLoader.setAttribute("id", "loadText");
-	myLoader.innerHTML = loaderText;
-	$(myLoader).appendTo("#myContainer");
-	*/
 	
 	var myLoaderBox = document.createElement("div");
 	var myLoader = document.createElement("div");
 	myLoaderBox.setAttribute("id", "myProgress");
 	myLoader.setAttribute("id", "myBar");
-	//myLoader.innerHTML = "0%";
 	$(myLoader).appendTo(myLoaderBox);
 	$(myLoaderBox).appendTo("#myContainer");
 	
@@ -108,8 +100,7 @@ var geoC = (function() {
 			if (check == true) {
 				// add point to map where searched
 				map.getSource('single-point').setData(ev.result.geometry);
-				// display loading visual
-				//myLoader.style.visibility = "visible";
+				
 				moveBar();
 				// retrieve and remove all classes with 'gonnaRemove'
 				var para = document.getElementsByClassName('gonnaRemove');
@@ -118,55 +109,6 @@ var geoC = (function() {
 				}
 				moveBar(ev.result.geometry.coordinates);
 				
-				/*
-				// Set timer to ensure loading
-				window.setTimeout(function() {
-					// control to not run twice
-					//if (geocoderControl == false) {
-						//geocoderControl = true;
-						
-						
-					
-					//myLoader.style.visibility = "hidden";
-					var features = map.queryRenderedFeatures(ev.result.geometry.coordinates, { layers: ['programs'] });
-					var layer = features[0];
-					
-					
-					var poly = turf.polygon([[
-						[-81, 41],
-						[-81, 47],
-						[-72, 47],
-						[-72, 41],
-						[-81, 41]
-					]]);
-					try {
-						var isInside = turf.inside(ev.result.geometry, poly);
-						console.log(isInside);
-					} catch(err) {
-						console.log(err);
-					}
-					
-					
-					
-					// call function with property parameters
-					try {
-						if (geocoderControl == false) {
-							addAndPopulateLinks(layer.properties.ATT, layer.properties.CenturyLin, 
-								layer.properties.Charter, layer.properties.Comcast, layer.properties.Frontier, 
-								layer.properties.Mediacom, layer.properties.Midco, layer.properties.Sprint, 
-								layer.properties.Lifeline);
-							geocoderControl = true;
-						}
-					} catch(err) {
-						if (geocoderControl == false) {
-							catchUndefinedLayer(err);
-							geocoderControl = true;
-						}
-					
-					}
-					//}
-				}, 6000);
-				*/
 			} else {
 			 	alert('Data is still being processed.');
 			}	
