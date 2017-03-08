@@ -188,18 +188,18 @@ var geoC = (function() {
 				
 				
 				try {
-					if (geocoderControl == false) {
+					//if (geocoderControl == false) {
 						addAndPopulateLinks(layer.properties.ATT, layer.properties.CenturyLin, 
 							layer.properties.Charter, layer.properties.Comcast, layer.properties.Frontier, 
 							layer.properties.Mediacom, layer.properties.Midco, layer.properties.Sprint, 
 							layer.properties.Lifeline);
 						geocoderControl = true;
-					}
+					//}
 				} catch(err) {
-					if (geocoderControl == false) {
+					//if (geocoderControl == false) {
 						catchUndefinedLayer(err);
 						geocoderControl = true;
-					}
+					//}
 					
 				}
 					
