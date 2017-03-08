@@ -108,6 +108,7 @@ var geoC = (function() {
 				myLoader.style.visibility = "hidden";
 				var features = map.queryRenderedFeatures(ev.result.geometry.coordinates, { layers: ['programs'] });
 				var layer = features[0];
+				/*
 				var poly = turf.polygon([[
 					[-81, 41],
 					[-81, 47],
@@ -120,6 +121,7 @@ var geoC = (function() {
 				} catch(err) {
 					console.log(err);
 				}
+				*/
 					
 				// call function with property parameters
 				try {
