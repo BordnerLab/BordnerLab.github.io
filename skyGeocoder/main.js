@@ -51,10 +51,7 @@ var geoC = (function() {
 	myLoader.innerHTML = loaderText;
 	$(myLoader).appendTo("#myContainer");
 	
-	//map.isSourceLoaded(id)
-	map.on('dataloading', function() {
-		console.log('data loading');
-	});
+	
 	
 	// ensures map has loaded before continuing
 	map.on('load', function() {
@@ -95,57 +92,63 @@ var geoC = (function() {
 
 		// Listen for the `geocoder.input` event
 		geocoder.on('result', function(ev) {
-			// add point to map where searched
-			map.getSource('single-point').setData(ev.result.geometry);
-			// display loading visual
-			myLoader.style.visibility = "visible";
-			// retrieve and remove all classes with 'gonnaRemove'
-			var para = document.getElementsByClassName('gonnaRemove');
-			while (para[0]) {
-				para[0].parentNode.removeChild(para[0]);
-			}
+			var check = map.isSourceLoaded('programs');
+			if (check == true) {
+				// add point to map where searched
+				map.getSource('single-point').setData(ev.result.geometry);
+				// display loading visual
+				myLoader.style.visibility = "visible";
+				// retrieve and remove all classes with 'gonnaRemove'
+				var para = document.getElementsByClassName('gonnaRemove');
+				while (para[0]) {
+					para[0].parentNode.removeChild(para[0]);
+				}
 			
-			// Set timer to ensure loading
-			window.setTimeout(function() {
-				// control to not run twice
-				//if (geocoderControl == false) {
-					//geocoderControl = true;
-				myLoader.style.visibility = "hidden";
-				var features = map.queryRenderedFeatures(ev.result.geometry.coordinates, { layers: ['programs'] });
-				var layer = features[0];
-				/*
-				var poly = turf.polygon([[
-					[-81, 41],
-					[-81, 47],
-					[-72, 47],
-					[-72, 41],
-					[-81, 41]
-				]]);
-				try {
-					var isInside = turf.inside(ev.result.geometry, poly);
-				} catch(err) {
-					console.log(err);
-				}
-				*/
+				// Set timer to ensure loading
+				window.setTimeout(function() {
+					// control to not run twice
+					//if (geocoderControl == false) {
+						//geocoderControl = true;
+					myLoader.style.visibility = "hidden";
+					var features = map.queryRenderedFeatures(ev.result.geometry.coordinates, { layers: ['programs'] });
+					var layer = features[0];
 					
-				// call function with property parameters
-				try {
-					if (geocoderControl == false) {
-						addAndPopulateLinks(layer.properties.ATT, layer.properties.CenturyLin, 
-							layer.properties.Charter, layer.properties.Comcast, layer.properties.Frontier, 
-							layer.properties.Mediacom, layer.properties.Midco, layer.properties.Sprint, 
-							layer.properties.Lifeline);
-						geocoderControl = true;
-					}
-				} catch(err) {
-					if (geocoderControl == false) {
-						catchUndefinedLayer(err);
-						geocoderControl = true;
+					var poly = turf.polygon([[
+						[-81, 41],
+						[-81, 47],
+						[-72, 47],
+						[-72, 41],
+						[-81, 41]
+					]]);
+					try {
+						var isInside = turf.inside(ev.result.geometry, poly);
+						console.log(isInside);
+					} catch(err) {
+						console.log(err);
 					}
 					
-				}
-				//}
-			}, 3000);		
+					
+					// call function with property parameters
+					try {
+						if (geocoderControl == false) {
+							addAndPopulateLinks(layer.properties.ATT, layer.properties.CenturyLin, 
+								layer.properties.Charter, layer.properties.Comcast, layer.properties.Frontier, 
+								layer.properties.Mediacom, layer.properties.Midco, layer.properties.Sprint, 
+								layer.properties.Lifeline);
+							geocoderControl = true;
+						}
+					} catch(err) {
+						if (geocoderControl == false) {
+							catchUndefinedLayer(err);
+							geocoderControl = true;
+						}
+					
+					}
+					//}
+				}, 3000);
+			} else {
+			 	alert('Data is still being processed.');
+			}	
 		});
 	});
 	
