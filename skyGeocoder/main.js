@@ -46,10 +46,21 @@ var geoC = (function() {
 	$(myLine).appendTo("#myContainer");
 	
 	// create and assign loading text
+	/*
 	var myLoader = document.createElement("h3");
 	myLoader.setAttribute("id", "loadText");
 	myLoader.innerHTML = loaderText;
 	$(myLoader).appendTo("#myContainer");
+	*/
+	
+	var myLoaderBox = document.createElement("div");
+	var myLoader = document.createElement("div");
+	myLoaderBox.setAttribute("id", "myProgress");
+	myLoader.setAttribute("id", "myBar");
+	//myLoader.innerHTML = "0%";
+	$(myLoader).appendTo(myLoaderBox);
+	$(myLoaderBox).appendTo("#myContainer");
+	
 	
 	
 	
@@ -97,7 +108,8 @@ var geoC = (function() {
 				// add point to map where searched
 				map.getSource('single-point').setData(ev.result.geometry);
 				// display loading visual
-				myLoader.style.visibility = "visible";
+				//myLoader.style.visibility = "visible";
+				moveBar();
 				// retrieve and remove all classes with 'gonnaRemove'
 				var para = document.getElementsByClassName('gonnaRemove');
 				while (para[0]) {
@@ -109,7 +121,10 @@ var geoC = (function() {
 					// control to not run twice
 					//if (geocoderControl == false) {
 						//geocoderControl = true;
-					myLoader.style.visibility = "hidden";
+						
+						
+						
+					//myLoader.style.visibility = "hidden";
 					var features = map.queryRenderedFeatures(ev.result.geometry.coordinates, { layers: ['programs'] });
 					var layer = features[0];
 					console.log(layer);
@@ -151,6 +166,21 @@ var geoC = (function() {
 			}	
 		});
 	});
+	
+	function moveBar() {
+		var elem = document.getElementById("myBar");
+		var width = 0;
+		var id = setInterval(frame, 10);
+		function frame() {
+			if (width >= 100) {
+				clearInterval(id);
+			} else {
+				width++;
+				elem.style.width = width + '%';
+				elem.innerHTML = width * 1 + '%';
+			}
+		};
+	};
 	
 	// function to add and populate links
 	function addAndPopulateLinks(ATT, CenturyLin, Charter, Comcast, Frontier, Mediacom, Midco, Sprint, Lifeline) {
