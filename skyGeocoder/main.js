@@ -145,7 +145,7 @@ var geoC = (function() {
 					
 					}
 					//}
-				}, 3000);
+				}, 6000);
 			} else {
 			 	alert('Data is still being processed.');
 			}	
@@ -304,7 +304,7 @@ var geoC = (function() {
 		// set timer to allow function to run again
 		window.setTimeout(function() {
 			geocoderControl = false;
-		}, 4000);
+		}, 7000);
 	};
 	
 	function catchUndefinedLayer(err) {
@@ -315,7 +315,7 @@ var geoC = (function() {
 		// set timer to allow function to run again
 		window.setTimeout(function() {
 			geocoderControl = false;
-		}, 4000);
+		}, 7000);
 	};
 	
 })();
