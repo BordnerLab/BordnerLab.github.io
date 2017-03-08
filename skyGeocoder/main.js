@@ -51,6 +51,11 @@ var geoC = (function() {
 	myLoader.innerHTML = loaderText;
 	$(myLoader).appendTo("#myContainer");
 	
+	//map.isSourceLoaded(id)
+	map.on('dataloading', function() {
+		console.log('data loading');
+	});
+	
 	// ensures map has loaded before continuing
 	map.on('load', function() {
 		// add polygon layer
