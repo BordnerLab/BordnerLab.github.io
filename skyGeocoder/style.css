@@ -103,6 +103,7 @@ body {
 #myProgress {
 	width: 100%;
 	background-color: #ddd;
+	visibility: hidden;
 }
 
 #myBar {

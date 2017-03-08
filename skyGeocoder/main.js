@@ -104,6 +104,7 @@ var geoC = (function() {
 		// Listen for the `geocoder.input` event
 		geocoder.on('result', function(ev) {
 			var check = map.isSourceLoaded('programs');
+			console.log(check);
 			if (check == true) {
 				// add point to map where searched
 				map.getSource('single-point').setData(ev.result.geometry);
@@ -115,7 +116,9 @@ var geoC = (function() {
 				while (para[0]) {
 					para[0].parentNode.removeChild(para[0]);
 				}
-			
+				moveBar(ev.result.geometry.coordinates);
+				
+				/*
 				// Set timer to ensure loading
 				window.setTimeout(function() {
 					// control to not run twice
@@ -123,11 +126,12 @@ var geoC = (function() {
 						//geocoderControl = true;
 						
 						
-						
+					
 					//myLoader.style.visibility = "hidden";
 					var features = map.queryRenderedFeatures(ev.result.geometry.coordinates, { layers: ['programs'] });
 					var layer = features[0];
-					console.log(layer);
+					
+					
 					var poly = turf.polygon([[
 						[-81, 41],
 						[-81, 47],
@@ -141,6 +145,7 @@ var geoC = (function() {
 					} catch(err) {
 						console.log(err);
 					}
+					
 					
 					
 					// call function with property parameters
@@ -161,19 +166,44 @@ var geoC = (function() {
 					}
 					//}
 				}, 6000);
+				*/
 			} else {
 			 	alert('Data is still being processed.');
 			}	
 		});
 	});
 	
-	function moveBar() {
+	function moveBar(point) {
+		var features = map.queryRenderedFeatures(ev.result.geometry.coordinates, { layers: ['programs'] });
+		var layer = features[0];
+					
+		myLoaderBox.style.visibility = "visible";
 		var elem = document.getElementById("myBar");
 		var width = 0;
-		var id = setInterval(frame, 10);
+		var id = setInterval(frame, 50);
 		function frame() {
 			if (width >= 100) {
 				clearInterval(id);
+				myLoaderBox.style.visibility = "hidden";
+				
+				
+				try {
+					if (geocoderControl == false) {
+						addAndPopulateLinks(layer.properties.ATT, layer.properties.CenturyLin, 
+							layer.properties.Charter, layer.properties.Comcast, layer.properties.Frontier, 
+							layer.properties.Mediacom, layer.properties.Midco, layer.properties.Sprint, 
+							layer.properties.Lifeline);
+						geocoderControl = true;
+					}
+				} catch(err) {
+					if (geocoderControl == false) {
+						catchUndefinedLayer(err);
+						geocoderControl = true;
+					}
+					
+				}
+					
+					
 			} else {
 				width++;
 				elem.style.width = width + '%';
