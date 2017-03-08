@@ -112,7 +112,7 @@ var geoC = (function() {
 					myLoader.style.visibility = "hidden";
 					var features = map.queryRenderedFeatures(ev.result.geometry.coordinates, { layers: ['programs'] });
 					var layer = features[0];
-					
+					console.log(layer);
 					var poly = turf.polygon([[
 						[-81, 41],
 						[-81, 47],
