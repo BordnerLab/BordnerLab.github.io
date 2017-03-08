@@ -174,7 +174,7 @@ var geoC = (function() {
 	});
 	
 	function moveBar(point) {
-		var features = map.queryRenderedFeatures(ev.result.geometry.coordinates, { layers: ['programs'] });
+		var features = map.queryRenderedFeatures(point, { layers: ['programs'] });
 		var layer = features[0];
 					
 		myLoaderBox.style.visibility = "visible";
