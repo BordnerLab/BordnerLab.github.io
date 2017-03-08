@@ -218,8 +218,8 @@ var geoC = (function() {
 		}
 		
 		if (Charter != "No discount program") {
-			link3.setAttribute("href", CharterCo);
-			link3.innerHTML = "<b>Charter: </b>" + CharterCo;
+			link3.setAttribute("href", Charter);
+			link3.innerHTML = "<b>Charter: </b>" + Charter;
 		} else {
 			link3.innerHTML = "<b>Charter: </b>No discount program";
 			link3.setAttribute("class", "noLink gonnaRemove");
@@ -234,8 +234,8 @@ var geoC = (function() {
 		}
 		
 		if (Frontier != "No discount program") {
-			link5.setAttribute("href", FrontierC);
-			link5.innerHTML = "<b>Frontier: </b>" + FrontierC;
+			link5.setAttribute("href", Frontier);
+			link5.innerHTML = "<b>Frontier: </b>" + Frontier;
 		} else {
 			link5.innerHTML = "<b>Frontier: </b>No discount program";
 			link5.setAttribute("class", "noLink gonnaRemove");
