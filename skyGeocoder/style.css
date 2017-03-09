@@ -15,10 +15,9 @@ body {
 
 #myLoadingContainer {
 	position: absolute;
-	font-size: 35px;
 	width: 500px;
 	height: 600px;
-	background: rgba(255,255,255,0.5);
+	background: rgba(255,255,255,1);
 	border: 1px solid black;
 	top: 50px;
 	left: 0;
@@ -27,6 +26,10 @@ body {
 	text-align: center;
 	visibility: visible;
 	z-index: 100;
+}
+
+#myLoadingContainer p {
+	font-size: 35px;
 }
 
 #myContainer {
