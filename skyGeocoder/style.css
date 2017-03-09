@@ -15,6 +15,8 @@ body {
 
 #myLoadingContainer {
 	position: absolute;
+	font-size: 20px;
+	color: white;
 	width: 500px;
 	height: 600px;
 	background: rgba(0,0,0,0.3);
