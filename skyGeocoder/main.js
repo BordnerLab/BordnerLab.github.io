@@ -54,10 +54,18 @@ var geoC = (function() {
 	$(myLoaderBox).appendTo("#myContainer");
 	
 	
-	var checky = map.isSourceLoaded('programs');
-	while (checky != true) {
-		console.log('loading');
-	}
+	
+	
+	initLoad = setInterval(function(){
+		var checky = map.isSourceLoaded('programs');
+		if (checky == true) {
+			var initialLoad = document.getElementById('myLoadingContainer');
+			initialLoad.style.visibility = "hidden";
+			clearInterval(initLoad);
+		} else {
+			console.log('loading');
+		}
+	}, 1000);
 	
 	// ensures map has loaded before continuing
 	map.on('load', function() {
