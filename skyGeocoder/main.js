@@ -66,7 +66,7 @@ var geoC = (function() {
 		map.addLayer({
 			'id': 'program-poly',
 			'type': 'fill',
-			'source': 'programs'
+			'source': 'programs',
 			'layout': {},
 			'paint': {
 				'fill-color': 'black',
