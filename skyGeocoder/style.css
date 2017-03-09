@@ -26,6 +26,7 @@ body {
 	text-align: center;
 	visibility: visible;
 	z-index: 100;
+	margin-bottom: 50px;
 }
 
 #myLoadingContainer p {
@@ -46,6 +47,7 @@ body {
 	overflow-y: scroll;
 	z-index: 99;
 	opacity: .5;
+	margin-bottom: 50px;
 }
 
 #myContainer h1 {
