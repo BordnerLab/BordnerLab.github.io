@@ -61,6 +61,8 @@ var geoC = (function() {
 		if (checky == true) {
 			var initialLoad = document.getElementById('myLoadingContainer');
 			initialLoad.style.visibility = "hidden";
+			var initialContainer = document.getElementById('myContainer');
+			initialContainer.style.opacity = "1";
 			clearInterval(initLoad);
 		} else {
 			console.log('loading');
@@ -129,7 +131,8 @@ var geoC = (function() {
 	function moveBar(point) {
 		var features = map.queryRenderedFeatures(point, { layers: ['programs'] });
 		var layer = features[0];
-		console.log(layer.length);
+		console.log(features[0]);
+		console.log(features[1]);
 					
 		myLoaderBox.style.visibility = "visible";
 		var elem = document.getElementById("myBar");
