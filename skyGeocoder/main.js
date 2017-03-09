@@ -54,31 +54,19 @@ var geoC = (function() {
 	$(myLoaderBox).appendTo("#myContainer");
 	
 	
-	
-	
-	initLoad = setInterval(function(){
-		var checky = map.isSourceLoaded('programs');
-		if (checky == true) {
-			var initialLoad = document.getElementById('myLoadingContainer');
-			initialLoad.style.visibility = "hidden";
-			var initialContainer = document.getElementById('myContainer');
-			initialContainer.style.opacity = "1";
-			clearInterval(initLoad);
-		} else {
-			console.log('loading');
-		}
-	}, 1000);
-	
 	// ensures map has loaded before continuing
 	map.on('load', function() {
+	
+		map.addSource('programs', {
+			'type': 'geojson',
+			'data': 'programs.geojson'
+		});
+		
 		// add polygon layer
 		map.addLayer({
-			'id': 'programs',
+			'id': 'program-poly',
 			'type': 'fill',
-			'source': {
-				'type': 'geojson',
-				'data': 'programs.geojson'
-			},
+			'source': 'programs'
 			'layout': {},
 			'paint': {
 				'fill-color': 'black',
@@ -105,6 +93,19 @@ var geoC = (function() {
 				"circle-color": "#007cbf"
 			}
 		});
+		
+		initLoad = setInterval(function(){
+			var checky = map.isSourceLoaded('programs');
+			if (checky == true) {
+				var initialLoad = document.getElementById('myLoadingContainer');
+				initialLoad.style.visibility = "hidden";
+				var initialContainer = document.getElementById('myContainer');
+				initialContainer.style.opacity = "1";
+				clearInterval(initLoad);
+			} else {
+				console.log('loading');
+			}
+		}, 1000);
 
 		// Listen for the `geocoder.input` event
 		geocoder.on('result', function(ev) {
@@ -122,7 +123,7 @@ var geoC = (function() {
 	});
 	
 	function moveBar(point) {
-		var features = map.queryRenderedFeatures(point, { layers: ['programs'] });
+		var features = map.queryRenderedFeatures(point, { layers: ['program-poly'] });
 		var layer = features[0];
 		console.log(features[0]);
 					
