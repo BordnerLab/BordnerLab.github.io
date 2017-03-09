@@ -109,6 +109,7 @@ var geoC = (function() {
 
 		// Listen for the `geocoder.input` event
 		geocoder.on('result', function(ev) {
+			/*
 			// add point to map where searched
 			map.getSource('single-point').setData(ev.result.geometry);
 				
@@ -117,12 +118,22 @@ var geoC = (function() {
 			while (para[0]) {
 				para[0].parentNode.removeChild(para[0]);
 			}
-			moveBar(ev.result.geometry.coordinates);
+			*/
+			moveBar(ev, ev.result.geometry.coordinates);
 			
 		});
 	});
 	
-	function moveBar(point) {
+	function moveBar(ev, point) {
+		// add point to map where searched
+		map.getSource('single-point').setData(ev.result.geometry);
+				
+		// retrieve and remove all classes with 'gonnaRemove'
+		var para = document.getElementsByClassName('gonnaRemove');
+		while (para[0]) {
+			para[0].parentNode.removeChild(para[0]);
+		}
+			
 		var features = map.queryRenderedFeatures(point, { layers: ['program-poly'] });
 		var layer = features[0];
 		console.log(features[0]);
@@ -138,18 +149,18 @@ var geoC = (function() {
 				
 				
 				try {
-					//if (geocoderControl == false) {
+					if (geocoderControl == false) {
 						addAndPopulateLinks(layer.properties.ATT, layer.properties.CenturyLin, 
 							layer.properties.Charter, layer.properties.Comcast, layer.properties.Frontier, 
 							layer.properties.Mediacom, layer.properties.Midco, layer.properties.Sprint, 
 							layer.properties.Lifeline);
 						geocoderControl = true;
-					//}
+					}
 				} catch(err) {
-					//if (geocoderControl == false) {
+					if (geocoderControl == false) {
 						catchUndefinedLayer(err);
 						geocoderControl = true;
-					//}
+					}
 					
 				}
 					
