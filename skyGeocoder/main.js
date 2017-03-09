@@ -132,7 +132,6 @@ var geoC = (function() {
 		var features = map.queryRenderedFeatures(point, { layers: ['programs'] });
 		var layer = features[0];
 		console.log(features[0]);
-		console.log(features[1]);
 					
 		myLoaderBox.style.visibility = "visible";
 		var elem = document.getElementById("myBar");

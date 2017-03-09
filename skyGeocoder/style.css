@@ -15,11 +15,10 @@ body {
 
 #myLoadingContainer {
 	position: absolute;
-	font-size: 20px;
-	color: white;
+	font-size: 35px;
 	width: 500px;
 	height: 600px;
-	background: rgba(0,0,0,0.3);
+	background: rgba(255,255,255,0.5);
 	border: 1px solid black;
 	top: 50px;
 	left: 0;
@@ -139,7 +138,7 @@ body {
   border: 16px solid #f3f3f3;
   border-radius: 50%;
   border-top: 16px solid #2471A3;
-  margin-top: 20px;
+  margin-top: 50px;
   width: 120px;
   height: 120px;
   left: 0;
