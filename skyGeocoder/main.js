@@ -188,6 +188,7 @@ var geoC = (function() {
 		var break6 = document.createElement("br");
 		var break7 = document.createElement("br");
 		var break8 = document.createElement("br");
+		var break9 = document.createElement("br");
 		
 		// attribute links with 'gonnaRemove' class
 		link1.setAttribute("class", "gonnaRemove");
@@ -313,6 +314,7 @@ var geoC = (function() {
 		$(link8).appendTo("#myContainer");
 		$(break8).appendTo("#myContainer");
 		$(link9).appendTo("#myContainer");
+		$(break9).appendTo("#myContainer");
 		
 		// set timer to allow function to run again
 		window.setTimeout(function() {
