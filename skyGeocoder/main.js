@@ -108,23 +108,16 @@ var geoC = (function() {
 
 		// Listen for the `geocoder.input` event
 		geocoder.on('result', function(ev) {
-			var check = map.isSourceLoaded('programs');
-			console.log(check);
-			if (check == true) {
-				// add point to map where searched
-				map.getSource('single-point').setData(ev.result.geometry);
+			// add point to map where searched
+			map.getSource('single-point').setData(ev.result.geometry);
 				
-				moveBar();
-				// retrieve and remove all classes with 'gonnaRemove'
-				var para = document.getElementsByClassName('gonnaRemove');
-				while (para[0]) {
-					para[0].parentNode.removeChild(para[0]);
-				}
-				moveBar(ev.result.geometry.coordinates);
-				
-			} else {
-			 	alert('Data is still being processed.');
-			}	
+			// retrieve and remove all classes with 'gonnaRemove'
+			var para = document.getElementsByClassName('gonnaRemove');
+			while (para[0]) {
+				para[0].parentNode.removeChild(para[0]);
+			}
+			moveBar(ev.result.geometry.coordinates);
+			
 		});
 	});
 	
