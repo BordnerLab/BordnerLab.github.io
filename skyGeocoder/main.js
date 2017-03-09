@@ -125,18 +125,12 @@ var geoC = (function() {
 	});
 	
 	function moveBar(ev, point) {
-		// add point to map where searched
-		map.getSource('single-point').setData(ev.result.geometry);
 				
 		// retrieve and remove all classes with 'gonnaRemove'
 		var para = document.getElementsByClassName('gonnaRemove');
 		while (para[0]) {
 			para[0].parentNode.removeChild(para[0]);
 		}
-			
-		var features = map.queryRenderedFeatures(point, { layers: ['program-poly'] });
-		var layer = features[0];
-		console.log(features[0]);
 					
 		myLoaderBox.style.visibility = "visible";
 		var elem = document.getElementById("myBar");
@@ -146,6 +140,12 @@ var geoC = (function() {
 			if (width >= 100) {
 				clearInterval(id);
 				myLoaderBox.style.visibility = "hidden";
+				
+				// add point to map where searched
+				map.getSource('single-point').setData(ev.result.geometry);
+				var features = map.queryRenderedFeatures(point, { layers: ['program-poly'] });
+				var layer = features[0];
+				console.log(features[0]);
 				
 				
 				try {
