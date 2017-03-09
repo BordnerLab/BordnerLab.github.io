@@ -160,7 +160,7 @@ var geoC = (function() {
 			} else {
 				width = width + .5;
 				elem.style.width = width + '%';
-				elem.innerHTML = width * 1 + '%';
+				//elem.innerHTML = width * 1 + '%';
 			}
 		};
 	};
