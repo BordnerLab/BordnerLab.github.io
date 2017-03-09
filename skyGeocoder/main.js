@@ -129,6 +129,7 @@ var geoC = (function() {
 	function moveBar(point) {
 		var features = map.queryRenderedFeatures(point, { layers: ['programs'] });
 		var layer = features[0];
+		console.log(layer.length);
 					
 		myLoaderBox.style.visibility = "visible";
 		var elem = document.getElementById("myBar");
@@ -210,6 +211,7 @@ var geoC = (function() {
 		break6.setAttribute("class", "gonnaRemove");
 		break7.setAttribute("class", "gonnaRemove");
 		break8.setAttribute("class", "gonnaRemove");
+		break9.setAttribute("class", "gonnaRemove");
 		
 		// attribute links with blank target for opening in new tab
 		link1.setAttribute("target", "_blank");
