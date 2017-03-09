@@ -125,7 +125,7 @@ var geoC = (function() {
 		myLoaderBox.style.visibility = "visible";
 		var elem = document.getElementById("myBar");
 		var width = 0;
-		var id = setInterval(frame, 60);
+		var id = setInterval(frame, 50);
 		function frame() {
 			if (width >= 100) {
 				clearInterval(id);
@@ -150,7 +150,7 @@ var geoC = (function() {
 					
 					
 			} else {
-				width++;
+				width = width + .5;
 				elem.style.width = width + '%';
 				elem.innerHTML = width * 1 + '%';
 			}
