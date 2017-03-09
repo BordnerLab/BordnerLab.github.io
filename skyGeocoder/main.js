@@ -54,7 +54,10 @@ var geoC = (function() {
 	$(myLoaderBox).appendTo("#myContainer");
 	
 	
-	
+	var checky = map.isSourceLoaded('programs');
+	while (checky != true) {
+		console.log('loading');
+	}
 	
 	// ensures map has loaded before continuing
 	map.on('load', function() {
@@ -122,7 +125,7 @@ var geoC = (function() {
 		myLoaderBox.style.visibility = "visible";
 		var elem = document.getElementById("myBar");
 		var width = 0;
-		var id = setInterval(frame, 50);
+		var id = setInterval(frame, 60);
 		function frame() {
 			if (width >= 100) {
 				clearInterval(id);
@@ -236,7 +239,7 @@ var geoC = (function() {
 		}
 		
 		if (Comcast != "No discount program") {
-			link4.setAttribute("href", Comast);
+			link4.setAttribute("href", Comcast);
 			link4.innerHTML = "<b>Comcast: </b>" + Comcast;
 		} else {
 			link4.innerHTML = "<b>Comcast: </b>No discount program";
