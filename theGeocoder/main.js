@@ -110,11 +110,11 @@ var geoC = (function() {
 				
 				// search the layers and see where point is
 				programs.eachLayer(function(layer) {
-					console.log(layer);
+					var polyArray = [];
+					//var polyLength = layer.feature.geometry.coordinates[0].length();
+					console.log(layer.feature.geometry.coordinates);
 					var isInside = turf.inside(points, poly);
 					if (isInside == true) {
-						console.log(isInside);
-					} else {
 						console.log(isInside);
 					}
 				});
