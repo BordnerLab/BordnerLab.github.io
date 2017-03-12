@@ -8,8 +8,6 @@ var geoC = (function() {
 	}).addTo(map);
 	
 	// create and initialize the geocoder
-	L.Control.geocoder().addTo(map);
-	
 	var geocoder = L.Control.geocoder({
 	}).on('markgeocode', function(e) {
 		console.log(e);
