@@ -18,6 +18,31 @@ var geoC = (function() {
 	});
 	tile_layer.addTo(map);
 	
+	// variable for displaying programs
+	var myStyle = {
+		fillColor: 'black',
+		weight: 1,
+		opacity: 0.75,
+		color: '#fff',
+		fillOpacity: 0.75
+	};
+	
+	// loads programs geojson into the map
+	$.ajax({
+		dataType: "json",
+		url: "programs.geojson",
+		success: function(data) {
+			programs = L.geoJson(data, {
+				style: myStyle
+			}).addTo(map);
+			console.log('program data loaded');
+			var initialLoad = document.getElementById('myLoadingContainer');
+			initialLoad.style.visibility = "hidden";
+			var initialContainer = document.getElementById('myContainer');
+			initialContainer.style.opacity = "1";
+		}
+	});
+	
 	// create and initialize the geocoder
 	var geocoder = L.Control.geocoder({
 		collapsed: false,
@@ -53,35 +78,6 @@ var geoC = (function() {
 	myLoader.setAttribute("id", "myBar");
 	$(myLoader).appendTo(myLoaderBox);
 	$(myLoaderBox).appendTo("#myContainer");
-	
-	// only add layer when map is finished loading
-	tile_layer.on('load', function() {
-		console.log('map loaded');
-		// variable for displaying programs
-		var myStyle = {
-			fillColor: 'black',
-			weight: 1,
-			opacity: 0.75,
-			color: '#fff',
-			fillOpacity: 0.75
-		};
-		
-		// loads programs geojson into the map
-		$.ajax({
-			dataType: "json",
-			url: "programs.geojson",
-			success: function(data) {
-				programs = L.geoJson(data, {
-					style: myStyle
-				}).addTo(map);
-				console.log('program data loaded');
-				var initialLoad = document.getElementById('myLoadingContainer');
-				initialLoad.style.visibility = "hidden";
-				var initialContainer = document.getElementById('myContainer');
-				initialContainer.style.opacity = "1";
-			}
-		});
-	});
 	
 	// handles retrieving data
 	function moveBar(e, point) {
