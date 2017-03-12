@@ -85,30 +85,11 @@ var geoC = (function() {
 	// handles retrieving data
 	function moveBar(e, point) {
 		// retrieve and remove all classes with 'gonnaRemove'
-		
-	};
-	
-	
-
-
-
-
-
-
-
-
-
-
-/*
-	
-	function moveBar(ev, point) {
-				
-		// retrieve and remove all classes with 'gonnaRemove'
 		var para = document.getElementsByClassName('gonnaRemove');
 		while (para[0]) {
 			para[0].parentNode.removeChild(para[0]);
 		}
-					
+		
 		myLoaderBox.style.visibility = "visible";
 		var elem = document.getElementById("myBar");
 		var width = 0;
@@ -118,21 +99,32 @@ var geoC = (function() {
 				clearInterval(id);
 				myLoaderBox.style.visibility = "hidden";
 				
-				// add point to map where searched
-				map.getSource('single-point').setData(ev.result.geometry);
-				var features = map.queryRenderedFeatures(point, { layers: ['program-poly'] });
-				var layer = features[0];
+				// search the layers and see where point is
 				
-				var poly = turf.polygon([[
-  					[-81, 41],
-  					[-81, 47],
-  					[-72, 47],
-  					[-72, 41],
-  					[-81, 41]
-				]]);
+				try {
+					//addAndPopulateLinks();
+				} catch (err) {
+					//catchUndefinedLayer(err);
+				}
+			} else {
+				width = width + .5;
+				elem.style.width = width + '%';
+			}
+		};
+	};
+	
+	
 
-				var isInside = turf.inside(ev.result.geometry, poly);
-				console.log(isInside);
+
+
+
+/*
+	
+	function moveBar(ev, point) {
+	
+		function frame() {
+			if (width >= 100) {
+				
 				
 				try {
 					if (geocoderControl == false) {
@@ -149,13 +141,6 @@ var geoC = (function() {
 					}
 					
 				}
-					
-					
-			} else {
-				width = width + .5;
-				elem.style.width = width + '%';
-				//elem.innerHTML = width * 1 + '%';
-			}
 		};
 	};
 	
