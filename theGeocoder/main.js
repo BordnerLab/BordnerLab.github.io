@@ -1,5 +1,10 @@
 
 var geoC = (function() {
+	// declare variables
+	var geocoderControl = false;
+	var titleText = "Enter Your Address";
+	var subText = "";
+	var errorText = "The address you have chosen is not valid, please enter a new address.";
 	
 	// create and initialize the map
 	var map = L.map('map').setView([0, 0], 2);
@@ -12,37 +17,10 @@ var geoC = (function() {
 	}).on('markgeocode', function(e) {
 		console.log(e);
 	}).addTo(map);
-
-
-
-
-
-
-
-
-
-
-
-
-
-	/*
-	// declare variables
-	var geocoderControl = false;
-	var titleText = "Enter Your Address";
-	//var loaderText = "Loading...";
-	var subText = "";
-	var errorText = "The address you have chosen is not valid, please enter a new address.";
 	
-	// create and connect to map
-	mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2bmtkcjUzaG5meCJ9.eswxCZSAnob59HR0wEaTpA';
-	var map = new mapboxgl.Map({
-		container: 'map',
-		style: 'mapbox://styles/bordnerwlei/cizepw2le005h2so39v1oa0i1',
-		center: [-89.4012, 43.0731],
-		zoom: 13,
-		pitch: 0.1
-	});
-			
+	
+	
+	
 	// create and assign title
 	var myTitle = document.createElement("h1");
 	myTitle.innerHTML = titleText;
@@ -53,13 +31,22 @@ var geoC = (function() {
 	mySubText.innerHTML = subText;
 	$(mySubText).appendTo("#myContainer");
 	
-	// create geocoder
-	var geocoder = new MapboxGeocoder({
-		accessToken: mapboxgl.accessToken
-	});
+	// remove, append, and assign id to geocoder
 	
-	// add geocoder 
-	map.addControl(geocoder);
+	// create and assign line
+	
+	
+
+
+
+
+
+
+
+
+
+
+/*
 	
 	// remove and append geocoder
 	$('.mapboxgl-ctrl-geocoder').detach().appendTo('#myContainer');
