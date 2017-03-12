@@ -24,7 +24,7 @@ var geoC = (function() {
 		placeholder: "Search...",
 		errorMessage: "Nothing Found."
 	}).on('markgeocode', function(e) {
-		console.log(e);
+		console.log('point found');
 		point = e.geocode.center;
 		moveBar(e, point);
 	}).addTo(map);
@@ -40,7 +40,7 @@ var geoC = (function() {
 	$(mySubText).appendTo("#myContainer");
 	
 	// remove, append, and assign geocoder
-	$('.leaflet-ctrl-geocoder').detach().appendTo('#myContainer').attr("id", "myGeocoder");
+	$('.leaflet-control-geocoder').detach().appendTo('#myContainer').attr("id", "myGeocoder");
 		
 	// create and assign line
 	var myLine = document.createElement("hr");
@@ -56,7 +56,6 @@ var geoC = (function() {
 	// only add layer when map is finished loading
 	tile_layer.on('load', function() {
 		console.log('map loaded');
-		
 		// variable for displaying programs
 		var myStyle = {
 			fillColor: 'black',
@@ -74,6 +73,7 @@ var geoC = (function() {
 				programs = L.geoJson(data, {
 					style: myStyle
 				}).addTo(map);
+				console.log('program data loaded');
 				var initialLoad = document.getElementById('myLoadingContainer');
 				initialLoad.style.visibility = "hidden";
 				var initialContainer = document.getElementById('myContainer');
