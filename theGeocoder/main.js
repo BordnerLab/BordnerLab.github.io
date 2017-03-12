@@ -25,7 +25,9 @@ var geoC = (function() {
 	
 		// create and initialize the geocoder
 		var geocoder = L.Control.geocoder({
-			collapsed: false
+			collapsed: false,
+			placeholder: "Search...",
+			errorMessage: "Nothing Found."
 		}).on('markgeocode', function(e) {
 			console.log(e);
 			point = e.geocode.center;
