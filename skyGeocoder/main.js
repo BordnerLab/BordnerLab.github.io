@@ -14,6 +14,8 @@ var geoC = (function() {
 		style: 'mapbox://styles/bordnerwlei/cizepw2le005h2so39v1oa0i1',
 		center: [-89.4012, 43.0731],
 		zoom: 13,
+		maxZoom: 13,
+		minZoom: 13,
 		pitch: 0.1
 	});
 			
@@ -109,18 +111,7 @@ var geoC = (function() {
 
 		// Listen for the `geocoder.input` event
 		geocoder.on('result', function(ev) {
-			/*
-			// add point to map where searched
-			map.getSource('single-point').setData(ev.result.geometry);
-				
-			// retrieve and remove all classes with 'gonnaRemove'
-			var para = document.getElementsByClassName('gonnaRemove');
-			while (para[0]) {
-				para[0].parentNode.removeChild(para[0]);
-			}
-			*/
 			moveBar(ev, ev.result.geometry.coordinates);
-			
 		});
 	});
 	
