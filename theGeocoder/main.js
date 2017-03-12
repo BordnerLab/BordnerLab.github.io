@@ -96,9 +96,17 @@ var geoC = (function() {
 				clearInterval(id);
 				myLoaderBox.style.visibility = "hidden";
 				
+				var poly = turf.polygon([[
+  					[-81, 41],
+  					[-81, 47],
+  					[-72, 47],
+  					[-72, 41],
+  					[-81, 41]
+				]]);
+				
 				// search the layers and see where point is
 				programs.eachLayer(function(layer) {
-					var poly = layer.feature.geomtry;
+					//var poly = layer.feature.geomtry;
 					var isInside = turf.inside(point, poly);
 					if (isInside == true) {
 						console.log(isInside);
