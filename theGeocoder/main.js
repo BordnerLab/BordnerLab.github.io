@@ -14,50 +14,47 @@ var geoC = (function() {
     	attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
 	
-	// create and initialize the geocoder
-	var geocoder = L.Control.geocoder({
-	}).on('markgeocode', function(e) {
-		console.log(e);
-		point = e.geocode.center;
+	map.on('load', function() {
+		console.log('map loaded');
+		// create and initialize the geocoder
+		var geocoder = L.Control.geocoder({
+		}).on('markgeocode', function(e) {
+			console.log(e);
+			point = e.geocode.center;
 		
-	}).addTo(map);
-	
-	// variable for displaying programs
-	var myStyle = {
-		fillColor: 'black',
-		weight: 1,
-		opacity: 0.75,
-		color: '#fff',
-		fillOpacity: 0.75
-	};
-	
-	// loads programs geojson into the map
-	$.ajax({
-		dataType: "json",
-		url: "programs.geojson",
-		success: function(data) {
-			programs = L.geoJson(data, {
-				style: myStyle
-			}).addTo(map);
-		}
+		}).addTo(map);
+		
+		// variable for displaying programs
+		var myStyle = {
+			fillColor: 'black',
+			weight: 1,
+			opacity: 0.75,
+			color: '#fff',
+			fillOpacity: 0.75
+		};
+		
+		// loads programs geojson into the map
+		$.ajax({
+			dataType: "json",
+			url: "programs.geojson",
+			success: function(data) {
+				programs = L.geoJson(data, {
+					style: myStyle
+				}).addTo(map);
+				console.log('success');
+			}
+		});
+		
+		// create and assign title
+		var myTitle = document.createElement("h1");
+		myTitle.innerHTML = titleText;
+		$(myTitle).appendTo("#myContainer");
+		
+		// create and assign sub text
+		var mySubText = document.createElement("p");
+		mySubText.innerHTML = subText;
+		$(mySubText).appendTo("#myContainer");
 	});
-	
-	
-	
-	
-	// create and assign title
-	var myTitle = document.createElement("h1");
-	myTitle.innerHTML = titleText;
-	$(myTitle).appendTo("#myContainer");
-	
-	// create and assign sub text
-	var mySubText = document.createElement("p");
-	mySubText.innerHTML = subText;
-	$(mySubText).appendTo("#myContainer");
-	
-	// remove, append, and assign id to geocoder
-	
-	// create and assign line
 	
 	
 
