@@ -5,7 +5,8 @@ var geoC = (function() {
 	var titleText = "Enter Your Address";
 	var subText = "";
 	var errorText = "The address you have chosen is not valid, please enter a new address.";
-	var point;
+	var point;	// store point from geocoder result
+	var programs;	// stores program polygons
 	
 	// create and initialize the map
 	var map = L.map('map').setView([0, 0], 2);
@@ -18,7 +19,28 @@ var geoC = (function() {
 	}).on('markgeocode', function(e) {
 		console.log(e);
 		point = e.geocode.center;
+		
 	}).addTo(map);
+	
+	// variable for displaying programs
+	var myStyle = {
+		fillColor: 'black',
+		weight: 1,
+		opacity: 0.75,
+		color: '#fff',
+		fillOpacity: 0.75
+	};
+	
+	// loads programs geojson into the map
+	$.ajax({
+		dataType: "json",
+		url: "programs.geojson",
+		success: function(data) {
+			programs = L.geoJson(data, {
+				style: myStyle
+			}).addTo(map);
+		}
+	});
 	
 	
 	
