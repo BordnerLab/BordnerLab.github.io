@@ -1,18 +1,13 @@
 
 var geoC = (function() {
 	// declare variables
+	var map;
 	var geocoderControl = false;
 	var titleText = "Enter Your Address";
 	var subText = "";
 	var errorText = "The address you have chosen is not valid, please enter a new address.";
 	var point;	// store point from geocoder result
 	var programs;	// stores program polygons
-	
-	// create and initialize the map
-	var map = L.map('map').setView([43, -88], 6);
-		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    	attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-	}).addTo(map);
 	
 	map.on('load', function() {
 		console.log('map loaded');
@@ -55,6 +50,12 @@ var geoC = (function() {
 		mySubText.innerHTML = subText;
 		$(mySubText).appendTo("#myContainer");
 	});
+	
+	// create and initialize the map
+	var map = L.map('map').setView([43, -88], 6);
+		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    	attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
 	
 	
 
