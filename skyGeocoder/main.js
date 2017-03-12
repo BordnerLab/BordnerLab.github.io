@@ -14,8 +14,6 @@ var geoC = (function() {
 		style: 'mapbox://styles/bordnerwlei/cizepw2le005h2so39v1oa0i1',
 		center: [-89.4012, 43.0731],
 		zoom: 13,
-		maxZoom: 13,
-		minZoom: 13,
 		pitch: 0.1
 	});
 			
@@ -104,8 +102,6 @@ var geoC = (function() {
 				var initialContainer = document.getElementById('myContainer');
 				initialContainer.style.opacity = "1";
 				clearInterval(initLoad);
-			} else {
-				console.log('loading');
 			}
 		}, 1000);
 
@@ -136,7 +132,6 @@ var geoC = (function() {
 				map.getSource('single-point').setData(ev.result.geometry);
 				var features = map.queryRenderedFeatures(point, { layers: ['program-poly'] });
 				var layer = features[0];
-				console.log(features[0]);
 				
 				
 				try {

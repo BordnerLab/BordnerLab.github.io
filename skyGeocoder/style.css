@@ -110,8 +110,8 @@ body {
 
 #myAttribution {
 	position: absolute;
-	top: -25px;
-	right: 0;
+	top: 10px;
+	right: 10px;
 }
 
 #myAttribution a {
