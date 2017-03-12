@@ -5,6 +5,7 @@ var geoC = (function() {
 	var titleText = "Enter Your Address";
 	var subText = "";
 	var errorText = "The address you have chosen is not valid, please enter a new address.";
+	var point;
 	
 	// create and initialize the map
 	var map = L.map('map').setView([0, 0], 2);
@@ -16,6 +17,7 @@ var geoC = (function() {
 	var geocoder = L.Control.geocoder({
 	}).on('markgeocode', function(e) {
 		console.log(e);
+		point = e.geocode.center;
 	}).addTo(map);
 	
 	
