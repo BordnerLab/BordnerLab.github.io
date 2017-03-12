@@ -9,7 +9,7 @@ var geoC = (function() {
 	var programs;	// stores program polygons
 	
 	// create and initialize the map
-	var map = L.map('map').setView([0, 0], 2);
+	var map = L.map('map').setView([43, -88], 6);
 		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     	attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
