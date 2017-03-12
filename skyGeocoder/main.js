@@ -133,6 +133,16 @@ var geoC = (function() {
 				var features = map.queryRenderedFeatures(point, { layers: ['program-poly'] });
 				var layer = features[0];
 				
+				var poly = turf.polygon([[
+  					[-81, 41],
+  					[-81, 47],
+  					[-72, 47],
+  					[-72, 41],
+  					[-81, 41]
+				]]);
+
+				var isInside = turf.inside(ev.result.geometry, poly);
+				console.log(isInside);
 				
 				try {
 					if (geocoderControl == false) {
