@@ -25,6 +25,7 @@ var geoC = (function() {
 		errorMessage: "Nothing Found."
 	}).on('markgeocode', function(e) {
 		console.log('point found');
+		console.log('e');
 		point = e.geocode.center;
 		moveBar(e, point);
 	}).addTo(map);
