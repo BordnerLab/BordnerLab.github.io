@@ -50,7 +50,7 @@ var geoC = (function() {
 		errorMessage: "Nothing Found."
 	}).on('markgeocode', function(e) {
 		console.log('point found');
-		console.log('e');
+		console.log(e);
 		point = e.geocode.center;
 		moveBar(e, point);
 	}).addTo(map);
@@ -98,7 +98,11 @@ var geoC = (function() {
 				
 				// search the layers and see where point is
 				programs.eachLayer(function(layer) {
-					console.log(layer);
+					var poly = layer.feature.geomtry;
+					var isInside = turf.inside(point, poly);
+					if (isInside == true) {
+						console.log(isInside);
+					}
 				});
 				
 				try {
