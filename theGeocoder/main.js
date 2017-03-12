@@ -100,6 +100,9 @@ var geoC = (function() {
 				myLoaderBox.style.visibility = "hidden";
 				
 				// search the layers and see where point is
+				programs.eachLayer(function(layer) {
+					console.log(layer);
+				});
 				
 				try {
 					//addAndPopulateLinks();
