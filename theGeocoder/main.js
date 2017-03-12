@@ -104,10 +104,14 @@ var geoC = (function() {
   					[-81, 41]
 				]]);
 				
+				var lat = point.lat;
+				var lng = point.lng;
+				var points = turf.point([lng, lat]);
+				
 				// search the layers and see where point is
 				programs.eachLayer(function(layer) {
 					//var poly = layer.feature.geomtry;
-					var isInside = turf.inside(point, poly);
+					var isInside = turf.inside(points, poly);
 					if (isInside == true) {
 						console.log(isInside);
 					}
