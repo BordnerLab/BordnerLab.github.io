@@ -1,11 +1,19 @@
 
 var geoC = (function() {
 	
+	// create and initialize the map
 	var map = L.map('map').setView([0, 0], 2);
 		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     	attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
+	
+	// create and initialize the geocoder
 	L.Control.geocoder().addTo(map);
+	
+	var geocoder = L.Control.geocoder({
+	}).on('markgeocode', function(e) {
+		console.log(e);
+	}).addTo(map);
 
 
 
