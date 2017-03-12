@@ -11,28 +11,51 @@ var geoC = (function() {
 	
 	// create and initialize the map
 	var map = L.map('map').setView([43, -88], 6);
-		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    	attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-	}).addTo(map);
 	
+	// create and add tile layer
 	var tile_layer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
  		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 	});
 	tile_layer.addTo(map);
-
+	
+	// create and initialize the geocoder
+	var geocoder = L.Control.geocoder({
+		collapsed: false,
+		placeholder: "Search...",
+		errorMessage: "Nothing Found."
+	}).on('markgeocode', function(e) {
+		console.log(e);
+		point = e.geocode.center;
+		moveBar(e, point);
+	}).addTo(map);
+	
+	// create and assign title
+	var myTitle = document.createElement("h1");
+	myTitle.innerHTML = titleText;
+	$(myTitle).appendTo("#myContainer");
+	
+	// create and assign sub text
+	var mySubText = document.createElement("p");
+	mySubText.innerHTML = subText;
+	$(mySubText).appendTo("#myContainer");
+	
+	// remove, append, and assign geocoder
+	$('.leaflet-ctrl-geocoder').detach().appendTo('#myContainer').attr("id", "myGeocoder");
+		
+	// create and assign line
+	var myLine = document.createElement("hr");
+	$(myLine.appendTo("#myContainer");
+		
+	var myLoaderBox = document.createElement("div");
+	var myLoader = document.createElement("div");
+	myLoaderBox.setAttribute("id", "myProgress");
+	myLoader.setAttribute("id", "myBar");
+	$(myLoader).appendTo(myLoaderBox);
+	$(myLoaderBox).appendTo("#myContainer");
+	
+	// only add layer when map is finished loading
 	tile_layer.on('load', function() {
 		console.log('map loaded');
-	
-		// create and initialize the geocoder
-		var geocoder = L.Control.geocoder({
-			collapsed: false,
-			placeholder: "Search...",
-			errorMessage: "Nothing Found."
-		}).on('markgeocode', function(e) {
-			console.log(e);
-			point = e.geocode.center;
-		
-		}).addTo(map);
 		
 		// variable for displaying programs
 		var myStyle = {
@@ -57,17 +80,13 @@ var geoC = (function() {
 				initialContainer.style.opacity = "1";
 			}
 		});
-		
-		// create and assign title
-		var myTitle = document.createElement("h1");
-		myTitle.innerHTML = titleText;
-		$(myTitle).appendTo("#myContainer");
-		
-		// create and assign sub text
-		var mySubText = document.createElement("p");
-		mySubText.innerHTML = subText;
-		$(mySubText).appendTo("#myContainer");
 	});
+	
+	// handles retrieving data
+	function moveBar(e, point) {
+		// retrieve and remove all classes with 'gonnaRemove'
+		
+	};
 	
 	
 
@@ -81,24 +100,6 @@ var geoC = (function() {
 
 
 /*
-	
-	// remove and append geocoder
-	$('.mapboxgl-ctrl-geocoder').detach().appendTo('#myContainer');
-	
-	// assign geocoder
-	$('.mapboxgl-ctrl-geocoder').attr("id", "myGeocoder");
-	
-	// create and assign line
-	var myLine = document.createElement("hr");
-	$(myLine).appendTo("#myContainer");
-	
-	
-	var myLoaderBox = document.createElement("div");
-	var myLoader = document.createElement("div");
-	myLoaderBox.setAttribute("id", "myProgress");
-	myLoader.setAttribute("id", "myBar");
-	$(myLoader).appendTo(myLoaderBox);
-	$(myLoaderBox).appendTo("#myContainer");
 	
 	
 	// ensures map has loaded before continuing
