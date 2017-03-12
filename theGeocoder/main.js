@@ -101,16 +101,6 @@ var geoC = (function() {
 
 /*
 	
-	
-	// ensures map has loaded before continuing
-	map.on('load', function() {
-
-		// Listen for the `geocoder.input` event
-		geocoder.on('result', function(ev) {
-			moveBar(ev, ev.result.geometry.coordinates);
-		});
-	});
-	
 	function moveBar(ev, point) {
 				
 		// retrieve and remove all classes with 'gonnaRemove'
