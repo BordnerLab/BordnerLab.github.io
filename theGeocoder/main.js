@@ -9,7 +9,18 @@ var geoC = (function() {
 	var point;	// store point from geocoder result
 	var programs;	// stores program polygons
 	
-	map.on('load', function() {
+	// create and initialize the map
+	var map = L.map('map').setView([43, -88], 6);
+		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    	attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
+	
+	var tile_layer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+ 		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+	});
+	tile_layer.addTo(map);
+
+	tile_layer.on('load', function() {
 		console.log('map loaded');
 		// create and initialize the geocoder
 		var geocoder = L.Control.geocoder({
@@ -50,12 +61,6 @@ var geoC = (function() {
 		mySubText.innerHTML = subText;
 		$(mySubText).appendTo("#myContainer");
 	});
-	
-	// create and initialize the map
-	var map = L.map('map').setView([43, -88], 6);
-		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    	attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-	}).addTo(map);
 	
 	
 
