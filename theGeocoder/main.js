@@ -44,7 +44,7 @@ var geoC = (function() {
 		
 	// create and assign line
 	var myLine = document.createElement("hr");
-	$(myLine.appendTo("#myContainer");
+	$(myLine).appendTo("#myContainer");
 		
 	var myLoaderBox = document.createElement("div");
 	var myLoader = document.createElement("div");
