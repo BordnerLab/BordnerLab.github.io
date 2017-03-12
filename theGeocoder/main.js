@@ -22,8 +22,10 @@ var geoC = (function() {
 
 	tile_layer.on('load', function() {
 		console.log('map loaded');
+		
 		// create and initialize the geocoder
 		var geocoder = L.Control.geocoder({
+			collapsed: false
 		}).on('markgeocode', function(e) {
 			console.log(e);
 			point = e.geocode.center;
