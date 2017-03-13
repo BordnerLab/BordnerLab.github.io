@@ -5,7 +5,9 @@ var geoC = (function() {
 	var titleText = "Enter Your Address";
 	//var loaderText = "Loading...";
 	var subText = "";
-	var errorText = "The address you have chosen is not valid, please enter a new address.";
+	var errorText = "It appears something has gone wrong. Please search this address again, or choose a different address.";
+	var errorText2 = "The address you have chosen is not valid. Please choose a new address.";
+	var errorCount = 0;
 	
 	// create and connect to map
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2bmtkcjUzaG5meCJ9.eswxCZSAnob59HR0wEaTpA';
@@ -171,7 +173,7 @@ var geoC = (function() {
 	
 	// function to add and populate links
 	function addAndPopulateLinks(ATT, CenturyLin, Charter, Comcast, Frontier, Mediacom, Midco, Sprint, Lifeline) {
-
+		errorCount = 0;
 		// create links
 		var link1 = document.createElement("a");
 		var link2 = document.createElement("a");
@@ -328,9 +330,15 @@ var geoC = (function() {
 	};
 	
 	function catchUndefinedLayer(err) {
+		errorCount = errorCount + 1;
 		var myErrorText = document.createElement("h3");
 		myErrorText.setAttribute("class", "gonnaRemove");
-		myErrorText.innerHTML = errorText + ": " + err;
+		if (errorCount >= 2) {
+			myErrorText.innerHTML = errorText2;
+		} else if (errorCount < 2) {
+			myErrorText.innerHTML = errorText;
+		}
+		
 		$(myErrorText).appendTo("#myContainer");
 		// set timer to allow function to run again
 		window.setTimeout(function() {
