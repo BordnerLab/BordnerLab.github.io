@@ -112,7 +112,7 @@ var geoC = (function() {
 				programs.eachLayer(function(layer) {
 					var polyArray = [];
 					//var polyLength = layer.feature.geometry.coordinates[0].length();
-					console.log(layer.feature.geometry.coordinates);
+					console.log(layer.feature.geometry.coordinates[0]);
 					var isInside = turf.inside(points, poly);
 					if (isInside == true) {
 						console.log(isInside);
