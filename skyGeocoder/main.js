@@ -3,7 +3,6 @@ var geoC = (function() {
 	// declare variables
 	var geocoderControl = false;
 	var titleText = "Enter Your Address";
-	//var loaderText = "Loading...";
 	var subText = "";
 	var errorText = "It appears something has gone wrong. Please search this address again, or choose a different address.";
 	var errorText2 = "The address you have chosen is not valid. Please choose a new address.";
@@ -166,7 +165,6 @@ var geoC = (function() {
 			} else {
 				width = width + 1;
 				elem.style.width = width + '%';
-				//elem.innerHTML = width * 1 + '%';
 			}
 		};
 	};
